@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="49831ca0-3dd7-4dcc-a513-75db5b3550e0"
+  name="Package1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="89aed075-c9bc-401e-83fa-f1aec0ec255e"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b051ffee-4555-4032-b6ff-18e3682a17f9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2c24d39c-f777-448f-8e0a-dfc146196048">
+                <propertyInstance
+                  Id="fb9fe34b-12b8-4c03-81f4-a8edbe3d93c6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3e00f98f-ddb1-47be-bbdd-1c296d297fec">
+                <propertyInstance
+                  Id="27ae9519-2354-46ca-ab95-b43775d52972"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="661ad32f-7730-4ffa-a733-611d9e64f68f">
+                <propertyInstance
+                  Id="759d0e2b-fc39-40cc-8032-758d3ea25803"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c6eb09c-3f53-4d9d-baed-24f5a720a13a">
+                <propertyInstance
+                  Id="80146e19-d0f2-4b6a-875e-f54610a50cd2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="597ad427-9bef-4ab9-a77d-2508a1bf9d14">
+                <propertyInstance
+                  Id="956fcab9-c2b0-4c69-b471-3eec7a661b1e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="df506968-2113-4b95-8434-0d02d1f1bbe0"
+            isDerived="false"
+            sourceEndRoleName="Class1"
+            targetEndRoleName="Enumeration1"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="5facedb0-17ca-48a2-ae7b-0cd09aa23f72"
+              LastKnownName="Enumeration1"
+              LastKnownLocation="Package_1304.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="57577fe0-0963-4519-a48c-0e435cf25058"
+                  name="Class1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f63c1d80-c005-42fd-a866-eedabd38e148"
+                  name="Enumeration1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="5facedb0-17ca-48a2-ae7b-0cd09aa23f72"
+        name="Enumeration1"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="78edb152-2866-419f-8b94-e724977ee2b2"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="704697d3-14a9-4678-9f99-8bca23188efb">
+                <propertyInstance
+                  Id="74b8a745-85cc-41fd-b4d0-b1004030b176"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="528c9606-b920-4f87-a59d-3be51230b260">
+                <propertyInstance
+                  Id="dfbfaaec-900e-4704-9798-3be2876525d8"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d538aab-9cea-42b5-83d3-c376dd5b25db">
+                <propertyInstance
+                  Id="f4b1d688-047a-493d-a87b-3b703a545bc9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="4f57f07c-cfb5-4021-bc65-8029ef055420"
+            name="A" />
+          <enumerationLiteral
+            Id="6a9f97c9-e8c7-41fc-a8b7-5e5316b7831c"
+            name="B" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

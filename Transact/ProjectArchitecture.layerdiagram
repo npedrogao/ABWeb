@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="40e92c2d-d641-41f4-9b28-a28c605d7403" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="769062e3-f57a-4d40-a6b8-9a6adc502aa7" name="Web Layer">
+      <childLayers>
+        <layer Id="3642f633-7cc2-44b2-985f-40ebad354886" name="ABWebCatalogue" />
+        <layer Id="4c737426-5cb8-41b7-9257-e2ccf9e63baa" name="DataDelegators">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="a6b8c8f2-48ca-4578-8a74-2c9809f649f3" direction="Forward">
+              <layerMoniker Id="aa42993c-8adc-4e6d-9bc6-808d5d65bad6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="00ec4760-3e5b-4c0e-bbd8-7e68b25f6c8e" name="ServiceDelegators">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="0aec2b85-aaa9-4ec1-ba60-3cdbfde96496" direction="Forward">
+              <layerMoniker Id="6e068eab-1698-4eba-b12e-f3995bc1f798" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="536651b9-92ec-4560-bffb-6b4656108992" name="Common" />
+        <layer Id="9adeb80d-bf7f-4797-928d-de21bcc42b15" name="Transact" />
+      </childLayers>
+    </layer>
+    <layer Id="7cda7484-0e9f-4063-975b-85143b4051a2" name="Data Layer">
+      <childLayers>
+        <layer Id="aa42993c-8adc-4e6d-9bc6-808d5d65bad6" name="DB2 Local" />
+        <layer Id="22db2ab0-a04c-4045-b59e-ecd1c7292d93" name="Altamira" />
+      </childLayers>
+    </layer>
+    <layer Id="6e068eab-1698-4eba-b12e-f3995bc1f798" name="BCDWS">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="15bd835e-d681-4e48-aa85-90c6522e09a9" direction="Forward">
+          <layerMoniker Id="22db2ab0-a04c-4045-b59e-ecd1c7292d93" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="2c62debb-cc02-4659-8ee0-88168f1da156" name="audit">
+      <childLayers>
+        <layer Id="0933d2d2-220d-4ff8-b6e6-b41c075038ae" name="Audit" />
+        <layer Id="2ca38e72-e442-4e7d-a009-ca8865ca7a05" name="Logging (log4N)" />
+      </childLayers>
+    </layer>
+    <layer Id="329b9d8e-b086-4e42-a279-30d19626853e" name="Management">
+      <childLayers>
+        <layer Id="32613340-7d03-43fe-8a51-929341630aa3" name="Visual Studio 2015 MVC5 + jQuery + Razor" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

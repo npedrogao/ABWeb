@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="ProjectPath = ..\TransactLib\TransactLib.csproj" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:11:59" Importance="Medium" Text="Transact's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Transact::TransactionManager::Transaction' -  (Class), 'Transact::TransactionManager::TI96' -  (Class), 'Transact::TransactionManager::TI97' -  (Class), 'Transact::TransactionManager::VC39' -  (Class), 'Transact::TransactionManager::CA29' -  (Class), 'Transact::TransactionManager::AP34' -  (Class) " />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::Transaction' -  (Class) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\Transaction.cs" />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::TI96' -  (Class) : success (file created) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\TI96.cs" />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::TI97' -  (Class) : success (file created) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\TI97.cs" />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::VC39' -  (Class) : success (file created) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\VC39.cs" />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::CA29' -  (Class) : success (file created) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\CA29.cs" />
+  <Message Timestamp="2017-07-07T14:12:24" Importance="Medium" Text="'Transact::TransactionManager::AP34' -  (Class) : success (file created) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\AP34.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="ProjectPath = ..\TransactLib\TransactLib.csproj" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="Transact's Text Template Binding: 'EnumTemplate' will apply EnumTemplate.t4 to: 'Transact::TransactionManager::PeriodoCoracao' -  (Enumeration), 'Transact::TransactionManager::EstadoFundo' -  (Enumeration), 'Transact::TransactionManager::MetodoResgate' -  (Enumeration), 'Transact::TransactionManager::RiscoProduto' -  (Enumeration), 'Transact::TransactionManager::PrazoAbsoluto' -  (Enumeration), 'Transact::TransactionManager::TipoRevalCapital' -  (Enumeration), 'Transact::TransactionManager::TipoValorizacao' -  (Enumeration) " />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::PeriodoCoracao' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\PeriodoCoracao.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::EstadoFundo' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\EstadoFundo.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::MetodoResgate' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\MetodoResgate.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::RiscoProduto' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\RiscoProduto.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::PrazoAbsoluto' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\PrazoAbsoluto.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::TipoRevalCapital' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\TipoRevalCapital.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="'Transact::TransactionManager::TipoValorizacao' -  (Enumeration) : success (file replaced) - C:\Users\sp00842\Source\Repos\bki\bki\TransactLib\GeneratedCode\TransactionManager\TipoValorizacao.cs" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="ProjectPath = ..\TransactLib\TransactLib.csproj" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Medium" Text="Transact's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Transact::TransactionManager::Transaction' -  (Class), 'Transact::TransactionManager::TI96' -  (Class), 'Transact::TransactionManager::TI97' -  (Class), 'Transact::TransactionManager::VC39' -  (Class), 'Transact::TransactionManager::CA29' -  (Class), 'Transact::TransactionManager::AP34' -  (Class) " />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::Transaction' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::TI96' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::TI97' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::VC39' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::CA29' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:25" Importance="Diagnostic" Text="'Transact::TransactionManager::AP34' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-07-07T14:12:26" Importance="Diagnostic" Text="The selection included 1 elements which were not bound to a template." />
+  <Message Timestamp="2017-07-07T14:12:26" Importance="Diagnostic" Text="'Transact::TransactionManager' -  (Package): no bound template." />
+  <Message Timestamp="2017-07-07T14:12:26" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="28e8f02a-d3a2-48d7-b1ca-dd1cd319bc06" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="91eaa57d-fff2-4a91-9db4-9d8b4fe45c3a" name="AB">
+      <childLayers>
+        <layer Id="4dcf81ae-9147-4e0a-b796-60752b3e54b3" name="AB Fat Client" />
+        <layer Id="e3f73401-7a73-4634-992e-26e776a61a0a" name="AB WebServer">
+          <childLayers>
+            <layer Id="11cd00e8-d2fa-4264-bb7f-9c7ebbca6b01" name="ABWebCatalogue">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="2b2b3666-fbf0-4bed-b8bc-97acfb9370e2" direction="Forward">
+                  <layerMoniker Id="86268485-4bc3-4c91-ad2b-be30151467fd" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="ae38b8ae-b1ab-4157-9c85-426a372cc713" direction="Forward">
+                  <layerMoniker Id="ec819913-33a9-4944-bbeb-3440cef80a45" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="ec819913-33a9-4944-bbeb-3440cef80a45" name="BCDWS">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b55f6f89-6bc2-4b7d-8d5a-dee21ce9e966" direction="Forward">
+          <layerMoniker Id="8498c29a-01e3-453a-9b7c-1b9d9d7eff3d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="43fc38c2-25d4-43e1-9e32-9fd979fca370" name="AP69_Method" />
+        <layer Id="54db7c71-a21b-4f9f-91e5-09ae4be5214c" name="VC37_Method" />
+        <layer Id="e4f53a85-3201-4eaa-b66a-7be524541ed1" name="TI05_Method" />
+        <layer Id="5679d019-d0d3-4c3c-8bd9-9f4d5e35c1e0" name="TI04_Method" />
+        <layer Id="bcdd649b-9bdf-4982-8025-875a94fe7ece" name="CA25_Method" />
+        <layer Id="8b14fe11-5312-4c1d-a81d-20ca309b6c6e" name="XX99_Method" />
+      </childLayers>
+    </layer>
+    <layer Id="8498c29a-01e3-453a-9b7c-1b9d9d7eff3d" name="Altamira" />
+    <layer Id="86268485-4bc3-4c91-ad2b-be30151467fd" name="DB2 Local" />
+  </layers>
+</layerModel>

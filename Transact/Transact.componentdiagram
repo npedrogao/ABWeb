@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="d7f8c486-4e67-4ee3-a9d6-6a1f90a01af6" name="Transact" linkedPackageId="f9e6569a-299f-4be3-9fd8-2621fa532188" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="606e14cf-f2a2-4b14-ae37-24dd1a8fe230" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="f6f06930-9995-4df4-83be-0650978e3e84" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="bdbbe00f-09f3-4b81-889f-e75b5424e279">
+          <propertyInstance Id="0a42bf88-5e9b-4131-9ce9-9b8c7d1918cd" name="BaseName">
+            <elementDefinition Id="5cee3fdb-902e-4c18-aeb0-717784227ea1" />
+          </propertyInstance>
+          <elementDefinition Id="09214496-76d7-45c1-a74a-1a8801d31bee" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="65a55514-0c79-4fd8-bf53-2e0e794bcef9">
+          <propertyInstance Id="a1217780-0965-403f-aaf8-66a99d096a27" name="ClrAttributes">
+            <elementDefinition Id="e6582655-028b-4835-9ba6-432e36c27215" />
+          </propertyInstance>
+          <elementDefinition Id="f5d719df-e0cd-433f-af85-44c285fc3174" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f3ee89a2-106c-40b8-b5af-682d7fd9bbcd">
+          <propertyInstance Id="a816891a-7f65-4fc9-a0f9-1013109721ed" name="Usings">
+            <elementDefinition Id="3bda5ba2-3de1-4adb-8c99-a7d3067bb181" />
+          </propertyInstance>
+          <elementDefinition Id="5d20985f-e5f7-401c-b811-362ffa081d99" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="4bf35149-876f-4f48-aeb7-860cd5686062" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="5ca6b6fd-e15f-47bf-a3e4-b6e9a56226cf" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="49ec7886-dd6d-4101-969e-64421898937e">
+          <propertyInstance Id="50adecdd-b69f-4030-8f1e-196066564b93" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="57d3d240-b64c-476c-ae95-1b38460c2995" />
+          </propertyInstance>
+          <elementDefinition Id="ce00c687-9c1a-4e8a-bc93-673499b4dc6e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="67009662-270e-4f72-ad3b-bd6bead82a7b">
+          <propertyInstance Id="25269a09-4d04-4f8c-955d-24e19b827ebf" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="ab3c06f3-d3dc-418b-b93b-814ac525ecae" />
+          </propertyInstance>
+          <elementDefinition Id="bc4c8477-7d8b-4d09-81e0-9308c460b6c4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="bf57e62b-dcfa-48e4-bb60-9368c8664fe9">
+          <propertyInstance Id="a0361970-71cc-4bbb-b3b0-3b25047cc342" name="ProjectPath" value="ClassTemplate=..\TransactLib\TransactLib.csproj|EnumTemplate=..\TransactLib\TransactLib.csproj|InterfaceTemplate=..\TransactLib\TransactLib.csproj|StructTemplate=..\TransactLib\TransactLib.csproj">
+            <elementDefinition Id="abbd5ebd-47a4-4345-8653-3058ca45e95c" />
+          </propertyInstance>
+          <elementDefinition Id="6d19e737-b722-4e29-9874-d040d57763ff" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6f772365-fff1-49db-a72b-86aba0cf66c5">
+          <propertyInstance Id="fa96ed24-d9cd-404d-ad15-13f0753b3f52" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="a37a717c-3722-416d-9af5-85a76e5342ce" />
+          </propertyInstance>
+          <elementDefinition Id="4d24a5c1-5e6c-448e-a239-c6f75519f533" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f0acbc45-01e1-47db-984d-5fbcd8462961">
+          <propertyInstance Id="e203e62e-1687-40cd-b514-3601726b155f" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="47f5493e-8399-4d32-978e-bb662a9ecd66" />
+          </propertyInstance>
+          <elementDefinition Id="d3685a80-7a0a-4720-928d-02ced4c2f5b3" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="18c9e737-df8e-42d3-b813-3ac70731c1c3">
+          <propertyInstance Id="6664e218-b493-4531-b144-9774b82e9ca9" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="983469d5-8138-4150-8a12-c676bb87c9a3" />
+          </propertyInstance>
+          <elementDefinition Id="c832aeda-6bb2-42bd-9bbb-ceb4a61d4244" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2516ce7c-0a97-40da-b84c-d7533da52370">
+          <propertyInstance Id="00eb2227-6f21-4630-b430-9162f023869c" name="Parameters">
+            <elementDefinition Id="146c078f-8198-425f-a0c5-79a84a19f267" />
+          </propertyInstance>
+          <elementDefinition Id="c50fd9ab-3337-446b-adce-9a2c9c82fc19" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="d23519f8-42b9-49ba-859c-5053004d1289" name="ServiceDelegators" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7cc1bcbc-4e2e-4b21-b1ee-243f48100b65" />
+        <suppliersInternal>
+          <dependency Id="4c63fbe8-8351-4fb8-a5a9-b0a163c4d6ca">
+            <componentMoniker Id="8e3b9eda-9537-4b38-aec5-0fbbe8327e58" LastKnownName="CommonLib" />
+            <elementDefinition Id="49060b19-adc5-4846-8c09-1fcc0ae72ef0" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="21b3ae7a-8d30-4ab8-9510-916bf74dbfd7" name="DataDelegators" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9cca0d4c-5688-4f92-96d6-e556066067ab" />
+        <suppliersInternal>
+          <dependency Id="c5dd2f7c-d7d1-43a8-894a-20eec0d5ee14">
+            <componentMoniker Id="8e3b9eda-9537-4b38-aec5-0fbbe8327e58" LastKnownName="CommonLib" />
+            <elementDefinition Id="c98565ac-df31-4200-b038-c6b53467c3fc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="dc766735-ac27-49f2-8df4-00e7e0235a7e" name="ABCatalogueWebSiteMVC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f2ed1e25-ee7e-481f-895a-741f9bf3c930" />
+        <suppliersInternal>
+          <dependency Id="a7b59fc6-bdc9-4dfc-a08b-b715e851fe00">
+            <componentMoniker Id="8e3b9eda-9537-4b38-aec5-0fbbe8327e58" LastKnownName="CommonLib" />
+            <elementDefinition Id="4e7c9a8d-a2cf-4b7a-9403-909d4a448a22" />
+          </dependency>
+          <dependency Id="052e68c5-c284-452c-8b2f-86743336cf3e">
+            <componentMoniker Id="21b3ae7a-8d30-4ab8-9510-916bf74dbfd7" LastKnownName="DataDelegators" />
+            <elementDefinition Id="abaa166d-1381-480c-ae26-827be7bcc646" />
+          </dependency>
+          <dependency Id="f5c63afc-8d46-4419-a714-e45fbc8884be">
+            <componentMoniker Id="d23519f8-42b9-49ba-859c-5053004d1289" LastKnownName="ServiceDelegators" />
+            <elementDefinition Id="35c53b23-e2ca-4a10-962e-2dac4672f657" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="8e3b9eda-9537-4b38-aec5-0fbbe8327e58" name="CommonLib" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9624e582-87b0-40c8-a1cd-03a96ebde779" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="f9e6569a-299f-4be3-9fd8-2621fa532188" name="Transact">
+    <elementDefinition Id="6385e39f-5aa4-4e6a-96dc-1be6e3454e09" />
+    <profileInstances>
+      <packageHasProfileInstances Id="be99703f-0d57-4d96-9b5b-add36bfd2115">
+        <profileInstance Id="8694c6b5-0258-44be-b715-e6c4c2422e1d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="73373cc9-bc35-43bf-8af9-51ed944ad68e">
+        <profileInstance Id="20da0f19-2ca4-4f51-938a-c1c5f86844cc" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3ee46141-cdab-4bb5-9b3c-f3200438511b">
+        <profileInstance Id="e0498a63-bdcb-4b71-9a61-04a03e5c1554" name="CSharpProfile">
+          <elementDefinition Id="4d2e835d-5ebb-42f9-b377-4669ea9fc5ff" />
+        </profileInstance>
+        <elementDefinition Id="10ec7334-bc53-44ee-a1c9-a3290bf1f2f6" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9d59bf3f-2e76-4aa8-a1cd-fcee5714badb">
+        <profileInstance Id="d565be15-1eb4-42db-86c2-55a2489d484a" name="TextTemplateBindings">
+          <elementDefinition Id="6f25fb56-5bd8-4701-b866-e6edaeba07dd" />
+        </profileInstance>
+        <elementDefinition Id="3dba7112-0b9d-4ac1-9ff0-014685e0911c" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>
