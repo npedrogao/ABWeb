@@ -115,6 +115,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
+    <Compile Include="WebExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

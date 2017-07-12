@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultMaster.master.cs" Inherits="ABCatalogue.DefaultMaster" %>
+
 <%@ Register Src="header.ascx" TagPrefix="uc1" TagName="header" %>
 
 <!DOCTYPE html>
@@ -14,15 +15,15 @@
 
 </head>
 
-<uc1:header runat="server" id="header" />
+<uc1:header runat="server" ID="header" />
 
-<body class="t-body-1" >
+<body class="t-body-1">
     <form id="form1" runat="server">
-    <div class="t-box-2">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="t-box-2">
+          
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 

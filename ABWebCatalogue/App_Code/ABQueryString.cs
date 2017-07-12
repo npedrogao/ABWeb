@@ -7,6 +7,7 @@ namespace ABWebCatalogue.App_Code
 {
     public class ABQueryString
     {
+
         public string Balcao { get; set; }
         public string BusinessUnit { get; set; }
         public string UserAB { get; set; }
@@ -25,6 +26,7 @@ namespace ABWebCatalogue.App_Code
 
         public ABQueryString(string balcao, string businessUnit, string userAB, string terminal, string transaction)
         {
+            System.Web.UI.DropDownList
             Balcao = balcao;
             BusinessUnit = businessUnit;
             UserAB = userAB;

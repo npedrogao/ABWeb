@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ABCatalogue.Site
 {
-    public partial class AP69 : System.Web.UI.Page
+    public partial class AP34 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {         
-         
+            ddlDebito
         }
     }
 }
