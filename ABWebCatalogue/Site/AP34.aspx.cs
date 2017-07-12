@@ -10,8 +10,7 @@ namespace ABCatalogue.Site
     public partial class AP34 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {         
-            ddlDebito
+        {                     
         }
     }
 }
