@@ -19,7 +19,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
-        <div class="title">AP69</div>
+        <div class="title"><asp:Label ID="lblTransaction" runat="server"></asp:Label></div>
         <div class="panel-content panel-body container-fluid form-horizontal">
             <div class="row">
                 <div class="col-xs-12 ">
@@ -77,15 +77,15 @@
                     <div class="row form-group ">
                         <div class="col-xs-6">
                             <asp:Label ID="Label4" runat="server" class="col-xs-4 control-label">Data de Início:</asp:Label>
-                            <div class="col-xs-4 ">
-                               
+                            <div class="col-xs-6">
+
                                 <%--<input id="txtDataInicio" type="date" runat="server" class="form-control" />--%>
                             </div>
 
                         </div>
                         <div class="col-xs-6">
                             <asp:Label ID="Label3" runat="server" class="col-xs-4 control-label">Data de Fim:</asp:Label>
-                            <div class="col-xs-4 ">
+                            <div class="col-xs-6">
                                 <%--<input id="txtDataFim" type="date" runat="server" class="form-control" />--%>
                             </div>
                         </div>
@@ -93,14 +93,13 @@
                 </div>
             </div>
 
-
             <div class="panel panel-default">
                 <div class="panel-title">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" href="#collapse2">Características Gerais<span class="glyphicon glyphicon-plus pull-right"></span></a>
                     </h4>
                 </div>
-                <div id="collapse2" class="panel-collapse collapse">
+                <div id="collapse2" class="panel-content panel-collapse collapse">
                     <div class="row panel-body container-fluid form-horizontal">
                         <div class="col-xs-12 ">
                             <div class="row form-group">
@@ -108,10 +107,6 @@
                                     <asp:Label ID="Label2" runat="server" class="col-xs-4 control-label">Prazo Absoluto:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlPrazoAbsoluto" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>A</asp:ListItem>
-                                            <asp:ListItem>P</asp:ListItem>
-                                            <asp:ListItem>D</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -141,11 +136,8 @@
 
                                 <div class="col-xs-6">
                                     <asp:Label ID="lbDeclaracao" runat="server" class="col-xs-4 control-label">Declaração IRS:</asp:Label>
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlDeclaracao" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -155,9 +147,6 @@
                                     <asp:Label ID="lbRepTranches" runat="server" class="col-xs-4 control-label">Rep. Tranches:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlRepTranches" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -187,9 +176,6 @@
                                     <asp:Label ID="lbRenovacoes" runat="server" class="col-xs-4 control-label">Renovações Automáticas:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlRenovacoes" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -219,9 +205,6 @@
                                     <asp:Label ID="lbMobilizacaoAntecipada" runat="server" class="col-xs-4 control-label">Mobilização Antecipada:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlMobilizacaoAntecipada" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -229,9 +212,6 @@
                                     <asp:Label ID="lbReforcoAutorizado" runat="server" class="col-xs-4 control-label">Reforço Autorizado:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlReforcoAutorizado" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -241,9 +221,6 @@
                                     <asp:Label ID="lbDiasNUteis" runat="server" class="col-xs-4 control-label">Dias Não Úteis:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="DDLDiasNUteis" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -251,9 +228,6 @@
                                     <asp:Label ID="lbDiasAntecip" runat="server" class="col-xs-4 control-label">Dias Antecipação:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="DDLDiasAntecip" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -277,9 +251,6 @@
                                     <asp:Label ID="lbDebito" runat="server" class="col-xs-4 control-label">Débito forçado:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlDebito" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -309,9 +280,6 @@
                                     <asp:Label ID="lbProdNCliente" runat="server" class="col-xs-4 control-label">Prod. Novo Cliente:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlProdNCliente" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -493,8 +461,6 @@
                                     <asp:Label ID="lbSolicitarClassRisco" runat="server" class="col-xs-8 control-label">Solicitar classificação de Risco:</asp:Label>
                                     <div class="col-xs-4">
                                         <asp:DropDownList ID="ddlSolicitarClassRisco" CssClass="form-control" runat="server">
-                                            <asp:ListItem Value="S">Sim</asp:ListItem>
-                                            <asp:ListItem Value="N">Não</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                     <div class="col-xs-4">
@@ -512,11 +478,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row form-group">
-        <div class="col-xs-offset-10">
-            <button class="btn btn-default">Limpar</button>
-            <button class="btn btn-default col-xs-offset-3">Gravar</button>
+        <br />
+        <div class="row form-group">
+            <div class="col-xs-12">
+                <div class="pull-right">
+                    <input type="button" id="btnClear" runat="server" class="btn btn-default" value="Limpar" />
+                    <input type="button" id="btnSave" runat="server" class="btn btn-btn btn-default" value="Guardar" onserverclick="btnSave_Click" />
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">

@@ -29,12 +29,16 @@ div.panel-content{
 }
 
 
-button.btn{
+input.btn{
     background: rgb(253, 101, 0);
     color: #fff;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
+}
+
+input.btn-btn{
+    margin-left: 20px;
 }
 
 a {

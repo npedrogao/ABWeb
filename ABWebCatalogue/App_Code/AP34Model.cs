@@ -78,6 +78,11 @@ namespace ABCatalogueWebSiteMVC.Models
             get;
             set;
         }
+        public virtual string CProdCnt2
+        {
+            get;
+            set;
+        }
 
         public virtual string CFinBb
         {
@@ -103,13 +108,13 @@ namespace ABCatalogueWebSiteMVC.Models
             set;
         }
 
-        public virtual bool IIrs
+        public virtual string IIrs
         {
             get;
             set;
         }
 
-        public virtual bool ITranche
+        public virtual string ITranche
         {
             get;
             set;
@@ -145,7 +150,13 @@ namespace ABCatalogueWebSiteMVC.Models
             set;
         }
 
-        public virtual bool IRenovac
+        public virtual string IRenovac
+        {
+            get;
+            set;
+        }
+
+        public virtual string RNVA
         {
             get;
             set;
@@ -157,19 +168,19 @@ namespace ABCatalogueWebSiteMVC.Models
             set;
         }
 
-        public virtual bool ILevAnt
+        public virtual string ILevAnt
         {
             get;
             set;
         }
 
-        public virtual bool IAutRef
+        public virtual string IAutRef
         {
             get;
             set;
         }
 
-        public virtual bool IDiaNUt
+        public virtual string IDiaNUt
         {
             get;
             set;

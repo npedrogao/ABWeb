@@ -21,48 +21,9 @@ namespace ABWebCatalogue
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BarclaysBankAccountSettings settings = new BarclaysBankAccountSettings()
-            {
-                ApplicationID = "CPWSClone",
-                UserRequester = @"Corebus2\nuno.cp.ibm",
-                ClientName = userProfile.Terminal
-            };
-
-            BarclaysBTS barclaysBTS = new BarclaysBTS("http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx");
-
-            barclaysBTS.BarclaysBankAccountSettingsValue = settings;
-            TJ21Transaction tr = new TJ21Transaction();
-            TJ21Filter input = new TJ21Filter() {
-                Ceventotit = "00000000000",
-                Cestado = "0",
-                Cisin = "000000000000",
-                Codvalor = "0000000000000",
-                Cproduto = "00",
-                Csubprod = "00",
-                Ddiaevento_CH = "00000000",
-                Dfimevento = "2017-12-31",
-                Dinievento = "2017-01-01",
-                Zseqvento_CH  = "000"
-
-            };
-            try
-            {
-                tr = barclaysBTS.TJ21EventosConsultaLista(input);            
-            }
-            
-            catch (System.Web.Services.Protocols.SoapException soapEx)
-            {
-                LogUtils.Error(soapEx);
-                Response.Redirect(@"Site\ErrorPage.aspx?message=" + soapEx.Message);
-            }
-            catch (Exception ex)
-            {
-                LogUtils.Error(ex);
-                Response.Redirect(@"Site\ErrorPage.aspx");
-            }
-
+        
             string page = "";
-            switch (userProfile.Transaction)
+            switch (Request.QueryString["transacao"])
             {               
                 case "CA25C":               
                 case "CA25V":

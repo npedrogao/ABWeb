@@ -33,7 +33,7 @@ namespace ABCatalogue.Site
         {
             string page = ddlMicroFamilia.SelectedValue;
 
-            Response.Redirect(page+".aspx");
+            Response.Redirect(page+".aspx?type=C");
         }
     }
 }

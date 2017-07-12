@@ -9,19 +9,16 @@
             <div class="row">
                 <div class="col-md-12 ">
                     <div class="row form-group">
-                        <div class="col-xs-8">
-                            <div class="col-xs-1">
-                            </div>
-                            <label class="col-xs-3 control-label">MicroFamilia</label>
+                        <div class="col-xs-6">
+                            <label class="col-xs-4 control-label">MicroFamilia</label>
                             <div class="col-xs-8 selectContainer">
-                                <asp:DropDownList ID="ddlMicroFamilia" runat="server"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlMicroFamilia" CssClass="form-control" runat="server"></asp:DropDownList>
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-6">
                             <div class="col-xs-12 pull-left">
                                 <input type="button" runat="server" class="btn btn-default col-xs-offset-1 btn-success" id="btnCreate" value="Criar Produto" onserverclick="btnCreate_Click" />
-
-                                 <input type="button" runat="server" class="btn btn-default col-xs-offset-1 btn-success" id="btnVoltar" value="Voltar" onserverclick="btnVoltar_Click" />
+                                <input type="button" runat="server" class="btn btn-default col-xs-offset-1 btn-success" id="btnVoltar" value="Voltar" onserverclick="btnVoltar_Click" />
 
                             </div>
                         </div>
