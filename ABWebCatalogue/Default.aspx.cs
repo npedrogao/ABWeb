@@ -75,12 +75,12 @@ namespace ABWebCatalogue
                 case "VC37V":
                     page = "VC37";
                     break;
-                case "AP69":
-                case "AP69C":
-                case "AP69M":
-                case "AP69A":
-                case "AP69V":
-                    page = "AP69";
+                case "AP34":
+                case "AP34C":
+                case "AP34M":
+                case "AP34A":
+                case "AP34V":
+                    page = "AP34";
                     break;
                 case "TI05":
                 case "TI05C":

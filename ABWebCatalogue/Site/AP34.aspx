@@ -1,6 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="AP69.aspx.cs" Inherits="ABCatalogue.Site.AP69" %>
-
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="AP34.aspx.cs" Inherits="ABCatalogue.Site.AP34" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="../Content/bootstrap.min.css" />
@@ -80,14 +78,15 @@
                         <div class="col-xs-6">
                             <asp:Label ID="Label4" runat="server" class="col-xs-4 control-label">Data de Início:</asp:Label>
                             <div class="col-xs-4 ">
-                                <input id="txtDataInicio" type="date" runat="server" class="form-control" />
+                               
+                                <%--<input id="txtDataInicio" type="date" runat="server" class="form-control" />--%>
                             </div>
 
                         </div>
                         <div class="col-xs-6">
                             <asp:Label ID="Label3" runat="server" class="col-xs-4 control-label">Data de Fim:</asp:Label>
                             <div class="col-xs-4 ">
-                                <input id="txtDataFim" type="date" runat="server" class="form-control" />
+                                <%--<input id="txtDataFim" type="date" runat="server" class="form-control" />--%>
                             </div>
                         </div>
                     </div>
@@ -468,7 +467,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbData" runat="server" class="col-xs-4 control-label">Data:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtData" type="date" runat="server" class="form-control" />
+                                        <%--input id="txtData" type="date" runat="server" class="form-control" />--%>
                                     </div>
                                 </div>
                             </div>
@@ -504,7 +503,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDataActivacao" runat="server" class="col-xs-4 control-label">Data de Activação:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtDataActivacao" type="date" runat="server" class="form-control" />
+                                        <%--<input id="txtDataActivacao" type="date" runat="server" class="form-control" />--%>
                                     </div>
                                 </div>
                             </div>

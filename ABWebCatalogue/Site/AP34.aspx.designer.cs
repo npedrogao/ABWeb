@@ -10,7 +10,7 @@
 namespace ABCatalogue.Site {
     
     
-    public partial class AP69 {
+    public partial class AP34 {
         
         /// <summary>
         /// Label8 control.
