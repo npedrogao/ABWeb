@@ -12,64 +12,62 @@ namespace ABWebCatalogue
 {
     public partial class Default : System.Web.UI.Page
     {
-        UserProfile userProfile = null;
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-                userProfile = (UserProfile)Session["UserProfile"];
+#if USE_ACTIVEX
+            if (Session["capturePostback"] == null)
+            {
+                StringBuilder sbScript = new StringBuilder();
+
+                sbScript.Append("<script language='JavaScript' type='text/javascript'>\n");
+                sbScript.Append("<!--\n");
+                sbScript.Append("var net = new ActiveXObject(\"WScript.Network\");");
+                sbScript.Append(this.ClientScript.GetPostBackEventReference(this, "@@@") + ";\n");
+                sbScript.Append("// -->\n");
+                sbScript.Append("</script>\n");
+
+                string ScriptContent = sbScript.ToString();
+                ScriptContent = ScriptContent.Replace("\'@@@\'", "net.UserName + \',\' + net.UserDomain + \',\'+ net.ComputerName");
+
+                this.ClientScript.RegisterStartupScript(this.GetType(), "AutoPostBackScript", ScriptContent);
+
+                Session["capturePostback"] = true;
+
+                return;
+            }
+
+            this.ClientScript.GetPostBackEventReference(this, "arg");
+
+            string eventTarget = this.Request["__EVENTTARGET"];
+            string eventArgument = this.Request["__EVENTARGUMENT"];
+
+            string[] Args = eventArgument.Split(',');
+            Session["clientUserName"] = Args[0];
+            Session["clientDomainName"] = Args[1];
+            Session["clientComputerName"] = Args[2];
+#if DEBUG
+            Debug.Assert(Args.Length == 3);
+            Debug.Assert(Args[0] != "");
+            Debug.Assert(Args[1] != "");
+            Debug.Assert(Args[2] != "");
+#endif // DEBUG
+
+            Session.Remove("capturePostback");
+
+            log.Info(String.Format("ClientActiveX UserName: \"{0}\" DomainName: \"{1}\" ComputerName: \"{2}\"", Args[0], Args[1], Args[2]));            
+#endif // USE_ACTIVEX
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BarclaysBankAccountSettings settings = new BarclaysBankAccountSettings()
-            {
-                ApplicationID = "CPWSClone",
-                UserRequester = @"Corebus2\nuno.cp.ibm",
-                ClientName = userProfile.Terminal
-            };
-
-            BarclaysBTS barclaysBTS = new BarclaysBTS("http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx");
-
-            barclaysBTS.BarclaysBankAccountSettingsValue = settings;
-            TJ21Transaction tr = new TJ21Transaction();
-            TJ21Filter input = new TJ21Filter() {
-                Ceventotit = "00000000000",
-                Cestado = "0",
-                Cisin = "000000000000",
-                Codvalor = "0000000000000",
-                Cproduto = "00",
-                Csubprod = "00",
-                Ddiaevento_CH = "00000000",
-                Dfimevento = "2017-12-31",
-                Dinievento = "2017-01-01",
-                Zseqvento_CH  = "000"
-
-            };
-            try
-            {
-                tr = barclaysBTS.TJ21EventosConsultaLista(input);            
-            }
-            
-            catch (System.Web.Services.Protocols.SoapException soapEx)
-            {
-                LogUtils.Error(soapEx);
-                Response.Redirect(@"Site\ErrorPage.aspx?message=" + soapEx.Message);
-            }
-            catch (Exception ex)
-            {
-                LogUtils.Error(ex);
-                Response.Redirect(@"Site\ErrorPage.aspx");
-            }
-
             string page = "";
-            switch (userProfile.Transaction)
+            switch (Request.QueryString["transaction"])
             {               
                 case "CA25C":               
                 case "CA25V":
                     page = "CA25";
                     break;
-                case "VC37":
-                case "VC37C":
+                case "VC37":               
                 case "VC37M":
                 case "VC37A":
                 case "VC37V":
@@ -101,7 +99,7 @@ namespace ABWebCatalogue
                     break;
             }
 
-            Response.Redirect(String.Format("Site/{0}.aspx", page));
+            Response.Redirect(String.Format("Site/{0}.aspx?{1}", page, Request.QueryString.ToString()));
         }
     }
 }
