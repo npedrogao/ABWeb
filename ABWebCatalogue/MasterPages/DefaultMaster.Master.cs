@@ -67,43 +67,43 @@ namespace ABWebCatalogue
                         if ((Session["clientUserName"] != null) && (Session["clientDomainName"] != null))
                             userId = Session["clientDomainName"] + "\\" + Session["clientUserName"];
 
-//#if DEBUG
-//                        Debug.Assert(userId != null);
-//#endif // DEBUG
+#if DEBUG
+                        Debug.Assert(userId != null);
+#endif // DEBUG
 
-//                        if (userId == null)
-//                            userId = Request.LogonUserIdentity.Name;
+                        if (userId == null)
+                            userId = Request.LogonUserIdentity.Name;
 
-//#if DEBUG
-//                        Debug.Assert(userId != null);
-//#endif // DEBUG
+#if DEBUG
+                        Debug.Assert(userId != null);
+#endif // DEBUG
 
-//#else
-//                        string userId = Request.LogonUserIdentity.Name;
-//#endif // USE_ACTIVEX
-//                        //<< NL 27/10/16 - Informação de Login por ActiveX
+#else
+                        string userId = Request.LogonUserIdentity.Name;
+#endif // USE_ACTIVEX
+                        //<< NL 27/10/16 - Informação de Login por ActiveX
 
 
                         string[] loginAD = userId.Split('\\');
-                        //Verifica se o utilizador é válido em função do user AB e do login 
+                        //Verifica se o utilizador é válido em função do user AB e do login
 
 
-//                        DataTable dt = dl.GetDataByUserAB(userAB, Consts.MASTERCONN);
-//                        if (!(dt.Rows.Count > 0 &&
-//                         dt.Rows[0]["CDOMINIO"].ToString().ToLower() == loginAD[0].ToLower() &&
-//                         dt.Rows[0]["CUSERNAME"].ToString().ToLower() == loginAD[1].ToLower()))
-//                        {
-//                            //   NL 21/11/16 - Bug no redirect na construção da query string>>
-//                            string sHostIpQS = "";
-//                            if (hostip != null)
-//                                sHostIpQS = "&hostip=" + hostip;
+                        DataTable dt = dl.GetDataByUserAB(userAB, Consts.MASTERCONN);
+                        if (!(dt.Rows.Count > 0 &&
+                         dt.Rows[0]["CDOMINIO"].ToString().ToLower() == loginAD[0].ToLower() &&
+                         dt.Rows[0]["CUSERNAME"].ToString().ToLower() == loginAD[1].ToLower()))
+                        {
+                            //   NL 21/11/16 - Bug no redirect na construção da query string>>
+                            string sHostIpQS = "";
+                            if (hostip != null)
+                                sHostIpQS = "&hostip=" + hostip;
 
                             string url = string.Format("ErrorRestrictedAccess.aspx?cBalcao={0}&cTerminal={1}&cCodUtilza={2}&host={3}&port={4}&ABSessionId={5}&transacao={6}{7}",
                             balcao, terminal, userAB, o_host, port, chave, transacao, sHostIpQS);
 
-//                            //string url = string.Format("ErrorRestrictedAccess.aspx?cBalcao={0}&cTerminal={1}&cCodUtilza={2}&host={3}&port={4}&ABSessionId={5}&transacao={6}",
-//                            //balcao, terminal, userAB, host, port, chave, transacao);
-//                            //<< NL 21/11/16 - Bug no redirect na construção da query string
+                            //string url = string.Format("ErrorRestrictedAccess.aspx?cBalcao={0}&cTerminal={1}&cCodUtilza={2}&host={3}&port={4}&ABSessionId={5}&transacao={6}",
+                            //balcao, terminal, userAB, host, port, chave, transacao);
+                            //<< NL 21/11/16 - Bug no redirect na construção da query string
 
                             //--Response.Redirect(url);
                             Response.Redirect(url, false); //-- JFI Avoid ThreadAbort Exception
