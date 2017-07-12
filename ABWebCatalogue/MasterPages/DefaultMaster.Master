@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultMaster.master.cs" Inherits="ABCatalogue.DefaultMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultMaster.master.cs" Inherits="ABWebCatalogue.DefaultMaster" %>
 <%@ Register Src="header.ascx" TagPrefix="uc1" TagName="header" %>
 
 <!DOCTYPE html>

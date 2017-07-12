@@ -6,16 +6,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ABCatalogue.Site
+namespace ABWebCatalogue.Site
 {
     public partial class Default : System.Web.UI.Page
     {
-        ABQueryString ab = null;
+        UserProfile userProfile = null;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                ab = (ABQueryString)Session["Transport"];
+                userProfile = (UserProfile)Session["UserProfile"];
         }
 
         protected void Page_Load(object sender, EventArgs e)

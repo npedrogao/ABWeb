@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="ABCatalogue.MasterPages.header" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="ABWebCatalogue.MasterPages.header" %>
 <script type="text/javascript">
 	function detectIE() {
 		var ua = window.navigator.userAgent;

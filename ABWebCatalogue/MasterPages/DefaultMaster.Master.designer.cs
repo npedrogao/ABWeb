@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ABCatalogue {
+namespace ABWebCatalogue {
     
     
     public partial class DefaultMaster {
@@ -28,7 +28,7 @@ namespace ABCatalogue {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ABCatalogue.MasterPages.header header;
+        protected global::ABWebCatalogue.MasterPages.header header;
         
         /// <summary>
         /// form1 control.

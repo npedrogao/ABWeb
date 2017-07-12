@@ -10,12 +10,12 @@ namespace ABCatalogue.Site
 {
     public partial class Create : System.Web.UI.Page
     {
-        ABQueryString ab = null;
+        UserProfile userProfile = null;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                ab = (ABQueryString)Session["Transport"];
+                userProfile = (UserProfile)Session["UserProfile"];
         }
 
         protected void Page_Load(object sender, EventArgs e)
