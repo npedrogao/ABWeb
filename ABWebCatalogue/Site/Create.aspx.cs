@@ -5,18 +5,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebExtensions;
+using CommonLib;
 
 namespace ABCatalogue.Site
 {
     public partial class Create : System.Web.UI.Page
     {
-        UserProfile userProfile = null;
-
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-                userProfile = (UserProfile)Session["UserProfile"];
+
         }
 
         protected void Page_Load(object sender, EventArgs e)

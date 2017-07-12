@@ -10,12 +10,9 @@ namespace ABWebCatalogue.Site
 {
     public partial class Default : System.Web.UI.Page
     {
-        UserProfile userProfile = null;
-
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-                userProfile = (UserProfile)Session["UserProfile"];
+          
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,7 +22,7 @@ namespace ABWebCatalogue.Site
 
         protected void btnCriar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Create.aspx");
+            Response.Redirect(String.Format("Create.aspx?{0}", Request.QueryString.ToString()));
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)

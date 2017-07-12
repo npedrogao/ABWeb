@@ -175,7 +175,6 @@
     <Compile Include="App_Code\DataAccess.cs" />
     <Compile Include="App_Code\TI96Model.cs" />
     <Compile Include="App_Code\TI97Model.cs" />
-    <Compile Include="App_Code\UserProfile.cs" />
     <Compile Include="App_Code\VC39Model.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
