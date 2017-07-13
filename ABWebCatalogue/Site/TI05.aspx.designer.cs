@@ -634,15 +634,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDataCot;
         
         /// <summary>
-        /// txtDataCot control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDataCot;
-        
-        /// <summary>
         /// lbPeriodCotacao control.
         /// </summary>
         /// <remarks>
@@ -940,15 +931,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDataCriacao;
         
         /// <summary>
-        /// txtDataInicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDataInicio;
-        
-        /// <summary>
         /// lbUltActual control.
         /// </summary>
         /// <remarks>
@@ -956,15 +938,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbUltActual;
-        
-        /// <summary>
-        /// txtUltActual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtUltActual;
         
         /// <summary>
         /// lbDtEmissao control.
@@ -976,15 +949,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtEmissao;
         
         /// <summary>
-        /// txtDtEmissao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtEmissao;
-        
-        /// <summary>
         /// lbDtUltMort control.
         /// </summary>
         /// <remarks>
@@ -994,15 +958,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtUltMort;
         
         /// <summary>
-        /// txtDtUltMort control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtUltMort;
-        
-        /// <summary>
         /// lbDtAmortFinal control.
         /// </summary>
         /// <remarks>
@@ -1010,15 +965,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDtAmortFinal;
-        
-        /// <summary>
-        /// txtDtAmortFinal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtAmortFinal;
         
         /// <summary>
         /// lbTipoAmortiz control.
@@ -1264,15 +1210,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtPrimJuro;
         
         /// <summary>
-        /// DtPrimJuro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DtPrimJuro;
-        
-        /// <summary>
         /// lbDtProxJuro control.
         /// </summary>
         /// <remarks>
@@ -1282,15 +1219,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtProxJuro;
         
         /// <summary>
-        /// txtDtProxJuro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtProxJuro;
-        
-        /// <summary>
         /// lbDtUtlJuro control.
         /// </summary>
         /// <remarks>
@@ -1298,15 +1226,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDtUtlJuro;
-        
-        /// <summary>
-        /// txtDtUtlJuro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtUtlJuro;
         
         /// <summary>
         /// lbJuroCorrid control.
@@ -1669,15 +1588,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtADMNegoc;
         
         /// <summary>
-        /// txtDtADMNegoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtADMNegoc;
-        
-        /// <summary>
         /// lbDtUltNegocObg control.
         /// </summary>
         /// <remarks>
@@ -1685,15 +1595,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDtUltNegocObg;
-        
-        /// <summary>
-        /// ddlDtUltNegocObg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ddlDtUltNegocObg;
         
         /// <summary>
         /// lbNExercAno control.
@@ -1741,15 +1642,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtProExer;
         
         /// <summary>
-        /// txtDtProExer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtProExer;
-        
-        /// <summary>
         /// lbDtUltExer control.
         /// </summary>
         /// <remarks>
@@ -1757,15 +1649,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDtUltExer;
-        
-        /// <summary>
-        /// txtDtUltExer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtUltExer;
         
         /// <summary>
         /// lbNumExercic control.
@@ -1930,15 +1813,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtAdmNegocAuto;
         
         /// <summary>
-        /// txtDtAdmNegocAuto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtAdmNegocAuto;
-        
-        /// <summary>
         /// lbDtUltNegocAuto control.
         /// </summary>
         /// <remarks>
@@ -1948,15 +1822,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDtUltNegocAuto;
         
         /// <summary>
-        /// txtDtUltNegocAuto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtUltNegocAuto;
-        
-        /// <summary>
         /// lbDtVenc control.
         /// </summary>
         /// <remarks>
@@ -1964,15 +1829,6 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDtVenc;
-        
-        /// <summary>
-        /// txtDtVenc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDtVenc;
         
         /// <summary>
         /// LbParidadeWar control.
@@ -2380,15 +2236,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbRestrationCodeDate;
         
         /// <summary>
-        /// txtRestrationCodeDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtRestrationCodeDate;
-        
-        /// <summary>
         /// lbSubFamilia control.
         /// </summary>
         /// <remarks>
@@ -2596,15 +2443,6 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbData;
         
         /// <summary>
-        /// txtData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtData;
-        
-        /// <summary>
         /// lbDescricao control.
         /// </summary>
         /// <remarks>
@@ -2666,14 +2504,5 @@ namespace ABCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDataActivacao;
-        
-        /// <summary>
-        /// txtDataActivacao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDataActivacao;
     }
 }

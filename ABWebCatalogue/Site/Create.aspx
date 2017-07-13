@@ -4,7 +4,7 @@
     <script src="../scripts/jquery-1.9.1.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="panel-body container-fluid form-horizontal">
             <div class="row">
                 <div class="col-md-12 ">

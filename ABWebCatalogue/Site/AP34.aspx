@@ -17,7 +17,7 @@
 </asp:Content>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
         <div class="title"><asp:Label ID="lblTransaction" runat="server"></asp:Label></div>
         <div class="panel-content panel-body container-fluid form-horizontal">
@@ -30,7 +30,7 @@
                                 <asp:TextBox ID="txtCodProduto" runat="server" MaxLength="2" CssClass="form-control"></asp:TextBox>
                             </div>
                             <div class="col-xs-6">
-                                <asp:TextBox ID="txtCodProdutoDesc" runat="server" MaxLength="30" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtCodProdutoDesc" runat="server" MaxLength="30" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-xs-6">
@@ -106,6 +106,7 @@
                                 <div class="col-xs-6">
                                     <asp:Label ID="Label2" runat="server" class="col-xs-4 control-label">Prazo Absoluto:</asp:Label>
                                     <div class="col-xs-4">
+                                        <select id="select" runat="server"></select>
                                         <asp:DropDownList ID="ddlPrazoAbsoluto" CssClass="form-control" runat="server">
                                         </asp:DropDownList>
                                     </div>

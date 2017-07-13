@@ -20,7 +20,7 @@
     <form id="form1" runat="server">
         <div class="t-box-2">
           
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder ID="CPH" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>

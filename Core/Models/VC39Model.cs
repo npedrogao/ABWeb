@@ -62,103 +62,103 @@ namespace Core.Models
             set;
         }
 
-        public virtual string Capo
+        public virtual string Capoano
         {
             get;
             set;
         }
 
-        public virtual string Zapo
+        public virtual string Zapolice
         {
             get;
             set;
         }
 
-        public virtual string Ceti
+        public virtual string Ccertif
         {
             get;
             set;
         }
 
-        public virtual string Cera
+        public virtual string Ccerano
         {
             get;
             set;
         }
 
-        public virtual string Cba1
+        public virtual string Cbalsaco
         {
             get;
             set;
         }
 
-        public virtual string Nct1
+        public virtual string Cctasaco
         {
             get;
             set;
         }
 
-        public virtual string Bank
+        public virtual string Cbannib
         {
             get;
             set;
         }
 
-        public virtual string Balc
+        public virtual string Cbalnib
         {
             get;
             set;
         }
 
-        public virtual string Cnum
+        public virtual string Cnumnib
         {
             get;
             set;
         }
 
-        public virtual string Digc
+        public virtual string Cdignib
         {
             get;
             set;
         }
 
-        public virtual string Qbas
+        public virtual string Qbascalc
         {
             get;
             set;
         }
 
-        public virtual string Cseq
+        public virtual string Csequen
         {
             get;
             set;
         }
 
-        public virtual string Qdec
+        public virtual string Qdeciups
         {
             get;
             set;
         }
 
-        public virtual string Qprp
+        public virtual string Qpropval
         {
             get;
             set;
         }
 
-        public virtual string Duti
+        public virtual string Ctipodias
         {
             get;
             set;
         }
 
-        public virtual string Qalt
+        public virtual string Qaltmod
         {
             get;
             set;
         }
 
-        public virtual string Cgrp
+        public virtual string Cgrupprd
         {
             get;
             set;
@@ -176,626 +176,632 @@ namespace Core.Models
             set;
         }
 
-        public virtual string Prod
+        public virtual string Criscoprd
         {
             get;
             set;
         }
 
-        public virtual string Patr
+        public virtual string Iriscopat
         {
             get;
             set;
         }
 
-        public virtual string Qami
+        public virtual string Qanomin
         {
             get;
             set;
         }
 
-        public virtual string Qdim
+        public virtual string Qmindia
         {
             get;
             set;
         }
 
-        public virtual string Qamx
+        public virtual string Qanomax
         {
             get;
             set;
         }
 
-        public virtual string Qdmx
+        public virtual string Qmaxdia
         {
             get;
             set;
         }
 
-        public virtual DateTime Dven
+        public virtual string Dvencim
         {
             get;
             set;
         }
 
-        public virtual string Tbon
+        public virtual string Tbonemp
         {
             get;
             set;
         }
 
-        public virtual string Tcom
+        public virtual string Tcomiss
         {
             get;
             set;
         }
 
-        public virtual string Tprg
+        public virtual string Tparresg
         {
             get;
             set;
         }
 
-        public virtual string Tgar
+        public virtual string Tgarant
         {
             get;
             set;
         }
 
-        public virtual string Tpen
+        public virtual string Tpentrfo
         {
             get;
             set;
         }
 
-        public virtual string Mrmi
+        public virtual string Mresgmin
         {
             get;
             set;
         }
 
-        public virtual string Tge1
+        public virtual string Tencges1
         {
             get;
             set;
         }
 
-        public virtual string Mot1
+        public virtual string Mencges1
         {
             get;
             set;
         }
 
-        public virtual string Tge2
+        public virtual string Tencges2
         {
             get;
             set;
         }
 
-        public virtual string Mot2
+        public virtual string Mencges2
         {
             get;
             set;
         }
 
-        public virtual string Tge3
+        public virtual string Tencges3
         {
             get;
             set;
         }
 
-        public virtual string Mot3
+        public virtual string Mencges3
         {
             get;
             set;
         }
 
-        public virtual string Tge4
+        public virtual string Tencges4
         {
             get;
             set;
         }
 
-        public virtual string Mot4
+        public virtual string Mencges4
         {
             get;
             set;
         }
 
-        public virtual string Tge5
+        public virtual string Tencges5
         {
             get;
             set;
         }
 
-        public virtual string Mot5
+        public virtual string Mencges5
         {
             get;
             set;
         }
 
-        public virtual string Tge6
+        public virtual string Tencges6
         {
             get;
             set;
         }
 
-        public virtual string Mot6
+        public virtual string Mencges6
         {
             get;
             set;
         }
 
-        public virtual string Idmn
+        public virtual string Qidadmin
         {
             get;
             set;
         }
 
-        public virtual string Iddf
+        public virtual string Qidaddef
         {
             get;
             set;
         }
 
-        public virtual string Idmx
+        public virtual string Qidadmax
         {
             get;
             set;
         }
 
-        public virtual string Npes
+        public virtual string Npessseg
         {
             get;
             set;
         }
 
-        public virtual string Idsu
+        public virtual string Qidadsub
         {
             get;
             set;
         }
 
-        public virtual string Codt
+        public virtual string Ctratado
         {
             get;
             set;
         }
 
-        public virtual string Cact
+        public virtual string Mcacta
         {
             get;
             set;
         }
 
-        public virtual string Capl
+        public virtual string Mcapol
         {
             get;
             set;
         }
 
-        public virtual string Co01
+        public virtual string Cpremcli
         {
             get;
             set;
         }
 
-        public virtual string Co02
+        public virtual string Cresgtcl
         {
             get;
             set;
         }
 
-        public virtual string Co03
+        public virtual string Cresgpcl
         {
             get;
             set;
         }
 
-        public virtual string Co04
+        public virtual string Credtcl
         {
             get;
             set;
         }
 
-        public virtual string Co05
+        public virtual string Credpcl
         {
             get;
             set;
         }
 
-        public virtual string Co06
+        public virtual string Csincli
         {
             get;
             set;
         }
 
-        public virtual string Co08
+        public virtual string Ctrfodeb
         {
             get;
             set;
         }
 
-        public virtual string Co09
+        public virtual string Ctrfecli
         {
             get;
             set;
         }
 
-        public virtual string Co10
+        public virtual string Cpremsoc
         {
             get;
             set;
         }
 
-        public virtual string Co11
+        public virtual string Crestsoc
         {
             get;
             set;
         }
 
-        public virtual string Co12
+        public virtual string Crespsoc
         {
             get;
             set;
         }
 
-        public virtual string Co13
+        public virtual string Credtsoc
         {
             get;
             set;
         }
 
-        public virtual string Co14
+        public virtual string Credpsoc
         {
             get;
             set;
         }
 
-        public virtual string Co15
+        public virtual string Csinsoc
         {
             get;
             set;
         }
 
-        public virtual string Co16
+        public virtual string Ctrfocre
         {
             get;
             set;
         }
 
-        public virtual string Tpr1
+        public virtual string Ctrfesoc
         {
             get;
             set;
         }
 
-        public virtual string Tpr2
+        public virtual string Tparesg1
         {
             get;
             set;
         }
 
-        public virtual string Tpr3
+        public virtual string Tparesg2
         {
             get;
             set;
         }
 
-        public virtual string Tpr4
+        public virtual string Tparesg3
         {
             get;
             set;
         }
 
-        public virtual string Tpr5
+        public virtual string Tparesg4
         {
             get;
             set;
         }
 
-        public virtual string Tpr6
+        public virtual string Tparesg5
         {
             get;
             set;
         }
 
-        public virtual string Apr1
+        public virtual string Tparesg6
         {
             get;
             set;
         }
 
-        public virtual string Apr2
+        public virtual string Qanores1
         {
             get;
             set;
         }
 
-        public virtual string Apr3
+        public virtual string Qanores2
         {
             get;
             set;
         }
 
-        public virtual string Apr4
+        public virtual string Qanores3
         {
             get;
             set;
         }
 
-        public virtual string Apr5
+        public virtual string Qanores4
         {
             get;
             set;
         }
 
-        public virtual string Apr6
+        public virtual string Qanores5
         {
             get;
             set;
         }
 
-        public virtual DateTime Dat1
+        public virtual string Qanores6
         {
             get;
             set;
         }
 
-        public virtual DateTime Dat2
+        public virtual string Dpresg1
         {
             get;
             set;
         }
 
-        public virtual DateTime Dat3
+        public virtual string Dpresg2
         {
             get;
             set;
         }
 
+        public virtual string Dpresg3
+        {
+            get;
+            set;
+        }
+
 
-        public virtual string Copr
+        public virtual string Copersg
         {
             get;
             set;
         }
 
-        public virtual string Spfu
+        public virtual string Subpfund
         {
             get;
             set;
         }
 
-        public virtual string Bafu
+        public virtual string Cbalfund
         {
             get;
             set;
         }
 
-        public virtual string Ctfu
+        public virtual string Ctafundo
         {
             get;
             set;
         }
 
-        public virtual string Ippp
+        public virtual string Icobppp
         {
             get;
             set;
         }
 
-        public virtual string Coprppp
+        public virtual string Copersgppp
         {
             get;
             set;
         }
 
-        public virtual string Tmo1
+        public virtual string Tencmod1
         {
             get;
             set;
         }
 
-        public virtual string Mon1
+        public virtual string Mencmod1
         {
             get;
             set;
         }
 
-        public virtual string Tmo2
+        public virtual string Tencmod2
         {
             get;
             set;
         }
 
-        public virtual string Mon2
+        public virtual string Mencmod2
         {
             get;
             set;
         }
 
-        public virtual string Tmo3
+        public virtual string Tencmod3
         {
             get;
             set;
         }
 
-        public virtual string Mon3
+        public virtual string Mencmod3
         {
             get;
             set;
         }
-        public virtual string Tmo4
+        public virtual string Tencmod4
         {
             get;
             set;
         }
 
-        public virtual string Mon4
+        public virtual string Mencmod4
         {
             get;
             set;
         }
 
-        public virtual string Tmo5
+        public virtual string Tencmod5
         {
             get;
             set;
         }
 
-        public virtual string Mon5
+        public virtual string Mencmod5
         {
             get;
             set;
         }
 
-        public virtual string Tmo6
+        public virtual string Tencmod6
         {
             get;
             set;
         }
 
-        public virtual string Mon6
+        public virtual string Mencmod6
         {
             get;
             set;
         }
 
-        public virtual string Prga
+        public virtual string Qprorrog
         {
             get;
             set;
         }
 
-        public virtual string Ival
+        public virtual string Ivaldur
         {
             get;
             set;
         }
 
-        public virtual string Ibca
+        public virtual string Ibasecal
         {
             get;
             set;
         }
 
 
-        public virtual string Irev
+        public virtual string Itiporev
         {
             get;
             set;
         }
 
-        public virtual string Tabr
+        public virtual string Ctabrev
         {
             get;
             set;
         }
 
-        public virtual string Imet
+        public virtual string Imetresg
         {
             get;
             set;
         }
 
-        public virtual string Capt
+        public virtual string Icaptlz
         {
             get;
             set;
         }
 
-        public virtual string Pinv
+        public virtual string Pvlsubs
         {
             get;
             set;
         }
 
-        public virtual string Iext
+        public virtual string Iextraut
         {
             get;
             set;
         }
 
-        public virtual string Ccgc
+        public virtual string Ccontsgc
         {
             get;
             set;
         }
 
-        public virtual string Cbgc
+        public virtual string Cbalcsgc
         {
             get;
             set;
         }
 
-        public virtual string Zcgc
+        public virtual string Zclisgc
         {
             get;
             set;
         }
 
-        public virtual string Cpsg
+        public virtual string Cprodsgc
         {
             get;
             set;
         }
 
-        public virtual string Spiv
+        public virtual string Csubpinv
         {
             get;
             set;
         }
 
-        public virtual string Vipc
+        public virtual string Qipcval
         {
             get;
             set;
         }
 
-        public virtual string Dutl
+        public virtual string Ctipodipc
         {
             get;
             set;
         }
 
-        public virtual string Cgtc
+        public virtual string Cgruptcln
         {
             get;
             set;
         }
 
-        public virtual string Ienc
+        public virtual string Ienccap
         {
             get;
             set;
         }
 
-        public virtual string Ipra
+        public virtual string Iprodass
         {
             get;
             set;
         }
 
-        public virtual string Cpra
+        public virtual string Cprodsgass
         {
             get;
             set;
         }
 
-        public virtual string Cspa
+        public virtual string Csprdsgass
         {
             get;
             set;
         }
 
-        public virtual string Dpra
+        public virtual string Dprdass
         {
             get;
             set;
         }
 
-        public virtual string Ijur
+        public virtual string Irecaljur
         {
             get;
             set;
@@ -885,7 +891,7 @@ namespace Core.Models
             set;
         }
 
-        public virtual DateTime Data
+        public virtual string Data
         {
             get;
             set;
@@ -909,13 +915,13 @@ namespace Core.Models
             set;
         }
 
-        public virtual DateTime DataActivacao
+        public virtual string DataActivacao
         {
             get;
             set;
         }
 
-        public virtual String IPrzAbs
+        public virtual string IPrzAbs
         {
             get;
             set;

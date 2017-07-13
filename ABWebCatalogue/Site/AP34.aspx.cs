@@ -29,25 +29,22 @@ namespace ABCatalogue.Site
             ddlDebito.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             ddlProdNCliente.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             ddlSolicitarClassRisco.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
+
+            //
 
             switch (type)
             {
                 case "C":
                     {
                         lblTransaction.Text = "AP34C";
+
                         break;
                     }
                 case "M":
-                    {
-                        lblTransaction.Text = "AP34M";
-
-                        txtCodProduto.Text = model.CProduto;
-
-                        break;
-                    }
                 case "V":
                     {
-                        lblTransaction.Text = "AP34V";
+                        lblTransaction.Text = "AP34M";
 
                         txtCodProduto.Text = model.CProduto;
                         txtCodProdutoDesc.Text = model.GProduto;
@@ -63,6 +60,8 @@ namespace ABCatalogue.Site
                         //txtDataFim
 
                         //Características Gerais
+                        select.Disabled = true;
+                        select.Value = model.IPrzAbs;
                         ddlPrazoAbsoluto.SelectedValue = model.IPrzAbs;
                         txtProdSubPContab.Text = model.CProdCnt;
                         txtProdSubPContab2.Text = model.CProdCnt2;
@@ -114,8 +113,14 @@ namespace ABCatalogue.Site
                         ddlSolicitarClassRisco.SelectedValue = model.SoliClasRisco;
                         //txtDataActivacao = model.DataActivacao;
 
+                        if (type == "V")
+                        {
+                            Master.FindControl("CPH").Controls.SetReadonlyControls();
+                        }
+
                         break;
                     }
+                
                 case "A":
                     {
                         lblTransaction.Text = "AP34A";
@@ -179,22 +184,19 @@ namespace ABCatalogue.Site
             model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
             model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
 
-            //form.GetStr(txtZonaGeografica.ID                   model.ZonaGeografica;
-            //form.GetStr(txtZonaGeograficaDesc.ID                model.ZonaGeograficaDesc;
-            //form.GetStr(txtOnOffRegular.ID                        model.OnOffRegular;
-            //form.GetStr(txtIpad.ID                        model.Ipad;
-            //form.GetStr(txtNivelRisco.ID                     model.NivelRisco;
-            //form.GetStr(txtVaR.ID                         model.VaR;
-            //form.GetStr(txtData.ID                            // model.Data;
-            //form.GetStr(txtDescricao.ID                    model.Descricao;
-            //form.GetStr(txtCatClass.ID                     model.CatClassActiv;
-            //form.GetStr(txtCatClassDesc.ID                model.CatClassActivDesc;
-            //form.GetStr(ddlSolicitarClassRisco.ID         model.SoliClasRisco;
+            model.ZonaGeografica = form.GetStr(txtZonaGeografica.ID);
+            model.ZonaGeograficaDesc = form.GetStr(txtZonaGeograficaDesc.ID);
+            model.OnOffRegular = form.GetStr(txtOnOffRegular.ID);
+            model.Ipad = form.GetStr(txtIpad.ID);
+            model.NivelRisco = form.GetStr(txtNivelRisco.ID);
+            model.VaR = form.GetStr(txtVaR.ID);
+            // model.Data=  form.GetStr(txtData.ID);
+            model.Descricao = form.GetStr(txtDescricao.ID);
+            model.CatClassActiv = form.GetStr(txtCatClass.ID);
+            model.CatClassActivDesc = form.GetStr(txtCatClassDesc.ID);
+            model.SoliClasRisco = form.GetStr(ddlSolicitarClassRisco.ID);
+            //model.DataActivacao = form.GetStr(txtDataActivacao.ID);
 
-
-
-
-            //txtDataActivacao = model.DataActivacao;
 
         }
 

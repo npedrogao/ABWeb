@@ -8,7 +8,7 @@
 
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
         <div class="title">TI05C</div>
         <div class="panel-content panel-body container-fluid form-horizontal">

@@ -6,7 +6,7 @@
     <script src="../scripts/bootstrap.min.js"></script>
     <script src="../scripts/bootstrap-datepicker.min.js"></script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
         <div class="title">TI04C</div>
         <div class="panel-content panel-body container-fluid form-horizontal">
