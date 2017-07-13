@@ -192,7 +192,7 @@ namespace Core.Models
             set;
         }
 
-        public virtual bool IDebFor
+        public virtual string IDebFor
         {
             get;
             set;
@@ -204,7 +204,7 @@ namespace Core.Models
             set;
         }
 
-        public virtual bool IPrClNew
+        public virtual string IPrClNew
         {
             get;
             set;
