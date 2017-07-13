@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ABWebCatalogue.App_Code;
+﻿using Core.Models;
+using Core.WebExtensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CommonLib;
-using ABCatalogueWebSiteMVC.Models;
 
 namespace ABCatalogue.Site
 {
@@ -22,17 +18,17 @@ namespace ABCatalogue.Site
         {
             type = Request.QueryString["type"];
 
-            ddlPrazoAbsoluto.LoadWithList(IsPostBack, Models.CatalogueModel.ListPrazoAbsoluto);
-            ddlDeclaracao.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlRepTranches.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlRenovacoes.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlMobilizacaoAntecipada.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlReforcoAutorizado.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            DDLDiasNUteis.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            DDLDiasAntecip.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlDebito.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlProdNCliente.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNao);
-            ddlSolicitarClassRisco.LoadWithList(IsPostBack, Models.CatalogueModel.ListSimNaoExclusivo);
+            ddlPrazoAbsoluto.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
+            ddlDeclaracao.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlRepTranches.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlRenovacoes.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlMobilizacaoAntecipada.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlReforcoAutorizado.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            DDLDiasNUteis.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            DDLDiasAntecip.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlDebito.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlProdNCliente.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            ddlSolicitarClassRisco.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
 
             switch (type)
             {

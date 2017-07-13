@@ -167,15 +167,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\AP34Model.cs" />
-    <Compile Include="App_Code\CA29Model.cs" />
-    <Compile Include="App_Code\CatalogueModel.cs" />
-    <Compile Include="App_Code\Consts.cs" />
-    <Compile Include="App_Code\DAL.cs" />
-    <Compile Include="App_Code\DataAccess.cs" />
-    <Compile Include="App_Code\TI96Model.cs" />
-    <Compile Include="App_Code\TI97Model.cs" />
-    <Compile Include="App_Code\VC39Model.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -293,17 +284,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
-      <Project>{4a99f429-bbd4-47d0-923b-896705a526dc}</Project>
-      <Name>CommonLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataDelegators\DataDelegators.csproj">
-      <Project>{4aec5e8d-652f-4fba-b762-18f587e6c463}</Project>
-      <Name>DataDelegators</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceDelegators\ServiceDelegators.csproj">
-      <Project>{7b3523d4-5b06-4635-b5b6-c3afe3109673}</Project>
-      <Name>ServiceDelegators</Name>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{a3f5cab1-1f3e-46a9-9cdd-befd237bb97e}</Project>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
