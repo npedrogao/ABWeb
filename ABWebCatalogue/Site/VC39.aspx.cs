@@ -154,45 +154,45 @@ namespace ABCatalogue.Site
                         txtQprorrog.Text = model.Qprorrog;
 
                         //VALIDAÇÕES
-                        cmbIvaldur.Text = model.Ivaldur;
-                        cmbIvaldur.Text = model.Ibasecal;
+                        cmbIvaldur.Value = model.Ivaldur;
+                        cmbIbasecal.Value = model.Ibasecal;
 
-                        //REVALIDAÇÃO de CAPITAL
-                        txtItiporev.Text = model.Itiporev;
-                        txtCtabrev.Text = model.Ctabrev;
+                        ////REVALIDAÇÃO de CAPITAL
+                        //txtItiporev.Text = model.Itiporev;
+                        //txtCtabrev.Text = model.Ctabrev;
 
-                        //INDICADORES
-                        txtImetresg.Text = model.Imetresg;
-                        txtIcaptlz.Text = model.Icaptlz;
+                        ////INDICADORES
+                        //txtImetresg.Text = model.Imetresg;
+                        //txtIcaptlz.Text = model.Icaptlz;
 
-                        //INFORMAÇÃO para AUTOMATISMO
-                        txtPvlsubs.Text = model.Pvlsubs;
-                        txtIextraut.Text = model.Iextraut;
-                        txtCcontsgc.Text = model.Ccontsgc;
-                        txtCbalcsgc.Text = model.Cbalcsgc;
-                        txtZclisgc.Text = model.Zclisgc;
-                        txtCprodsgc.Text = model.Cprodsgc;
-                        txtCsubpinv.Text = model.Csubpinv;
-                        txtQipcval.Text = model.Qipcval;
-                        txtCtipodipc.Text = model.Ctipodipc;
+                        ////INFORMAÇÃO para AUTOMATISMO
+                        //txtPvlsubs.Text = model.Pvlsubs;
+                        //txtIextraut.Text = model.Iextraut;
+                        //txtCcontsgc.Text = model.Ccontsgc;
+                        //txtCbalcsgc.Text = model.Cbalcsgc;
+                        //txtZclisgc.Text = model.Zclisgc;
+                        //txtCprodsgc.Text = model.Cprodsgc;
+                        //txtCsubpinv.Text = model.Csubpinv;
+                        //txtQipcval.Text = model.Qipcval;
+                        //txtCtipodipc.Text = model.Ctipodipc;
 
-                        //TESTES CLINICOS
-                        txtCgruptcln.Text = model.Cgruptcln;
+                        ////TESTES CLINICOS
+                        //txtCgruptcln.Text = model.Cgruptcln;
 
-                        //SUBSCRIÇÃO
-                        txtCgruptcln.Text = model.Ienccap;
+                        ////SUBSCRIÇÃO
+                        //txtCgruptcln.Text = model.Ienccap;
 
-                        //PRODUTO ASSOCIADO
-                        txtIprodass.Text = model.Iprodass;
-                        txtCprodsgass.Text = model.Cprodsgass;
-                        txtCsprdsgass.Text = model.Csprdsgass;
-                        txtDprdass.Text = model.Dprdass;
+                        ////PRODUTO ASSOCIADO
+                        //txtIprodass.Text = model.Iprodass;
+                        //txtCprodsgass.Text = model.Cprodsgass;
+                        //txtCsprdsgass.Text = model.Csprdsgass;
+                        //txtDprdass.Text = model.Dprdass;
 
-                        //CALCULO DE JURO
-                        txtIrecaljur.Text = model.Irecaljur;
+                        ////CALCULO DE JURO
+                        //txtIrecaljur.Text = model.Irecaljur;
 
-                        //DPM
-                        txtIdpm.Text = model.Idpm;
+                        ////DPM
+                        //txtIdpm.Text = model.Idpm;
 
 
 
@@ -318,7 +318,7 @@ namespace ABCatalogue.Site
 
             //CONTABILIDADE
             model.Copersg = form.GetStr(txtCopersg.ID);
-            model.Copersgppp = form.GetStr(Copersgppp.ID);
+            model.Copersgppp = form.GetStr(cmbCopersgppp.ID);
             model.Icobppp = form.GetStr(txtIcobppp.ID);
 
             //FUNDO ASSOCIADO
@@ -344,45 +344,45 @@ namespace ABCatalogue.Site
             model.Qprorrog = form.GetStr(txtQprorrog.ID);
 
             //VALIDAÇÕES
-            model.Ivaldur = form.GetStr(txtIvaldur.ID);
-            model.Ibasecal = form.GetStr(txtIvaldur.ID);
+            model.Ivaldur = form.GetStr(cmbIvaldur.ID);
+            model.Ibasecal = form.GetStr(cmbIbasecal.ID);
 
-            //REVALIDAÇÃO de CAPITAL
-            model.Itiporev = form.GetStr(txtItiporev.ID);
-            model.Ctabrev = form.GetStr(txtCtabrev.ID);
+            ////REVALIDAÇÃO de CAPITAL
+            //model.Itiporev = form.GetStr(txtItiporev.ID);
+            //model.Ctabrev = form.GetStr(txtCtabrev.ID);
 
-            //INDICADORES
-            model.Imetresg = form.GetStr(txtImetresg.ID);
-            model.Icaptlz = form.GetStr(txtIcaptlz.ID);
+            ////INDICADORES
+            //model.Imetresg = form.GetStr(txtImetresg.ID);
+            //model.Icaptlz = form.GetStr(txtIcaptlz.ID);
 
-            //INFORMAÇÃO para AUTOMATISMO
-            model.Pvlsubs = form.GetStr(txtPvlsubs.ID);
-            model.Iextraut = form.GetStr(txtIextraut.ID);
-            model.Ccontsgc = form.GetStr(txtCcontsgc.ID);
-            model.Cbalcsgc = form.GetStr(txtCbalcsgc.ID);
-            model.Zclisgc = form.GetStr(txtZclisgc.ID);
-            model.Cprodsgc = form.GetStr(txtCprodsgc.ID);
-            model.Csubpinv = form.GetStr(txtCsubpinv.ID);
-            model.Qipcval = form.GetStr(txtQipcval.ID);
-            model.Ctipodipc = form.GetStr(txtCtipodipc.ID);
+            ////INFORMAÇÃO para AUTOMATISMO
+            //model.Pvlsubs = form.GetStr(txtPvlsubs.ID);
+            //model.Iextraut = form.GetStr(txtIextraut.ID);
+            //model.Ccontsgc = form.GetStr(txtCcontsgc.ID);
+            //model.Cbalcsgc = form.GetStr(txtCbalcsgc.ID);
+            //model.Zclisgc = form.GetStr(txtZclisgc.ID);
+            //model.Cprodsgc = form.GetStr(txtCprodsgc.ID);
+            //model.Csubpinv = form.GetStr(txtCsubpinv.ID);
+            //model.Qipcval = form.GetStr(txtQipcval.ID);
+            //model.Ctipodipc = form.GetStr(txtCtipodipc.ID);
 
-            //TESTES CLINICOS
-            model.Cgruptcln = form.GetStr(txtCgruptcln.ID);
+            ////TESTES CLINICOS
+            //model.Cgruptcln = form.GetStr(txtCgruptcln.ID);
 
-            //SUBSCRIÇÃO
-            model.Ienccap = form.GetStr(txtCgruptcln.ID);
+            ////SUBSCRIÇÃO
+            //model.Ienccap = form.GetStr(txtCgruptcln.ID);
 
-            //PRODUTO ASSOCIADO
-            model.Iprodass = form.GetStr(txtIprodass.ID);
-            model.Cprodsgass = form.GetStr(txtCprodsgass.ID);
-            model.Csprdsgass = form.GetStr(txtCsprdsgass.ID);
-            model.Dprdass = form.GetStr(txtDprdass.ID);
+            ////PRODUTO ASSOCIADO
+            //model.Iprodass = form.GetStr(txtIprodass.ID);
+            //model.Cprodsgass = form.GetStr(txtCprodsgass.ID);
+            //model.Csprdsgass = form.GetStr(txtCsprdsgass.ID);
+            //model.Dprdass = form.GetStr(txtDprdass.ID);
 
-            //CALCULO DE JURO
-            model.Irecaljur = form.GetStr(txtIrecaljur.ID);
+            ////CALCULO DE JURO
+            //model.Irecaljur = form.GetStr(txtIrecaljur.ID);
 
-            //DPM
-            model.Idpm = form.GetStr(txtIdpm.ID);
+            ////DPM
+            //model.Idpm = form.GetStr(txtIdpm.ID);
 
         }
     }
