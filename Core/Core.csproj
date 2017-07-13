@@ -140,7 +140,7 @@
     </None>
     <None Include="ServiceWrapper\WSDLReferences\bcdws.wsdl" />
     <None Include="ServiceWrapper\WSDLReferences\Service.wsdl" />
-    <None Include="ServiceWrapper\wsProxy.config" />
+    <None Include="wsProxy.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
