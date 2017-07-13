@@ -499,22 +499,22 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbCampanahExcepcao;
         
         /// <summary>
-        /// txtCampanahExcepcao control.
+        /// txtCampanhaExcepcao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCampanahExcepcao;
+        protected global::System.Web.UI.WebControls.TextBox txtCampanhaExcepcao;
         
         /// <summary>
-        /// txtCampanahExcepcaoDesc control.
+        /// txtCampanhaExcepcaoDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCampanahExcepcaoDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtCampanhaExcepcaoDesc;
         
         /// <summary>
         /// lbConstituicao control.
@@ -787,6 +787,15 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbDescricao;
         
         /// <summary>
+        /// txtDescricao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescricao;
+        
+        /// <summary>
         /// lbCatClass control.
         /// </summary>
         /// <remarks>
@@ -805,13 +814,13 @@ namespace ABCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCatClass;
         
         /// <summary>
-        /// TXTCatClassDesc control.
+        /// txtCatClassDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TXTCatClassDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtCatClassDesc;
         
         /// <summary>
         /// lbSolicitarClassRisco control.

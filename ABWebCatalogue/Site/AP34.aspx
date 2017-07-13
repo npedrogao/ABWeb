@@ -295,10 +295,10 @@
                                 <div class="col-xs-6">
                                     <asp:Label ID="lbCampanahExcepcao" runat="server" class="col-xs-4 control-label">Campanha Excepção:</asp:Label>
                                     <div class="col-xs-2">
-                                        <asp:TextBox ID="txtCampanahExcepcao" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                                        <asp:TextBox ID="txtCampanhaExcepcao" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtCampanahExcepcaoDesc" runat="server" CssClass="form-control" MaxLength="30"></asp:TextBox>
+                                        <asp:TextBox ID="txtCampanhaExcepcaoDesc" runat="server" CssClass="form-control" MaxLength="30"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +443,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDescricao" runat="server" class="col-xs-4 control-label">Descrição:</asp:Label>
                                     <div class="col-xs-8">
-                                        <textarea id="txtDescricao" style="resize: none" class="form-control " cols="20" rows="2"></textarea>
+                                        <textarea id="txtDescricao" runat="server" style="resize: none" class="form-control " cols="20" rows="2"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +454,7 @@
                                         <asp:TextBox ID="txtCatClass" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="TXTCatClassDesc" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtCatClassDesc" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
