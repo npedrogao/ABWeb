@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DataDelegators.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="FileLocation" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\inetpub\config\Connections.config</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>

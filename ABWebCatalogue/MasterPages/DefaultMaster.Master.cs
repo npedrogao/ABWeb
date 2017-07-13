@@ -1,5 +1,5 @@
-﻿using ABWebCatalogue.App_Code;
-using CommonLib.Log;
+﻿using Core.DataWrapper;
+using Core.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -54,9 +54,9 @@ namespace ABWebCatalogue
                 if (!IsPostBack)
                 {
 
-                    DAL dl = new DAL();
+                    DataAccess dl = new DataAccess();
                     DataTable dtResult = new DataTable();
-                    dtResult = dl.GetDataByProjectAndType("ValidaUserId", 00, Consts.BRANCHPTCONN);
+                    dtResult = dl.GetDataByProjectAndType("ValidaUserId", 00, DataAccess.BRANCHPTCONN);
                     if (bool.TryParse(dtResult.Rows[0]["PR_SUBVALOR"].ToString(), out validUserId) && validUserId)
                     {
 
@@ -88,7 +88,7 @@ namespace ABWebCatalogue
                         //Verifica se o utilizador é válido em função do user AB e do login
 
 
-                        DataTable dt = dl.GetDataByUserAB(userAB, Consts.MASTERCONN);
+                        DataTable dt = dl.GetDataByUserAB(userAB, DataAccess.MASTERCONN);
                         if (!(dt.Rows.Count > 0 &&
                          dt.Rows[0]["CDOMINIO"].ToString().ToLower() == loginAD[0].ToLower() &&
                          dt.Rows[0]["CUSERNAME"].ToString().ToLower() == loginAD[1].ToLower()))
