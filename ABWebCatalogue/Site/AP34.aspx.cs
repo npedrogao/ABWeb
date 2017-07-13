@@ -76,16 +76,48 @@ namespace ABCatalogue.Site
                         ddlDeclaracao.SelectedValue = model.IIrs;
                         ddlRepTranches.SelectedValue = model.ITranche;
                         txtCodAgregado.Text = model.CAgregDp;
-
                         //Renovações
                         ddlRenovacoes.SelectedValue = model.IRenovac;
                         txtNumRenovacoes.Text = model.RNVA;
-
                         //Operações
                         ddlMobilizacaoAntecipada.SelectedValue = model.ILevAnt;
                         ddlReforcoAutorizado.SelectedValue = model.IAutRef;
                         DDLDiasNUteis.SelectedValue = model.IDiaNUt;
                         DDLDiasAntecip.SelectedValue = model.QDiasAnt;
+                        //Débito
+                        ddlDebito.SelectedValue = model.IDebFor;
+                        txtNumTentativas.Text = model.QTentDeb;
+                        //Validação Cliente
+                        ddlProdNCliente.SelectedValue = model.IPrClNew;
+                        txtNumDiasCliente.Text = model.QDiasNCli;
+                        txtCampanhaExcepcao.Text = model.CCampNet;
+                        txtCampanhaExcepcaoDesc.Text = model.GCampNet;
+                        //Cross Selling
+                        txtConstituicao.Text = model.CCxsCons;
+                        txtConstituicaoDesc.Text = model.GCxsCons;
+                        txtVencimento.Text = model.CCxsVenc;
+                        txtVencimentoDesc.Text = model.GCxsVenc;
+                        //Atributos Investimento
+                        txtSubFamilia.Text = model.SubFamilia;
+                        txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
+                        txtLiquidez.Text = model.Liquidez;
+                        txtComplexidade.Text = model.Complexidade;
+                        txtComplexidadeDesc.Text = model.ComplexidadeDesc;
+                        txtHorizonteTemporal.Text = model.HorizonteTemporal;
+                        txtHorizonteTemporalDesc.Text = model.HorizonteTemporalDesc;
+                        txtZonaGeografica.Text = model.ZonaGeografica;
+                        txtZonaGeograficaDesc.Text = model.ZonaGeograficaDesc;
+                        txtOnOffRegular.Text = model.OnOffRegular;
+                        txtIpad.Text = model.Ipad;
+                        txtNivelRisco.Text = model.NivelRisco;
+                        txtVaR.Text = model.VaR;
+                        //txtData = model.Data;
+                        txtDescricao.Value = model.Descricao;
+                        txtCatClass.Text = model.CatClassActiv;
+                        txtCatClassDesc.Text = model.CatClassActivDesc;
+                        ddlSolicitarClassRisco.SelectedValue = model.SoliClasRisco;
+                        //txtDataActivacao = model.DataActivacao;
+
                         break;
                     }
                 case "A":
@@ -111,7 +143,6 @@ namespace ABCatalogue.Site
             model.GMoeda = form.GetStr(txtMoeda2.ID);
             model.CEstado = form.GetStr(txtEstado.ID);
             model.GEstado = form.GetStr(txtEstadoDesc.ID);
-
             //Características Gerais
             model.IPrzAbs = form.GetStr(ddlPrazoAbsoluto.ID);
             model.CProdCnt = form.GetStr(txtProdSubPContab.ID);
@@ -122,16 +153,53 @@ namespace ABCatalogue.Site
             model.IIrs = form.GetStr(ddlDeclaracao.ID);
             model.ITranche = form.GetStr(ddlRepTranches.ID);
             model.CAgregDp = form.GetStr(txtCodAgregado.ID);
-
             //Renovações
             model.IRenovac = form.GetStr(ddlRenovacoes.ID);
             model.RNVA = form.GetStr(txtNumRenovacoes.ID);
-
             //Operações
             model.ILevAnt = form.GetStr(ddlMobilizacaoAntecipada.ID);
             model.IAutRef = form.GetStr(ddlReforcoAutorizado.ID);
             model.IDiaNUt = form.GetStr(DDLDiasNUteis.ID);
             model.QDiasAnt = form.GetStr(DDLDiasAntecip.ID);
+            //Débito
+            model.IDebFor = form.GetStr(ddlDebito.ID);
+            model.QTentDeb = form.GetStr(txtNumTentativas.ID);
+            //Validação Cliente
+            model.IPrClNew = form.GetStr(ddlProdNCliente.ID);
+            model.QDiasNCli = form.GetStr(txtNumDiasCliente.ID);
+            model.CCampNet = form.GetStr(txtCampanhaExcepcao.ID);
+            model.GCampNet = form.GetStr(txtCampanhaExcepcaoDesc.ID);
+            //Cross Selling
+            model.CCxsCons = form.GetStr(txtConstituicao.ID);
+            model.GCxsCons = form.GetStr(txtConstituicaoDesc.ID);
+            model.CCxsVenc = form.GetStr(txtVencimento.ID);
+            model.GCxsVenc = form.GetStr(txtVencimentoDesc.ID);
+            //Atributos Investimento
+            model.SubFamilia = form.GetStr(txtSubFamilia.ID);
+            model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
+            model.Liquidez = form.GetStr(txtLiquidez.ID);
+            model.Complexidade = form.GetStr(txtComplexidade.ID);
+            model.ComplexidadeDesc = form.GetStr(txtComplexidadeDesc.ID);
+            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
+            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
+
+            //form.GetStr(txtZonaGeografica.ID                   model.ZonaGeografica;
+            //form.GetStr(txtZonaGeograficaDesc.ID                model.ZonaGeograficaDesc;
+            //form.GetStr(txtOnOffRegular.ID                        model.OnOffRegular;
+            //form.GetStr(txtIpad.ID                        model.Ipad;
+            //form.GetStr(txtNivelRisco.ID                     model.NivelRisco;
+            //form.GetStr(txtVaR.ID                         model.VaR;
+            //form.GetStr(txtData.ID                            // model.Data;
+            //form.GetStr(txtDescricao.ID                    model.Descricao;
+            //form.GetStr(txtCatClass.ID                     model.CatClassActiv;
+            //form.GetStr(txtCatClassDesc.ID                model.CatClassActivDesc;
+            //form.GetStr(ddlSolicitarClassRisco.ID         model.SoliClasRisco;
+
+
+
+
+            //txtDataActivacao = model.DataActivacao;
+
         }
 
     }
