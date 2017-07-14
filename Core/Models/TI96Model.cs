@@ -576,56 +576,56 @@ namespace Core.Models
 
 
         [Display(Name = "Tipo Warrant")]
-        public virtual string Twar
+        public virtual string Itipowar
         {
             get;
             set;
         }
 
         [Display(Name = "Estilo Warrant")]
-        public virtual string Ewar
+        public virtual string Iestwar
         {
             get;
             set;
         }
 
         [Display(Name = "Tipo Exercício")]
-        public virtual string Texe
+        public virtual string Itipexer
         {
             get;
             set;
         }
 
         [Display(Name = "Data admissão negociação")]
-        public virtual DateTime Fadm
+        public virtual string Feadmiss
         {
             get;
             set;
         }
 
         [Display(Name = "Data última negociação")]
-        public virtual DateTime Fult
+        public virtual string Feultneg
         {
             get;
             set;
         }
 
         [Display(Name = "Data de vencimento")]
-        public virtual DateTime Fven
+        public virtual string Fevencim
         {
             get;
             set;
         }
 
         [Display(Name = "Paridade Warrant")]
-        public virtual decimal Pari
+        public virtual decimal Paridade
         {
             get;
             set;
         }
 
         [Display(Name = "Lote mínimo para exercício")]
-        public virtual int Ltmn
+        public virtual int Qlotemin
         {
             get;
             set;
@@ -633,48 +633,48 @@ namespace Core.Models
 
         #region (IND.ACTIVO SUBJ.)
         [Display(Name = "Índice Activo Subjacente")]
-        public virtual string Isub
+        public virtual string Iactsubj
         {
             get;
             set;
         }
       
-        public virtual string Dsub
+        public virtual string Nactsubj
         {
             get;
             set;
         }
         #endregion
         [Display(Name = "Moeda Activo Subjacente")]
-        public virtual string Smoe
+        public virtual string Cmoesubj
         {
             get;
             set;
         }
 
         [Display(Name = "Tipo Liquidação")]
-        public virtual string Tliq
+        public virtual string Ctipoliq
         {
             get;
             set;
         }
 
         [Display(Name = "Preço Exercício")]
-        public virtual decimal Pexe
+        public virtual decimal Strike
         {
             get;
             set;
         }
 
         [Display(Name = "Nome do Emitente")]
-        public virtual string Nemi
+        public virtual string Nemiten
         {
             get;
             set;
         }
 
         [Display(Name = "Nominativo")]
-        public virtual string Tivo
+        public virtual string Inominat
         {
             get;
             set;
@@ -682,7 +682,7 @@ namespace Core.Models
         #endregion
 
         [Display(Name = "Novo Valor Unitário")]
-        public virtual decimal Nmi2
+        public virtual decimal Nominn
         {
             get;
             set;
@@ -731,28 +731,28 @@ namespace Core.Models
         }
         #region (PAPEL COMERCIAL)
         [Display(Name = "Index Prazo Inferior")]
-        public virtual decimal Ipri
+        public virtual decimal Tprzinf
         {
             get;
             set;
         }
 
         [Display(Name = "Index Prazo Superior")]
-        public virtual decimal Iprs
+        public virtual decimal Tprzsup
         {
             get;
             set;
         }
 
         [Display(Name = "Nº Dias Index Inferior")]
-        public virtual int Ndii
+        public virtual int Qprzinf
         {
             get;
             set;
         }
 
         [Display(Name = "Nº Dias Index Superior")]
-        public virtual int Ndis
+        public virtual int Qprzsup
         {
             get;
             set;
@@ -760,7 +760,7 @@ namespace Core.Models
         }
 
         [Display(Name = "Indexante")]
-        public virtual decimal Indx
+        public virtual decimal Tindexante
         {
             get;
             set;
@@ -768,7 +768,7 @@ namespace Core.Models
         }
 
         [Display(Name = "Spread")]
-        public virtual decimal Spre
+        public virtual decimal Tspreadpc
         {
             get;
             set;
@@ -776,7 +776,7 @@ namespace Core.Models
         }
 
         [Display(Name = "Arredondamento")]
-        public virtual decimal Arre
+        public virtual decimal Tarredond
         {
             get;
             set;
@@ -789,7 +789,7 @@ namespace Core.Models
         }
 
         [Display(Name = "Taxa Referência")]
-        public virtual decimal Tcam
+        public virtual decimal Tcambio
         {
             get;
             set;
@@ -797,7 +797,7 @@ namespace Core.Models
         }
 
         [Display(Name = "Data de Câmbio")]
-        public virtual DateTime Dtcm
+        public virtual string Dcambio
         {
             get;
             set;
@@ -805,13 +805,13 @@ namespace Core.Models
         #endregion
         #region (TAXA MULTIPLA)
         [Display(Name = "Taxa Mínima")]
-        public virtual decimal Txmi
+        public virtual decimal Txmin
         {
             get;
             set;
         }
         [Display(Name = "Taxa Máxima")]
-        public virtual decimal Txma
+        public virtual decimal Txmax
         {
             get;
             set;
@@ -820,115 +820,115 @@ namespace Core.Models
 
         #region (ATRIBUTOS INVESTIMENTO)
         [Display(Name = "Sub-Família")]
-        public virtual string SubFamilia
+        public virtual string Csubfam
         {
             get;
             set;
         }
 
-        public virtual string SubFamiliaDesc
+        public virtual string Dsubfam
         {
             get;
             set;
         }
 
-        public virtual string Liquidez
+        public virtual string Cliquidprod
         {
             get;
             set;
         }
         [Display(Name = "Complexidade")]
-        public virtual string Complexidade
+        public virtual string Ccomplexinv
         {
             get;
             set;
         }
 
-        public virtual string ComplexidadeDesc
+        public virtual string Dcomplexinv
         {
             get;
             set;
         }
 
-        public virtual string HorizonteTemporal
+        public virtual string Chorizon
         {
             get;
             set;
         }
 
-        public virtual string HorizonteTemporalDesc
+        public virtual string Dhorizon
         {
             get;
             set;
         }
         [Display(Name = "Zona Geográfica")]
-        public virtual string ZonaGeografica
+        public virtual string Czongeog
         {
             get;
             set;
         }
 
-        public virtual string ZonaGeograficaDesc
+        public virtual string Dzongeog
         {
             get;
             set;
         }
         [Display(Name = "OnOff/Regular")]
-        public virtual string OnOffRegular
+        public virtual string Conoffregu
         {
             get;
             set;
         }
         [Display(Name = "Ipad")]
-        public virtual string Ipad
+        public virtual string Cipad
         {
             get;
             set;
         }
         [Display(Name = "Nível Risco")]
-        public virtual string NivelRisco
+        public virtual string Cnivelrisco
         {
             get;
             set;
         }
         [Display(Name = "VaR")]
-        public virtual string VaR
+        public virtual string Mvar
         {
             get;
             set;
         }
         [Display(Name = "Data")]
-        public virtual string Data
+        public virtual string Dvar
         {
             get;
             set;
         }
         [Display(Name = "Descrição")]
-        public virtual string Descricao
+        public virtual string Gobsrv
         {
             get;
             set;
         }
         [Display(Name = "Cat/Class.Activ.")]
-        public virtual string CatClassActiv
+        public virtual string Cclaacti
         {
             get;
             set;
         }
 
-        public virtual string CatClassActivDesc
+        public virtual string Cclassrisc
         {
             get;
             set;
         }
 
-        public virtual string DataActivacao
+        public virtual string Dtactiva
         {
             get;
             set;
         }
 
-        public virtual String IPrzAbs
+        public virtual string IPrzAbs
         {
             get;
             set;

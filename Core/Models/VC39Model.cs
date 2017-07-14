@@ -7,7 +7,7 @@ namespace Core.Models
 {
     public class VC39Model
     {
-        
+       
         public virtual string Cpro
         {
             get;
