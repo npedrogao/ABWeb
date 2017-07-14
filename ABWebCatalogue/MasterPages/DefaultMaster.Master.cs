@@ -1,5 +1,6 @@
 ﻿using Core.DataWrapper;
 using Core.Logging;
+using Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,12 +15,6 @@ namespace ABWebCatalogue
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-           
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
             int port;
             string userAB = Request.QueryString["cCodUtilza"];
             bool validUserId = false;
@@ -27,6 +22,7 @@ namespace ABWebCatalogue
             string terminal = Request.QueryString["cTerminal"];
             string transacao = Request.QueryString["transacao"];
 
+            CatalogueModel.Terminal = terminal;
 
             try
             {
@@ -117,5 +113,12 @@ namespace ABWebCatalogue
                 LogUtils.Error(ex);
             }
         }
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+            
     }
 }

@@ -14,5 +14,31 @@
     <Setting Name="WsProxyFileLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\inetpub\config\WsProxy.config</Value>
     </Setting>
+    <Setting Name="ConnectionStringMaster" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST</Value>
+    </Setting>
+    <Setting Name="ConnectionStringBranchPT" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=BPT_SIT;uid=db8tutab;pwd=gto894asm;mode=SHARE;dbalias=BPT_SIT&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=BPT_SIT;uid=db8tutab;pwd=gto894asm;mode=SHARE;dbalias=BPT_SIT</Value>
+    </Setting>
+    <Setting Name="ConnectionStringABL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=SIT_ABL;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=SIT_ABL&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=SIT_ABL;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=SIT_ABL</Value>
+    </Setting>
+    <Setting Name="BCDWS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

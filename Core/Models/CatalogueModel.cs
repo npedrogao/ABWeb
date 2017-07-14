@@ -8,6 +8,8 @@ namespace Core.Models
 {
     public static class CatalogueModel
     {
+        public static string Terminal { get; set; }
+
         public static string Familia { get; set; }
 
         public static string SubFamilia { get; set; }
@@ -89,7 +91,7 @@ namespace Core.Models
                                     new string[] { "", "" },
                                     new string[] { "AP34", "(AP34) Depósitos Estruturados" },
                                     new string[] { "CA29", "(CA29) Fundos" },
-                                    new string[] { "VC39", "(VC39) Seguros" },
+                                    //new string[] { "VC39", "(VC39) Seguros" },
                                     new string[] { "TI96", "(TI96) Papel Comercial" },
                                     new string[] { "TI97", "(TI97) Titulos" }
                                   });

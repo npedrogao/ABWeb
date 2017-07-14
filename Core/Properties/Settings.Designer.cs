@@ -58,5 +58,44 @@ namespace Core.Properties {
                 return ((string)(this["WsProxyFileLocation"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST")]
+        public string ConnectionStringMaster {
+            get {
+                return ((string)(this["ConnectionStringMaster"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=BPT_SIT;uid=db8tutab;pwd=gto894asm;mode=SHARE;dbalias=BPT_SIT")]
+        public string ConnectionStringBranchPT {
+            get {
+                return ((string)(this["ConnectionStringBranchPT"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=SIT_ABL;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=SIT_ABL")]
+        public string ConnectionStringABL {
+            get {
+                return ((string)(this["ConnectionStringABL"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx")]
+        public string BCDWS {
+            get {
+                return ((string)(this["BCDWS"]));
+            }
+        }
     }
 }

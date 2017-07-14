@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ABCatalogue.Site {
+namespace ABWebCatalogue.Site {
     
     
     public partial class Create {
