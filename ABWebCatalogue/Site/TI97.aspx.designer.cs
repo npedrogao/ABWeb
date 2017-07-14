@@ -10,7 +10,7 @@
 namespace ABWebCatalogue.Site {
     
     
-    public partial class TI05 {
+    public partial class TI97 {
         
         /// <summary>
         /// lbEspecie control.

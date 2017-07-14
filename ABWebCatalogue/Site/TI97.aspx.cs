@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ABWebCatalogue.Site
 {
-    public partial class TI05 : System.Web.UI.Page
+    public partial class TI97 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
