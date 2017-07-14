@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace ABCatalogue
+namespace ABWebCatalogue
 {
     public class Global : System.Web.HttpApplication
     {

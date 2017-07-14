@@ -19,8 +19,9 @@ namespace Core.DataWrapper
             {
                 if (connectionStringsList.Count == 0)
                 {
-                    LoggingHelper.LogEvent("ReadFile", LoggingType.Debug);
-                    readConfigFile();
+                    //LoggingHelper.LogEvent("ReadFile", LoggingType.Debug);
+                    //readConfigFile();
+                    readAppConfig();
                 }
 
                 return connectionStringsList[name];
@@ -60,6 +61,12 @@ namespace Core.DataWrapper
                 connectionStringsList.Add(name, connectionString);
                 LoggingHelper.LogEvent("ADD - " + name + " - " + connectionString, LoggingType.Debug);
             }
+        }
+
+        private static void readAppConfig() {
+            connectionStringsList.Add(DataAccess.BRANCHPTCONN, Properties.Settings.Default.ConnectionStringABL);
+            connectionStringsList.Add(DataAccess.MASTERCONN, Properties.Settings.Default.ConnectionStringMaster);
+            connectionStringsList.Add(DataAccess.ABLCONN, Properties.Settings.Default.ConnectionStringABL);
         }
     }
 }
