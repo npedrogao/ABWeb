@@ -8,10 +8,10 @@ namespace Core.WebExtensions
 {
     public static class WebExtensions
     {
-        public static void LoadWithList(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, List<KeyValuePair<string,string>> lst)
+        public static void LoadWithList(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, List<KeyValuePair<string, string>> lst)
         {
-            if(!isPostBack)
-            { 
+            if (!isPostBack)
+            {
                 ddl.DataTextField = "Value";
                 ddl.DataValueField = "Key";
                 ddl.DataSource = lst;
@@ -29,7 +29,7 @@ namespace Core.WebExtensions
                 ddl.DataBind();
             }
         }
-        
+
 
         public static DateTime? GetDt(this System.Collections.Specialized.NameValueCollection col, string colName)
         {
@@ -37,7 +37,7 @@ namespace Core.WebExtensions
             if (!String.IsNullOrEmpty(value) && value is string && value.Trim().Length == 10)
             {
                 string str = (value as string);
-                return new DateTime(Convert.ToInt32(str.Substring(0, 2)), Convert.ToInt32(str.Substring(2, 2)), Convert.ToInt32(str.Substring(4, 4))); 
+                return new DateTime(Convert.ToInt32(str.Substring(0, 2)), Convert.ToInt32(str.Substring(2, 2)), Convert.ToInt32(str.Substring(4, 4)));
             }
             else
                 return null;
@@ -46,10 +46,63 @@ namespace Core.WebExtensions
         public static string GetStr(this System.Collections.Specialized.NameValueCollection col, string colName)
         {
             var value = col[colName];
-            if(value!=null)
+            if (value != null)
                 return value.Trim();
             return String.Empty;
         }
+
+
+        public static long GetLng(this System.Collections.Specialized.NameValueCollection col, string colName)
+        {
+            var value = col[colName];
+            if (value != null)
+            {
+                string lng = value.Trim();
+                return Convert.ToUInt32(lng);
+            }
+
+            return 0;
+        }
+
+        public static short GetShtr(this System.Collections.Specialized.NameValueCollection col, string colName)
+        {
+            var value = col[colName];
+            if (value != null)
+            {
+                string shrt = value.Trim();
+                return Convert.ToInt16(shrt);
+            }
+
+            return 0;
+        }
+
+        public static decimal GetDec(this System.Collections.Specialized.NameValueCollection col, string colName)
+        {
+            var value = col[colName];
+
+            if (value != null)
+            {
+                string strim = value.Trim();
+                return Convert.ToDecimal(strim);
+            }
+
+            return 0;
+        }
+
+        public static int GetInt(this System.Collections.Specialized.NameValueCollection col, string colName)
+        {
+            var value = col[colName];
+
+            if (value != null)
+            {
+                string strim = value.Trim();
+                return Convert.ToInt32(strim);
+            }
+
+            return 0;
+        }
+
+
 
         public static void SetReadonlyControls(this ControlCollection controlCollection)
         {

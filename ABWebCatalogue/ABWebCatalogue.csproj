@@ -161,7 +161,7 @@
     <Content Include="Site\Default.aspx" />
     <Content Include="Site\ErrorPage.aspx" />
     <Content Include="Site\ErrorRestrictedAccess.aspx" />
-    <Content Include="Site\TI04.aspx" />
+    <Content Include="Site\TI96.aspx" />
     <Content Include="Site\TI05.aspx" />
     <Content Include="Site\VC39.aspx" />
     <Content Include="Web.config" />
@@ -234,12 +234,12 @@
     <Compile Include="Site\ErrorRestrictedAccess.aspx.designer.cs">
       <DependentUpon>ErrorRestrictedAccess.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site\TI04.aspx.cs">
-      <DependentUpon>TI04.aspx</DependentUpon>
+    <Compile Include="Site\TI96.aspx.cs">
+      <DependentUpon>TI96.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site\TI04.aspx.designer.cs">
-      <DependentUpon>TI04.aspx</DependentUpon>
+    <Compile Include="Site\TI96.aspx.designer.cs">
+      <DependentUpon>TI96.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\TI05.aspx.cs">
       <DependentUpon>TI05.aspx</DependentUpon>

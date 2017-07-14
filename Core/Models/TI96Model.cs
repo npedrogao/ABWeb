@@ -16,28 +16,28 @@ namespace Core.Models
         }
 
         [Display(Name = "Id. Prog.")]
-        public virtual string Idtp
+        public virtual string Cprogramapc
         {
             get;
             set;
         }
 
         [Display(Name = "Nº Cliente")]
-        public virtual int Ncli
+        public virtual int Zcliente
         {
             get;
             set;
         }
 
         [Display(Name = "Nº Emissão")]
-        public virtual int Nems
+        public virtual int Zemissao
         {
             get;
             set;
         }
         
         [Display(Name = "Valor nom. emissão")]
-        public virtual decimal Vlne
+        public virtual decimal Mnomine
         {
             get;
             set;
@@ -45,13 +45,13 @@ namespace Core.Models
 
         #region (BANCO AGENTE)
         [Display(Name = "Banco Agente")]
-        public virtual int Bana
+        public virtual int Codban
         {
             get;
             set;
         }
       
-        public virtual string Gban
+        public virtual string Dcodban
         {
             get;
             set;
@@ -59,13 +59,13 @@ namespace Core.Models
         #endregion
         #region (ESPECIE)
         [Display(Name = "Espécie")]
-        public virtual string Cval
+        public virtual string Codvalor
         {
             get;
             set;
         }
 
-        public virtual string Nbrv
+        public virtual string Nombrev
         {
             get;
             set;
@@ -73,28 +73,28 @@ namespace Core.Models
         #endregion
 
         [Display(Name = "Reactivar")]
-        public virtual string Ract
+        public virtual string Reactivar
         {
             get;
             set;
         }
 
         [Display(Name = "Isin")]
-        public virtual string Isin
+        public virtual string Codisin
         {
             get;
             set;
         }
 
         [Display(Name = "Código sgc")]
-        public virtual string Csgc
+        public virtual string Codsgc
         {
             get;
             set;
         }
 
         [Display(Name = "Bolsa sgc")]
-        public virtual string Bsgc
+        public virtual string Bolsgc
         {
             get;
             set;
@@ -102,14 +102,14 @@ namespace Core.Models
 
         #region (CUSTODIANTE)
         [Display(Name = "Custodiante")]
-        public virtual string Ccus
+        public virtual string Ccustod
         {
             get;
             set;
         }
 
         [Display(Name = null)]
-        public virtual string Dcus
+        public virtual string Dcustod
         {
             get;
             set;
@@ -117,118 +117,118 @@ namespace Core.Models
         #endregion
 
         [Display(Name = "Cotação")]
-        public virtual decimal Camd
+        public virtual decimal Camed
         {
             get;
             set;
         }
 
         [Display(Name = "Moeda Cot/Liq")]
-        public virtual string Moec
+        public virtual string Moedaval
         {
             get;
             set;
         }
 
         [Display(Name = "Default")]
-        public virtual string Itit
+        public virtual string Ititdef
         {
             get;
             set;
         }
 
         [Display(Name = "Vl. Nom. Unitário")]
-        public virtual decimal Nmin
+        public virtual decimal Nomin
         {
             get;
             set;
         }
 
         [Display(Name = "Moeda Nominal")]
-        public virtual string Divi
+        public virtual string Coddivi
         {
             get;
             set;
         }
        
         [Display(Name = "CVM")]
-        public virtual string Nemo
+        public virtual string Nemonica
         {
             get;
             set;
         }
 
         [Display(Name = "Local Guard.")]
-        public virtual string Lgua
+        public virtual string Lguarda
         {
             get;
             set;
         }
 
         [Display(Name = "Sist. Negoc.")]
-        public virtual string Tipt
+        public virtual string Tiptitul
         {
             get;
             set;
         }
 
         [Display(Name = "Bloomberg")]
-        public virtual string Blob
+        public virtual string Cbloombg
         {
             get;
             set;
         }
 
         [Display(Name = "Escalão")]
-        public virtual string Ctip
+        public virtual string Ctipesc
         {
             get;
             set;
         }
 
         [Display(Name = "Reuters")]
-        public virtual string Reut
+        public virtual string Creuters
         {
             get;
             set;
         }
 
         [Display(Name = "D. Custódia")]
-        public virtual string Derc
+        public virtual string Dercus
         {
             get;
             set;
         }
 
         [Display(Name = "NIF")]
-        public virtual string Cnif
+        public virtual string Nif
         {
             get;
             set;
         }
         #region (PAIS EMIT)
         [Display(Name = "País Emit.")]
-        public virtual int Cpai
+        public virtual int Cpaisemi
         {
             get;
             set;
         }
         
-        public virtual string Dpai
+        public virtual string Dpaisemi
         {
             get;
             set;
         }
         #endregion
         [Display(Name = "Lote mínimo")]
-        public virtual decimal Lote
+        public virtual decimal Lotemin
         {
             get;
             set;
         }
 
         [Display(Name = "Agências")]
-        public virtual string Itba
+        public virtual string Ititbal
         {
             get;
             set;
@@ -236,13 +236,13 @@ namespace Core.Models
 
         #region PAIS MERCAD
         [Display(Name = "País Mercado")]
-        public virtual int Codp
+        public virtual int Codpais
         {
             get;
             set;
         }
 
-        public virtual string Desp
+        public virtual string Dpais
         {
             get;
             set;
@@ -250,14 +250,14 @@ namespace Core.Models
         #endregion
 
         [Display(Name = "NET")]
-        public virtual short Iban
+        public virtual short Ibantele
         {
             get;
             set;
         }
 
         [Display(Name = "% Crédito")]
-        public virtual decimal Tcre
+        public virtual decimal Tcredito
         {
             get;
             set;
@@ -265,13 +265,13 @@ namespace Core.Models
 
         #region (SEG.CARTEIR)
         [Display(Name = "Seg. Carteira")]
-        public virtual string Segc
+        public virtual string Segcart
         {
             get;
             set;
         }
 
-        public virtual string Dseg
+        public virtual string Dsegcart
         {
             get;
             set;
@@ -279,14 +279,14 @@ namespace Core.Models
         #endregion
         
         [Display(Name = "Estado")]
-        public virtual string Situ
+        public virtual string Situaca
         {
             get;
             set;
         }
 
         [Display(Name = "Negociável")]
-        public virtual string Nego
+        public virtual string Negociav
         {
             get;
             set;
@@ -294,13 +294,13 @@ namespace Core.Models
 
         #region (ULT.ACTU)
         [Display(Name = "Última Actualização")]
-        public virtual int Fech
+        public virtual int Fechactu
         {
             get;
             set;
         }
 
-        public virtual string Util
+        public virtual string Usuario
         {
             get;
             set;
@@ -308,118 +308,118 @@ namespace Core.Models
         #endregion
 
         #region (BOLSAS)
-        public virtual short Bl01
+        public virtual short Cbolsa01
         {
             get;
             set;
         }
 
-        public virtual short Bl02
+        public virtual short Cbolsa02
         {
             get;
             set;
         }
 
-        public virtual short Bl03
+        public virtual short Cbolsa03
         {
             get;
             set;
         }
 
-        public virtual short Bl04
+        public virtual short Cbolsa04
         {
             get;
             set;
         }
 
-        public virtual short Bl05
+        public virtual short Cbolsa05
         {
             get;
             set;
         }
 
-        public virtual short Bl06
+        public virtual short Cbolsa06
         {
             get;
             set;
         }
 
-        public virtual short Bl07
+        public virtual short Cbolsa07
         {
             get;
             set;
         }
 
-        public virtual short Bl08
+        public virtual short Cbolsa08
         {
             get;
             set;
         }
 
-        public virtual short Bl09
+        public virtual short Cbolsa09
         {
             get;
             set;
         }
 
-        public virtual short Bl10
+        public virtual short Cbolsa10
         {
             get;
             set;
         }
 
-        public virtual short Bl11
+        public virtual short Cbolsa11
         {
             get;
             set;
         }
         
-        public virtual short Bl12
+        public virtual short Cbolsa12
         {
             get;
             set;
         }
         
-        public virtual short Bl13     
+        public virtual short Cbolsa13
         {
             get;
             set;
         }
         
-        public virtual short Bl14
+        public virtual short Cbolsa14
         {
             get;
             set;
         }
         
-        public virtual short Bl15
+        public virtual short Cbolsa15
         {
             get;
             set;
         }
         #endregion
-       public virtual string Tpin
+       public virtual string Tipint
         {
             get;
             set;
         }
 
         [Display(Name = "Modalidade (cap/desc)")]
-        public virtual string Ipem
+        public virtual string Itipemiss
         {
             get;
             set;
         }
 
         [Display(Name = "Taxa Média Emissão")]
-        public virtual decimal Inte
+        public virtual decimal Interes
         {
             get;
             set;
         }
  
         [Display(Name = "Qtd. Emissão")]
-        public virtual long Desd
+        public virtual long Desde
         {
             get;
             set;
@@ -427,147 +427,147 @@ namespace Core.Models
 
         [Display(Name = "% Isenção")]
         [DisplayFormat(DataFormatString = "{0:C}")]
-        public virtual decimal Exen
+        public virtual decimal Exenc
         {
             get;
             set;
         }
 
         [Display(Name = "Taxa de Emissão")]
-        public virtual decimal Txpr
+        public virtual decimal Txprog
         {
             get;
             set;
         }
 
         [Display(Name = "% IRS / IRC")]
-        public virtual decimal Rete
+        public virtual decimal Reten
         {
             get;
             set;
         }
 
         [Display(Name = "Prazo da Emissão")]
-        public virtual decimal Przd
+        public virtual decimal Przdprog
         {
             get;
             set;
         }
 
         [Display(Name = "% Juro Diário")]
-        public virtual decimal Jurl
+        public virtual decimal Jurodliq
         {
             get;
             set;
         }
 
         [Display(Name = "Base Calculo")]
-        public virtual decimal Base
+        public virtual decimal Basecalc
         {
             get;
             set;
         }
 
         [Display(Name = "Cálculo de Juros")]
-        public virtual string Cajr
+        public virtual string Icalcjur
         {
             get;
             set;
         }
 
         [Display(Name = "% Juro Anterior")]
-        public virtual decimal Tjur
+        public virtual decimal Tjuro7
         {
             get;
             set;
         }
 
         [Display(Name = "Mensualização")]
-        public virtual string Imen
+        public virtual string Imensual
         {
             get;
             set;
         }
 
         [Display(Name = "Tipo Amortização")]
-        public virtual string Tipm
+        public virtual string Tipamor
         {
             get;
             set;
         }
 
         [Display(Name = "Data Emissão")]
-        public virtual DateTime Emis
+        public virtual string Emis
         {
             get;
             set;
         }
 
         [Display(Name = "ISIN Con. BP")]
-        public virtual string Isbp
+        public virtual string Isinbp
         {
             get;
             set;
         }
 
         [Display(Name = "Data Amortização")]
-        public virtual DateTime Fpro
+        public virtual string Fproxa
         {
             get;
             set;
         }
         
         [Display(Name = "Cod. Adic. BP")]
-        public virtual string Cida
+        public virtual string Cidabp
         {
             get;
             set;
         }
         
         [Display(Name = "Data 1º Cupão")]
-        public virtual DateTime Fpri
+        public virtual string Fprimc
         {
             get;
             set;
         }
 
         [Display(Name = "Data BP")]
-        public virtual DateTime Fban
+        public virtual string Fbancopt
         {
             get;
             set;
         }
 
         [Display(Name = "Cupão Corrido")]
-        public virtual string Cupc
+        public virtual string Cupcorrc
         {
             get;
             set;
         }
 
         [Display(Name = "Venc-1 DD/MM")]
-        public virtual DateTime Venc1
+        public virtual string Venc1
         {
             get;
             set;
         }
 
         [Display(Name = "Venc-2 DD/MM")]
-        public virtual DateTime Venc2
+        public virtual string Venc2
         {
             get;
             set;
         }
 
         [Display(Name = "Venc-3 DD/MM")]
-        public virtual DateTime Venc3
+        public virtual string Venc3
         {
             get;
             set;
         }
 
         [Display(Name = "Venc-4 DD/MM")]
-        public virtual DateTime Venc4
+        public virtual string Venc4
         {
             get;
             set;
