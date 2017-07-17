@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using EnumExtensions;
 
 namespace Core.Models
 {
@@ -54,21 +54,21 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListEstado
+        public static List<KeyValuePair<string, string>> ListEstado
         {
             get
             {
                 return toDropDownList(new string[][] {
                                     new string[] { "", "" },
-                                    new string[] { "AP34", "Em Criação" },
-                                    new string[] { "CA29", "Activos" },
-                                    new string[] { "VC39", "Em Modificação" },
-                                    new string[] { "TI96", "Inactivo" }
+                                    new string[] { "C", "Em Criação" },
+                                    new string[] { "A", "Activos" },
+                                    new string[] { "M", "Em Modificação" },
+                                    new string[] { "I", "Inactivo" }
                                   });
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListProduto
+        public static List<KeyValuePair<string, string>> ListProduto
         {
             get
             {
@@ -83,7 +83,7 @@ namespace Core.Models
         }
 
 
-        public  static List<KeyValuePair<string, string>> ListMicroFamilias
+        public static List<KeyValuePair<string, string>> ListMicroFamilias
         {
             get
             {
@@ -98,29 +98,55 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListSimNaoExclusivo
+        public static List<KeyValuePair<string, string>> ListSimNaoExclusivo
+        {
+            get
+            {
+                //return toDropDownList(new string[][] {
+                //                    new string[] { "S", "Sim" },
+                //                    new string[] { "N", "Não" }
+                //                  });
+                return toDropDownList(new string[][] {
+                           new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Sim),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Sim)},
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Nao),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Nao)}
+                });
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListSimNao
+        {
+            get
+            {
+                //return toDropDownList(new string[][] {
+                //new string[] { " ", " " },
+                //                    new string[] { "S", "Sim" },
+                //                    new string[] { "N", "Não" }
+                //                  });
+
+                return toDropDownList(new string[][] {
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Empty),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Empty) },
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Sim),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Sim)},
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Nao),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Nao)}
+                });
+            }
+        }
+
+
+        public static List<KeyValuePair<string, string>> ListActive
         {
             get
             {
                 return toDropDownList(new string[][] {
-                                    new string[] { "S", "Sim" },
-                                    new string[] { "N", "Não" }
-                                  });
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Empty),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Empty) },
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Activo),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Activo) },
+                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Inactivo),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Inactivo)}
+                });
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListSimNao
-        {
-            get
-            {
-                return toDropDownList(new string[][] {
-                                    new string[] { "S", "Sim" },
-                                    new string[] { "N", "Não" }
-                                  });
-            }
-        }
 
-        public  static List<KeyValuePair<string, string>> ListPricing
+
+        public static List<KeyValuePair<string, string>> ListPricing
         {
             get
             {
@@ -131,7 +157,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoArredon
+        public static List<KeyValuePair<string, string>> ListTipoArredon
         {
             get
             {
@@ -142,7 +168,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoWarrant
+        public static List<KeyValuePair<string, string>> ListTipoWarrant
         {
             get
             {
@@ -153,7 +179,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListEstiloWarrant
+        public static List<KeyValuePair<string, string>> ListEstiloWarrant
         {
             get
             {
@@ -164,7 +190,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoExercicio
+        public static List<KeyValuePair<string, string>> ListTipoExercicio
         {
             get
             {
@@ -175,7 +201,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoLiquida
+        public static List<KeyValuePair<string, string>> ListTipoLiquida
         {
             get
             {
@@ -186,7 +212,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListPrazoAbsoluto
+        public static List<KeyValuePair<string, string>> ListPrazoAbsoluto
         {
             get
             {
@@ -199,7 +225,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoMercado
+        public static List<KeyValuePair<string, string>> ListTipoMercado
         {
             get
             {
@@ -211,7 +237,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListRiscoProduto
+        public static List<KeyValuePair<string, string>> ListRiscoProduto
         {
             get
             {
@@ -226,7 +252,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoAmortizacao
+        public static List<KeyValuePair<string, string>> ListTipoAmortizacao
         {
             get
             {
@@ -239,7 +265,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoSubscricao
+        public static List<KeyValuePair<string, string>> ListTipoSubscricao
         {
             get
             {
@@ -253,7 +279,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoResgate
+        public static List<KeyValuePair<string, string>> ListTipoResgate
         {
             get
             {
@@ -266,7 +292,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListPeriodoCoracao
+        public static List<KeyValuePair<string, string>> ListPeriodoCoracao
         {
             get
             {
@@ -281,7 +307,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoValoracao
+        public static List<KeyValuePair<string, string>> ListTipoValoracao
         {
             get
             {
@@ -293,7 +319,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListCustodia
+        public static List<KeyValuePair<string, string>> ListCustodia
         {
             get
             {
@@ -305,7 +331,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListElegivel
+        public static List<KeyValuePair<string, string>> ListElegivel
         {
             get
             {
@@ -317,7 +343,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListRiscoKidd
+        public static List<KeyValuePair<string, string>> ListRiscoKidd
         {
             get
             {
@@ -330,11 +356,11 @@ namespace Core.Models
                                     new string[] { "5", "5" },
                                     new string[] { "6", "6" },
                                     new string[] { "7", "7" }
-                                  }); 
+                                  });
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListEstadoFundo
+        public static List<KeyValuePair<string, string>> ListEstadoFundo
         {
             get
             {
@@ -346,7 +372,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListSitsNegociavel
+        public static List<KeyValuePair<string, string>> ListSitsNegociavel
         {
             get
             {
@@ -360,7 +386,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListIbanNet
+        public static List<KeyValuePair<string, string>> ListIbanNet
         {
             get
             {
@@ -374,7 +400,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListNegociavel
+        public static List<KeyValuePair<string, string>> ListNegociavel
         {
             get
             {
@@ -388,7 +414,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListElegibilidade
+        public static List<KeyValuePair<string, string>> ListElegibilidade
         {
             get
             {
@@ -403,7 +429,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoJuro
+        public static List<KeyValuePair<string, string>> ListTipoJuro
         {
             get
             {
@@ -416,7 +442,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListModalidade
+        public static List<KeyValuePair<string, string>> ListModalidade
         {
             get
             {
@@ -428,7 +454,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListTipoCalculoJuros
+        public static List<KeyValuePair<string, string>> ListTipoCalculoJuros
         {
             get
             {
@@ -440,7 +466,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListSenioridade
+        public static List<KeyValuePair<string, string>> ListSenioridade
         {
             get
             {
@@ -452,7 +478,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListNumAno
+        public static List<KeyValuePair<string, string>> ListNumAno
         {
             get
             {
@@ -468,7 +494,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListIndiceActivoSubjacente
+        public static List<KeyValuePair<string, string>> ListIndiceActivoSubjacente
         {
             get
             {
@@ -481,7 +507,7 @@ namespace Core.Models
             }
         }
 
-        public  static List<KeyValuePair<string, string>> ListOnOffRegular
+        public static List<KeyValuePair<string, string>> ListOnOffRegular
         {
             get
             {
@@ -494,7 +520,7 @@ namespace Core.Models
 
         static CatalogueModel()
         {
-           
+
 
         }
 
@@ -514,7 +540,7 @@ namespace Core.Models
                         x => new KeyValuePair<string, string>(x[0], append ? x[0] + "-" + x[1] : x[1])
                     )
                   );
-                 
+
             }
             return list;
         }

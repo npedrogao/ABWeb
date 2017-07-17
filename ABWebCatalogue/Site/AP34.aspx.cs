@@ -19,17 +19,20 @@ namespace ABWebCatalogue.Site
             type = Request.QueryString["type"];
 
             ddlPrazoAbsoluto.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
-            ddlDeclaracao.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlRepTranches.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlRenovacoes.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlMobilizacaoAntecipada.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlReforcoAutorizado.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            DDLDiasNUteis.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            DDLDiasAntecip.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlDebito.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlProdNCliente.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            ddlSolicitarClassRisco.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
+            ddlDeclaracao.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlRepTranches.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlRenovacoes.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlMobilizacaoAntecipada.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlReforcoAutorizado.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            DDLDiasNUteis.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+
+            ddlEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
+            DDLDiasAntecip.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlDebito.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlProdNCliente.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            ddlSolicitarClassRisco.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+
+            //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
 
             //
 
@@ -54,14 +57,12 @@ namespace ABWebCatalogue.Site
                         txtClasseDesc.Text = model.GClaPrz;
                         txtMoeda.Text = model.CMoeda;
                         txtMoeda2.Text = model.GMoeda;
-                        txtEstado.Text = model.CEstado;
+                        ddlEstado.SelectedValue = model.CEstado;
                         txtEstadoDesc.Text = model.GEstado;
-                        //txtDataInicio
-                        //txtDataFim
+                        txtDataInicio.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
+                        txtDataFim.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
 
                         //Características Gerais
-                        select.Disabled = true;
-                        select.Value = model.IPrzAbs;
                         ddlPrazoAbsoluto.SelectedValue = model.IPrzAbs;
                         txtProdSubPContab.Text = model.CProdCnt;
                         txtProdSubPContab2.Text = model.CProdCnt2;
@@ -106,12 +107,13 @@ namespace ABWebCatalogue.Site
                         txtIpad.Text = model.Ipad;
                         txtNivelRisco.Text = model.NivelRisco;
                         txtVaR.Text = model.VaR;
-                        //txtData = model.Data;
+                        txtData.Text = model.Data != null ? model.Data.Value.ToString("yyyy-MM-dd") : "";
+      
                         txtDescricao.Value = model.Descricao;
                         txtCatClass.Text = model.CatClassActiv;
                         txtCatClassDesc.Text = model.CatClassActivDesc;
                         ddlSolicitarClassRisco.SelectedValue = model.SoliClasRisco;
-                        //txtDataActivacao = model.DataActivacao;
+                        txtDataActivacao.Text = model.DataActivacao != null ? model.DataActivacao.Value.ToString("yyyy-MM-dd") : "";
 
                         if (type == "V")
                         {
@@ -142,7 +144,7 @@ namespace ABWebCatalogue.Site
             model.GClaPrz = form.GetStr(txtClasseDesc.ID);
             model.CMoeda = form.GetStr(txtMoeda.ID);
             model.GMoeda = form.GetStr(txtMoeda2.ID);
-            model.CEstado = form.GetStr(txtEstado.ID);
+            model.CEstado = form.GetStr(ddlEstado.ID);
             model.GEstado = form.GetStr(txtEstadoDesc.ID);
             //Características Gerais
             model.IPrzAbs = form.GetStr(ddlPrazoAbsoluto.ID);

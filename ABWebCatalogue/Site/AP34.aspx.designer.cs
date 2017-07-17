@@ -139,13 +139,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtEstado control.
+        /// ddlEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
         
         /// <summary>
         /// txtEstadoDesc control.
@@ -166,6 +166,15 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
+        /// txtDataInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDataInicio;
+        
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -175,6 +184,15 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
+        /// txtDataFim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDataFim;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -182,15 +200,6 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// select control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect select;
         
         /// <summary>
         /// ddlPrazoAbsoluto control.
@@ -787,6 +796,15 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lbData;
         
         /// <summary>
+        /// txtData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtData;
+        
+        /// <summary>
         /// lbDescricao control.
         /// </summary>
         /// <remarks>
@@ -857,6 +875,15 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbDataActivacao;
+        
+        /// <summary>
+        /// txtDataActivacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDataActivacao;
         
         /// <summary>
         /// btnClear control.

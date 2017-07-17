@@ -31,6 +31,19 @@ namespace Core.WebExtensions
         }
 
 
+        public static void LoadWithEnum(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, IEnumerable<KeyValuePair<string, string>> lst)
+        {
+            if (!isPostBack)
+            {
+                ddl.DataTextField = "Value";
+                ddl.DataValueField = "Key";
+                ddl.DataSource = lst;
+                ddl.DataBind();
+            }
+        }
+
+
+
         public static DateTime? GetDt(this System.Collections.Specialized.NameValueCollection col, string colName)
         {
             var value = col[colName];
@@ -123,9 +136,20 @@ namespace Core.WebExtensions
                         case "System.Web.UI.HtmlControls.HtmlSelect":
                             {
                                 var sel = (ctrl as System.Web.UI.HtmlControls.HtmlSelect);
+                                
                                 sel.Disabled = true;
+                                
+
+                                break;
                             }
-                            break;
+
+                        case "System.Web.UI.WebControls.DropDownList":
+                            {
+                                var ddl = (ctrl as System.Web.UI.WebControls.DropDownList);
+                                ddl.Enabled = false;
+                                break;
+                            }
+                            
                     }
                 }
             }

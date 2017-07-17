@@ -67,8 +67,9 @@
                         <div class="col-xs-6">
                             <asp:Label ID="Label5" runat="server" class="col-xs-4 control-label">Estado:</asp:Label>
                             <div class="col-xs-2">
-                                <asp:TextBox ID="txtEstado" runat="server" MaxLength="3" CssClass="form-control"></asp:TextBox>
-                            </div>
+                                <asp:DropDownList ID="ddlEstado" CssClass="form-control" runat="server">
+                                        </asp:DropDownList>
+                                </div>
                             <div class="col-xs-6">
                                 <asp:TextBox ID="txtEstadoDesc" runat="server" MaxLength="30" CssClass="form-control"></asp:TextBox>
                             </div>
@@ -78,7 +79,7 @@
                         <div class="col-xs-6">
                             <asp:Label ID="Label4" runat="server" class="col-xs-4 control-label">Data de Início:</asp:Label>
                             <div class="col-xs-6">
-
+                                <asp:TextBox runat="server" ID="txtDataInicio" ReadOnly="true" Width="80px"></asp:TextBox>
                                 <%--<input id="txtDataInicio" type="date" runat="server" class="form-control" />--%>
                             </div>
 
@@ -86,6 +87,7 @@
                         <div class="col-xs-6">
                             <asp:Label ID="Label3" runat="server" class="col-xs-4 control-label">Data de Fim:</asp:Label>
                             <div class="col-xs-6">
+                                 <asp:TextBox runat="server" ID="txtDataFim" ReadOnly="true" Width="80px"></asp:TextBox>
                                 <%--<input id="txtDataFim" type="date" runat="server" class="form-control" />--%>
                             </div>
                         </div>
@@ -106,7 +108,7 @@
                                 <div class="col-xs-6">
                                     <asp:Label ID="Label2" runat="server" class="col-xs-4 control-label">Prazo Absoluto:</asp:Label>
                                     <div class="col-xs-4">
-                                        <select id="select" runat="server"></select>
+                                        <%--<select id="select" runat="server"></select>--%>
                                         <asp:DropDownList ID="ddlPrazoAbsoluto" CssClass="form-control" runat="server">
                                         </asp:DropDownList>
                                     </div>
@@ -221,6 +223,7 @@
                                 <div class="col-xs-6">
                                     <asp:Label ID="lbDiasNUteis" runat="server" class="col-xs-4 control-label">Dias Não Úteis:</asp:Label>
                                     <div class="col-xs-4">
+
                                         <asp:DropDownList ID="DDLDiasNUteis" CssClass="form-control" runat="server">
                                         </asp:DropDownList>
                                     </div>
@@ -436,6 +439,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbData" runat="server" class="col-xs-4 control-label">Data:</asp:Label>
                                     <div class="col-xs-4">
+                                        <asp:TextBox runat="server" ID="txtData" ReadOnly="true" Width="80px"></asp:TextBox>
                                         <%--input id="txtData" type="date" runat="server" class="form-control" />--%>
                                     </div>
                                 </div>
@@ -470,6 +474,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDataActivacao" runat="server" class="col-xs-4 control-label">Data de Activação:</asp:Label>
                                     <div class="col-xs-4">
+                                        <asp:TextBox runat="server" ID="txtDataActivacao" ReadOnly="true" Width="80px"></asp:TextBox>
                                         <%--<input id="txtDataActivacao" type="date" runat="server" class="form-control" />--%>
                                     </div>
                                 </div>
