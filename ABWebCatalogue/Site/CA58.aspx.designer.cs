@@ -10,7 +10,7 @@
 namespace ABWebCatalogue.Site {
     
     
-    public partial class Default {
+    public partial class CA58 {
         
         /// <summary>
         /// btnPesquisar control.

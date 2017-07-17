@@ -44,16 +44,15 @@ namespace UnitTestBDCWS
                 TJ21Filter input = new TJ21Filter()
                 {
                     Ceventotit = "92760006090",
-                    //"92760006090"            
                     Cestado = "A",
                     Cisin = "IE00B43VK078",
-                    //Codvalor = "0000000000000",
-                    //Cproduto = "  ",
-                    //Csubprod = "  "
-                    //Ddiaevento_CH = "30032017",
-                    Dfimevento = "2017-04-27"
-                    //Dinievento = "24.11.2014",
-                    //Zseqvento_CH = "000"
+                    Codvalor = "0000000000000",
+                    Cproduto = "  ",
+                    Csubprod = "  ",
+                    Ddiaevento_CH = "30032017",
+                    Dfimevento = "2017-04-27",
+                    Dinievento = "24.11.2014",
+                    Zseqvento_CH = "000"
                 };
 
 

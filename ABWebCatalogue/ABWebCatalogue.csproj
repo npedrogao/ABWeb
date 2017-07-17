@@ -158,7 +158,7 @@
     <Content Include="Site\AP34.aspx" />
     <Content Include="Site\CA25.aspx" />
     <Content Include="Site\Create.aspx" />
-    <Content Include="Site\Default.aspx" />
+    <Content Include="Site\CA58.aspx" />
     <Content Include="Site\ErrorPage.aspx" />
     <Content Include="Site\ErrorRestrictedAccess.aspx" />
     <Content Include="Site\TI96.aspx" />
@@ -213,12 +213,12 @@
     <Compile Include="Site\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Site\CA58.aspx.cs">
+      <DependentUpon>CA58.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Site\CA58.aspx.designer.cs">
+      <DependentUpon>CA58.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\ErrorPage.aspx.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>

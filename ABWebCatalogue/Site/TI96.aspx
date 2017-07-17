@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI96.aspx.cs" Inherits="ABCatalogue.Site.TI96" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI96.aspx.cs" Inherits="ABWebCatalogue.Site.TI96" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="../Content/bootstrap.min.css" />
@@ -8,7 +8,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
-        <div class="title"><asp:Label ID="lblTransaction" runat="server"></asp:Label></div>
+        <div class="title">
+            <asp:Label ID="lblTransaction" runat="server"></asp:Label>
+        </div>
         <div class="panel-content panel-body container-fluid form-horizontal">
             <div class="row">
                 <div class="col-xs-12">
@@ -526,28 +528,19 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTipoWarrant" runat="server" class="col-xs-4 control-label">Tipo Warrant:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlTipoWarrant" CssClass="form-control" runat="server">
-                                            <asp:ListItem>CALL</asp:ListItem>
-                                            <asp:ListItem>PUT</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbItipowar" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbEstiloWarrant" runat="server" class="col-xs-4 control-label">Estilo Warrant:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlEstiloWarrant" CssClass="form-control" runat="server">
-                                            <asp:ListItem>EUROPEU</asp:ListItem>
-                                            <asp:ListItem>AMERICANO</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbIestwar" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTipoExercicio" runat="server" class="col-xs-4 control-label">Tipo Exercicio:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlTipoExercicio" CssClass="form-control" runat="server">
-                                            <asp:ListItem>AUTOMÁTICO</asp:ListItem>
-                                            <asp:ListItem>NÃO AUTOMÁTICO</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbItipexer" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -556,19 +549,19 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDtAdmissNeg" runat="server" class="col-xs-4 control-label">Dt Admiss. Negoc.</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtDtAdmissNeg" type="date" class="form-control" />
+                                        <asp:TextBox ID="txtFeadmiss" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDtUltNegoc" runat="server" class="col-xs-4 control-label">Dt Última. Negoc.:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtDtUltNegoc" type="date" class="form-control" />
+                                        <asp:TextBox ID="txtFeultneg" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDtVenc" runat="server" class="col-xs-4 control-label">DT de Vencimento:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtDtVenc" type="date" class="form-control" />
+                                        <asp:TextBox ID="txtFevencim" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -577,29 +570,24 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbParidadeWarrant" runat="server" class="col-xs-4 control-label">Paridade Warrant:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtParidadeWarrant" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtParidade" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbLoteMinPExerc" runat="server" class="col-xs-4 control-label">Lote Min. P/Exerc.:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtLoteMinPExerc" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
+                                        <asp:TextBox ID="txtQlotemin" runat="server" CssClass="form-control" MaxLength="5"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbIndActivo" runat="server" class="col-xs-4 control-label">Ind. Activo Subj.:</asp:Label>
                                     <div class="col-xs-2">
-                                        <asp:DropDownList ID="ddlIndActivo" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>A</asp:ListItem>
-                                            <asp:ListItem>I</asp:ListItem>
-                                            <asp:ListItem>T</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbIactsubj" runat="server" class="form-control"></select>
                                     </div>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtIndActivoDesc" runat="server" CssClass="form-control" MaxLength="25"></asp:TextBox>
+                                        <select id="cmbNactsubj" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -608,18 +596,14 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbMoedaActivo" runat="server" class="col-xs-4 control-label">Moeda Activo Subjacente:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtMoedaActivo" runat="server" CssClass="form-control" MaxLength="3"></asp:TextBox>
+                                        <asp:TextBox ID="txtCmoesubj" runat="server" CssClass="form-control" MaxLength="3"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTipoLiquidacao" runat="server" class="col-xs-4 control-label">Tipo Liquidação:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlTipoLiquidacao" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem Value="FIS">FISICA</asp:ListItem>
-                                            <asp:ListItem Value="FIN">FINANCEIRA</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbCtipoliq" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -628,24 +612,20 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbPrecoExercicio" runat="server" class="col-xs-4 control-label">Preço Exercício:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtPrecoExercicio" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtStrike" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbNomeEmitente" runat="server" class="col-xs-4 control-label">Nome Emitente:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtNomeEmitente" runat="server" CssClass="form-control" MaxLength="25"></asp:TextBox>
+                                        <asp:TextBox ID="txtNemiten" runat="server" CssClass="form-control" MaxLength="25"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbNominativo" runat="server" class="col-xs-4 control-label">Nominativo:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlNominativo" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem Value="S">Sim</asp:ListItem>
-                                            <asp:ListItem Value="N">Não</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbInominat" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -765,13 +745,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbIndexPrazoInf" runat="server" class="col-xs-4 control-label">Index Prazo Inf.:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtIndexPrazoInf" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTprzinf" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbIndexPrazoSup" runat="server" class="col-xs-4 control-label">Index Prazo Sup.:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTprzsup" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -780,13 +760,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDiasIndexInf" runat="server" class="col-xs-4 control-label">Nº Dias Index Inf.:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtDiasIndexInf" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                                        <asp:TextBox ID="txtQprzinf" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDiasIndexSup" runat="server" class="col-xs-4 control-label">Nº Dias Index Sup.:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtDiasIndexSup" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
+                                        <asp:TextBox ID="txtQprzsup" runat="server" CssClass="form-control" MaxLength="4"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -795,13 +775,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbIndexante" runat="server" class="col-xs-4 control-label">Indexante:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtIndexante" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTindexante" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbSpread" runat="server" class="col-xs-4 control-label">Spread:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtSpread" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTspreadpc" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -810,13 +790,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbArredondamento" runat="server" class="col-xs-4 control-label">Arredondamento:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtArredondamento" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTarredond" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTaxaRef" runat="server" class="col-xs-4 control-label">Taxa Referência:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTaxaRef" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTcambio" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -825,7 +805,7 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDtCambio" runat="server" class="col-xs-4 control-label">Data de Câmbio:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtDtCambio" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
+                                        <asp:TextBox ID="txtDcambio" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -847,13 +827,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTaxaMin" runat="server" class="col-xs-4 control-label">Taxa Minima:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTaxaMin" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTxmin" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbTaxaMax" runat="server" class="col-xs-4 control-label">Taxa Máxima:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTaxaMax" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
+                                        <asp:TextBox ID="txtTxmax" runat="server" CssClass="form-control" MaxLength="9"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -875,22 +855,22 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbSubFamilia" runat="server" class="col-xs-4 control-label">SubFamilia:</asp:Label>
                                     <div class="col-xs-6">
-                                        <asp:TextBox ID="txtSubFamilia" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCsubfam" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbLiquidez" runat="server" class="col-xs-4 control-label">Liquidez:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtLiquidez" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCliquidprod" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbComplexidade" runat="server" class="col-xs-4 control-label">Complexidade:</asp:Label>
                                     <div class="col-xs-3">
-                                        <asp:TextBox ID="txtComplexidade" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCcomplexinv" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-5">
-                                        <asp:TextBox ID="txtComplexidadeDesc" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtDcomplexinv" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -899,19 +879,19 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbHorizontalTemporal" runat="server" class="col-xs-4 control-label">Horizontal Temporal:</asp:Label>
                                     <div class="col-xs-3">
-                                        <asp:TextBox ID="txtHorizontalTemporal" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtChorizon" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-5">
-                                        <asp:TextBox ID="txtHorizontalTemporalDesc" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtDhorizon" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbZonaGeo" runat="server" class="col-xs-4 control-label">Zona Geográfica:</asp:Label>
                                     <div class="col-xs-3">
-                                        <asp:TextBox ID="txtZonaGeo" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCzongeog" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                     <div class="col-xs-5">
-                                        <asp:TextBox ID="txtZonaGeoDesc" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtDzongeog" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -920,21 +900,13 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbOnOffReg" runat="server" class="col-xs-4 control-label">OnOff/Regular:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlOnOffReg" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>O</asp:ListItem>
-                                            <asp:ListItem>R</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbConoffregu" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbIPad" runat="server" class="col-xs-4 control-label">iPAD:</asp:Label>
                                     <div class="col-xs-3">
-                                        <asp:DropDownList ID="ddlIPad" CssClass="form-control" runat="server">
-                                            <asp:ListItem></asp:ListItem>
-                                            <asp:ListItem>S</asp:ListItem>
-                                            <asp:ListItem>N</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <select id="cmbCipad" runat="server" class="form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -943,20 +915,27 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbNivelRisco" runat="server" class="col-xs-4 control-label">Nivel Risco:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtNivelRisco" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCnivelrisco" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbVar" runat="server" class="col-xs-4 control-label">VaR:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtVar" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtMvar" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbData" runat="server" class="col-xs-4 control-label">Data:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtData" runat="server" type="date" class="form-control" />
+                                        <asp:TextBox ID="txtDvar" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <asp:Label ID="Label1" runat="server" class="col-xs-4 control-label">Descrição:</asp:Label>
+                                <div class="col-xs-8">
+                                    <asp:TextBox ID="txtGobsrv" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -964,19 +943,19 @@
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbCatClassActiv" runat="server" class="col-xs-4 control-label">Cat./Class.Activ.:</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtCatClassActiv" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCclaacti" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbSoliClassifica" runat="server" class="col-xs-4 control-label">Solicitar Classificação de Risco (S/N):</asp:Label>
                                     <div class="col-xs-4">
-                                        <asp:TextBox ID="txtSoliClassifica" runat="server" CssClass="form-control" size="1"></asp:TextBox>
+                                        <asp:TextBox ID="txtCclassrisc" runat="server" CssClass="form-control" size="1"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-xs-4">
                                     <asp:Label ID="lbDataActiv" runat="server" class="col-xs-4 control-label">Data de Activação:</asp:Label>
                                     <div class="col-xs-4">
-                                        <input id="txtDataActiv" type="date" class="form-control" />
+                                        <asp:TextBox ID="txtDtactiva" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
