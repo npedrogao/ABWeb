@@ -62,7 +62,7 @@ namespace Core.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein")]
         public string ConnectionStringMaster {
             get {
                 return ((string)(this["ConnectionStringMaster"]));

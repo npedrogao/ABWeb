@@ -96,7 +96,7 @@
       </component>
     </componentModelHasComponents>
     <componentModelHasComponents>
-      <component Id="dc766735-ac27-49f2-8df4-00e7e0235a7e" name="ABCatalogueWebSiteMVC" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <component Id="dc766735-ac27-49f2-8df4-00e7e0235a7e" name="ABWebCatalogueWebSiteMVC" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f2ed1e25-ee7e-481f-895a-741f9bf3c930" />
         <suppliersInternal>
           <dependency Id="a7b59fc6-bdc9-4dfc-a08b-b715e851fe00">

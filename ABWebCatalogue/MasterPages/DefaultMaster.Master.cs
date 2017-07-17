@@ -52,7 +52,7 @@ namespace ABWebCatalogue
 
                     DataAccess dl = new DataAccess();
                     DataTable dtResult = new DataTable();
-                    dtResult = dl.GetDataByProjectAndType("ValidaUserId", 00, DataAccess.BRANCHPTCONN);
+                    dtResult = dl.GetDataByProjectAndType("ValidaUserId", 00, DataAccess.MASTERCONN);
                     if (bool.TryParse(dtResult.Rows[0]["PR_SUBVALOR"].ToString(), out validUserId) && validUserId)
                     {
 

@@ -9,7 +9,7 @@
       <componentMoniker Id="21b3ae7a-8d30-4ab8-9510-916bf74dbfd7" LastKnownName="DataDelegators" />
     </componentShape>
     <componentShape Id="b32f8ab0-9537-4f79-ba20-db2f083a0253" absoluteBounds="5.875, 5, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
-      <componentMoniker Id="dc766735-ac27-49f2-8df4-00e7e0235a7e" LastKnownName="ABCatalogueWebSiteMVC" />
+      <componentMoniker Id="dc766735-ac27-49f2-8df4-00e7e0235a7e" LastKnownName="ABWebCatalogueWebSiteMVC" />
     </componentShape>
     <componentShape Id="9038d639-e728-4ea3-b41f-6ca8d9669192" absoluteBounds="5.875, 2, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
       <componentMoniker Id="8e3b9eda-9537-4b38-aec5-0fbbe8327e58" LastKnownName="CommonLib" />

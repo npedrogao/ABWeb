@@ -17,10 +17,10 @@
     <Setting Name="ConnectionStringMaster" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Dsn=SIT_MST;uid=db2tuser;pwd=12letmein;mode=SHARE;dbalias=DEV_MST</Value>
+      <Value Profile="(Default)">Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein</Value>
     </Setting>
     <Setting Name="ConnectionStringBranchPT" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
