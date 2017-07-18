@@ -58,6 +58,9 @@ namespace ABWebCatalogue
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Core.DataWrapper.DataAccess teste = new Core.DataWrapper.DataAccess();
+
             string page = "";
             switch (Request.QueryString["transaction"])
             {               

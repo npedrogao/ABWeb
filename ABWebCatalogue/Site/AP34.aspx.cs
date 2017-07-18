@@ -14,7 +14,6 @@ namespace ABWebCatalogue.Site
         string type;
         AP34Model model = new AP34Model();
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
             type = Request.QueryString["type"];
@@ -35,14 +34,13 @@ namespace ABWebCatalogue.Site
 
             //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
 
-            //
-
-
             switch (type)
             {
                 case "C":
                     {
                         lblTransaction.Text = "AP34C";
+
+                          //  Core.Models.ModelField("AP34C", model.CProduto, 
 
                         break;
                     }
@@ -224,7 +222,6 @@ namespace ABWebCatalogue.Site
 
             Master.FindControl("CPH").Controls.SetCleanField();
 
-            Page_Load(sender, e);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
