@@ -1,55 +1,4 @@
 ﻿
-div.content {
-    margin: 16px;
-    width: 100%;
-    font-family: Bankinter;
-}
-
-div.title {
-    width: 100%;
-    background-color: rgb(253, 101, 0);
-    color: #FFF;
-    font-size: 15px;
-    text-align: right;
-    padding: 10px;
-}
-
-div.panel-title{
-    width: 100%;
-    background-color: rgb(253, 101, 0);
-    color: #FFF;
-    font-size: 15px;
-    padding: 10px;
-}
-
-div.panel-content{
-    background-color: rgb(242, 242, 242);
-    color: rgb(66, 99, 145); 
-}
-
-button.btn{
-    background: rgb(253, 101, 0);
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-}
-
-button.btn-btn{
-    margin-left: 20px;
-}
-
-a {
-    text-decoration: none;
-}
-
-hr.hr {
-    background: rgb(253, 101, 0);
-    height: 0.5px;
-    color: rgb(253, 101, 0);
-}
-
-
 /******/
 
 body {
@@ -1392,6 +1341,40 @@ table.dataTable tr {
 }
 
 
+div.content {
+    margin: 16px;
+    width: 100%;
+    font-family: Bankinter;
+}
+
+div.panel-content{
+    background-color: rgb(242, 242, 242);
+    color: rgb(66, 99, 145); 
+}
+
+button.btn{
+    background: rgb(253, 101, 0);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+button.btn-btn{
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr.hr {
+    background: rgb(253, 101, 0);
+    height: 0.5px;
+    color: rgb(253, 101, 0);
+}
+
+
 
 div.title {
     width: 100%;
@@ -1440,7 +1423,15 @@ button.titleAccordion.active:after {
     background-color: rgb(245, 102, 0);
 }
 
-
+div.title {
+    width: 100%;
+    background-color: rgb(253, 101, 0);
+    color: #FFF;
+    font-size: 15px;
+    text-align: right;
+    padding: 10px;
+    transition: 0.4s;
+}
 
 .panel {
     padding: 0 18px;
