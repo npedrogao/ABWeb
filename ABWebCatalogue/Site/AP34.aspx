@@ -13,7 +13,7 @@
         <asp:Label ID="lblTransaction" runat="server" CssClass="titleGrayBold"></asp:Label>
     </div>
     <asp:Panel ID="pnlContent" runat="server">
-        <table width="100%" cellpadding="0" cellspacing="0" class="t-table-1">
+        <table width="100%" cellpadding="0" cellspacing="0" class="t-table-0">
             <tr>
                 <td class="t-table-col-1" colspan="8">&nbsp;</td>
             </tr>
@@ -78,7 +78,7 @@
     <br />
 
 
-    <button id="btnCatGerais" class="titleAccordion" runat="server" value="Características Gerais" onserverclick="btnCaracGerais_Click"></button>
+    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>
     <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -136,7 +136,7 @@
     <br />
     <br />
 
-    <button id="btnRenovacoes" class="titleAccordion" runat="server" value="Renovações" onserverclick="btnRenovacoes_Click"></button>
+    <button id="btnRenovacoes" class="titleAccordion" runat="server" onserverclick="btnRenovacoes_Click">Renovações</button>
     <asp:Panel ID="pnlRenovacoesContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -160,7 +160,7 @@
     <br />
     <br />
 
-    <button id="btnOperacoes" class="titleAccordion" runat="server" value="Operações" onserverclick="btnOperacoes_Click"></button>
+    <button id="btnOperacoes" class="titleAccordion" runat="server" onserverclick="btnOperacoes_Click">Operações</button>
     <asp:Panel ID="pnlOperacoesContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -201,7 +201,7 @@
     <br />
     <br />
 
-    <button id="btnDebito" class="titleAccordion" runat="server" value="Débito" onserverclick="btnDebito_Click"></button>
+    <button id="btnDebito" class="titleAccordion" runat="server" onserverclick="btnDebito_Click">Débito</button>
     <asp:Panel ID="pnlDebitoContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -225,7 +225,7 @@
     <br />
     <br />
 
-    <button id="btnValidacao" class="titleAccordion" runat="server" value="Validação Cliente" onserverclick="btnValidacao_Click"></button>
+    <button id="btnValidacao" class="titleAccordion" runat="server" onserverclick="btnValidacao_Click">Validação Cliente</button>
     <asp:Panel ID="pnlValidacaoContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -254,11 +254,11 @@
             </tr>
         </table>
     </asp:Panel>
-   
+
     <br />
     <br />
 
-    <button id="btnCrossSelling" class="titleAccordion" runat="server" value="Cross Selling" onserverclick="btnCrossSelling_Click"></button>
+    <button id="btnCrossSelling" class="titleAccordion" runat="server" onserverclick="btnCrossSelling_Click">Cross Selling</button>
     <asp:Panel ID="pnlCrossSellingContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -285,7 +285,7 @@
     <br />
     <br />
 
-    <button id="btnAtributoInvestimento" class="titleAccordion" runat="server" value="Atributos de Investimento" onserverclick="btnAtributoInvestimento_Click"></button>
+    <button id="btnAtributoInvestimento" class="titleAccordion" runat="server" onserverclick="btnAtributoInvestimento_Click">Atributos de Investimento</button>
     <asp:Panel ID="pnlAtributoInvestimentoContent" runat="server">
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
@@ -394,16 +394,17 @@
             </tr>
         </table>
     </asp:Panel>
-    
-    <div>
-        <hr class="hr" />
-    </div>
+    <br />
+    <br />
+
+    <hr class="hr" />
+
     <br />
     <div class="row form-group">
         <div class="col-xs-12">
             <div class="pull-right">
-                <input type="button" id="btnClear" runat="server" class="btn btn-default" value="Limpar" />
-                <input type="button" id="btnSave" runat="server" class="btn btn-btn btn-default" value="Guardar" onserverclick="btnSave_Click" />
+                <button id="btnClear" class="btn" runat="server" onserverclick="btnClear_Click">Limpar</button>
+                <button id="btnSave" class="btn btn-btn" runat="server" onserverclick="btnSave_Click">Guardar</button>
             </div>
         </div>
     </div>

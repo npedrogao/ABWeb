@@ -214,7 +214,9 @@ namespace ABWebCatalogue.Site
 
         protected void btnClean_Click(object sender, EventArgs e)
         {
+            Master.FindControl("CPH").Controls.SetCleanField();
 
+            Page_Load(sender, e);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

@@ -1036,7 +1036,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnClear;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnClear;
         
         /// <summary>
         /// btnSave control.
@@ -1045,6 +1045,6 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton btnSave;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSave;
     }
 }

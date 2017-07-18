@@ -27,7 +27,7 @@ div.panel-content{
     color: rgb(66, 99, 145); 
 }
 
-input.btn{
+button.btn{
     background: rgb(253, 101, 0);
     color: #fff;
     cursor: pointer;
@@ -35,7 +35,7 @@ input.btn{
     text-align: center;
 }
 
-input.btn-btn{
+button.btn-btn{
     margin-left: 20px;
 }
 

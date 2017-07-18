@@ -115,8 +115,6 @@ namespace Core.WebExtensions
             return 0;
         }
 
-
-
         public static void SetReadonlyControls(this ControlCollection controlCollection)
         {
             foreach (Control ctrl in controlCollection)
@@ -138,18 +136,49 @@ namespace Core.WebExtensions
                                 var sel = (ctrl as System.Web.UI.HtmlControls.HtmlSelect);
                                 
                                 sel.Disabled = true;
-                                
-
-                                break;
                             }
-
+                            break;
                         case "System.Web.UI.WebControls.DropDownList":
                             {
                                 var ddl = (ctrl as System.Web.UI.WebControls.DropDownList);
                                 ddl.Enabled = false;
-                                break;
                             }
-                            
+                            break;
+                    }
+                }
+            }
+        }
+
+        public static void SetCleanField(this ControlCollection controlCollection)
+        {
+            foreach (Control ctrl in controlCollection)
+            {
+                if (ctrl.Controls.Count > 0)
+                    SetCleanField(ctrl.Controls);
+                else
+                {
+                    switch (ctrl.GetType().ToString())
+                    {
+                        case "System.Web.UI.WebControls.TextBox":
+                            {
+                                var txt = (ctrl as System.Web.UI.WebControls.TextBox);
+                                txt.Text = string.Empty;
+                            }
+                            break;
+                        case "System.Web.UI.HtmlControls.HtmlSelect":
+                            {
+                                var sel = (ctrl as System.Web.UI.HtmlControls.HtmlSelect);
+                                sel.Value = "";
+                                sel.SelectedIndex = -1;
+                            }
+                            break;
+                        case "System.Web.UI.WebControls.DropDownList":
+                            {
+                                var ddl = (ctrl as System.Web.UI.WebControls.DropDownList);
+                                ddl.ClearSelection();
+
+                            }
+                            break;
                     }
                 }
             }
