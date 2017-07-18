@@ -8,9 +8,14 @@ namespace DbExtensions
 {
     public static class DbExtensions
     {
-        public static String GetDbStr(this SqlDataReader reader, string colName)
+        public static string GetDbStr(this SqlDataReader reader, string colName)
         {
             return (reader[colName] as string);
+        }
+
+        public static int GetDbInt(this SqlDataReader reader, string colName)
+        {
+            return (int)reader[colName];
         }
     }
 }
