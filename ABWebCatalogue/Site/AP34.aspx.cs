@@ -14,6 +14,7 @@ namespace ABWebCatalogue.Site
         string type;
         AP34Model model = new AP34Model();
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             type = Request.QueryString["type"];
@@ -35,6 +36,7 @@ namespace ABWebCatalogue.Site
             //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
 
             //
+
 
             switch (type)
             {
@@ -108,7 +110,7 @@ namespace ABWebCatalogue.Site
                         txtNivelRisco.Text = model.NivelRisco;
                         txtVaR.Text = model.VaR;
                         txtData.Text = model.Data != null ? model.Data.Value.ToString("yyyy-MM-dd") : "";
-      
+
                         txtDescricao.Value = model.Descricao;
                         txtCatClass.Text = model.CatClassActiv;
                         txtCatClassDesc.Text = model.CatClassActivDesc;
@@ -122,7 +124,7 @@ namespace ABWebCatalogue.Site
 
                         break;
                     }
-                
+
                 case "A":
                     {
                         lblTransaction.Text = "AP34A";
@@ -132,8 +134,97 @@ namespace ABWebCatalogue.Site
         }
 
 
+        protected void btnCaracGerais_Click(object sender, EventArgs e)
+        {
+            if (pnlCatGeraisContent.Visible == false)
+            {
+                pnlCatGeraisContent.Visible = true;
+            }
+            else
+            {
+                pnlCatGeraisContent.Visible = false;
+            }
+        }
+
+        protected void btnRenovacoes_Click(object sender, EventArgs e)
+        {
+            if (pnlRenovacoesContent.Visible == false)
+            {
+                pnlRenovacoesContent.Visible = true;
+            }
+            else
+            {
+                pnlRenovacoesContent.Visible = false;
+            }
+        }
+
+        protected void btnOperacoes_Click(object sender, EventArgs e)
+        {
+            if (pnlOperacoesContent.Visible == false)
+            {
+                pnlOperacoesContent.Visible = true;
+            }
+            else
+            {
+                pnlOperacoesContent.Visible = false;
+            }
+        }
+
+        protected void btnDebito_Click(object sender, EventArgs e)
+        {
+            if (pnlDebitoContent.Visible == false)
+            {
+                pnlDebitoContent.Visible = true;
+            }
+            else
+            {
+                pnlDebitoContent.Visible = false;
+            }
+        }
+
+        protected void btnValidacao_Click(object sender, EventArgs e)
+        {
+            if (pnlValidacaoContent.Visible == false)
+            {
+                pnlValidacaoContent.Visible = true;
+            }
+            else
+            {
+                pnlValidacaoContent.Visible = false;
+            }
+        }
+
+        protected void btnCrossSelling_Click(object sender, EventArgs e)
+        {
+            if (pnlCrossSellingContent.Visible == false)
+            {
+                pnlCrossSellingContent.Visible = true;
+            }
+            else
+            {
+                pnlCrossSellingContent.Visible = false;
+            }
+        }
+
+        protected void btnAtributoInvestimento_Click(object sender, EventArgs e)
+        {
+            if (pnlAtributoInvestimentoContent.Visible == false)
+            {
+                pnlAtributoInvestimentoContent.Visible = true;
+            }
+            else
+            {
+                pnlAtributoInvestimentoContent.Visible = false;
+            }
+        }
+
+
+
+
+
         protected void btnSave_Click(object sender, EventArgs e)
         {
+
             var form = Request.Form;
 
             model.CProduto = form.GetStr(txtCodProduto.ID);

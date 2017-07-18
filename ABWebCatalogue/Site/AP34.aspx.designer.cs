@@ -13,6 +13,15 @@ namespace ABWebCatalogue.Site {
     public partial class AP34 {
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// lblTransaction control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTransaction;
+        
+        /// <summary>
+        /// pnlContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlContent;
         
         /// <summary>
         /// Label8 control.
@@ -193,6 +211,24 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtDataFim;
         
         /// <summary>
+        /// btnCatGerais control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCatGerais;
+        
+        /// <summary>
+        /// pnlCatGeraisContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCatGeraisContent;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -328,6 +364,24 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCodAgregado;
         
         /// <summary>
+        /// btnRenovacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnRenovacoes;
+        
+        /// <summary>
+        /// pnlRenovacoesContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlRenovacoesContent;
+        
+        /// <summary>
         /// lbRenovacoes control.
         /// </summary>
         /// <remarks>
@@ -362,6 +416,24 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumRenovacoes;
+        
+        /// <summary>
+        /// btnOperacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnOperacoes;
+        
+        /// <summary>
+        /// pnlOperacoesContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlOperacoesContent;
         
         /// <summary>
         /// lbMobilizacaoAntecipada control.
@@ -436,6 +508,24 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.DropDownList DDLDiasAntecip;
         
         /// <summary>
+        /// btnDebito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnDebito;
+        
+        /// <summary>
+        /// pnlDebitoContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlDebitoContent;
+        
+        /// <summary>
         /// lbDebito control.
         /// </summary>
         /// <remarks>
@@ -470,6 +560,24 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumTentativas;
+        
+        /// <summary>
+        /// btnValidacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnValidacao;
+        
+        /// <summary>
+        /// pnlValidacaoContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlValidacaoContent;
         
         /// <summary>
         /// lbProdNCliente control.
@@ -535,6 +643,24 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCampanhaExcepcaoDesc;
         
         /// <summary>
+        /// btnCrossSelling control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCrossSelling;
+        
+        /// <summary>
+        /// pnlCrossSellingContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCrossSellingContent;
+        
+        /// <summary>
         /// lbConstituicao control.
         /// </summary>
         /// <remarks>
@@ -587,6 +713,24 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtVencimentoDesc;
+        
+        /// <summary>
+        /// btnAtributoInvestimento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAtributoInvestimento;
+        
+        /// <summary>
+        /// pnlAtributoInvestimentoContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAtributoInvestimentoContent;
         
         /// <summary>
         /// lbSubFamilia control.
