@@ -67,6 +67,7 @@ namespace Core.DataWrapper
             connectionStringsList.Add(DataAccess.BRANCHPTCONN, Properties.Settings.Default.ConnectionStringABL);
             connectionStringsList.Add(DataAccess.MASTERCONN, Properties.Settings.Default.ConnectionStringMaster);
             connectionStringsList.Add(DataAccess.ABLCONN, Properties.Settings.Default.ConnectionStringABL);
+            connectionStringsList.Add(DataAccess.CATALOGUECONN, Properties.Settings.Default.ConnectionStringCatalogue);
         }
     }
 }

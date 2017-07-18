@@ -58,6 +58,10 @@ namespace ABWebCatalogue
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Core.DataWrapper.DataAccess teste = new Core.DataWrapper.DataAccess();
+            teste.GetFieldsByScreen(null, Core.DataWrapper.DataAccess.CATALOGUECONN, "VC25C");
+
             string page = "";
             switch (Request.QueryString["transaction"])
             {               

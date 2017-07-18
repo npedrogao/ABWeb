@@ -97,5 +97,16 @@ namespace Core.Properties {
                 return ((string)(this["BCDWS"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=C301BTC005.corebus2.barclays.org\\TC005,5660;Database=catalogue;User Id=Cat" +
+            "alogue;p@$$w0rd")]
+        public string ConnectionStringCatalogue {
+            get {
+                return ((string)(this["ConnectionStringCatalogue"]));
+            }
+        }
     }
 }
