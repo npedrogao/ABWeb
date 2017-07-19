@@ -74,8 +74,8 @@
     </asp:Panel>
     <br />
 
-
-    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>
+    <asp:Button ID="btnCatGerais" runat="server" CssClass="titleAccordion" Text="Caractiristicas Gerais" OnClick="btnCatGerais_Click" />
+    <%--<button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>--%>
     <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
