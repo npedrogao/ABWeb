@@ -49,7 +49,55 @@ namespace Core.Models
         Modificacao = 'M',
         [Description("Inactivo")]
         Inactivo = 'I'
+    }
 
+
+    public enum TipoCampoEnum
+    {
+        /// <summary>
+        /// Não definido e inesperado
+        /// </summary>
+        Unknown = 0,
+        /// <summary>
+        /// Valor textual
+        /// </summary>
+        String = 1,
+        /// <summary>
+        /// Valor com casas decimais
+        /// </summary>
+        Decimal = 2,
+        /// <summary>
+        /// Data simples formato: ZZ/ZZ/ZZZZ, sem horas minutos e segundos
+        /// </summary>
+        Data = 3,
+        /// <summary>
+        /// Caixa de opções com valor e descritivo em texto
+        /// </summary>
+        ComboBox = 4,
+        /// <summary>
+        /// Caixa de opções com valor e descritivo em texto
+        /// </summary>
+        CustomMask = 5,
+    }
+
+    public enum TabelaEnum
+    {
+        [Description("")]
+        NA = 0,
+        [Description("TB026")]
+        TB026 = 1,
+        [Description("TB088")]
+        TB088 = 2,
+        [Description("TB192")]
+        TB192 = 3,
+        [Description("TB196")]
+        TB196 = 4,
+        [Description("TB234")]
+        TB234 = 5,
+        [Description("TB061")]
+        TB061 = 6,
+        [Description("TB018")]
+        TB018 = 7,
     }
 
     public enum TipoArredonEnum

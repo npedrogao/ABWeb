@@ -8,7 +8,31 @@ namespace Core.Models
 {
     public static class CatalogueModel
     {
-
+        /// <summary>
+        /// Applys the model definitions to page
+        /// </summary>
+        /// <param name="page"></param>
+        public static void ApplyModel(System.Web.UI.Page page)
+        {
+            var lst = new List<ModelField>();
+            string transactionName = page.Request.Form["transacao"];
+            lst.Add(new ModelField(transactionName, "CPRODUTO", 1, TipoCampoEnum.String));
+            string fieldName = string.Empty;
+            foreach (var itm in lst)
+            {
+                switch(itm.TipoDeCampo)
+                {
+                    case TipoCampoEnum.String:
+                    case TipoCampoEnum.Decimal:
+                    case TipoCampoEnum.Data:
+                        fieldName = "lbl" + itm.CopyBook;
+                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.TextBox).Text = itm.DescricaoLbl;
+                        fieldName = "txt" + itm.CopyBook;
+                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                        break;
+                }
+            }
+        }
 
         public static string Terminal { get; set; }
 
@@ -16,7 +40,7 @@ namespace Core.Models
 
         public static string SubFamilia { get; set; }
 
-        public static string EmCormercialzacao { get; set; }
+        public static string EmComercialzacao { get; set; }
 
         public static string Estado { get; set; }
 
