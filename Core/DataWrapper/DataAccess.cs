@@ -21,6 +21,7 @@ namespace Core.DataWrapper
         public DataTable TB142(string connectionName)
         {
             LogUtils.Enter();
+            BaseOdbcDbConnection dbConnection = new BaseOdbcDbConnection(connectionName);
             OdbcDataReader reader = null;
             OdbcCommand command = null;
             StringBuilder destination = new StringBuilder();
@@ -29,7 +30,7 @@ namespace Core.DataWrapper
             try
             {
 
-                command = createCommand(connectionName);
+                command = dbConnection.createCommand(connectionName);
                 StringBuilder sqlQuery = new StringBuilder(@"SELECT *
 FROM         DB2PTUSER.TB196");
 
@@ -48,9 +49,9 @@ FROM         DB2PTUSER.TB196");
             }
             finally
             {
-                closeReader(reader);
-                closeCommand(command);
-                closeConnection();
+                dbConnection.closeReader(reader);
+                dbConnection.closeCommand(command);
+                dbConnection.closeConnection();
                 LogUtils.Leave();
             }
         }
@@ -62,11 +63,11 @@ FROM         DB2PTUSER.TB196");
             OdbcCommand command = null;
             StringBuilder destination = new StringBuilder();
             DataTable dataTable = new DataTable();
-
+            BaseOdbcDbConnection dbConnection = new BaseOdbcDbConnection(connectionName);
             try
             {
 
-                command = createCommand(connectionName);
+                command = dbConnection.createCommand(connectionName);
                 StringBuilder sqlQuery = new StringBuilder(@"SELECT     CELEMTAB1, GELEM30, CELEMTAB2, CELEMTAB3, NELEMC01, NELEMC02, NELEMC03, NELEMC04, NELEMC05, NELEMC06, NELEMC07, 
                       NELEMC08, NELEMC09, NELEMC10, NELEMC11, NELEMC12, NELEMC13, NELEMC14, NELEMC15
 FROM         DB2PTUSER.TB196");
@@ -86,9 +87,9 @@ FROM         DB2PTUSER.TB196");
             }
             finally
             {
-                closeReader(reader);
-                closeCommand(command);
-                closeConnection();
+                dbConnection.closeReader(reader);
+                dbConnection.closeCommand(command);
+                dbConnection.closeConnection();
                 LogUtils.Leave();
             }
         }
@@ -101,7 +102,7 @@ FROM         DB2PTUSER.TB196");
             OdbcCommand command = null;
             StringBuilder destination = new StringBuilder();
             DataTable dataTable = new DataTable();
-
+            BaseOdbcDbConnection dbConnection = new BaseOdbcDbConnection(connectionName);
             try
             {
                 StringBuilder Query = new StringBuilder();
@@ -114,7 +115,7 @@ FROM         DB2PTUSER.TB196");
                 Query.Append("FROM DB2PTUSER.PROC_REF_DATA ");
                 Query.Append("WHERE PR_PRJ_ID IN(" + prj_id + ") and PR_ACTIVO = 1 and PR_TIPO in ('" + tipo + "')");
 
-                command = createCommand(connectionName);
+                command = dbConnection.createCommand(connectionName);
                 StringBuilder sqlQuery = new StringBuilder();
                 sqlQuery.Append(Query);
 
@@ -133,9 +134,9 @@ FROM         DB2PTUSER.TB196");
             }
             finally
             {
-                closeReader(reader);
-                closeCommand(command);
-                closeConnection();
+                dbConnection.closeReader(reader);
+                dbConnection.closeCommand(command);
+                dbConnection.closeConnection();
                 LogUtils.Leave();
             }
         }
@@ -147,7 +148,7 @@ FROM         DB2PTUSER.TB196");
             OdbcCommand command = null;
             StringBuilder destination = new StringBuilder();
             DataTable dataTable = new DataTable();
-
+            BaseOdbcDbConnection dbConnection = new BaseOdbcDbConnection(connectionName);
             try
             {
                 StringBuilder Query = new StringBuilder();
@@ -157,7 +158,7 @@ FROM         DB2PTUSER.TB196");
                 Query.Append("FROM DB2PTUSER.PROC_REF_DATA ");
                 Query.Append("WHERE CUSERNAME = '" + userAB + "'");
 
-                command = createCommand(connectionName);
+                command = dbConnection.createCommand(connectionName);
                 StringBuilder sqlQuery = new StringBuilder();
                 sqlQuery.Append(Query);
 
@@ -176,71 +177,11 @@ FROM         DB2PTUSER.TB196");
             }
             finally
             {
-                closeReader(reader);
-                closeCommand(command);
-                closeConnection();
+                dbConnection.closeReader(reader);
+                dbConnection.closeCommand(command);
+                dbConnection.closeConnection();
                 LogUtils.Leave();
             }
-        }
-
-        public List <ModelField> ModeFieldList()
-        {
-            LogUtils.Enter();
-            List<ModelField> listOfFields = new List<ModelField>();
-
-            try
-            {
-                using (SqlDbConnection dbCon = new SqlDbConnection(@"Data Source=C301BTC005.corebus2.barclays.org\TC005,5660;Initial Catalog=catalogue;User Id=Catalogue;Password=p@$$w0rd;Integrated Security=False;MultipleActiveResultSets=True"))
-                {
-
-                    SqlDataReader dr = dbCon.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", "VC25C"));
-
-                    if (dr.HasRows)
-                        while (dr.Read())
-                        {
-                            ModelField newField = new ModelField();
-
-                            try
-                            {
-                                newField.Ecran = dr.GetDbStr("Ecra");
-                                newField.CopyBook = dr.GetDbStr("CopyBook");
-                                newField.Tamanho = dr.GetDbInt("Size");
-
-                                switch (dr.GetDbStr("ValType"))
-                                {
-                                    case "STR":
-                                        newField.Tipo = ModelField.TipoCampo.STRING;
-                                        break;
-                                    case "DEC":
-                                        newField.Tipo = ModelField.TipoCampo.DECIMAL;
-                                        break;
-                                    case "DATA":
-                                        newField.Tipo = ModelField.TipoCampo.DATA;
-                                        break;
-                                    default:
-                                        newField.Tipo = ModelField.TipoCampo.UNKNOWN;
-                                        break;
-                                }
-                            }
-                            catch (InvalidCastException ex)
-                            {
-                                LogUtils.Error(ex);
-                                throw ex;
-                            }
-                            finally
-                            {
-                                dbCon.Dispose();
-                            };
-                        }
-                }
-            }
-            catch (Exception ex)
-            {
-                LogUtils.Error(ex);
-                throw ex;
-            }
-
-                return listOfFields;
-        }
+        }     
     }
 }

@@ -16,6 +16,14 @@ namespace Core.Models
         Inactivo = 'I'
     }
 
+    public enum PricingEnum
+    {
+        [Description("Clean")]
+        Clean = 'C',
+        [Description("Dirty")]
+        Dirty = 'D'
+    }
+
     public enum SimNaoEnum
     {
         [Description(" ")]
