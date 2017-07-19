@@ -18,6 +18,82 @@ namespace Core.DataWrapper
         public const string ABLCONN = "ConnectionStringABL";
         public const string CATALOGUECONN = "ConnectionStringCatalogue";
 
+        public DataTable TB142(string connectionName)
+        {
+            LogUtils.Enter();
+            OdbcDataReader reader = null;
+            OdbcCommand command = null;
+            StringBuilder destination = new StringBuilder();
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+
+                command = createCommand(connectionName);
+                StringBuilder sqlQuery = new StringBuilder(@"SELECT *
+FROM         DB2PTUSER.TB196");
+
+                command.CommandText = sqlQuery.ToString();
+                reader = command.ExecuteReader();
+
+                dataTable.Load(reader);
+
+                return dataTable;
+
+            }
+            catch (Exception e)
+            {
+                LogUtils.Error(e);
+                throw e;
+            }
+            finally
+            {
+                closeReader(reader);
+                closeCommand(command);
+                closeConnection();
+                LogUtils.Leave();
+            }
+        }
+
+        public DataTable TB196(string connectionName)
+        {
+            LogUtils.Enter();
+            OdbcDataReader reader = null;
+            OdbcCommand command = null;
+            StringBuilder destination = new StringBuilder();
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+
+                command = createCommand(connectionName);
+                StringBuilder sqlQuery = new StringBuilder(@"SELECT     CELEMTAB1, GELEM30, CELEMTAB2, CELEMTAB3, NELEMC01, NELEMC02, NELEMC03, NELEMC04, NELEMC05, NELEMC06, NELEMC07, 
+                      NELEMC08, NELEMC09, NELEMC10, NELEMC11, NELEMC12, NELEMC13, NELEMC14, NELEMC15
+FROM         DB2PTUSER.TB196");
+
+                command.CommandText = sqlQuery.ToString();
+                reader = command.ExecuteReader();
+
+                dataTable.Load(reader);
+
+                return dataTable;
+
+            }
+            catch (Exception e)
+            {
+                LogUtils.Error(e);
+                throw e;
+            }
+            finally
+            {
+                closeReader(reader);
+                closeCommand(command);
+                closeConnection();
+                LogUtils.Leave();
+            }
+        }
+
+
         public DataTable GetDataByProjectAndType(string tipo, int prj_id, string connectionName)
         {
             LogUtils.Enter();
