@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 namespace Core.Models
 {
 
+    
+
     public class AP34Model 
     {
 
@@ -49,13 +51,13 @@ namespace Core.Models
             set;
         }
 
-        public virtual DateTime DIniVal
+        public virtual DateTime? DIniVal
         {
             get;
             set;
         }
 
-        public virtual DateTime DFimVal
+        public virtual DateTime? DFimVal
         {
             get;
             set;
@@ -336,7 +338,7 @@ namespace Core.Models
             set;
         }
 
-        public virtual DateTime Data
+        public virtual DateTime? Data
         {
             get;
             set;
@@ -360,7 +362,7 @@ namespace Core.Models
             set;
         }
 
-        public virtual DateTime DataActivacao
+        public virtual DateTime? DataActivacao
         {
             get;
             set;

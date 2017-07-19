@@ -5,9 +5,15 @@ using System.Web;
 
 namespace Core.Models
 {
+    
     public class VC39Model
     {
-       
+
+        public VC39Model()
+        {
+      
+        }
+
         public virtual string Cpro
         {
             get;
@@ -976,9 +982,6 @@ namespace Core.Models
         }
         
 
-        public VC39Model()
-        {
-
-        }
+       
     }
 }

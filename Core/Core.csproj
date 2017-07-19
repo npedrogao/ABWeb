@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataWrapper\BaseDbConnection.cs" />
     <Compile Include="DataWrapper\BaseOdbcDbConnection.cs" />
+    <Compile Include="DataWrapper\BaseSqlDbConnection.cs" />
     <Compile Include="DataWrapper\ManageConnections.cs" />
+    <Compile Include="DataWrapper\SqlDbConnection.cs" />
     <Compile Include="Logging\LoggingHelper.cs" />
     <Compile Include="Logging\Log\LogFile.cs" />
     <Compile Include="Logging\Log\LogSidHelper.cs" />
@@ -113,6 +116,7 @@
     <Compile Include="Models\CatalogueModel.cs" />
     <Compile Include="DataWrapper\DataAccess.cs" />
     <Compile Include="Models\ModelEnumerations.cs" />
+    <Compile Include="Models\ModelField.cs" />
     <Compile Include="Models\TI96Model.cs" />
     <Compile Include="Models\TI97Model.cs" />
     <Compile Include="Models\VC39Model.cs" />
@@ -127,6 +131,7 @@
     <Compile Include="ServiceWrapper\StaticServiceProxy.cs" />
     <Compile Include="ServiceWrapper\WSDLReferences\BcdwsReference.cs" />
     <Compile Include="ServiceWrapper\WSDLReferences\ServiceReference.cs" />
+    <Compile Include="WebExtensions\DbExtensions.cs" />
     <Compile Include="WebExtensions\EnumExtensions.cs" />
     <Compile Include="WebExtensions\WebExtensions.cs" />
   </ItemGroup>

@@ -13,6 +13,7 @@ namespace Core.DataWrapper
         public const string BRANCHPTCONN = "ConnectionStringBranchPT";
         public const string MASTERCONN = "ConnectionStringMaster";
         public const string ABLCONN = "ConnectionStringABL";
+        public const string CATALOGUECONN = "ConnectionStringCatalogue";
 
         public DataTable TB142(string connectionName)
         {
@@ -178,5 +179,44 @@ FROM         DB2PTUSER.TB196");
                 LogUtils.Leave();
             }
         }
+
+
+        //public DataTable GetFieldsByScreen(string userAB, string connectionName, string screen)
+        //{
+        //    LogUtils.Enter();
+        //    SqlDataReader reader = null;
+        //    SqlCommand command = null;
+        //    StringBuilder destination = new StringBuilder();
+        //    DataTable dataTable = new DataTable();
+
+        //    try
+        //    {
+        //        command = createCommand(connectionName);
+        //        command.CommandText = "ModelDb2Tbl.SP_GetFieldsByScreen";
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("Ecra", screen);
+
+        //        using (command.Connection)
+        //        {
+        //            command.Connection.Open();
+        //            dataTable.Load(command.ExecuteReader());
+        //        }
+
+        //        return dataTable;
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        LogUtils.Error(e);
+        //        throw e;
+        //    }
+        //    finally
+        //    {
+        //        closeReader(reader);
+        //        closeCommand(command);
+        //        closeConnection();
+        //        LogUtils.Leave();
+        //    }
+        //}
     }
 }
