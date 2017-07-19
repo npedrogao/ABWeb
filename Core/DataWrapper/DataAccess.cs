@@ -1,14 +1,17 @@
 ﻿using Core.Logging;
+using Core.Models;
+using DbExtensions;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
+using System.Data.SqlClient;
 using System.Text;
 using System.Web;
 
 namespace Core.DataWrapper
 {
-    public class DataAccess : BaseOdbcDbConnection
+    public class DataAccess
     {
         public const string BRANCHPTCONN = "ConnectionStringBranchPT";
         public const string MASTERCONN = "ConnectionStringMaster";
@@ -104,43 +107,64 @@ namespace Core.DataWrapper
             }
         }
 
+        public List <ModelField> ModeFieldList()
+        {
+            LogUtils.Enter();
+            List<ModelField> listOfFields = new List<ModelField>();
 
-        //public DataTable GetFieldsByScreen(string userAB, string connectionName, string screen)
-        //{
-        //    LogUtils.Enter();
-        //    SqlDataReader reader = null;
-        //    SqlCommand command = null;
-        //    StringBuilder destination = new StringBuilder();
-        //    DataTable dataTable = new DataTable();
+            try
+            {
+                using (SqlDbConnection dbCon = new SqlDbConnection(@"Data Source=C301BTC005.corebus2.barclays.org\TC005,5660;Initial Catalog=catalogue;User Id=Catalogue;Password=p@$$w0rd;Integrated Security=False;MultipleActiveResultSets=True"))
+                {
 
-        //    try
-        //    {
-        //        command = createCommand(connectionName);
-        //        command.CommandText = "ModelDb2Tbl.SP_GetFieldsByScreen";
-        //        command.CommandType = CommandType.StoredProcedure;
-        //        command.Parameters.AddWithValue("Ecra", screen);
+                    SqlDataReader dr = dbCon.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", "VC25C"));
 
-        //        using (command.Connection)
-        //        {
-        //            command.Connection.Open();
-        //            dataTable.Load(command.ExecuteReader());
-        //        }
+                    if (dr.HasRows)
+                        while (dr.Read())
+                        {
+                            ModelField newField = new ModelField();
 
-        //        return dataTable;
+                            try
+                            {
+                                newField.Ecran = dr.GetDbStr("Ecra");
+                                newField.CopyBook = dr.GetDbStr("CopyBook");
+                                newField.Tamanho = dr.GetDbInt("Size");
 
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        LogUtils.Error(e);
-        //        throw e;
-        //    }
-        //    finally
-        //    {
-        //        closeReader(reader);
-        //        closeCommand(command);
-        //        closeConnection();
-        //        LogUtils.Leave();
-        //    }
-        //}
+                                switch (dr.GetDbStr("ValType"))
+                                {
+                                    case "STR":
+                                        newField.Tipo = ModelField.TipoCampo.STRING;
+                                        break;
+                                    case "DEC":
+                                        newField.Tipo = ModelField.TipoCampo.DECIMAL;
+                                        break;
+                                    case "DATA":
+                                        newField.Tipo = ModelField.TipoCampo.DATA;
+                                        break;
+                                    default:
+                                        newField.Tipo = ModelField.TipoCampo.UNKNOWN;
+                                        break;
+                                }
+                            }
+                            catch (InvalidCastException ex)
+                            {
+                                LogUtils.Error(ex);
+                                throw ex;
+                            }
+                            finally
+                            {
+                                dbCon.Dispose();
+                            };
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtils.Error(ex);
+                throw ex;
+            }
+
+                return listOfFields;
+        }
     }
 }
