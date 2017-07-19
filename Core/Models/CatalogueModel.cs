@@ -9,6 +9,11 @@ namespace Core.Models
     public static class CatalogueModel
     {
 
+        public CatalogueModel(string ecranNome)
+        {
+            var lst = new List<ModelField>();
+            lst.Add(new ModelField(ecranNome, ""))
+        }
 
         public static string Terminal { get; set; }
 
@@ -16,7 +21,7 @@ namespace Core.Models
 
         public static string SubFamilia { get; set; }
 
-        public static string EmCormercialzacao { get; set; }
+        public static string EmComercialzacao { get; set; }
 
         public static string Estado { get; set; }
 
