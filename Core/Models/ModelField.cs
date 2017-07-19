@@ -15,62 +15,41 @@ namespace Core.Models
         /// </summary>
         public TabelaEnum Tabela { get; set; }
 
-        private string ecra;
-        private string copybook;
-        private int tamanho;
-        private TipoCampo tipo;
+        /// <summary>
+        /// Tabela usada para validar a key inserida pelo utilizador
+        /// </summary>
+        public TabelaEnum ValidaTab { get; set; }
 
-        public ModelField(string ecra, string copybook, int tamanho, TipoCampo tipoCampo)
-        {
-            this.ecra = ecra;
-            this.copybook = copybook;
-            this.tamanho = tamanho;
-            this.tipo = tipoCampo;
-        }
+        /// <summary>
+        /// Tipologia do campo em questão
+        /// </summary>
+        public TipoCampoEnum TipoDeCampo { get; set; }
 
         public string Ecran { get; set; }
 
-        public string DescricaoLbl { get; set; }
+        public string LblDescription { get; set; }
 
         public string CopyBook { get; set; }
         public int Tamanho { get; set; }
 
-        public ModelField(string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo)
+        public string ValidaCol { get; set; }
+
+        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, 
+            TabelaEnum validaTabela)
         {
+            this.Tabela = tabelaId;
             this.Ecran = ecra;
             this.CopyBook = copybook;
             this.Tamanho = tamanho;
             this.TipoDeCampo = tipoCampo;
+            this.ValidaCol = validaCol;
+            this.LblDescription = description;
+            this.ValidaTab = validaTabela;
         }
 
         public ModelField()
-            {
-
-        public int Tamanho
         {
-            get
-            {
-                return tamanho;
-            }
-            set
-            {
-                tamanho = value;
-            }
+
         }
-
-
-        public TipoCampo Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-            set
-            {
-                tipo = value;
-            }
-        }
-
-        public enum TipoCampo { STRING, DECIMAL, DATA, UNKNOWN }
     }
 }

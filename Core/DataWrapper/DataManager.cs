@@ -39,24 +39,27 @@ namespace Core.DataWrapper
                                 newField.Ecran = dr.GetDbStr("Ecra");
                                 newField.CopyBook = dr.GetDbStr("CopyBook");
                                 newField.Tamanho = dr.GetDbInt("Size");
-                                newField.TabelaId = dr.GetDbStr("TblID");
+                                newField.Tabela = (TabelaEnum)dr.GetDbInt("TabelaID");
+                                newField.ValidaCol = dr.GetDbStr("ValidaCol");
+                                newField.LblDescription = dr.GetDbStr("Descritivo");
+                                newField.ValidaTab = (TabelaEnum)dr.GetDbInt("ValidaTblID");
+
 
                                 switch (dr.GetDbStr("ValType"))
                                 {
                                     case "STR":
-                                        newField.Tipo = ModelField.TipoCampo.STRING;
+                                        newField.TipoDeCampo = TipoCampoEnum.STRING;
                                         break;
                                     case "DEC":
-                                        newField.Tipo = ModelField.TipoCampo.DECIMAL;
+                                        newField.TipoDeCampo = TipoCampoEnum.DECIMAL;
                                         break;
                                     case "DATA":
-                                        newField.Tipo = ModelField.TipoCampo.DATA;
+                                        newField.TipoDeCampo = TipoCampoEnum.DATA;
                                         break;
                                     case "CMB":
-                                        newField.Tipo = ModelField.TipoCampo.DATA;
+                                        newField.TipoDeCampo = TipoCampoEnum.COMBOBOX;
                                         break;
-                                    default:
-                                        newField.Tipo = ModelField.TipoCampo.UNKNOWN;
+                                    default:                                        
                                         break;
                                 }
                             }
