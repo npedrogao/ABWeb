@@ -13,7 +13,7 @@ namespace Core.DataWrapper
 
         public SqlDbConnection(string connectionString) : base(connectionString)
         {
-            currentCon = new System.Data.SqlClient.SqlConnection(connectionString);
+            currentCon = (System.Data.SqlClient.SqlConnection)dbCon;
         }
 
         public override void Dispose()
@@ -39,9 +39,9 @@ namespace Core.DataWrapper
             SqlCommand cmnd = new SqlCommand(spName);
 
             cmnd.Parameters.AddRange(spParams);
-            cmnd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmnd.CommandType = System.Data.CommandType.StoredProcedure;            
             cmnd.Connection = currentCon;
-            cmnd.Connection.Open();
+
             return cmnd.ExecuteReader();
         }
 
