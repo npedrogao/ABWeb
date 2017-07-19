@@ -3,18 +3,20 @@ using System.Data.Odbc;
 using System.Collections.Generic;
 using System.Data;
 using System.Configuration;
+using System.Data.Common;
 
 namespace Core.DataWrapper
 {
-    public class BaseOdbcDbConnection
+    public class BaseOdbcDbConnection : BaseDbConnection
     {
         protected int MAX_LIST_SIZE = 60;
 
-        private OdbcConnection _conn = null;
+        private System.Data.Odbc.OdbcConnection currentCon = null;
         private OdbcTransaction transact = null;
-
-        public BaseOdbcDbConnection()
+       
+        public BaseOdbcDbConnection(string connectionString) : base(connectionString)
         {
+            currentCon = (System.Data.Odbc.OdbcConnection) dbCon;
         }
 
         public OdbcCommand getDbCommand(string connectionName, string sqlString = null)
@@ -25,12 +27,12 @@ namespace Core.DataWrapper
 
         public OdbcConnection getConnection(string connectionName)
         {
-            if (_conn == null)
+            if (currentCon == null)
             {
                 try
                 {
-                    _conn = new OdbcConnection(ManageConnections.getConnectionString(connectionName));
-                    _conn.Open();
+                    currentCon = new OdbcConnection(ManageConnections.getConnectionString(connectionName));
+                    currentCon.Open();
                 }
                 catch (Exception ex)
                 {
@@ -38,11 +40,11 @@ namespace Core.DataWrapper
                     throw ex;
                 }
             }
-            else if (_conn.State == System.Data.ConnectionState.Closed)
+            else if (currentCon.State == System.Data.ConnectionState.Closed)
             {
-                _conn.Open();
+                currentCon.Open();
             }
-            return _conn;
+            return currentCon;
         }
 
         public OdbcTransaction beginTransaction(string connectionName)
@@ -66,7 +68,7 @@ namespace Core.DataWrapper
         {
             try
             {
-                if (_conn != null && transact != null)
+                if (currentCon != null && transact != null)
                 {
                     transact.Commit();
                 }
@@ -86,7 +88,7 @@ namespace Core.DataWrapper
         {
             try
             {
-                if (_conn != null && transact != null)
+                if (currentCon != null && transact != null)
                 {
                     transact.Rollback();
                 }
@@ -165,10 +167,10 @@ namespace Core.DataWrapper
         {
             try
             {
-                if (_conn != null/* && _conn.State != System.Data.ConnectionState.Closed*/)
+                if (currentCon != null/* && currentCon.State != System.Data.ConnectionState.Closed*/)
                 {
-                    _conn.Close();
-                    _conn = null;
+                    currentCon.Close();
+                    currentCon = null;
                 }
             }
             catch (Exception ex)
@@ -177,5 +179,31 @@ namespace Core.DataWrapper
             }
         }
 
+        public override DbConnection GetNewConnection(string conectionString)
+        {
+            return new System.Data.SqlClient.SqlConnection(conectionString);
+        }
+
+        public override void OpenConnection()
+        {
+            if (dbCon.State == System.Data.ConnectionState.Open)
+            {
+                dbCon.Close();
+            }
+
+            base.dbCon.Open();
+        }
+
+        public override void Dispose()
+        {
+            try
+            {
+                base.dbCon.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
+            }
+        }
     }
 }

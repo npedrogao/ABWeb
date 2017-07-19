@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using DbExtensions;
 using System.Collections.Generic;
 using Core.Models;
+using Core.DataWrapper;
 
 namespace UnitTestBDCWS
 {
@@ -14,7 +15,7 @@ namespace UnitTestBDCWS
         [TestMethod]
         public void TestMethod1()
         {
-            new DataAccess().ModeFieldList();
+            DataManager.ModeFieldList();
         }
     }
 }

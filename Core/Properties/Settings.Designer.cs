@@ -101,8 +101,9 @@ namespace Core.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=C301BTC005.corebus2.barclays.org\\TC005,5660;Database=catalogue;User Id=Cat" +
-            "alogue;p@$$w0rd")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=C301BTC005.corebus2.barclays.org\\TC005,5660;Initial Catalog=catalogue" +
+            ";User Id=Catalogue;Password=p@$$w0rd;Integrated Security=False;MultipleActiveRes" +
+            "ultSets=True")]
         public string ConnectionStringCatalogue {
             get {
                 return ((string)(this["ConnectionStringCatalogue"]));

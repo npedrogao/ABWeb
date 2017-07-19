@@ -65,13 +65,25 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "C", "Em Criação" },
-                                    new string[] { "A", "Activos" },
-                                    new string[] { "M", "Em Modificação" },
-                                    new string[] { "I", "Inactivo" }
-                                  });
+                EstadoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = EstadoEnum.Activo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstadoEnum.Criacao;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstadoEnum.Modificacao;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstadoEnum.Inactivo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -109,14 +121,21 @@ namespace Core.Models
         {
             get
             {
-                //return toDropDownList(new string[][] {
-                //                    new string[] { "S", "Sim" },
-                //                    new string[] { "N", "Não" }
-                //                  });
-                return toDropDownList(new string[][] {
-                           new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Sim),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Sim)},
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Nao),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Nao)}
-                });
+                SimNaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = SimNaoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SimNaoEnum.Sim;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SimNaoEnum.Nao;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -124,34 +143,42 @@ namespace Core.Models
         {
             get
             {
-                //return toDropDownList(new string[][] {
-                //new string[] { " ", " " },
-                //                    new string[] { "S", "Sim" },
-                //                    new string[] { "N", "Não" }
-                //                  });
+                SimNaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
 
-                return toDropDownList(new string[][] {
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Empty),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Empty) },
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Sim),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Sim)},
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(SimNaoEnum.Nao),  EnumExtensions.EnumExtensions.GetDesc(SimNaoEnum.Nao)}
-                });
+                en = SimNaoEnum.Sim;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SimNaoEnum.Nao;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+
             }
         }
-
 
         public static List<KeyValuePair<string, string>> ListActive
         {
             get
             {
-                return toDropDownList(new string[][] {
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Empty),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Empty) },
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Activo),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Activo) },
-                    new string[] { EnumExtensions.EnumExtensions.GetValue(ActivoInactivoEnum.Inactivo),  EnumExtensions.EnumExtensions.GetDesc(ActivoInactivoEnum.Inactivo)}
-                });
+                ActivoInactivoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ActivoInactivoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ActivoInactivoEnum.Activo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ActivoInactivoEnum.Inactivo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
-
-
 
         public static List<KeyValuePair<string, string>> ListPricing
         {
@@ -159,6 +186,10 @@ namespace Core.Models
             {
                 PricingEnum en;
                 var lst = new List<KeyValuePair<string, string>>();
+
+                en = PricingEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
 
                 en = PricingEnum.Clean;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -175,10 +206,21 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                     new string[] { "E", "Excesso" },
-                                    new string[] { "D", "Defeito" }
-                                  });
+                TipoArredonEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoArredonEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoArredonEnum.Defeito;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoArredonEnum.Excesso;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -186,10 +228,21 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "C", "Call" },
-                                    new string[] { "P", "Put" }
-                                  });
+                TipoWarrantEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoWarrantEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoWarrantEnum.Call;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoWarrantEnum.Put;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -197,10 +250,21 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "E", "Europeu" },
-                                    new string[] { "A", "Americano" }
-                                  });
+                EstiloWarrantEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = EstiloWarrantEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstiloWarrantEnum.Europeu;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstiloWarrantEnum.Americano;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -208,10 +272,21 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "A", "Automático" },
-                                    new string[] { "N", "Não Automático" }
-                                  });
+                TipoExercicioEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+                
+                en = TipoExercicioEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoExercicioEnum.Automatico;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoExercicioEnum.NaoAutomatico;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
@@ -219,10 +294,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "A", "Fisica" },
-                                    new string[] { "N", "Financeira" }
-                                  });
+                TipoLiquidaEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoLiquidaEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+
+                en = TipoLiquidaEnum.Financeira;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoLiquidaEnum.Fisica;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 

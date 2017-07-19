@@ -6,9 +6,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
 
-    <div class="title">
+    <%--s<div class="title">
         <asp:Label ID="lblTransaction" runat="server" CssClass="titleGrayBold"></asp:Label>
+    </div>--%>
+    <div class="titleAccordion">
+        <asp:Label ID="lblTransaction" runat="server"> AP34C </asp:Label>
     </div>
+
     <asp:Panel ID="pnlContent" runat="server">
         <table width="100%" cellpadding="0" cellspacing="0" class="t-table-0">
             <tr>
@@ -73,9 +77,8 @@
         </table>
     </asp:Panel>
     <br />
+    <button id="btnCaracGerais" class="titleAccordion-plus" runat="server" onserverclick="btnCaracGerais_Click">Caracteristicas Gerais</button>
 
-
-    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>
     <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -134,7 +137,7 @@
     <br />
     <br />
 
-    <button id="btnRenovacoes" class="titleAccordion" runat="server" onserverclick="btnRenovacoes_Click">Renovações</button>
+    <button id="btnRenovacoes" class="titleAccordion-plus" runat="server" onserverclick="btnRenovacoes_Click">Renovações</button>
 
     <asp:Panel ID="pnlRenovacoesContent" runat="server" Visible="false">
         <br />
@@ -160,7 +163,7 @@
     <br />
     <br />
 
-    <button id="btnOperacoes" class="titleAccordion" runat="server" onserverclick="btnOperacoes_Click">Operações</button>
+    <button id="btnOperacoes" class="titleAccordion-plus" runat="server" onserverclick="btnOperacoes_Click">Operações</button>
 
     <asp:Panel ID="pnlOperacoesContent" runat="server" Visible="false">
         <br />
@@ -203,7 +206,7 @@
     <br />
     <br />
 
-    <button id="btnDebito" class="titleAccordion" runat="server" onserverclick="btnDebito_Click">Débito</button>
+    <button id="btnDebito" class="titleAccordion-plus" runat="server" onserverclick="btnDebito_Click">Débito</button>
 
     <asp:Panel ID="pnlDebitoContent" runat="server" Visible="false">
         <br />
@@ -220,7 +223,7 @@
                     <asp:Label ID="lbNumTentativas" runat="server" class="t-label-1">Nr. Tentativas:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtNumTentativas" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
+                    <asp:TextBox ID="txtNumTentativas" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -229,7 +232,7 @@
     <br />
     <br />
 
-    <button id="btnValidacao" class="titleAccordion" runat="server" onserverclick="btnValidacao_Click">Validação Cliente</button>
+    <button id="btnValidacao" class="titleAccordion-plus" runat="server" onserverclick="btnValidacao_Click">Validação Cliente</button>
     <asp:Panel ID="pnlValidacaoContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -245,7 +248,7 @@
                     <asp:Label ID="lbNumDiasCliente" runat="server" class="t-label-1">Nr. Dias Novo Cliente:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtNumDiasCliente" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
+                    <asp:TextBox ID="txtNumDiasCliente" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -253,8 +256,8 @@
                     <asp:Label ID="lbCampanahExcepcao" runat="server" class="t-label-1">Campanha Excepção:</asp:Label>
                 </td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtCampanhaExcepcao" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtCampanhaExcepcaoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
+                    <asp:TextBox ID="txtCampanhaExcepcao" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtCampanhaExcepcaoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -263,27 +266,26 @@
     <br />
     <br />
 
-    <button id="btnCrossSelling" class="titleAccordion" runat="server" onserverclick="btnCrossSelling_Click">Cross Selling</button>
+    <button id="btnCrossSelling" class="titleAccordion-plus" runat="server" onserverclick="btnCrossSelling_Click">Cross Selling</button>
     <asp:Panel ID="pnlCrossSellingContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
-                <td class="t-table-col-1" colspan="8">&nbsp;</td>
-            </tr>
-            <tr>
                 <td class="t-table-col-1">
                     <asp:Label ID="lbConstituicao" runat="server" class="t-label-1">Constituição:</asp:Label></td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtConstituicao" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtConstituicaoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
+                    <asp:TextBox ID="txtConstituicao" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtConstituicaoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbVencimento" runat="server" class="t-label-1">Vencimento:</asp:Label></td>
+                    <asp:Label ID="lbVencimento" runat="server" class="t-label-1">Vencimento:</asp:Label>
+                </td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtVencimento" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtVencimentoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox></td>
+                    <asp:TextBox ID="txtVencimento" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtVencimentoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
+                </td>
             </tr>
         </table>
     </asp:Panel>
@@ -291,7 +293,7 @@
     <br />
     <br />
 
-    <button id="btnAtributoInvestimento" class="titleAccordion" runat="server" onserverclick="btnAtributoInvestimento_Click">Atributos de Investimento</button>
+    <button id="btnAtributoInvestimento" class="titleAccordion-plus" runat="server" onserverclick="btnAtributoInvestimento_Click">Atributos de Investimento</button>
     <asp:Panel ID="pnlAtributoInvestimentoContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
