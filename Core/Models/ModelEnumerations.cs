@@ -57,23 +57,27 @@ namespace Core.Models
         /// <summary>
         /// Não definido e inesperado
         /// </summary>
-        UNKNOWN = 0,
+        Unknown = 0,
         /// <summary>
         /// Valor textual
         /// </summary>
-        STRING = 1,
+        String = 1,
         /// <summary>
         /// Valor com casas decimais
         /// </summary>
-        DECIMAL = 2,
+        Decimal = 2,
         /// <summary>
         /// Data simples formato: ZZ/ZZ/ZZZZ, sem horas minutos e segundos
         /// </summary>
-        DATA = 3,
+        Data = 3,
         /// <summary>
         /// Caixa de opções com valor e descritivo em texto
         /// </summary>
-        COMBOBOX = 4,
+        ComboBox = 4,
+        /// <summary>
+        /// Caixa de opções com valor e descritivo em texto
+        /// </summary>
+        CustomMask = 5,
     }
 
     public enum TabelaEnum
