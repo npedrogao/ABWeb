@@ -6,9 +6,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
 
-    <div class="title">
+    <%--s<div class="title">
         <asp:Label ID="lblTransaction" runat="server" CssClass="titleGrayBold"></asp:Label>
+    </div>--%>
+    <div class="titleAccordion">
+        <asp:Label ID="lblTransaction" runat="server"> AP34C </asp:Label>
     </div>
+
     <asp:Panel ID="pnlContent" runat="server">
         <table width="100%" cellpadding="0" cellspacing="0" class="t-table-0">
             <tr>
@@ -73,9 +77,8 @@
         </table>
     </asp:Panel>
     <br />
+    <button id="btnCaracGerais" class="titleAccordion-plus" runat="server" onserverclick="btnCaracGerais_Click">Caracteristicas Gerais</button>
 
-    <asp:Button ID="btnCatGerais" runat="server" CssClass="titleAccordion" Text="Caractiristicas Gerais" OnClick="btnCatGerais_Click" />
-    <%--<button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>--%>
     <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -134,7 +137,7 @@
     <br />
     <br />
 
-    <button id="btnRenovacoes" class="titleAccordion" runat="server" onserverclick="btnRenovacoes_Click">Renovações</button>
+    <button id="btnRenovacoes" class="titleAccordion-plus" runat="server" onserverclick="btnRenovacoes_Click">Renovações</button>
 
     <asp:Panel ID="pnlRenovacoesContent" runat="server" Visible="false">
         <br />
@@ -160,7 +163,7 @@
     <br />
     <br />
 
-    <button id="btnOperacoes" class="titleAccordion" runat="server" onserverclick="btnOperacoes_Click">Operações</button>
+    <button id="btnOperacoes" class="titleAccordion-plus" runat="server" onserverclick="btnOperacoes_Click">Operações</button>
 
     <asp:Panel ID="pnlOperacoesContent" runat="server" Visible="false">
         <br />
@@ -203,7 +206,7 @@
     <br />
     <br />
 
-    <button id="btnDebito" class="titleAccordion" runat="server" onserverclick="btnDebito_Click">Débito</button>
+    <button id="btnDebito" class="titleAccordion-plus" runat="server" onserverclick="btnDebito_Click">Débito</button>
 
     <asp:Panel ID="pnlDebitoContent" runat="server" Visible="false">
         <br />
@@ -229,7 +232,7 @@
     <br />
     <br />
 
-    <button id="btnValidacao" class="titleAccordion" runat="server" onserverclick="btnValidacao_Click">Validação Cliente</button>
+    <button id="btnValidacao" class="titleAccordion-plus" runat="server" onserverclick="btnValidacao_Click">Validação Cliente</button>
     <asp:Panel ID="pnlValidacaoContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -263,7 +266,7 @@
     <br />
     <br />
 
-    <button id="btnCrossSelling" class="titleAccordion" runat="server" onserverclick="btnCrossSelling_Click">Cross Selling</button>
+    <button id="btnCrossSelling" class="titleAccordion-plus" runat="server" onserverclick="btnCrossSelling_Click">Cross Selling</button>
     <asp:Panel ID="pnlCrossSellingContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -290,7 +293,7 @@
     <br />
     <br />
 
-    <button id="btnAtributoInvestimento" class="titleAccordion" runat="server" onserverclick="btnAtributoInvestimento_Click">Atributos de Investimento</button>
+    <button id="btnAtributoInvestimento" class="titleAccordion-plus" runat="server" onserverclick="btnAtributoInvestimento_Click">Atributos de Investimento</button>
     <asp:Panel ID="pnlAtributoInvestimentoContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">

@@ -133,17 +133,19 @@ namespace ABWebCatalogue.Site
 
 
 
-        protected void btnCatGerais_Click(object sender, EventArgs e)
+        protected void btnCaracGerais_Click(object sender, EventArgs e)
         {
             if (pnlCatGeraisContent.Visible == false)
             {
                 pnlCatGeraisContent.Visible = true;
-                btnCatGerais.CssClass = "Active";
+                btnCaracGerais.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnCaracGerais.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlCatGeraisContent.Visible = false;
-                //btnCatGerais.CssClass = "Active";
+                btnCaracGerais.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnCaracGerais.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -153,10 +155,14 @@ namespace ABWebCatalogue.Site
             if (pnlRenovacoesContent.Visible == false)
             {
                 pnlRenovacoesContent.Visible = true;
+                btnRenovacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnRenovacoes.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlRenovacoesContent.Visible = false;
+                btnRenovacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnRenovacoes.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -165,10 +171,15 @@ namespace ABWebCatalogue.Site
             if (pnlOperacoesContent.Visible == false)
             {
                 pnlOperacoesContent.Visible = true;
+                btnOperacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnOperacoes.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlOperacoesContent.Visible = false;
+
+                btnOperacoes.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnOperacoes.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -177,10 +188,16 @@ namespace ABWebCatalogue.Site
             if (pnlDebitoContent.Visible == false)
             {
                 pnlDebitoContent.Visible = true;
+
+                btnDebito.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnDebito.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlDebitoContent.Visible = false;
+
+                btnDebito.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnDebito.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -189,10 +206,16 @@ namespace ABWebCatalogue.Site
             if (pnlValidacaoContent.Visible == false)
             {
                 pnlValidacaoContent.Visible = true;
+
+                btnValidacao.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnValidacao.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlValidacaoContent.Visible = false;
+
+                btnValidacao.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnValidacao.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -201,10 +224,16 @@ namespace ABWebCatalogue.Site
             if (pnlCrossSellingContent.Visible == false)
             {
                 pnlCrossSellingContent.Visible = true;
+
+                btnCrossSelling.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnCrossSelling.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlCrossSellingContent.Visible = false;
+
+                btnCrossSelling.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnCrossSelling.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
@@ -213,10 +242,16 @@ namespace ABWebCatalogue.Site
             if (pnlAtributoInvestimentoContent.Visible == false)
             {
                 pnlAtributoInvestimentoContent.Visible = true;
+
+                btnAtributoInvestimento.Attributes.CssStyle.Remove("titleAccordion-plus");
+                btnAtributoInvestimento.Attributes.Add("class", "titleAccordion-less");
             }
             else
             {
                 pnlAtributoInvestimentoContent.Visible = false;
+
+                btnAtributoInvestimento.Attributes.CssStyle.Remove("titleAccordion-less");
+                btnAtributoInvestimento.Attributes.Add("class", "titleAccordion-plus");
             }
         }
 
