@@ -51,7 +51,6 @@
     <Compile Include="DataWrapper\BaseDbConnection.cs" />
     <Compile Include="DataWrapper\BaseOdbcDbConnection.cs" />
     <Compile Include="DataWrapper\BaseSqlDbConnection.cs" />
-    <Compile Include="DataWrapper\DataManager.cs" />
     <Compile Include="DataWrapper\ManageConnections.cs" />
     <Compile Include="DataWrapper\SqlDbConnection.cs" />
     <Compile Include="Logging\LoggingHelper.cs" />

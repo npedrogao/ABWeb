@@ -131,7 +131,6 @@ namespace Core.Models
             }
         }
 
-
         public static List<KeyValuePair<string, string>> ListActive
         {
             get
@@ -143,8 +142,6 @@ namespace Core.Models
                 });
             }
         }
-
-
 
         public static List<KeyValuePair<string, string>> ListPricing
         {
