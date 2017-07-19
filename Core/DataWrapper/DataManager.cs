@@ -39,6 +39,7 @@ namespace Core.DataWrapper
                                 newField.Ecran = dr.GetDbStr("Ecra");
                                 newField.CopyBook = dr.GetDbStr("CopyBook");
                                 newField.Tamanho = dr.GetDbInt("Size");
+                                newField.TabelaId = dr.GetDbStr("TblID");
 
                                 switch (dr.GetDbStr("ValType"))
                                 {
@@ -49,6 +50,9 @@ namespace Core.DataWrapper
                                         newField.Tipo = ModelField.TipoCampo.DECIMAL;
                                         break;
                                     case "DATA":
+                                        newField.Tipo = ModelField.TipoCampo.DATA;
+                                        break;
+                                    case "CMB":
                                         newField.Tipo = ModelField.TipoCampo.DATA;
                                         break;
                                     default:
