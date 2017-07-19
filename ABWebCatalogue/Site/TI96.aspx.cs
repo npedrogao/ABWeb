@@ -206,5 +206,45 @@ namespace ABWebCatalogue.Site
             //model.Dtactiva = form.GetStr(txtDtactiva.ID);
 
         }
+
+        protected void btnWarrants_Click(object sender, EventArgs e)
+        {
+            pnlWarrantsContent.Visible = pnlWarrantsContent.Visible == false ? true : false;
+        }
+
+        protected void btnPanel1_Click(object sender, EventArgs e)
+        {
+            pnlPanel1Content.Visible = pnlPanel1Content.Visible == false ? true : false;
+        }
+
+        protected void btnPanel2_Click(object sender, EventArgs e)
+        {
+            pnlPanel2Content.Visible = pnlPanel2Content.Visible == false ? true : false;
+        }
+
+        protected void btnPanel3_Click(object sender, EventArgs e)
+        {
+            pnlPanel3Content.Visible = pnlPanel3Content.Visible == false ? true : false;
+          
+        }
+        protected void btnPapComerc_Click(object sender, EventArgs e)
+        {
+            pnlPapComercContent.Visible = pnlPapComercContent.Visible == false ? true : false;
+
+        }
+
+        protected void btnTaxMult_Click(object sender, EventArgs e)
+        {
+            pnlTaxMultContent.Visible = pnlTaxMultContent.Visible == false ? true : false;
+
+        }
+
+        protected void btnAtInves_Click(object sender, EventArgs e)
+        {
+            pnlAtInvesContent.Visible = pnlAtInvesContent.Visible == false ? true : false;
+           
+
+
+        }
     }
 }

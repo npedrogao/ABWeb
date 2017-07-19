@@ -498,11 +498,12 @@
 
 
 
-    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Warrants</button>
-    <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
+    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnWarrants_Click">Warrants</button>
+    <asp:Panel ID="pnlWarrantsContent" runat="server" Visible="false">
         <br />
 
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+
             <tr>
                 <td class="t-table-col-1">
 
@@ -517,379 +518,529 @@
                 <td class="t-table-col-2">
                     <select id="cmbIestwar" runat="server" class="t-field-14"></select>
                 </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="empty" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
             </tr>
 
-            <%--
-                                    <asp:Label ID="lbTipoExercicio" runat="server" class="t-label-1">Tipo Exercicio:</asp:Label>
-                                        <select id="cmbItipexer" runat="server" class="t-field-14"></select>
-                                    <asp:Label ID="lbDtAdmissNeg" runat="server" class="t-label-1">Dt Admiss. Negoc.</asp:Label>
-                                        <asp:TextBox ID="txtFeadmiss" runat="server" CssClass="t-field-14"></asp:TextBox>
-                                    <asp:Label ID="lbDtUltNegoc" runat="server" class="t-label-1">Dt Última. Negoc.:</asp:Label>
-                                        <asp:TextBox ID="txtFeultneg" runat="server" CssClass="t-field-14"></asp:TextBox>
-                                    <asp:Label ID="lbDtVenc" runat="server" class="t-label-1">DT de Vencimento:</asp:Label>
-                                        <asp:TextBox ID="txtFevencim" runat="server" CssClass="t-field-14"></asp:TextBox>
-                                    <asp:Label ID="lbParidadeWarrant" runat="server" class="t-label-1">Paridade Warrant:</asp:Label>
-                                        <asp:TextBox ID="txtParidade" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    <asp:Label ID="lbLoteMinPExerc" runat="server" class="t-label-1">Lote Min. P/Exerc.:</asp:Label>
-                                        <asp:TextBox ID="txtQlotemin" runat="server" CssClass="t-field-14" MaxLength="5"></asp:TextBox>
+            <tr>
+                <td class="t-table-col-1">
 
-                                    <asp:Label ID="lbIndActivo" runat="server" class="t-label-1">Ind. Activo Subj.:</asp:Label>
-                                        <select id="cmbIactsubj" runat="server" class="t-field-14"></select>
-                                        <select id="cmbNactsubj" runat="server" class="t-field-14"></select>
+                    <asp:Label ID="lbTipoExercicio" runat="server" class="t-label-1">Tipo Exercicio:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbItipexer" runat="server" class="t-field-14"></select>
+                </td>
+            </tr>
 
-                                    <asp:Label ID="lbMoedaActivo" runat="server" class="t-label-1">Moeda Activo Subjacente:</asp:Label>
-                                        <asp:TextBox ID="txtCmoesubj" runat="server" CssClass="t-field-14" MaxLength="3"></asp:TextBox>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDtAdmissNeg" runat="server" class="t-label-1">Dt Admiss. Negoc.</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtFeadmiss" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDtUltNegoc" runat="server" class="t-label-1">Dt Última. Negoc.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtFeultneg" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
 
-                                    <asp:Label ID="lbTipoLiquidacao" runat="server" class="t-label-1">Tipo Liquidação:</asp:Label>
-                                        <select id="cmbCtipoliq" runat="server" class="t-field-14"></select>
 
-                                    <asp:Label ID="lbPrecoExercicio" runat="server" class="t-label-1">Preço Exercício:</asp:Label>
-                                        <asp:TextBox ID="txtStrike" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDtVenc" runat="server" class="t-label-1">DT de Vencimento:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtFevencim" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
 
-                                    <asp:Label ID="lbNomeEmitente" runat="server" class="t-label-1">Nome Emitente:</asp:Label>
-                                        <asp:TextBox ID="txtNemiten" runat="server" CssClass="t-field-14" MaxLength="25"></asp:TextBox>
-                                    <asp:Label ID="lbNominativo" runat="server" class="t-label-1">Nominativo:</asp:Label>
-                                        <select id="cmbInominat" runat="server" class="t-field-14"></select> --%>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbParidadeWarrant" runat="server" class="t-label-1">Paridade Warrant:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtParidade" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbLoteMinPExerc" runat="server" class="t-label-1">Lote Min. P/Exerc.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtQlotemin" runat="server" CssClass="t-field-14" MaxLength="5"></asp:TextBox>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndActivo" runat="server" class="t-label-1">Ind. Activo Subj.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbIactsubj" runat="server" class="t-field-14"></select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbMoedaActivo" runat="server" class="t-label-1">Moeda Activo Subjacente:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCmoesubj" runat="server" CssClass="t-field-14" MaxLength="3"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbTipoLiquidacao" runat="server" class="t-label-1">Tipo Liquidação:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbCtipoliq" runat="server" class="t-field-14"></select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbPrecoExercicio" runat="server" class="t-label-1">Preço Exercício:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtStrike" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbNomeEmitente" runat="server" class="t-label-1">Nome Emitente:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtNemiten" runat="server" CssClass="t-field-14" MaxLength="25"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbNominativo" runat="server" class="t-label-1">Nominativo:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbInominat" runat="server" class="t-field-14"></select>
+                </td>
+            </tr>
         </table>
     </asp:Panel>
-    <%--
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse2">Panel 1<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbNovoValorUnit" runat="server" class="t-label-1">Novo Valor Unit.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtNovoValorUnit" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
 
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbNatJuridica" runat="server" class="t-label-1">Natureza Juridica:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtNatJuridica" runat="server" CssClass="t-field-14" MaxLength="6"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+    <br />
+    <br />
 
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIndicePrincipal" runat="server" class="t-label-1">Indice Principal:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtIndicePrincipal" runat="server" CssClass="t-field-14" MaxLength="2"></asp:TextBox>
-                                    </div>
-                                </div>
+    <button id="Button1" class="titleAccordion" runat="server" onserverclick="btnPanel1_Click">Panel1</button>
+    <asp:Panel ID="pnlPanel1Content" runat="server" Visible="false">
+        <br />
 
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIndiceSecundario" runat="server" class="t-label-1">Indice Secundário:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtIndiceSecundario" runat="server" CssClass="t-field-14" MaxLength="2"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
 
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse3">Panel 2<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse3" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbRetEstranq" runat="server" class="t-label-1">% Ret. Estranq.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtRetEstranq" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="Label5" runat="server" class="t-label-1">Estilo Warrant:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtEstiloWarrant" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbNovoValorUnit" runat="server" class="t-label-1">Novo Valor Unit.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtNovoValorUnit" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label2" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label3" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+            </tr>
 
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse4">Panel 3<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse4" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbExchangeTraded" runat="server" class="t-label-1">Exchange Traded Funds:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:DropDownList ID="ddlExchangeTraded" CssClass="t-field-14" runat="server">
-                                            <asp:ListItem Value="S">Sim</asp:ListItem>
-                                            <asp:ListItem Value="N">Não</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse5">Papel Comercial<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse5" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIndexPrazoInf" runat="server" class="t-label-1">Index Prazo Inf.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTprzinf" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIndexPrazoSup" runat="server" class="t-label-1">Index Prazo Sup.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTprzsup" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbNatJuridica" runat="server" class="t-label-1">Natureza Juridica:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtNatJuridica" runat="server" CssClass="t-field-14" MaxLength="6"></asp:TextBox>
+                </td>
+            </tr>
 
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbDiasIndexInf" runat="server" class="t-label-1">Nº Dias Index Inf.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtQprzinf" runat="server" CssClass="t-field-14" MaxLength="4"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbDiasIndexSup" runat="server" class="t-label-1">Nº Dias Index Sup.:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtQprzsup" runat="server" CssClass="t-field-14" MaxLength="4"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndicePrincipal" runat="server" class="t-label-1">Indice Principal:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtIndicePrincipal" runat="server" CssClass="t-field-14" MaxLength="2"></asp:TextBox>
+                </td>
+            </tr>
 
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIndexante" runat="server" class="t-label-1">Indexante:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTindexante" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbSpread" runat="server" class="t-label-1">Spread:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTspreadpc" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbArredondamento" runat="server" class="t-label-1">Arredondamento:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTarredond" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbTaxaRef" runat="server" class="t-label-1">Taxa Referência:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTcambio" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndiceSecundario" runat="server" class="t-label-1">Indice Secundário:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtIndiceSecundario" runat="server" CssClass="t-field-14" MaxLength="2"></asp:TextBox>
+                </td>
+            </tr>
 
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbDtCambio" runat="server" class="t-label-1">Data de Câmbio:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtDcambio" runat="server" CssClass="t-field-14" MaxLength="10"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse6">Taxa Múltipla<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse6" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbTaxaMin" runat="server" class="t-label-1">Taxa Minima:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTxmin" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbTaxaMax" runat="server" class="t-label-1">Taxa Máxima:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtTxmax" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </table>
+    </asp:Panel>
 
-            <div class="panel panel-default">
-                <div class="panel-title">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#collapse7">Atributos de Investimento<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                    </h4>
-                </div>
-                <div id="collapse7" class="panel-content panel-collapse collapse">
-                    <div class="row panel-body container-fluid form-horizontal">
-                        <div class="col-xs-12">
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbSubFamilia" runat="server" class="t-label-1">SubFamilia:</asp:Label>
-                                    <div class="col-xs-6">
-                                        <asp:TextBox ID="txtCsubfam" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbLiquidez" runat="server" class="t-label-1">Liquidez:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtCliquidprod" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbComplexidade" runat="server" class="t-label-1">Complexidade:</asp:Label>
-                                    <div class="col-xs-3">
-                                        <asp:TextBox ID="txtCcomplexinv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                    <div class="col-xs-5">
-                                        <asp:TextBox ID="txtDcomplexinv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+    <br />
+    <br />
 
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbHorizontalTemporal" runat="server" class="t-label-1">Horizontal Temporal:</asp:Label>
-                                    <div class="col-xs-3">
-                                        <asp:TextBox ID="txtChorizon" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                    <div class="col-xs-5">
-                                        <asp:TextBox ID="txtDhorizon" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbZonaGeo" runat="server" class="t-label-1">Zona Geográfica:</asp:Label>
-                                    <div class="col-xs-3">
-                                        <asp:TextBox ID="txtCzongeog" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                    <div class="col-xs-5">
-                                        <asp:TextBox ID="txtDzongeog" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+    <button id="Button2" class="titleAccordion" runat="server" onserverclick="btnPanel2_Click">Panel2</button>
+    <asp:Panel ID="pnlPanel2Content" runat="server" Visible="false">
+        <br />
 
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbOnOffReg" runat="server" class="t-label-1">OnOff/Regular:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <select id="cmbConoffregu" runat="server" class="t-field-14"></select>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbIPad" runat="server" class="t-label-1">iPAD:</asp:Label>
-                                    <div class="col-xs-3">
-                                        <select id="cmbCipad" runat="server" class="t-field-14"></select>
-                                    </div>
-                                </div>
-                            </div>
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
 
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbNivelRisco" runat="server" class="t-label-1">Nivel Risco:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtCnivelrisco" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbVar" runat="server" class="t-label-1">VaR:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtMvar" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbData" runat="server" class="t-label-1">Data:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtDvar" runat="server" CssClass="t-field-14"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbRetEstranq" runat="server" class="t-label-1">% Ret. Estranq.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtRetEstranq" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
 
-                            <div class="row form-group">
-                                <asp:Label ID="Label1" runat="server" class="t-label-1">Descrição:</asp:Label>
-                                <div class="col-xs-8">
-                                    <asp:TextBox ID="txtGobsrv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                </div>
-                            </div>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label5" runat="server" class="t-label-1">% Agrav. IRS:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtEstiloWarrant" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label4" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+            </tr>
 
-                            <div class="row form-group">
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbCatClassActiv" runat="server" class="t-label-1">Cat./Class.Activ.:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtCclaacti" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbSoliClassifica" runat="server" class="t-label-1">Solicitar Classificação de Risco (S/N):</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtCclassrisc" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <asp:Label ID="lbDataActiv" runat="server" class="t-label-1">Data de Activação:</asp:Label>
-                                    <div class="col-xs-4">
-                                        <asp:TextBox ID="txtDtactiva" runat="server" CssClass="t-field-14"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>--%>
-    <div class="row form-group">
+
+        </table>
+    </asp:Panel>
+
+
+    <br />
+    <br />
+
+    <button id="Button7" class="titleAccordion" runat="server" onserverclick="btnPanel3_Click">Panel3</button>
+    <asp:Panel ID="pnlPanel3Content" runat="server" Visible="false">
+        <br />
+
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbExchangeTraded" runat="server" class="t-label-1">Exchange Traded Funds:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="ddlExchangeTraded" runat="server" class="t-field-14"></select>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label6" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label7" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+            </tr>
+
+        </table>
+    </asp:Panel>
+
+
+
+    <br />
+    <br />
+
+    <button id="Button4" class="titleAccordion" runat="server" onserverclick="btnPapComerc_Click">Papel Comercial</button>
+    <asp:Panel ID="pnlPapComercContent" runat="server" Visible="false">
+        <br />
+
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndexPrazoInf" runat="server" class="t-label-1">Index Prazo Inf.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTprzinf" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndexPrazoSup" runat="server" class="t-label-1">Index Prazo Sup.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTprzsup" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label8" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDiasIndexInf" runat="server" class="t-label-1">Nº Dias Index Inf.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtQprzinf" runat="server" CssClass="t-field-14" MaxLength="4"></asp:TextBox>
+
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDiasIndexSup" runat="server" class="t-label-1">Nº Dias Index Sup.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtQprzsup" runat="server" CssClass="t-field-14" MaxLength="4"></asp:TextBox>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIndexante" runat="server" class="t-label-1">Indexante:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTindexante" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbSpread" runat="server" class="t-label-1">Spread:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTspreadpc" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbArredondamento" runat="server" class="t-label-1">Arredondamento:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTarredond" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbTaxaRef" runat="server" class="t-label-1">Taxa Referência:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTcambio" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDtCambio" runat="server" class="t-label-1">Data de Câmbio:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtDcambio" runat="server" CssClass="t-field-14" MaxLength="10"></asp:TextBox>
+                </td>
+
+            </tr>
+
+
+        </table>
+    </asp:Panel>
+
+
+    <br />
+    <br />
+
+    <button id="Button5" class="titleAccordion" runat="server" onserverclick="btnTaxMult_Click">Taxa Múltipla</button>
+    <asp:Panel ID="pnlTaxMultContent" runat="server" Visible="false">
+        <br />
+
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbTaxaMin" runat="server" class="t-label-1">Taxa Minima:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTxmin" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label9" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label10" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                <td class="t-table-col-2"></td>
+
+
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbTaxaMax" runat="server" class="t-label-1">Taxa Máxima:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtTxmax" runat="server" CssClass="t-field-14" MaxLength="9"></asp:TextBox>
+                </td>
+            </tr>
+
+        </table>
+    </asp:Panel>
+
+
+
+
+    <br />
+    <br />
+
+    <button id="Button6" class="titleAccordion" runat="server" onserverclick="btnAtInves_Click">Atributos de Investimento</button>
+    <asp:Panel ID="pnlAtInvesContent" runat="server" Visible="false">
+        <br />
+
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+
+
+            <tr>
+                <td class="t-table-col-1">
+
+                    <asp:Label ID="lbSubFamilia" runat="server" class="t-label-1">SubFamilia:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCsubfam" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                    <asp:TextBox ID="txtDsubfam" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbLiquidez" runat="server" class="t-label-1">Liquidez:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCliquidprod" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+
+
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbComplexidade" runat="server" class="t-label-1">Complexidade:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCcomplexinv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                    <asp:TextBox ID="txtDcomplexinv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbHorizontalTemporal" runat="server" class="t-label-1">Horizontal Temporal:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtChorizon" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+
+                    <asp:TextBox ID="txtDhorizon" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbZonaGeo" runat="server" class="t-label-1">Zona Geográfica:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+
+                    <asp:TextBox ID="txtCzongeog" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                    <asp:TextBox ID="txtDzongeog" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbOnOffReg" runat="server" class="t-label-1">OnOff/Regular:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbConoffregu" runat="server" class="t-field-14"></select>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbIPad" runat="server" class="t-label-1">iPAD:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <select id="cmbCipad" runat="server" class="t-field-14"></select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbNivelRisco" runat="server" class="t-label-1">Nivel Risco:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCnivelrisco" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbVar" runat="server" class="t-label-1">VaR:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtMvar" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbData" runat="server" class="t-label-1">Data:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtDvar" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="txtDesc" runat="server" class="t-label-1">Descrição:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtGobsrv" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbCatClassActiv" runat="server" class="t-label-1">Cat./Class.Activ.:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCclaacti" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbSoliClassifica" runat="server" class="t-label-1">Solicitar Classificação de Risco (S/N):</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtCclassrisc" runat="server" CssClass="t-field-14" size="1"></asp:TextBox>
+                </td>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lbDataActiv" runat="server" class="t-label-1">Data de Activação:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtDtactiva" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
+
+        </table>
+    </asp:Panel>
+
+    <%--    <div class="row form-group">
         <div class="col-xs-offset-10">
             <button class="btn btn-default">Limpar</button>
             <button class="btn btn-default col-xs-offset-3">Gravar</button>
         </div>
-    </div>
+    </div>--%>
     <div class="row">
         <hr class="hr" />
     </div>
