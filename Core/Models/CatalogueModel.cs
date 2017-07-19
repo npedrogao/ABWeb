@@ -8,6 +8,8 @@ namespace Core.Models
 {
     public static class CatalogueModel
     {
+
+
         public static string Terminal { get; set; }
 
         public static string Familia { get; set; }
@@ -150,10 +152,17 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                     new string[] { "C", "Clean" },
-                                    new string[] { "D", "Dirty" }
-                                  }); ;
+                PricingEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = PricingEnum.Clean;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PricingEnum.Dirty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
             }
         }
 
