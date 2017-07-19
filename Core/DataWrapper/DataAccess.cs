@@ -11,7 +11,7 @@ using System.Web;
 
 namespace Core.DataWrapper
 {
-    public class DataAccess
+    public class DataAccess : BaseOdbcDbConnection
     {
         public const string BRANCHPTCONN = "ConnectionStringBranchPT";
         public const string MASTERCONN = "ConnectionStringMaster";

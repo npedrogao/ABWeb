@@ -49,4 +49,11 @@ namespace Core.Models
         Inactivo = 'I'
 
     }
+
+    public enum PricingEnum
+    {
+        Clean = 'C',
+        Dirty  ='D'
+
+    }
 }
