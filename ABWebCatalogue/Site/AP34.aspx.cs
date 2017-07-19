@@ -14,8 +14,11 @@ namespace ABWebCatalogue.Site
         string type;
         AP34Model model = new AP34Model();
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this.LoadComplete += AP34_LoadComplete;
+
             type = Request.QueryString["type"];
 
             ddlPrazoAbsoluto.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
@@ -25,7 +28,7 @@ namespace ABWebCatalogue.Site
             ddlMobilizacaoAntecipada.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlReforcoAutorizado.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             DDLDiasNUteis.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-
+            
             ddlEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
             DDLDiasAntecip.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlDebito.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
@@ -34,11 +37,12 @@ namespace ABWebCatalogue.Site
 
             //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
 
+
             switch (type)
             {
                 case "C":
                     {
-                        lblTransaction.Text = "AP34C";
+                        
 
                         //  Core.Models.ModelField("AP34C", model.CProduto, 
 
@@ -47,16 +51,16 @@ namespace ABWebCatalogue.Site
                 case "M":
                 case "V":
                     {
-                        lblTransaction.Text = "AP34M";
+                        
 
-                        txtCodProduto.Text = model.CProduto;
-                        txtCodProdutoDesc.Text = model.GProduto;
-                        txtCodSubProduto.Text = model.CSubProd;
-                        txtCodSubProdutoDesc.Text = model.GSubProd;
-                        txtClasse.Text = model.CClaPrz;
-                        txtClasseDesc.Text = model.GClaPrz;
-                        txtMoeda.Text = model.CMoeda;
-                        txtMoeda2.Text = model.GMoeda;
+                        txtCProduto.Text = model.CProduto;
+                        txtGProduto.Text = model.GProduto;
+                        txtCSubProd.Text = model.CSubProd;
+                        txtGSubProd.Text = model.GSubProd;
+                        txtCClaPrz.Text = model.CClaPrz;
+                        txtGClaPrz.Text = model.GClaPrz;
+                        txtCMoeda.Text = model.CMoeda;
+                        txtGMoeda.Text = model.GMoeda;
                         ddlEstado.SelectedValue = model.CEstado;
                         txtEstadoDesc.Text = model.GEstado;
                         txtDataInicio.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
@@ -125,13 +129,16 @@ namespace ABWebCatalogue.Site
 
                 case "A":
                     {
-                        lblTransaction.Text = "AP34A";
+                        
                         break;
                     }
             }
         }
 
-
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            CatalogueModel.ApplyModel(this);
+        }
 
         protected void btnCaracGerais_Click(object sender, EventArgs e)
         {
@@ -267,14 +274,14 @@ namespace ABWebCatalogue.Site
         {
             var form = Request.Form;
 
-            model.CProduto = form.GetStr(txtCodProduto.ID);
-            model.GProduto = form.GetStr(txtCodProdutoDesc.ID);
-            model.CSubProd = form.GetStr(txtCodSubProduto.ID);
-            model.GSubProd = form.GetStr(txtCodSubProdutoDesc.ID);
-            model.CClaPrz = form.GetStr(txtClasse.ID);
-            model.GClaPrz = form.GetStr(txtClasseDesc.ID);
-            model.CMoeda = form.GetStr(txtMoeda.ID);
-            model.GMoeda = form.GetStr(txtMoeda2.ID);
+            model.CProduto = form.GetStr(txtCProduto.ID);
+            model.GProduto = form.GetStr(txtGProduto.ID);
+            model.CSubProd = form.GetStr(txtCSubProd.ID);
+            model.GSubProd = form.GetStr(txtGSubProd.ID);
+            model.CClaPrz = form.GetStr(txtCClaPrz.ID);
+            model.GClaPrz = form.GetStr(txtGClaPrz.ID);
+            model.CMoeda = form.GetStr(txtCMoeda.ID);
+            model.GMoeda = form.GetStr(txtGMoeda.ID);
             model.CEstado = form.GetStr(ddlEstado.ID);
             model.GEstado = form.GetStr(txtEstadoDesc.ID);
             //Características Gerais

@@ -26,7 +26,7 @@ namespace Core.Models
                     case TipoCampoEnum.Decimal:
                     case TipoCampoEnum.Data:
                         fieldName = "lbl" + itm.CopyBook;
-                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.TextBox).Text = itm.DescricaoLbl;
+                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                         fieldName = "txt" + itm.CopyBook;
                         (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
                         break;

@@ -20,34 +20,34 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label8" runat="server" class="t-label-1">Código de Produto:</asp:Label>
+                    <asp:Label ID="lblCProduto" runat="server" class="t-label-1">Código de Produto:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtCodProduto" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtCodProdutoDesc" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <asp:TextBox ID="txtCProduto" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtGProduto" runat="server" CssClass="t-field-15"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label9" runat="server" class="t-label-1">Código do SubProduto:</asp:Label>
+                    <asp:Label ID="lblCSubProd" runat="server" class="t-label-1">Código do SubProduto:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtCodSubProduto" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtCodSubProdutoDesc" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <asp:TextBox ID="txtCSubProd" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtGSubProd" runat="server" CssClass="t-field-15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label6" runat="server" class="t-label-1">Classe:</asp:Label>
+                    <asp:Label ID="lblCClaPrz" runat="server" class="t-label-1">Classe:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtClasse" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtClasseDesc" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <asp:TextBox ID="txtCClaPrz" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtGClaPrz" runat="server" CssClass="t-field-15"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label7" runat="server" class="t-label-1">Moeda:</asp:Label>
+                    <asp:Label ID="lblCMoeda" runat="server" class="t-label-1">Moeda:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtMoeda" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtMoeda2" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <asp:TextBox ID="txtCMoeda" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtGMoeda" runat="server" CssClass="t-field-15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
