@@ -19,6 +19,8 @@ namespace ABWebCatalogue.Site
         {
             //this.LoadComplete += AP34_LoadComplete;
 
+            CatalogueModel.ApplyModel(this);
+
             type = Request.QueryString["type"];
 
             ddlPrazoAbsoluto.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
@@ -137,7 +139,7 @@ namespace ABWebCatalogue.Site
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            CatalogueModel.ApplyModel(this);
+            
         }
 
         protected void btnCaracGerais_Click(object sender, EventArgs e)

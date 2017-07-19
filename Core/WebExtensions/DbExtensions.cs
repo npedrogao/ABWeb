@@ -17,5 +17,13 @@ namespace DbExtensions
         {
             return (int)reader[colName];
         }
+
+        public static int? GetDbIntNull(this SqlDataReader reader, string colName)
+        {
+            var value = reader[colName];
+            if (!DBNull.Value.Equals(value))
+                return (int)reader[colName];
+            return null;
+        }
     }
 }

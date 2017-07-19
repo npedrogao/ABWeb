@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using EnumExtensions;
+using Core.DataWrapper;
 
 namespace Core.Models
 {
@@ -15,24 +16,43 @@ namespace Core.Models
         public static void ApplyModel(System.Web.UI.Page page)
         {
             var lst = new List<ModelField>();
-            string transactionName = page.Request.Form["transacao"];
+            string transactionName = page.Request.QueryString["transacao"];
             lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
             string fieldName = string.Empty;
             string placeHolderName = "CPH";
-            foreach (var itm in lst)
+            System.Web.UI.Control curControl = null;
+
+            
+            lst = DataManager.ModelFieldList(transactionName);
+
+            try
             {
-                switch(itm.TipoDeCampo)
+                foreach (var itm in lst)
                 {
-                    case TipoCampoEnum.String:
-                    case TipoCampoEnum.Decimal:
-                    case TipoCampoEnum.Data:
-                        fieldName = "lbl" + itm.CopyBook;
-                        (page.Master.FindControl(placeHolderName).FindControl(fieldName) as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                        fieldName = "txt" + itm.CopyBook;
-                        (page.Master.FindControl(placeHolderName).FindControl(fieldName) as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
-                        break;
+                    if (String.IsNullOrEmpty(itm.CopyBook))
+                        continue;
+
+                    switch (itm.TipoDeCampo)
+                    {
+                        case TipoCampoEnum.String:
+                        case TipoCampoEnum.Decimal:
+                        case TipoCampoEnum.Data:
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
+                            fieldName = "txt" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                            break;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception("curControl: " + fieldName + " Msg:"+ ex.Message);
+            }
+            
         }
 
         public static string Terminal { get; set; }
