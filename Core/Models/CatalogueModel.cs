@@ -18,6 +18,7 @@ namespace Core.Models
             string transactionName = page.Request.Form["transacao"];
             lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
             string fieldName = string.Empty;
+            string placeHolderName = "CPH";
             foreach (var itm in lst)
             {
                 switch(itm.TipoDeCampo)
@@ -26,9 +27,9 @@ namespace Core.Models
                     case TipoCampoEnum.Decimal:
                     case TipoCampoEnum.Data:
                         fieldName = "lbl" + itm.CopyBook;
-                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                        (page.Master.FindControl(placeHolderName).FindControl(fieldName) as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                         fieldName = "txt" + itm.CopyBook;
-                        (page.Master.FindControl(fieldName) as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                        (page.Master.FindControl(placeHolderName).FindControl(fieldName) as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
                         break;
                 }
             }
