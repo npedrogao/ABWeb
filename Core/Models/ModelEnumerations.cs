@@ -83,7 +83,7 @@ namespace Core.Models
     public enum TabelaEnum
     {
         [Description("")]
-        NA = 0,
+        NULL = 0,
         [Description("TB026")]
         TB026 = 1,
         [Description("TB088")]

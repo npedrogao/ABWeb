@@ -16,7 +16,7 @@ namespace Core.Models
         {
             var lst = new List<ModelField>();
             string transactionName = page.Request.Form["transacao"];
-            lst.Add(new ModelField(transactionName, "CPRODUTO", 1, TipoCampoEnum.String));
+            lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL));
             string fieldName = string.Empty;
             foreach (var itm in lst)
             {

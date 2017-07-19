@@ -41,23 +41,23 @@ namespace Core.DataWrapper
                                 newField.Tamanho = dr.GetDbInt("Size");
                                 newField.Tabela = (TabelaEnum)dr.GetDbInt("TabelaID");
                                 newField.ValidaCol = dr.GetDbStr("ValidaCol");
-                                newField.LblDescription = dr.GetDbStr("Descritivo");
+                                newField.DescricaoLbl = dr.GetDbStr("Descritivo");
                                 newField.ValidaTab = (TabelaEnum)dr.GetDbInt("ValidaTblID");
 
 
                                 switch (dr.GetDbStr("ValType"))
                                 {
                                     case "STR":
-                                        newField.TipoDeCampo = TipoCampoEnum.STRING;
+                                        newField.TipoDeCampo = TipoCampoEnum.String;
                                         break;
                                     case "DEC":
-                                        newField.TipoDeCampo = TipoCampoEnum.DECIMAL;
+                                        newField.TipoDeCampo = TipoCampoEnum.Decimal;
                                         break;
                                     case "DATA":
-                                        newField.TipoDeCampo = TipoCampoEnum.DATA;
+                                        newField.TipoDeCampo = TipoCampoEnum.Data;
                                         break;
                                     case "CMB":
-                                        newField.TipoDeCampo = TipoCampoEnum.COMBOBOX;
+                                        newField.TipoDeCampo = TipoCampoEnum.ComboBox;
                                         break;
                                     default:                                        
                                         break;
