@@ -24,14 +24,17 @@
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCProduto" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtGProduto" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <select id="cmbGProduto" runat="server" class="t-field-15"></select>
+                    <%--<asp:TextBox ID="txtGProduto" runat="server" CssClass="t-field-15"></asp:TextBox>--%>
+
                 </td>
                 <td class="t-table-col-1">
                     <asp:Label ID="lblCSubProd" runat="server" class="t-label-1">Código do SubProduto:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCSubProd" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="txtGSubProd" runat="server" CssClass="t-field-15"></asp:TextBox>
+                    <select id="cmbGSubProd" runat="server" class="t-field-15"></select>
+                    <%--<asp:TextBox ID="txtGSubProd" runat="server" CssClass="t-field-15"></asp:TextBox>--%>
                 </td>
             </tr>
             <tr>

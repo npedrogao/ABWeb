@@ -49,13 +49,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCProduto;
         
         /// <summary>
-        /// txtGProduto control.
+        /// cmbGProduto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGProduto;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGProduto;
         
         /// <summary>
         /// lblCSubProd control.
@@ -76,13 +76,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCSubProd;
         
         /// <summary>
-        /// txtGSubProd control.
+        /// cmbGSubProd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGSubProd;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGSubProd;
         
         /// <summary>
         /// lblCClaPrz control.

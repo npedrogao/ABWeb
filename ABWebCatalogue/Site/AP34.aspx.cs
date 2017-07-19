@@ -54,9 +54,11 @@ namespace ABWebCatalogue.Site
 
 
                         txtCProduto.Text = model.CProduto;
-                        txtGProduto.Text = model.GProduto;
+                        cmbGProduto.Value = model.GProduto;
+                        //txtGProduto.Text = model.GProduto;
                         txtCSubProd.Text = model.CSubProd;
-                        txtGSubProd.Text = model.GSubProd;
+                        cmbGSubProd.Value = model.GSubProd;
+                        //txtGSubProd.Text = model.GSubProd;
                         txtCClaPrz.Text = model.CClaPrz;
                         txtGClaPrz.Text = model.GClaPrz;
                         txtCMoeda.Text = model.CMoeda;
@@ -275,9 +277,9 @@ namespace ABWebCatalogue.Site
             var form = Request.Form;
 
             model.CProduto = form.GetStr(txtCProduto.ID);
-            model.GProduto = form.GetStr(txtGProduto.ID);
+            model.GProduto = form.GetStr(cmbGProduto.ID);
             model.CSubProd = form.GetStr(txtCSubProd.ID);
-            model.GSubProd = form.GetStr(txtGSubProd.ID);
+            model.GSubProd = form.GetStr(cmbGSubProd.ID);
             model.CClaPrz = form.GetStr(txtCClaPrz.ID);
             model.GClaPrz = form.GetStr(txtGClaPrz.ID);
             model.CMoeda = form.GetStr(txtCMoeda.ID);
