@@ -410,6 +410,7 @@ namespace Core.Models
         [Description("J")]
         J = 'J'
     }
+
     public enum NumAnoEnum
     {
         [Description(" ")]
@@ -428,7 +429,28 @@ namespace Core.Models
         N6 = 6,
         [Description("12")]
         N12 = 12
+    }
 
+    public enum IndiceActivoSubjacenteEnum
+    {
+        [Description(" ")]
+        Empty = ' ',
+        [Description("A")]
+        A = 'A',
+        [Description("I")]
+        I = 'I',
+        [Description("T")]
+        T = 'T'
+    }
+
+    public enum OnOffRegularEnum
+    {
+        [Description(" ")]
+        Empty = ' ',
+        [Description("O")]
+        O = 'O',
+        [Description("R")]
+        R = 'R'
     }
 
 }

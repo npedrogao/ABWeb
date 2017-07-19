@@ -952,12 +952,26 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "A", "A" },
-                                    new string[] { "I", "I" },
-                                    new string[] { "T", "T" }
-                                  });
+                IndiceActivoSubjacenteEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = IndiceActivoSubjacenteEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.I;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -965,10 +979,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                     new string[] { "O", "O" },
-                                    new string[] { "R", "R" }
-                                  });
+                OnOffRegularEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = OnOffRegularEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = OnOffRegularEnum.O;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = OnOffRegularEnum.R;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
