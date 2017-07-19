@@ -74,8 +74,8 @@
     </asp:Panel>
     <br />
 
-
-    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>
+    <asp:Button ID="btnCatGerais" runat="server" CssClass="titleAccordion" Text="Caractiristicas Gerais" OnClick="btnCatGerais_Click" />
+    <%--<button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnCaracGerais_Click">Caractiristicas Gerais</button>--%>
     <asp:Panel ID="pnlCatGeraisContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -220,7 +220,7 @@
                     <asp:Label ID="lbNumTentativas" runat="server" class="t-label-1">Nr. Tentativas:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtNumTentativas" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
+                    <asp:TextBox ID="txtNumTentativas" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -245,7 +245,7 @@
                     <asp:Label ID="lbNumDiasCliente" runat="server" class="t-label-1">Nr. Dias Novo Cliente:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtNumDiasCliente" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
+                    <asp:TextBox ID="txtNumDiasCliente" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -253,8 +253,8 @@
                     <asp:Label ID="lbCampanahExcepcao" runat="server" class="t-label-1">Campanha Excepção:</asp:Label>
                 </td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtCampanhaExcepcao" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtCampanhaExcepcaoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
+                    <asp:TextBox ID="txtCampanhaExcepcao" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtCampanhaExcepcaoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -268,22 +268,21 @@
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
-                <td class="t-table-col-1" colspan="8">&nbsp;</td>
-            </tr>
-            <tr>
                 <td class="t-table-col-1">
                     <asp:Label ID="lbConstituicao" runat="server" class="t-label-1">Constituição:</asp:Label></td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtConstituicao" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtConstituicaoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
+                    <asp:TextBox ID="txtConstituicao" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtConstituicaoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbVencimento" runat="server" class="t-label-1">Vencimento:</asp:Label></td>
+                    <asp:Label ID="lbVencimento" runat="server" class="t-label-1">Vencimento:</asp:Label>
+                </td>
                 <td class="t-table-col-3">
-                    <asp:TextBox ID="txtVencimento" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
-                    <asp:TextBox ID="txtVencimentoDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox></td>
+                    <asp:TextBox ID="txtVencimento" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtVencimentoDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
+                </td>
             </tr>
         </table>
     </asp:Panel>

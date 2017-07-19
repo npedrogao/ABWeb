@@ -13,19 +13,7 @@ namespace Core.DataWrapper
 
         public SqlDbConnection(string connectionString) : base(connectionString)
         {
-            currentCon = new System.Data.SqlClient.SqlConnection(connectionString);
-        }
-
-        public override void Dispose()
-        {
-            try
-            {
-                base.dbCon.Dispose();
-            }
-            catch(Exception ex)
-            {
-                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
-            }
+            currentCon = (System.Data.SqlClient.SqlConnection)dbCon;
         }
 
         /// <summary>
@@ -39,9 +27,9 @@ namespace Core.DataWrapper
             SqlCommand cmnd = new SqlCommand(spName);
 
             cmnd.Parameters.AddRange(spParams);
-            cmnd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmnd.CommandType = System.Data.CommandType.StoredProcedure;            
             cmnd.Connection = currentCon;
-            cmnd.Connection.Open();
+
             return cmnd.ExecuteReader();
         }
 
@@ -58,6 +46,18 @@ namespace Core.DataWrapper
             }
 
             base.dbCon.Open();
+        }
+
+        public override void Dispose()
+        {
+            try
+            {
+                base.dbCon.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
+            }
         }
     }
 }

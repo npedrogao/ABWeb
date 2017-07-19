@@ -40,7 +40,7 @@ namespace ABWebCatalogue.Site
                     {
                         lblTransaction.Text = "AP34C";
 
-                          //  Core.Models.ModelField("AP34C", model.CProduto, 
+                        //  Core.Models.ModelField("AP34C", model.CProduto, 
 
                         break;
                     }
@@ -132,17 +132,21 @@ namespace ABWebCatalogue.Site
         }
 
 
-        protected void btnCaracGerais_Click(object sender, EventArgs e)
+
+        protected void btnCatGerais_Click(object sender, EventArgs e)
         {
             if (pnlCatGeraisContent.Visible == false)
             {
                 pnlCatGeraisContent.Visible = true;
+                btnCatGerais.CssClass = "Active";
             }
             else
             {
                 pnlCatGeraisContent.Visible = false;
+                //btnCatGerais.CssClass = "Active";
             }
         }
+
 
         protected void btnRenovacoes_Click(object sender, EventArgs e)
         {
