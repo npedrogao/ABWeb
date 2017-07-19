@@ -35,11 +35,13 @@ namespace Core.DataWrapper
         /// <param name="spParams">Parameters of different types</param>
         /// <returns>SqlDataReader object where you can read the SP output</returns>
         public SqlDataReader ExecSp(string spName, params SqlParameter[] spParams)
-        {
+        {           
             SqlCommand cmnd = new SqlCommand(spName);
 
             cmnd.Parameters.AddRange(spParams);
             cmnd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmnd.Connection = currentCon;
+            cmnd.Connection.Open();
             return cmnd.ExecuteReader();
         }
 
@@ -50,6 +52,11 @@ namespace Core.DataWrapper
 
         public override void OpenConnection()
         {
+            if(dbCon.State == System.Data.ConnectionState.Open)
+            {
+                dbCon.Close();
+            }
+
             base.dbCon.Open();
         }
     }
