@@ -58,11 +58,6 @@ namespace Core.DataWrapper
             {
                 Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
             }
-            finally
-            {
-                if(base.dbCon.State != System.Data.ConnectionState.Closed)
-                base.dbCon.Close();
-            }
         }
     }
 }
