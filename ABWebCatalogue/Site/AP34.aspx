@@ -52,26 +52,26 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label5" runat="server" class="t-label-1">Estado:</asp:Label>
+                    <asp:Label ID="lblCEstado" runat="server" class="t-label-1">Estado:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:DropDownList ID="ddlEstado" CssClass="t-field-14" runat="server">
+                    <asp:DropDownList ID="cmbCEstado" CssClass="t-field-14" runat="server">
                     </asp:DropDownList>
-                    <asp:TextBox ID="txtEstadoDesc" runat="server" MaxLength="30" CssClass="t-field-15"></asp:TextBox>
+                    <asp:TextBox ID="txtGEstado" runat="server" MaxLength="30" CssClass="t-field-15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label4" runat="server" class="t-label-1">Data de Início:</asp:Label>
+                    <asp:Label ID="lblDIniVal" runat="server" class="t-label-1">Data de Início:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox runat="server" ID="txtDataInicio" ReadOnly="true" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtDIniVal" ReadOnly="true" CssClass="t-field-6"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label3" runat="server" class="t-label-1">Data de Fim:</asp:Label>
+                    <asp:Label ID="lblDFimVal" runat="server" class="t-label-1">Data de Fim:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox runat="server" ID="txtDataFim" ReadOnly="true" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txtDFimVal" ReadOnly="true" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
@@ -84,51 +84,51 @@
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label2" runat="server" class="t-label-1">Prazo Absoluto:</asp:Label>
+                    <asp:Label ID="lblIPrzAbs" runat="server" class="t-label-1">Prazo Absoluto:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <%--<select id="select" runat="server"></select>--%>
-                    <asp:DropDownList ID="ddlPrazoAbsoluto" CssClass="t-field-6" runat="server">
+                    <asp:DropDownList ID="cmbIPrzAbs" CssClass="t-field-6" runat="server">
                     </asp:DropDownList>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label1" runat="server" class="t-label-1">Prod/SubP Contab:</asp:Label>
+                    <asp:Label ID="lblCProdCnt" runat="server" class="t-label-1">Prod/SubP Contab:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtProdSubPContab" runat="server" CssClass="t-field-6"></asp:TextBox>
-                    <asp:TextBox ID="txtProdSubPContab2" runat="server" CssClass="t-field-6"></asp:TextBox>
-                    <asp:TextBox ID="txtProdSubPContabDesc" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtCProdCnt" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtCProdCnt2" runat="server" CssClass="t-field-6"></asp:TextBox>
+                    <asp:TextBox ID="txtCSProCnt" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbFinalidade" runat="server" class="t-label-1">Finalidade Bankinter:</asp:Label>
+                    <asp:Label ID="lblCFinBb" runat="server" class="t-label-1">Finalidade Bankinter:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtFinalidade" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
-                    <asp:TextBox ID="txtFinalidadeDesc" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
+                    <asp:TextBox ID="txtCFinBb" runat="server" CssClass="t-field-6" MaxLength="3"></asp:TextBox>
+                    <asp:TextBox ID="txtGFinBb" runat="server" CssClass="t-field-6" MaxLength="30"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbDeclaracao" runat="server" CssClass="t-label-1">Declaração IRS:</asp:Label>
+                    <asp:Label ID="lblIIrs" runat="server" CssClass="t-label-1">Declaração IRS:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:DropDownList ID="ddlDeclaracao" CssClass="t-field-6" runat="server">
+                    <asp:DropDownList ID="cmbIIrs" CssClass="t-field-6" runat="server">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbRepTranches" runat="server" CssClass="t-label-1">Rep. Tranches:</asp:Label>
+                    <asp:Label ID="lblITranche" runat="server" CssClass="t-label-1">Rep. Tranches:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:DropDownList ID="ddlRepTranches" CssClass="t-field-6" runat="server">
+                    <asp:DropDownList ID="cmbITranche" CssClass="t-field-6" runat="server">
                     </asp:DropDownList>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lbCodAgregado" runat="server" CssClass="t-label-1">Cód. Agregado:</asp:Label>
+                    <asp:Label ID="lblCAgregDp" runat="server" CssClass="t-label-1">Cód. Agregado:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtCodAgregado" runat="server" CssClass="t-field-6" MaxLength="2"></asp:TextBox>
+                    <asp:TextBox ID="txtCAgregDp" runat="server" CssClass="t-field-6" MaxLength="2"></asp:TextBox>
                 </td>
             </tr>
         </table>

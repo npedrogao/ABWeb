@@ -21,15 +21,15 @@ namespace ABWebCatalogue.Site
 
             type = Request.QueryString["type"];
 
-            ddlPrazoAbsoluto.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
-            ddlDeclaracao.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlRepTranches.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIPrzAbs.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
+            cmbIIrs.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbITranche.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlRenovacoes.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlMobilizacaoAntecipada.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlReforcoAutorizado.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             DDLDiasNUteis.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            
-            ddlEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
+
+            cmbCEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
             DDLDiasAntecip.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlDebito.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlProdNCliente.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
@@ -42,7 +42,7 @@ namespace ABWebCatalogue.Site
             {
                 case "C":
                     {
-                        
+
 
                         //  Core.Models.ModelField("AP34C", model.CProduto, 
 
@@ -51,7 +51,7 @@ namespace ABWebCatalogue.Site
                 case "M":
                 case "V":
                     {
-                        
+
 
                         txtCProduto.Text = model.CProduto;
                         txtGProduto.Text = model.GProduto;
@@ -61,21 +61,21 @@ namespace ABWebCatalogue.Site
                         txtGClaPrz.Text = model.GClaPrz;
                         txtCMoeda.Text = model.CMoeda;
                         txtGMoeda.Text = model.GMoeda;
-                        ddlEstado.SelectedValue = model.CEstado;
-                        txtEstadoDesc.Text = model.GEstado;
-                        txtDataInicio.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
-                        txtDataFim.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
+                        cmbCEstado.SelectedValue = model.CEstado;
+                        txtGEstado.Text = model.GEstado;
+                        txtDIniVal.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
+                        txtDFimVal.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
 
                         //Características Gerais
-                        ddlPrazoAbsoluto.SelectedValue = model.IPrzAbs;
-                        txtProdSubPContab.Text = model.CProdCnt;
-                        txtProdSubPContab2.Text = model.CProdCnt2;
-                        txtProdSubPContabDesc.Text = model.CSProCnt;
-                        txtFinalidade.Text = model.CFinBb;
-                        txtFinalidadeDesc.Text = model.GFinBb;
-                        ddlDeclaracao.SelectedValue = model.IIrs;
-                        ddlRepTranches.SelectedValue = model.ITranche;
-                        txtCodAgregado.Text = model.CAgregDp;
+                        cmbIPrzAbs.SelectedValue = model.IPrzAbs;
+                        txtCProdCnt.Text = model.CProdCnt;
+                        txtCProdCnt2.Text = model.CProdCnt2;
+                        txtCSProCnt.Text = model.CSProCnt;
+                        txtCFinBb.Text = model.CFinBb;
+                        txtGFinBb.Text = model.GFinBb;
+                        cmbIIrs.SelectedValue = model.IIrs;
+                        cmbITranche.SelectedValue = model.ITranche;
+                        txtCAgregDp.Text = model.CAgregDp;
                         //Renovações
                         ddlRenovacoes.SelectedValue = model.IRenovac;
                         txtNumRenovacoes.Text = model.RNVA;
@@ -129,7 +129,7 @@ namespace ABWebCatalogue.Site
 
                 case "A":
                     {
-                        
+
                         break;
                     }
             }
@@ -282,18 +282,18 @@ namespace ABWebCatalogue.Site
             model.GClaPrz = form.GetStr(txtGClaPrz.ID);
             model.CMoeda = form.GetStr(txtCMoeda.ID);
             model.GMoeda = form.GetStr(txtGMoeda.ID);
-            model.CEstado = form.GetStr(ddlEstado.ID);
-            model.GEstado = form.GetStr(txtEstadoDesc.ID);
+            model.CEstado = form.GetStr(cmbCEstado.ID);
+            model.GEstado = form.GetStr(txtGEstado.ID);
             //Características Gerais
-            model.IPrzAbs = form.GetStr(ddlPrazoAbsoluto.ID);
-            model.CProdCnt = form.GetStr(txtProdSubPContab.ID);
-            model.CProdCnt2 = form.GetStr(txtProdSubPContab2.ID);
-            model.CSProCnt = form.GetStr(txtProdSubPContabDesc.ID);
-            model.CFinBb = form.GetStr(txtFinalidade.ID);
-            model.GFinBb = form.GetStr(txtFinalidadeDesc.ID);
-            model.IIrs = form.GetStr(ddlDeclaracao.ID);
-            model.ITranche = form.GetStr(ddlRepTranches.ID);
-            model.CAgregDp = form.GetStr(txtCodAgregado.ID);
+            model.IPrzAbs = form.GetStr(cmbIPrzAbs.ID);
+            model.CProdCnt = form.GetStr(txtCProdCnt.ID);
+            model.CProdCnt2 = form.GetStr(txtCProdCnt2.ID);
+            model.CSProCnt = form.GetStr(txtCSProCnt.ID);
+            model.CFinBb = form.GetStr(txtCFinBb.ID);
+            model.GFinBb = form.GetStr(txtGFinBb.ID);
+            model.IIrs = form.GetStr(cmbIIrs.ID);
+            model.ITranche = form.GetStr(cmbITranche.ID);
+            model.CAgregDp = form.GetStr(txtCAgregDp.ID);
             //Renovações
             model.IRenovac = form.GetStr(ddlRenovacoes.ID);
             model.RNVA = form.GetStr(txtNumRenovacoes.ID);
