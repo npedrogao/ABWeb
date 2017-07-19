@@ -27,7 +27,7 @@ namespace Core.Models
 
         public string Ecran { get; set; }
 
-        public string LblDescription { get; set; }
+        public string DescricaoLbl { get; set; }
 
         public string CopyBook { get; set; }
         public int Tamanho { get; set; }
