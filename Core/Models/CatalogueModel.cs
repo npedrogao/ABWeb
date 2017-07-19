@@ -3,12 +3,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using EnumExtensions;
+using Core.DataWrapper;
 
 namespace Core.Models
 {
     public static class CatalogueModel
     {
+        /// <summary>
+        /// Applys the model definitions to page
+        /// </summary>
+        /// <param name="page"></param>
+        public static void ApplyModel(System.Web.UI.Page page)
+        {
+            var lst = new List<ModelField>();
+            string transactionName = page.Request.QueryString["transacao"];
+            lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
+            string fieldName = string.Empty;
+            string placeHolderName = "CPH";
+            System.Web.UI.Control curControl = null;
 
+            
+            lst = DataManager.ModelFieldList(transactionName);
+
+            try
+            {
+                foreach (var itm in lst)
+                {
+                    if (String.IsNullOrEmpty(itm.CopyBook))
+                        continue;
+
+                    switch (itm.TipoDeCampo)
+                    {
+                        case TipoCampoEnum.String:
+                        case TipoCampoEnum.Decimal:
+                        case TipoCampoEnum.Data:
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
+                            fieldName = "txt" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("curControl: " + fieldName + " Msg:"+ ex.Message);
+            }
+            
+        }
 
         public static string Terminal { get; set; }
 
@@ -16,7 +61,7 @@ namespace Core.Models
 
         public static string SubFamilia { get; set; }
 
-        public static string EmCormercialzacao { get; set; }
+        public static string EmComercialzacao { get; set; }
 
         public static string Estado { get; set; }
 
@@ -269,7 +314,7 @@ namespace Core.Models
             {
                 TipoExercicioEnum en;
                 var lst = new List<KeyValuePair<string, string>>();
-                
+
                 en = TipoExercicioEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
@@ -312,12 +357,27 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "A", "A" },
-                                    new string[] { "P", "P" },
-                                    new string[] { "D", "D" }
-                                  });
+                PrazoAbsolutoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = PrazoAbsolutoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+
+                en = PrazoAbsolutoEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PrazoAbsolutoEnum.D;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PrazoAbsolutoEnum.P;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -325,11 +385,28 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "MER", "MER" },
-                                    new string[] { "MNR", "MNR" },
-                                    new string[] { "NAN", "NAN"}
-                                  });
+
+                TipoMercadoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoMercadoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+
+                en = TipoMercadoEnum.MER;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoMercadoEnum.MNR;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoMercadoEnum.NAN;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -337,14 +414,35 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "1", "1" },
-                                    new string[] { "2", "2" },
-                                    new string[] { "3", "3" },
-                                    new string[] { "4", "4" },
-                                    new string[] { "5", "5" }
-                                  });
+                RiscoProdutoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = RiscoProdutoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+
+                en = RiscoProdutoEnum.Nivel1;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoProdutoEnum.Nivel2;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoProdutoEnum.Nivel3;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoProdutoEnum.Nivel4;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoProdutoEnum.Nivel5;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -352,12 +450,27 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "Q", "Q" },
-                                    new string[] { "T", "T" },
-                                    new string[] { "A", "A" }
-                                  });
+
+                TipoAmortizacaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoAmortizacaoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoAmortizacaoEnum.Q;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoAmortizacaoEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoAmortizacaoEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -365,13 +478,31 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "T", "T" },
-                                    new string[] { "O", "O" },
-                                    new string[] { "S", "S" },
-                                    new string[] { "R", "R" }
-                                  });
+
+                TipoSubscricaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoSubscricaoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoSubscricaoEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoSubscricaoEnum.O;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoSubscricaoEnum.S;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoSubscricaoEnum.R;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -379,12 +510,27 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "Q", "Q" },
-                                    new string[] { "T", "T" },
-                                    new string[] { "A", "A" }
-                                  });
+                TipoResgateEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoResgateEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.Q;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+
             }
         }
 
@@ -392,14 +538,34 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "D", "D" }, //Default
-                                    new string[] { "W", "W" },
-                                    new string[] { "Q", "Q" },
-                                    new string[] { "M", "M" },
-                                    new string[] { "A", "A" }
-                                  });
+                PeriodoCoracaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = PeriodoCoracaoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PeriodoCoracaoEnum.D;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PeriodoCoracaoEnum.W;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PeriodoCoracaoEnum.Q;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PeriodoCoracaoEnum.M;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = PeriodoCoracaoEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -407,11 +573,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "F", "F" },
-                                    new string[] { "L", "L" }
-                                  });
+                TipoValoracaoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoValoracaoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoValoracaoEnum.F;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoValoracaoEnum.L;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -419,11 +596,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                   new string[] { " ", " " },
-                                    new string[] { "C", "C" },
-                                    new string[] { "D", "D" } //Default
-                                  });
+                CustodiaEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = CustodiaEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = CustodiaEnum.C;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = CustodiaEnum.D;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -431,11 +619,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { " ", " " },
-                                    new string[] { "0", "0" },
-                                    new string[] { "100", "100" } //Default
-                                  });
+                ElegivelEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ElegivelEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegivelEnum.Nivel0;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegivelEnum.Nivel100;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -443,16 +642,42 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "1", "1" },
-                                    new string[] { "2", "2" },
-                                    new string[] { "3", "3" },
-                                    new string[] { "4", "4" },
-                                    new string[] { "5", "5" },
-                                    new string[] { "6", "6" },
-                                    new string[] { "7", "7" }
-                                  });
+                RiscoKiddEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = RiscoKiddEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel1;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel2;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel3;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel4;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel5;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel6;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = RiscoKiddEnum.Nivel7;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -460,11 +685,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { " ", " " },
-                                    new string[] { "I", "I" },
-                                    new string[] { "A", "A" }
-                                  });
+                EstadoFundoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = EstadoFundoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstadoFundoEnum.I;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = EstadoFundoEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -472,13 +708,30 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "N", "N" },
-                                    new string[] { "P", "P" },
-                                    new string[] { "O", "O" },
-                                    new string[] { "X", "X" }
-                                  });
+                SitsNegociavelEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = SitsNegociavelEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SitsNegociavelEnum.N;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SitsNegociavelEnum.P;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SitsNegociavelEnum.O;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SitsNegociavelEnum.X;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -486,13 +739,26 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "0", "0" },
-                                    new string[] { "1", "1" },
-                                    new string[] { "2", "2" },
-                                    new string[] { "3", "3" }
-                                  });
+                IbanNetEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = IbanNetEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IbanNetEnum.Nivel1;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IbanNetEnum.Nivel2;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IbanNetEnum.Nivel3;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -500,13 +766,30 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "S", "S" },
-                                    new string[] { "N", "N" },
-                                    new string[] { "C", "C" },
-                                    new string[] { "V", "V" }
-                                  });
+                NegociavelEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = NegociavelEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NegociavelEnum.S;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NegociavelEnum.N;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NegociavelEnum.N;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NegociavelEnum.V;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -514,14 +797,34 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "BOE", "BOE" },
-                                    new string[] { "ECB", "ECB" },
-                                    new string[] { "FED", "FED" },
-                                    new string[] { "LCB", "LCB" },
-                                    new string[] { "MKT", "MKT" }
-                                  });
+                ElegibilidadeEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ElegibilidadeEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegibilidadeEnum.BOE;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegibilidadeEnum.ECB;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegibilidadeEnum.FED;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegibilidadeEnum.LCB;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ElegibilidadeEnum.MKT;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -529,12 +832,26 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "F", "Fixo" },
-                                    new string[] { "I", "Var" },
-                                    new string[] { "M", "Outro" }
-                                  });
+                TipoJuroEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoJuroEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoJuroEnum.Fixo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoJuroEnum.Var;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoJuroEnum.Outro;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -542,11 +859,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { " ", " " },
-                                    new string[] { "C", "C" },
-                                    new string[] { "D", "D" }
-                                  });
+                ModalidadeEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ModalidadeEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ModalidadeEnum.C;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ModalidadeEnum.D;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -554,11 +882,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { " ", " " },
-                                    new string[] {  "T", "Mês" },
-                                    new string[] {  "D", "Dias" }
-                                  });
+                TipoCalculoJurosEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = TipoCalculoJurosEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoCalculoJurosEnum.Mes;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoCalculoJurosEnum.Dias;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -566,11 +905,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                   new string[] { " ", " " },
-                                    new string[] { "S", "S" },
-                                    new string[] { "J", "J" }
-                                  });
+                SenioridadeEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = SenioridadeEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SenioridadeEnum.S;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = SenioridadeEnum.J;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -578,15 +928,43 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "1", "1" },
-                                    new string[] { "2", "2" },
-                                    new string[] { "3", "3" },
-                                    new string[] { "4", "4" },
-                                    new string[] { "6", "6" },
-                                    new string[] { "12", "12" }
-                                  });
+                NumAnoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = NumAnoEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N1;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N2;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N3;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N4;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N5;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N6;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = NumAnoEnum.N12;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+
             }
         }
 
@@ -594,12 +972,26 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                    new string[] { "", "" },
-                                    new string[] { "A", "A" },
-                                    new string[] { "I", "I" },
-                                    new string[] { "T", "T" }
-                                  });
+                IndiceActivoSubjacenteEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = IndiceActivoSubjacenteEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.I;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IndiceActivoSubjacenteEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 
@@ -607,10 +999,22 @@ namespace Core.Models
         {
             get
             {
-                return toDropDownList(new string[][] {
-                                     new string[] { "O", "O" },
-                                    new string[] { "R", "R" }
-                                  });
+                OnOffRegularEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = OnOffRegularEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = OnOffRegularEnum.O;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = OnOffRegularEnum.R;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
             }
         }
 

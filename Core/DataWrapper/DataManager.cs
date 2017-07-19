@@ -11,12 +11,12 @@ namespace Core.DataWrapper
 {
     public static class DataManager
     {
-        public static List<ModelField> ModeFieldList()
+        public static List<ModelField> ModelFieldList(string ecra)
         {
             try
             {
                 LogUtils.Enter();
-                List<ModelField> listOfFields = new List<ModelField>();
+                List<ModelField> lst = new List<ModelField>();
 
                 if (String.IsNullOrWhiteSpace(Properties.Settings.Default.ConnectionStringCatalogue))
                 {
@@ -27,45 +27,56 @@ namespace Core.DataWrapper
                 using (SqlDbConnection dbCon = new SqlDbConnection(Properties.Settings.Default.ConnectionStringCatalogue))
                 {
 
-                    SqlDataReader dr = dbCon.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", "VC25C"));
-
-                    if (dr.HasRows)
+                    SqlDataReader dr = dbCon.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", ecra));
+                    try
+                    {
+                        if (dr.HasRows)
                         while (dr.Read())
                         {
                             ModelField newField = new ModelField();
+                                
+                            newField.Ecran = dr.GetDbStr("Ecra");
+                            newField.CopyBook = dr.GetDbStr("CopyBook");
+                            newField.Tamanho = dr.GetDbInt("Tamanho");
+                            var tabID = dr.GetDbIntNull("TabelaID");
+                            if (tabID.HasValue)
+                                newField.Tabela = (TabelaEnum)tabID;
 
-                            try
-                            {
-                                newField.Ecran = dr.GetDbStr("Ecra");
-                                newField.CopyBook = dr.GetDbStr("CopyBook");
-                                newField.Tamanho = dr.GetDbInt("Size");
+                            newField.ValidaCol = dr.GetDbStr("ValidaCol");
+                            newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                            var validaTb = dr.GetDbIntNull("ValidaTblID");
+                            if (validaTb.HasValue)
+                                newField.ValidaTab = (TabelaEnum) validaTb;
 
-                                switch (dr.GetDbStr("ValType"))
-                                {
-                                    case "STR":
-                                        newField.Tipo = ModelField.TipoCampo.STRING;
-                                        break;
-                                    case "DEC":
-                                        newField.Tipo = ModelField.TipoCampo.DECIMAL;
-                                        break;
-                                    case "DATA":
-                                        newField.Tipo = ModelField.TipoCampo.DATA;
-                                        break;
-                                    default:
-                                        newField.Tipo = ModelField.TipoCampo.UNKNOWN;
-                                        break;
-                                }
-                            }
-                            catch (InvalidCastException ex)
+                            switch (dr.GetDbStr("ValType"))
                             {
-                                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Error, ex);
-                                LogUtils.Error(ex);
-                                throw ex;
+                                case "STR":
+                                    newField.TipoDeCampo = TipoCampoEnum.String;
+                                    break;
+                                case "DEC":
+                                    newField.TipoDeCampo = TipoCampoEnum.Decimal;
+                                    break;
+                                case "DATA":
+                                    newField.TipoDeCampo = TipoCampoEnum.Data;
+                                    break;
+                                case "CMB":
+                                    newField.TipoDeCampo = TipoCampoEnum.ComboBox;
+                                    break;
+                                default:                                        
+                                    break;
                             }
+                            lst.Add(newField);
                         }
+                    }
+                    catch (InvalidCastException ex)
+                    {
+                        Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Error, ex);
+                        LogUtils.Error(ex);
+                        throw ex;
+                    }
                 }
 
-                return listOfFields;
+                return lst;
             }
             catch (Exception ex)
             {
