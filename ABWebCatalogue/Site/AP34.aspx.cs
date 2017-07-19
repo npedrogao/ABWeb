@@ -24,15 +24,15 @@ namespace ABWebCatalogue.Site
             cmbIPrzAbs.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
             cmbIIrs.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbITranche.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlRenovacoes.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlMobilizacaoAntecipada.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlReforcoAutorizado.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            DDLDiasNUteis.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIRenovac.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbILevAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIAutRef.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIDiaNUt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
 
             cmbCEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
-            DDLDiasAntecip.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlDebito.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlProdNCliente.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbQDiasAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIDebFor.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            cmbIPrClNew.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             ddlSolicitarClassRisco.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
 
             //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
@@ -77,26 +77,26 @@ namespace ABWebCatalogue.Site
                         cmbITranche.SelectedValue = model.ITranche;
                         txtCAgregDp.Text = model.CAgregDp;
                         //Renovações
-                        ddlRenovacoes.SelectedValue = model.IRenovac;
-                        txtNumRenovacoes.Text = model.RNVA;
+                        cmbIRenovac.SelectedValue = model.IRenovac;
+                        txtRNVA.Text = model.RNVA;
                         //Operações
-                        ddlMobilizacaoAntecipada.SelectedValue = model.ILevAnt;
-                        ddlReforcoAutorizado.SelectedValue = model.IAutRef;
-                        DDLDiasNUteis.SelectedValue = model.IDiaNUt;
-                        DDLDiasAntecip.SelectedValue = model.QDiasAnt;
+                        cmbILevAnt.SelectedValue = model.ILevAnt;
+                        cmbIAutRef.SelectedValue = model.IAutRef;
+                        cmbIDiaNUt.SelectedValue = model.IDiaNUt;
+                        cmbQDiasAnt.SelectedValue = model.QDiasAnt;
                         //Débito
-                        ddlDebito.SelectedValue = model.IDebFor;
-                        txtNumTentativas.Text = model.QTentDeb;
+                        cmbIDebFor.SelectedValue = model.IDebFor;
+                        txtQTentDeb.Text = model.QTentDeb;
                         //Validação Cliente
-                        ddlProdNCliente.SelectedValue = model.IPrClNew;
-                        txtNumDiasCliente.Text = model.QDiasNCli;
-                        txtCampanhaExcepcao.Text = model.CCampNet;
-                        txtCampanhaExcepcaoDesc.Text = model.GCampNet;
+                        cmbIPrClNew.SelectedValue = model.IPrClNew;
+                        txtQDiasNCli.Text = model.QDiasNCli;
+                        txtCCampNet.Text = model.CCampNet;
+                        txtGCampNet.Text = model.GCampNet;
                         //Cross Selling
-                        txtConstituicao.Text = model.CCxsCons;
-                        txtConstituicaoDesc.Text = model.GCxsCons;
-                        txtVencimento.Text = model.CCxsVenc;
-                        txtVencimentoDesc.Text = model.GCxsVenc;
+                        txtCCxsCons.Text = model.CCxsCons;
+                        txtGCxsCons.Text = model.GCxsCons;
+                        txtCCxsVenc.Text = model.CCxsVenc;
+                        txtGCxsVenc.Text = model.GCxsVenc;
                         //Atributos Investimento
                         txtSubFamilia.Text = model.SubFamilia;
                         txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
@@ -295,26 +295,26 @@ namespace ABWebCatalogue.Site
             model.ITranche = form.GetStr(cmbITranche.ID);
             model.CAgregDp = form.GetStr(txtCAgregDp.ID);
             //Renovações
-            model.IRenovac = form.GetStr(ddlRenovacoes.ID);
-            model.RNVA = form.GetStr(txtNumRenovacoes.ID);
+            model.IRenovac = form.GetStr(cmbIRenovac.ID);
+            model.RNVA = form.GetStr(txtRNVA.ID);
             //Operações
-            model.ILevAnt = form.GetStr(ddlMobilizacaoAntecipada.ID);
-            model.IAutRef = form.GetStr(ddlReforcoAutorizado.ID);
-            model.IDiaNUt = form.GetStr(DDLDiasNUteis.ID);
-            model.QDiasAnt = form.GetStr(DDLDiasAntecip.ID);
+            model.ILevAnt = form.GetStr(cmbILevAnt.ID);
+            model.IAutRef = form.GetStr(cmbIAutRef.ID);
+            model.IDiaNUt = form.GetStr(cmbIDiaNUt.ID);
+            model.QDiasAnt = form.GetStr(cmbQDiasAnt.ID);
             //Débito
-            model.IDebFor = form.GetStr(ddlDebito.ID);
-            model.QTentDeb = form.GetStr(txtNumTentativas.ID);
+            model.IDebFor = form.GetStr(cmbIDebFor.ID);
+            model.QTentDeb = form.GetStr(txtQTentDeb.ID);
             //Validação Cliente
-            model.IPrClNew = form.GetStr(ddlProdNCliente.ID);
-            model.QDiasNCli = form.GetStr(txtNumDiasCliente.ID);
-            model.CCampNet = form.GetStr(txtCampanhaExcepcao.ID);
-            model.GCampNet = form.GetStr(txtCampanhaExcepcaoDesc.ID);
+            model.IPrClNew = form.GetStr(cmbIPrClNew.ID);
+            model.QDiasNCli = form.GetStr(txtQDiasNCli.ID);
+            model.CCampNet = form.GetStr(txtCCampNet.ID);
+            model.GCampNet = form.GetStr(txtGCampNet.ID);
             //Cross Selling
-            model.CCxsCons = form.GetStr(txtConstituicao.ID);
-            model.GCxsCons = form.GetStr(txtConstituicaoDesc.ID);
-            model.CCxsVenc = form.GetStr(txtVencimento.ID);
-            model.GCxsVenc = form.GetStr(txtVencimentoDesc.ID);
+            model.CCxsCons = form.GetStr(txtCCxsCons.ID);
+            model.GCxsCons = form.GetStr(txtGCxsCons.ID);
+            model.CCxsVenc = form.GetStr(txtCCxsVenc.ID);
+            model.GCxsVenc = form.GetStr(txtGCxsVenc.ID);
             //Atributos Investimento
             model.SubFamilia = form.GetStr(txtSubFamilia.ID);
             model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
