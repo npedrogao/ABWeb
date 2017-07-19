@@ -27,24 +27,29 @@ namespace Core.Models
 
         public string Ecran { get; set; }
 
-        public string DescricaoLbl { get; set; }
+        public string LblDescription { get; set; }
 
         public string CopyBook { get; set; }
         public int Tamanho { get; set; }
 
-        public ModelField(string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo)
+        public string ValidaCol { get; set; }
+
+        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, 
+            TabelaEnum validaTabela)
         {
+            this.Tabela = tabelaId;
             this.Ecran = ecra;
             this.CopyBook = copybook;
             this.Tamanho = tamanho;
             this.TipoDeCampo = tipoCampo;
+            this.ValidaCol = validaCol;
+            this.LblDescription = description;
+            this.ValidaTab = validaTabela;
         }
 
         public ModelField()
         {
 
         }
-
-        
     }
 }
