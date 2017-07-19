@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Microsoft.Win32; 
 namespace UnitTestBDCWS
 {
     [TestClass]
@@ -9,6 +9,7 @@ namespace UnitTestBDCWS
         [TestMethod]
         public void TestMethod1()
         {
+
             BarclaysBTS barclaysBTS = new BarclaysBTS("http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx");
 
             #region SOAPHeader
