@@ -16,23 +16,6 @@ namespace Core.DataWrapper
             currentCon = (System.Data.SqlClient.SqlConnection)dbCon;
         }
 
-        /// <summary>
-        /// Execute stored procedure of given spName and with parameters
-        /// </summary>
-        /// <param name="spName"></param>
-        /// <param name="spParams">Parameters of different types</param>
-        /// <returns>SqlDataReader object where you can read the SP output</returns>
-        public SqlDataReader ExecSp(string spName, params SqlParameter[] spParams)
-        {           
-            SqlCommand cmnd = new SqlCommand(spName);
-
-            cmnd.Parameters.AddRange(spParams);
-            cmnd.CommandType = System.Data.CommandType.StoredProcedure;            
-            cmnd.Connection = currentCon;
-
-            return cmnd.ExecuteReader();
-        }
-
         public override DbConnection GetNewConnection(string conectionString)
         {
             return new System.Data.SqlClient.SqlConnection(conectionString);
@@ -58,6 +41,23 @@ namespace Core.DataWrapper
             {
                 Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
             }
+        }
+
+        /// <summary>
+        /// Execute stored procedure of given spName and with parameters
+        /// </summary>
+        /// <param name="spName"></param>
+        /// <param name="spParams">Parameters of different types</param>
+        /// <returns>SqlDataReader object where you can read the SP output</returns>
+        public override DbDataReader ExecSp(string spName, params DbParameter[] spParams)
+        {
+            SqlCommand cmnd = new SqlCommand(spName);
+
+            cmnd.Parameters.AddRange(spParams);
+            cmnd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmnd.Connection = currentCon;
+
+            return cmnd.ExecuteReader();
         }
     }
 }

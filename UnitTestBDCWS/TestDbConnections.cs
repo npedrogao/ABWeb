@@ -17,14 +17,32 @@ namespace UnitTestBDCWS
             // arrange
             string transactionName = @"AP69";
             string connectionString = @"Data Source = C301BTC005.corebus2.barclays.org\TC005,5660; Initial Catalog = catalogue; User Id = Catalogue; Password = p@$$w0rd; Integrated Security = False; MultipleActiveResultSets = True";
-            SqlDbConnection dbConn = new SqlDbConnection(connectionString);
-            
+
             // act           
+            SqlDbConnection dbConn = new SqlDbConnection(connectionString);
             List<ModelField> listToTest = CatalogueDAL.GetModelDb2(transactionName, dbConn);
 
             // assert
             Assert.IsNotNull(dbConn);
             Assert.IsTrue(listToTest.Count > 0);
+        }
+
+        [TestMethod]
+        public void TestDb2Connection()
+        {
+            string connectionString = @"Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein";
+
+            // act           
+            OdbcDbConnection dbConn = new OdbcDbConnection(connectionString);
+
+            //CELEMTAB1, GELEM30, CELEMTAB2, CELEMTAB3, NELEMC01, NELEMC02, NELEMC03, NELEMC04, NELEMC05, NELEMC06, NELEMC07
+            string[] colunas = new string [4] { "CELEMTAB1", "GELEM30", "NELEMC02", "NELEMC04" };
+
+            dbConn.ExecSql(TabelaEnum.TB196, colunas);
+
+
+            // assert
+
         }
     }
 }
