@@ -18,6 +18,8 @@ namespace Core.DataWrapper
 
         public abstract System.Data.Common.DbConnection GetNewConnection(string conectionString);
 
+        public abstract System.Data.Common.DbDataReader ExecSp(string spName, params System.Data.Common.DbParameter[] spParams);
+
         public abstract void OpenConnection();
         public abstract void Dispose();
     }

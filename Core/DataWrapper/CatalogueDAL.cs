@@ -24,7 +24,7 @@ namespace Core.DataWrapper
                     return null;
                 }
 
-                    SqlDataReader dr = dbConnection.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", ecra));
+                    SqlDataReader dr = (SqlDataReader)dbConnection.ExecSp("dbo.GetModelDb2Sp", new SqlParameter("@Ecra", ecra));
                     try
                     {
                         if (dr.HasRows)

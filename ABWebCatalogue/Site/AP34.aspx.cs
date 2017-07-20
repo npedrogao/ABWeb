@@ -82,7 +82,7 @@ namespace ABWebCatalogue.Site
                         txtCAgregDp.Text = model.CAgregDp;
                         //Renovações
                         cmbIRenovac.SelectedValue = model.IRenovac;
-                        txtRNVA.Text = model.RNVA;
+                        txtQMAXREN.Text = model.RNVA;
                         //Operações
                         cmbILevAnt.SelectedValue = model.ILevAnt;
                         cmbIAutRef.SelectedValue = model.IAutRef;
@@ -300,7 +300,7 @@ namespace ABWebCatalogue.Site
             model.CAgregDp = form.GetStr(txtCAgregDp.ID);
             //Renovações
             model.IRenovac = form.GetStr(cmbIRenovac.ID);
-            model.RNVA = form.GetStr(txtRNVA.ID);
+            model.RNVA = form.GetStr(txtQMAXREN.ID);
             //Operações
             model.ILevAnt = form.GetStr(cmbILevAnt.ID);
             model.IAutRef = form.GetStr(cmbIAutRef.ID);

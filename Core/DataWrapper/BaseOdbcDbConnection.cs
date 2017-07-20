@@ -7,16 +7,17 @@ using System.Data.Common;
 
 namespace Core.DataWrapper
 {
-    public class BaseOdbcDbConnection : BaseDbConnection
+    public class BaseOdbcDbConnection
     {
         protected int MAX_LIST_SIZE = 60;
 
         private System.Data.Odbc.OdbcConnection currentCon = null;
         private OdbcTransaction transact = null;
-       
-        public BaseOdbcDbConnection(string connectionString) : base(connectionString)
+        private string connectionName;
+
+        public BaseOdbcDbConnection(string connectionName)
         {
-            currentCon = (System.Data.Odbc.OdbcConnection) dbCon;
+            this.connectionName = connectionName;
         }
 
         public OdbcCommand getDbCommand(string connectionName, string sqlString = null)
@@ -179,31 +180,6 @@ namespace Core.DataWrapper
             }
         }
 
-        public override DbConnection GetNewConnection(string conectionString)
-        {
-            return new System.Data.SqlClient.SqlConnection(conectionString);
-        }
 
-        public override void OpenConnection()
-        {
-            if (dbCon.State == System.Data.ConnectionState.Open)
-            {
-                dbCon.Close();
-            }
-
-            base.dbCon.Open();
-        }
-
-        public override void Dispose()
-        {
-            try
-            {
-                base.dbCon.Dispose();
-            }
-            catch (Exception ex)
-            {
-                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
-            }
-        }
     }
 }

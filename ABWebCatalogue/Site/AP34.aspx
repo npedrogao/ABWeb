@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCProduto" runat="server" class="t-label-1">Código de Produto:</asp:Label>
+                    <asp:Label ID="lblCProduto" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCProduto" runat="server" CssClass="t-field-14"></asp:TextBox>
@@ -29,7 +29,7 @@
 
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCSubProd" runat="server" class="t-label-1">Código do SubProduto:</asp:Label>
+                    <asp:Label ID="lblCSubProd" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCSubProd" runat="server" CssClass="t-field-14"></asp:TextBox>
@@ -39,14 +39,14 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCClaPrz" runat="server" class="t-label-1">Classe:</asp:Label>
+                    <asp:Label ID="lblCClaPrz" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCClaPrz" runat="server" CssClass="t-field-14"></asp:TextBox>
                     <asp:TextBox ID="txtGClaPrz" runat="server" CssClass="t-field-15"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCMoeda" runat="server" class="t-label-1">Moeda:</asp:Label>
+                    <asp:Label ID="lblCMoeda" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCMoeda" runat="server" CssClass="t-field-14"></asp:TextBox>
@@ -55,7 +55,7 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCEstado" runat="server" class="t-label-1">Estado:</asp:Label>
+                    <asp:Label ID="lblCEstado" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:DropDownList ID="cmbCEstado" CssClass="t-field-14" runat="server">
@@ -154,10 +154,10 @@
                     </asp:DropDownList>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblRNVA" runat="server" class="t-label-1">Nr. Máximo Renovações:</asp:Label>
+                    <asp:Label ID="lblQMAXREN" runat="server" class="t-label-1">Nr. Máximo Renovações:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtRNVA" runat="server" CssClass="t-field-6" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox ID="txtQMAXREN" runat="server" CssClass="t-field-6"></asp:TextBox>
                 </td>
             </tr>
         </table>
