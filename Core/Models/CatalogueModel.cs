@@ -15,15 +15,15 @@ namespace Core.Models
         /// <param name="page"></param>
         public static void ApplyModel(System.Web.UI.Page page)
         {
-            var lst = new List<ModelField>();
-            string transactionName = page.Request.QueryString["transacao"];
-            lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
-            string fieldName = string.Empty;
-            string placeHolderName = "CPH";
+            string transactionName, fieldName, placeHolderName, errorLst;
+
+            transactionName = page.Request.QueryString["transacao"];
+            fieldName = string.Empty;
+            errorLst = string.Empty;
+            placeHolderName = "CPH";
             System.Web.UI.Control curControl = null;
 
-            
-            lst = DataManager.ModelDb2(transactionName);
+            var lst = DataManager.ModelDb2(transactionName);
 
             try
             {
@@ -39,30 +39,48 @@ namespace Core.Models
                         case TipoCampoEnum.Data:
                             fieldName = "lbl" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
+                            if(curControl != null)
+                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                            else
+                                errorLst += fieldName + "\n";
 
                             fieldName = "txt" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            if (curControl == null)
-                                break;
-                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                            if (curControl != null)
+                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                            else
+                                errorLst += fieldName + "\n";
+
                             break;
                         case TipoCampoEnum.ComboBox:
                             if(itm.Tabela == TabelaEnum.NULL)
                             {
                                 fieldName = "lbl" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+
+                                if (curControl != null)
+                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                                else
+                                    errorLst += fieldName + "\n";
+
                             }
                             else
                             {
                                 //todo: carrega 
 
-                            fieldName = "cmb" + itm.CopyBook;
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                                fieldName = "cmb" + itm.CopyBook;
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                                if(curControl != null)
+                                    (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                                else
+                                    errorLst += fieldName + "\n";
                             }
 
                             break;
                     }
+                    if(errorLst.Length > 0)
+                        throw new Exception("Campos errados: "+ errorLst);
                 }
             }
             catch (Exception ex)
