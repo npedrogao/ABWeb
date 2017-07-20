@@ -17,7 +17,7 @@ namespace Core.DataWrapper
             currentCon = (System.Data.Odbc.OdbcConnection)dbCon;
         }
 
-        public OdbcDataReader ExecSql(TabelaEnum tabela, string whereClause, params string[] colunas)
+        public OdbcDataReader ExecSql(TabelaEnum tabela, params string[] colunas)
         {
             if (tabela == TabelaEnum.NULL)
                 throw new ArgumentException("Necessário indicar tabela DB2!");
