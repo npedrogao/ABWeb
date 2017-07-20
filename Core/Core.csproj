@@ -133,6 +133,7 @@
     <Compile Include="ServiceWrapper\StaticServiceProxy.cs" />
     <Compile Include="ServiceWrapper\WSDLReferences\BcdwsReference.cs" />
     <Compile Include="ServiceWrapper\WSDLReferences\ServiceReference.cs" />
+    <Compile Include="Utils\WebUtils.cs" />
     <Compile Include="WebExtensions\DbExtensions.cs" />
     <Compile Include="WebExtensions\EnumExtensions.cs" />
     <Compile Include="WebExtensions\WebExtensions.cs" />

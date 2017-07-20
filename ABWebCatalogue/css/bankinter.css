@@ -1484,3 +1484,22 @@ font.font {
     margin-right: 75px;
     color: #63544A;
 }
+
+.btnLeft{
+    margin-left: 91%;
+}
+
+.divCollapseLeft{
+    margin-left: 88%;
+}
+
+
+.btnCollapse {
+     width: 108px;
+    height: 26px;
+    background: #F56600;
+    border: 1px solid #F56600;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}

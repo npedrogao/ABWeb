@@ -5,13 +5,17 @@
     <script src="../scripts/jquery-1.9.1.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
     <script src="../scripts/bootstrap-datepicker.min.js"></script>
-
+    <meta http-equiv="Cache-Control" content="no-store" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="title">
         <asp:Label ID="lblTransaction" runat="server" CssClass="titleGrayBold"></asp:Label>
+    </div>
+
+        <div class="titleAccordion">
+        <asp:Label ID="Label6" runat="server"> TI97 </asp:Label>
     </div>
 
     <asp:Panel ID="pnlContent" runat="server">
@@ -395,13 +399,22 @@
 
 
         </table>
+
+             <br /> 
+    <div class="divCollapseLeft">
+        <button id="btnCloseAll" class="btnCollapse" runat="server" onserverclick="btnCloseAll_Click">Fechar todos</button>
+
+        <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
+    </div>
     </asp:Panel>
 
 
-    <br />
+    <br />  <br />
+
+    
 
 
-    <button id="btnCatGerais" class="titleAccordion" runat="server" onserverclick="btnDadComp_Click">Dados Complementares: OBRIGAÇÕES/V.M. CONVERTÍVEIS</button>
+    <button id="btnDadComp" class="titleAccordion-plus" runat="server" onserverclick="btnDadComp_Click">Dados Complementares: OBRIGAÇÕES/V.M. CONVERTÍVEIS</button>
     <asp:Panel ID="pnlDadCompContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -696,7 +709,7 @@
     <br />
     <br />
 
-    <button id="Button7" class="titleAccordion" runat="server" onserverclick="btnDadsCOmpWarra_Click">Dados Complementares WARRANTS DESTACADOS / V.M.CONVERTÍVEIS</button>
+    <button id="btnDadsCOmpWarra" class="titleAccordion-plus" runat="server" onserverclick="btnDadsCOmpWarra_Click">Dados Complementares WARRANTS DESTACADOS / V.M.CONVERTÍVEIS</button>
     <asp:Panel ID="pnlDadsCOmpWarraContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -790,7 +803,7 @@
     <br />
     <br />
 
-    <button id="Button1" class="titleAccordion" runat="server" onserverclick="btnDadsCompWarrAUto_Click">Dados Complementares WARRANTS AUTÓNOMOS / WARRANTS ESTRUTURADOS</button>
+    <button id="btnDadsCompWarrAuto" class="titleAccordion-plus" runat="server" onserverclick="btnDadsCompWarrAUto_Click">Dados Complementares WARRANTS AUTÓNOMOS / WARRANTS ESTRUTURADOS</button>
     <asp:Panel ID="pnlDadsCompWarrAUtoContent" runat="server" Visible="false">
         <br />
 
@@ -912,7 +925,7 @@
 
 
 
-    <button id="Button2" class="titleAccordion" runat="server" onserverclick="btnDadsComp_Click">Dados Complementares DERIVADOS/FUTUROS</button>
+    <button id="btnDadsComp" class="titleAccordion-plus" runat="server" onserverclick="btnDadsComp_Click">Dados Complementares DERIVADOS/FUTUROS</button>
     <asp:Panel ID="pnlDadsCompContent" runat="server" Visible="false">
         <br />
 
@@ -955,7 +968,7 @@
     <br />
 
 
-    <button id="Button3" class="titleAccordion" runat="server" onserverclick="btnDadosTec_Click">Dados Técnicos espécie</button>
+    <button id="btnDadosTec" class="titleAccordion-plus" runat="server" onserverclick="btnDadosTec_Click">Dados Técnicos espécie</button>
     <asp:Panel ID="pnlDadosTecContent" runat="server" Visible="false">
         <br />
 
@@ -988,7 +1001,7 @@
     <br />
     <br />
 
-    <button id="Button4" class="titleAccordion" runat="server" onserverclick="btnDadsCompEle_Click">Dados Complementares ELEGIBILIDADE</button>
+    <button id="btnDadsCompEle" class="titleAccordion-plus" runat="server" onserverclick="btnDadsCompEle_Click">Dados Complementares ELEGIBILIDADE</button>
     <asp:Panel ID="pnlDadsCompEleContent" runat="server" Visible="false">
         <br />
 
@@ -1053,7 +1066,7 @@
     <br />
     <br />
 
-    <button id="Button5" class="titleAccordion" runat="server" onserverclick="btnDadosCompImp_Click">Dados Complementares Impostos FTT</button>
+    <button id="btnDadosCompImp" class="titleAccordion-plus" runat="server" onserverclick="btnDadosCompImp_Click">Dados Complementares Impostos FTT</button>
     <asp:Panel ID="pnlDadosCompImpContent" runat="server" Visible="false">
         <br />
 
@@ -1083,7 +1096,7 @@
     <br />
     <br />
 
-    <button id="Button6" class="titleAccordion" runat="server" onserverclick="btnAttInv_Click">Atributos de Investimento</button>
+    <button id="btnAttInv" class="titleAccordion-plus" runat="server" onserverclick="btnAttInv_Click">Atributos de Investimento</button>
     <asp:Panel ID="pnlAttInvContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -1203,15 +1216,13 @@
         </table>
     </asp:Panel>
 
-    <div class="row form-group">
-        <div class="col-xs-offset-10">
-            <button class="btn btn-default">Limpar</button>
-            <button class="btn btn-default col-xs-offset-3">Gravar</button>
-        </div>
+    <br /> <br />
+    
+       <hr class="hr" /> 
+       <br /> 
+    <div class="btnLeft">
+        <button id="btnClear" class="t-btn-2" runat="server" onserverclick="btnClear_Click">Limpar</button>
+        <button id="btnSave" class="t-btn-2" runat="server" onserverclick="btnSave_Click">Guardar</button>
     </div>
-    <div class="row">
-        <hr class="hr" />
-    </div>
-    </div>
-
+    <br /> <br />
 </asp:Content>
