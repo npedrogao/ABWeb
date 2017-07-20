@@ -412,7 +412,7 @@
     <hr class="hr" />
 
     <br />
-    <div class="">
+    <div class="btnLeft">
         <button id="btnClear" class="t-btn-2" runat="server" onserverclick="btnClear_Click">Limpar</button>
         <button id="btnSave" class="t-btn-2" runat="server" onserverclick="btnSave_Click">Guardar</button>
     </div>
