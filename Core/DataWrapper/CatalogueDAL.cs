@@ -34,7 +34,11 @@ namespace Core.DataWrapper
 
                                 newField.Ecran = dr.GetDbStr("Ecra");
                                 newField.CopyBook = dr.GetDbStr("CopyBook");
-                                newField.Tamanho = dr.GetDbInt("Tamanho");
+                                                        
+                                var size = dr.GetDbIntNull("Tamanho");
+                                if (size.HasValue)
+                                    newField.Tamanho = size;
+
                                 var tabID = dr.GetDbIntNull("TabelaID");
                                 if (tabID.HasValue)
                                     newField.Tabela = (TabelaEnum)tabID;
@@ -62,7 +66,7 @@ namespace Core.DataWrapper
                                     case "CUST":
                                         newField.TipoDeCampo = TipoCampoEnum.CustomMask;
                                         break;
-                            default:
+                                    default:
                                         break;
                                 }
                                 lst.Add(newField);

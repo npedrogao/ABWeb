@@ -30,7 +30,7 @@ namespace Core.Models
         public string DescricaoLbl { get; set; }
 
         public string CopyBook { get; set; }
-        public int Tamanho { get; set; }
+        public int ? Tamanho { get; set; }
 
         public string ValidaCol { get; set; }
 
