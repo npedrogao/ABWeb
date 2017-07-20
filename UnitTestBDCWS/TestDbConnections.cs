@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using DbExtensions;
 using System.Collections.Generic;
 using Core.Models;
+using System.Data;
 
 namespace UnitTestBDCWS
 {
@@ -30,19 +31,17 @@ namespace UnitTestBDCWS
         [TestMethod]
         public void TestDb2Connection()
         {
+            // arrange
             string connectionString = @"Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein";
-
-            // act           
+            //CELEMTAB1, GELEM30, CELEMTAB2, CELEMTAB3, NELEMC01, NELEMC02, NELEMC03, NELEMC04, NELEMC05, NELEMC06, NELEMC07
+            string[] colunas = new string[4] { "CELEMTAB1", "GELEM30", "NELEMC02", "NELEMC04" };
             OdbcDbConnection dbConn = new OdbcDbConnection(connectionString);
 
-            //CELEMTAB1, GELEM30, CELEMTAB2, CELEMTAB3, NELEMC01, NELEMC02, NELEMC03, NELEMC04, NELEMC05, NELEMC06, NELEMC07
-            string[] colunas = new string [4] { "CELEMTAB1", "GELEM30", "NELEMC02", "NELEMC04" };
-
-            dbConn.ExecSql(TabelaEnum.TB196, colunas);
-
+            // act           
+            DataTable tabela = Db2DAL.GetDb2Table(TabelaEnum.TB196, dbConn, colunas);
 
             // assert
-
+            Assert.IsTrue(colunas.Length == tabela.Columns.Count);
         }
     }
 }

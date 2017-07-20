@@ -52,6 +52,7 @@
     <Compile Include="DataWrapper\BaseOdbcDbConnection.cs" />
     <Compile Include="DataWrapper\CatalogueDAL.cs" />
     <Compile Include="DataWrapper\DataManager.cs" />
+    <Compile Include="DataWrapper\Db2DAL.cs" />
     <Compile Include="DataWrapper\OdbcDbConnection.cs" />
     <Compile Include="DataWrapper\ManageConnections.cs" />
     <Compile Include="DataWrapper\SqlDbConnection.cs" />

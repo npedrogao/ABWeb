@@ -17,34 +17,11 @@ namespace Core.DataWrapper
             currentCon = (System.Data.Odbc.OdbcConnection)dbCon;
         }
 
-        public OdbcDataReader ExecSql(TabelaEnum tabela, params string[] colunas)
+        public OdbcDataReader ExecSql(string query)
         {
-            if (tabela == TabelaEnum.NULL)
-                throw new ArgumentException("Necessário indicar tabela DB2!");
-
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT ");
-
-            if (colunas?.Length > 0)
-            {
-                foreach (string coluna in colunas)
-                {
-                    query.Append(coluna.Trim());
-                    query.Append(", ");
-                }
-                query.Remove(query.Length - 2, 2);
-            } else
-            {
-                query.Append(" * ");
-            }
-             
-            query.Append(" FROM ");
-            query.Append("DB2PTUSER.");
-            query.Append(tabela);
-
             OdbcCommand cmnd = new OdbcCommand();
             cmnd.CommandType = System.Data.CommandType.Text;
-            cmnd.CommandText = query.ToString();
+            cmnd.CommandText = query;
             cmnd.Connection = currentCon;
 
             return cmnd.ExecuteReader();
