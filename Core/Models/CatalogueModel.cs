@@ -15,21 +15,22 @@ namespace Core.Models
         /// <param name="page"></param>
         public static void ApplyModel(System.Web.UI.Page page)
         {
+
             var lst = new List<ModelField>();
             string transactionName = page.Request.QueryString["transacao"];
-            lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
+            lst.Add(new ModelField(TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL, true));
             string fieldName = string.Empty;
             string placeHolderName = "CPH";
             System.Web.UI.Control curControl = null;
 
-            
+
             lst = DataManager.ModelFieldList(transactionName);
 
             try
             {
                 foreach (var itm in lst)
                 {
-                    if (String.IsNullOrEmpty(itm.CopyBook))
+                    if (String.IsNullOrEmpty(itm.CopyBook) || itm.CopyBook == "CPRDMFID" || itm.CopyBook == "CRISCOPRD")
                         continue;
 
                     switch (itm.TipoDeCampo)
@@ -37,22 +38,45 @@ namespace Core.Models
                         case TipoCampoEnum.String:
                         case TipoCampoEnum.Decimal:
                         case TipoCampoEnum.Data:
-                            fieldName = "lbl" + itm.CopyBook;
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
+                            if (!itm.Subcampo.Value)
+                            {
+                                fieldName = "lbl" + itm.CopyBook;
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                                if(curControl == null)
+                                    break;
+                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                            }
 
                             fieldName = "txt" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            if (curControl == null)
+                                break;
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                            break;
+                        case TipoCampoEnum.ComboBox:
+                            if(itm.Tabela == TabelaEnum.NULL)
+                            {
+                                fieldName = "lbl" + itm.CopyBook;
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            }
+                            else
+                            {
+                                //todo: carrega 
+
+                            fieldName = "cmb" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            }
+
                             break;
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("curControl: " + fieldName + " Msg:"+ ex.Message);
+                throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
             }
-            
+
         }
 
         public static string Terminal { get; set; }

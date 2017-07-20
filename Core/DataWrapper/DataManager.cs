@@ -48,6 +48,12 @@ namespace Core.DataWrapper
                             if (validaTb.HasValue)
                                 newField.ValidaTab = (TabelaEnum) validaTb;
 
+
+                            var validaBool = dr.GetDbBoolNull("SubCampo");
+                            if(validaBool.HasValue)
+                                newField.Subcampo = validaBool;
+
+
                             switch (dr.GetDbStr("ValType"))
                             {
                                 case "STR":

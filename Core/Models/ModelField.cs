@@ -34,8 +34,10 @@ namespace Core.Models
 
         public string ValidaCol { get; set; }
 
+        public bool? Subcampo { get; set; }
+
         public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, 
-            TabelaEnum validaTabela)
+            TabelaEnum validaTabela, bool subcampo)
         {
             this.Tabela = tabelaId;
             this.Ecran = ecra;
@@ -45,6 +47,7 @@ namespace Core.Models
             this.ValidaCol = validaCol;
             this.DescricaoLbl = description;
             this.ValidaTab = validaTabela;
+            this.Subcampo = subcampo;
         }
 
         public ModelField()

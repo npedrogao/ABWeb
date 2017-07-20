@@ -391,22 +391,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.DropDownList cmbIRenovac;
         
         /// <summary>
-        /// lblRNVA control.
+        /// lblQMAXREN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRNVA;
+        protected global::System.Web.UI.WebControls.Label lblQMAXREN;
         
         /// <summary>
-        /// txtRNVA control.
+        /// txtQMAXREN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRNVA;
+        protected global::System.Web.UI.WebControls.TextBox txtQMAXREN;
         
         /// <summary>
         /// btnOperacoes control.
