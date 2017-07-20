@@ -202,6 +202,24 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtDFimVal;
         
         /// <summary>
+        /// btnCloseAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCloseAll;
+        
+        /// <summary>
+        /// btnOpenAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnOpenAll;
+        
+        /// <summary>
         /// btnCaracGerais control.
         /// </summary>
         /// <remarks>

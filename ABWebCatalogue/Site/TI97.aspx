@@ -14,7 +14,7 @@
         <asp:Label ID="lblTransaction" runat="server" CssClass="titleGrayBold"></asp:Label>
     </div>
 
-        <div class="titleAccordion">
+    <div class="titleAccordion">
         <asp:Label ID="Label6" runat="server"> TI97 </asp:Label>
     </div>
 
@@ -400,18 +400,16 @@
 
         </table>
 
-             <br /> 
-    <div class="divCollapseLeft">
-        <button id="btnCloseAll" class="btnCollapse" runat="server" onserverclick="btnCloseAll_Click">Fechar todos</button>
+        <br />
+        <div class="divCollapseLeft">
+            <button id="btnCloseAll" class="btnCollapse" runat="server" onserverclick="btnCloseAll_Click">Fechar todos</button>
 
-        <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
-    </div>
+            <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
+        </div>
     </asp:Panel>
 
-
-    <br />  <br />
-
-    
+    <br />
+    <br />
 
 
     <button id="btnDadComp" class="titleAccordion-plus" runat="server" onserverclick="btnDadComp_Click">Dados Complementares: OBRIGAÇÕES/V.M. CONVERTÍVEIS</button>
@@ -1189,40 +1187,42 @@
             </tr>
 
 
-            
+
             <tr>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbCatClass" runat="server" class="t-label-1">Cat./Class.activ.:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbCatClass" runat="server" class="t-label-1">Cat./Class.activ.:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <asp:TextBox ID="txtCatClass" runat="server" CssClass="t-field-14"></asp:TextBox>
-            <asp:TextBox ID="TXTCatClassDesc" runat="server" CssClass="t-field-14"></asp:TextBox>
-                             </td>
+                    <asp:TextBox ID="txtCatClass" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="TXTCatClassDesc" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbSolicitarClassRisco" runat="server" class="t-label-1">Solicitar classificação de Risco:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbSolicitarClassRisco" runat="server" class="t-label-1">Solicitar classificação de Risco:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <select id="ddlSolicitarClassRisco" runat="server" class="t-field-14"></select>
-                             </td>
+                    <select id="ddlSolicitarClassRisco" runat="server" class="t-field-14"></select>
+                </td>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbDataActivacao" runat="server" class="t-label-1">Data de Activação:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbDataActivacao" runat="server" class="t-label-1">Data de Activação:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <asp:TextBox ID="txtDataActivacao" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtDataActivacao" runat="server" CssClass="t-field-14"></asp:TextBox>
 
-               </td>
+                </td>
             </tr>
 
         </table>
     </asp:Panel>
 
-    <br /> <br />
-    
-       <hr class="hr" /> 
-       <br /> 
+    <br />
+    <br />
+
+    <hr class="hr" />
+    <br />
     <div class="btnLeft">
         <button id="btnClear" class="t-btn-2" runat="server" onserverclick="btnClear_Click">Limpar</button>
         <button id="btnSave" class="t-btn-2" runat="server" onserverclick="btnSave_Click">Guardar</button>
     </div>
-    <br /> <br />
+    <br />
+    <br />
 </asp:Content>
