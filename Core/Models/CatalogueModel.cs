@@ -15,22 +15,21 @@ namespace Core.Models
         /// <param name="page"></param>
         public static void ApplyModel(System.Web.UI.Page page)
         {
-
             var lst = new List<ModelField>();
             string transactionName = page.Request.QueryString["transacao"];
-            lst.Add(new ModelField(TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL, true));
+            lst.Add(new ModelField( TabelaEnum.TB018, transactionName, "CPRODUTO", 1, TipoCampoEnum.String, "", "Teste", TabelaEnum.NULL)); 
             string fieldName = string.Empty;
             string placeHolderName = "CPH";
             System.Web.UI.Control curControl = null;
 
-
-            lst = DataManager.ModelFieldList(transactionName);
+            
+            lst = DataManager.ModelDb2(transactionName);
 
             try
             {
                 foreach (var itm in lst)
                 {
-                    if (String.IsNullOrEmpty(itm.CopyBook) || itm.CopyBook == "CPRDMFID" || itm.CopyBook == "CRISCOPRD")
+                    if (String.IsNullOrEmpty(itm.CopyBook))
                         continue;
 
                     switch (itm.TipoDeCampo)
@@ -38,15 +37,9 @@ namespace Core.Models
                         case TipoCampoEnum.String:
                         case TipoCampoEnum.Decimal:
                         case TipoCampoEnum.Data:
-
-                            if (!itm.Subcampo.Value)
-                            {
-                                fieldName = "lbl" + itm.CopyBook;
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                                if(curControl == null)
-                                    break;
-                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                            }
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
 
                             fieldName = "txt" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
@@ -76,7 +69,7 @@ namespace Core.Models
             {
                 throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
             }
-
+            
         }
 
         public static string Terminal { get; set; }
