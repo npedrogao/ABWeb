@@ -25,5 +25,13 @@ namespace DbExtensions
                 return (int)reader[colName];
             return null;
         }
+
+        public static bool? GetDbBoolNull(this SqlDataReader reader, string colName)
+        {
+            var value = reader[colName];
+            if (!DBNull.Value.Equals(value))
+                return (bool)reader[colName];
+            return null;
+        }
     }
 }
