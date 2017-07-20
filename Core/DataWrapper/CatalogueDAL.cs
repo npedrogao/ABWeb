@@ -59,7 +59,10 @@ namespace Core.DataWrapper
                                     case "CMB":
                                         newField.TipoDeCampo = TipoCampoEnum.ComboBox;
                                         break;
-                                    default:
+                                    case "CUST":
+                                        newField.TipoDeCampo = TipoCampoEnum.CustomMask;
+                                        break;
+                            default:
                                         break;
                                 }
                                 lst.Add(newField);
