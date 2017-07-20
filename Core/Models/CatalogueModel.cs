@@ -23,7 +23,7 @@ namespace Core.Models
             System.Web.UI.Control curControl = null;
 
             
-            lst = DataManager.ModelFieldList(transactionName);
+            lst = DataManager.ModelDb2(transactionName);
 
             try
             {
