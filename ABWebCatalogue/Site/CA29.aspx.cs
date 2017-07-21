@@ -23,13 +23,13 @@ namespace ABWebCatalogue.Site
             if (!pnlClaBankContent.Visible)
             {
                 pnlClaBankContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnClaBank);
+                WebUtil.ChangeBtnAtt(true, btnClaBank);
 
             }
             else
             {
                 pnlClaBankContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnClaBank);
+                WebUtil.ChangeBtnAtt(false, btnClaBank);
 
             }
 
@@ -41,13 +41,13 @@ namespace ABWebCatalogue.Site
             if (!PnlClaAllFunds.Visible)
             {
                 PnlClaAllFunds.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnClaAllFunds);
+                WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
 
             }
             else
             {
                 PnlClaAllFunds.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnClaAllFunds);
+                WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
 
             }
 
@@ -59,13 +59,13 @@ namespace ABWebCatalogue.Site
             if (!pnlSociGest.Visible)
             {
                 pnlSociGest.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnSociGest);
+                WebUtil.ChangeBtnAtt(true, btnSociGest);
 
             }
             else
             {
                 pnlSociGest.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnSociGest);
+                WebUtil.ChangeBtnAtt(false, btnSociGest);
 
             }
 
@@ -77,13 +77,13 @@ namespace ABWebCatalogue.Site
             if (!pnlSicav.Visible)
             {
                 pnlSicav.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnSicav);
+                WebUtil.ChangeBtnAtt(true, btnSicav);
 
             }
             else
             {
                 pnlSicav.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnSicav);
+                WebUtil.ChangeBtnAtt(false, btnSicav);
 
             }
 
@@ -95,13 +95,13 @@ namespace ABWebCatalogue.Site
             if (!pnlKiid.Visible)
             {
                 pnlKiid.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnKiid);
+                WebUtil.ChangeBtnAtt(true, btnKiid);
 
             }
             else
             {
                 pnlKiid.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnKiid);
+                WebUtil.ChangeBtnAtt(false, btnKiid);
 
             }
 
@@ -113,13 +113,13 @@ namespace ABWebCatalogue.Site
             if (!pnlDivid.Visible)
             {
                 pnlDivid.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnDivid);
+                WebUtil.ChangeBtnAtt(true, btnDivid);
 
             }
             else
             {
                 pnlDivid.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnDivid);
+                WebUtil.ChangeBtnAtt(false, btnDivid);
 
             }
 
@@ -131,13 +131,13 @@ namespace ABWebCatalogue.Site
             if (!pnlOutrasCaract.Visible)
             {
                 pnlOutrasCaract.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnOutrasCaract);
+                WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
 
             }
             else
             {
                 pnlOutrasCaract.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnOutrasCaract);
+                WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
 
             }
 
@@ -149,13 +149,13 @@ namespace ABWebCatalogue.Site
             if (!pnlComi.Visible)
             {
                 pnlComi.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnComi);
+                WebUtil.ChangeBtnAtt(true, btnComi);
 
             }
             else
             {
                 pnlComi.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnComi);
+                WebUtil.ChangeBtnAtt(false, btnComi);
 
             }
 
@@ -167,13 +167,13 @@ namespace ABWebCatalogue.Site
             if (!pnlCot.Visible)
             {
                 pnlCot.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCot);
+                WebUtil.ChangeBtnAtt(true, btnCot);
 
             }
             else
             {
                 pnlCot.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCot);
+                WebUtil.ChangeBtnAtt(false, btnCot);
 
             }
 
@@ -185,13 +185,13 @@ namespace ABWebCatalogue.Site
             if (!pnlNego.Visible)
             {
                 pnlNego.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnNego);
+                WebUtil.ChangeBtnAtt(true, btnNego);
 
             }
             else
             {
                 pnlNego.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnNego);
+                WebUtil.ChangeBtnAtt(false, btnNego);
 
             }
 
@@ -203,13 +203,13 @@ namespace ABWebCatalogue.Site
             if (!pnlCanalDist.Visible)
             {
                 pnlCanalDist.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCanalDist);
+                WebUtil.ChangeBtnAtt(true, btnCanalDist);
 
             }
             else
             {
                 pnlCanalDist.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCanalDist);
+                WebUtil.ChangeBtnAtt(false, btnCanalDist);
 
             }
 
@@ -221,13 +221,13 @@ namespace ABWebCatalogue.Site
             if (!pnlContasDo.Visible)
             {
                 pnlContasDo.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnContasDo);
+                WebUtil.ChangeBtnAtt(true, btnContasDo);
 
             }
             else
             {
                 pnlContasDo.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnContasDo);
+                WebUtil.ChangeBtnAtt(false, btnContasDo);
 
             }
 
@@ -240,13 +240,13 @@ namespace ABWebCatalogue.Site
             if (!pnlAttInvContent.Visible)
             {
                 pnlAttInvContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnAttInv);
+                WebUtil.ChangeBtnAtt(true, btnAttInv);
 
             }
             else
             {
                 pnlAttInvContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnAttInv);
+                WebUtil.ChangeBtnAtt(false, btnAttInv);
 
             }
 
@@ -268,61 +268,61 @@ namespace ABWebCatalogue.Site
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
             pnlClaBankContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnClaBank);
+            WebUtil.ChangeBtnAtt(false, btnClaBank);
             PnlClaAllFunds.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnClaAllFunds);
+            WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
             pnlSociGest.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnSociGest);
+            WebUtil.ChangeBtnAtt(false, btnSociGest);
             pnlSicav.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnSicav);
+            WebUtil.ChangeBtnAtt(false, btnSicav);
             pnlKiid.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnKiid);
+            WebUtil.ChangeBtnAtt(false, btnKiid);
             pnlDivid.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnDivid);
+            WebUtil.ChangeBtnAtt(false, btnDivid);
             pnlOutrasCaract.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnOutrasCaract);
+            WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
             pnlComi.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnComi);
+            WebUtil.ChangeBtnAtt(false, btnComi);
             pnlCot.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCot);
+            WebUtil.ChangeBtnAtt(false, btnCot);
             pnlNego.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnNego);
+            WebUtil.ChangeBtnAtt(false, btnNego);
             pnlCanalDist.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCanalDist);
+            WebUtil.ChangeBtnAtt(false, btnCanalDist);
             pnlContasDo.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnContasDo);
+            WebUtil.ChangeBtnAtt(false, btnContasDo);
             pnlAttInvContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnAttInv);
+            WebUtil.ChangeBtnAtt(false, btnAttInv);
         }
 
         protected void btnOpenAll_Click(object sender, EventArgs e)
         {
             pnlClaBankContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnClaBank);
+            WebUtil.ChangeBtnAtt(true, btnClaBank);
             PnlClaAllFunds.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnClaAllFunds);
+            WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
             pnlSociGest.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnSociGest);
+            WebUtil.ChangeBtnAtt(true, btnSociGest);
             pnlSicav.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnSicav);
+            WebUtil.ChangeBtnAtt(true, btnSicav);
             pnlKiid.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnKiid);
+            WebUtil.ChangeBtnAtt(true, btnKiid);
             pnlDivid.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnDivid);
+            WebUtil.ChangeBtnAtt(true, btnDivid);
             pnlOutrasCaract.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnOutrasCaract);
+            WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
             pnlComi.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnComi);
+            WebUtil.ChangeBtnAtt(true, btnComi);
             pnlCot.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCot);
+            WebUtil.ChangeBtnAtt(true, btnCot);
             pnlNego.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnNego);
+            WebUtil.ChangeBtnAtt(true, btnNego);
             pnlCanalDist.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCanalDist);
+            WebUtil.ChangeBtnAtt(true, btnCanalDist);
             pnlContasDo.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnContasDo);
+            WebUtil.ChangeBtnAtt(true, btnContasDo);
             pnlAttInvContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnAttInv);
+            WebUtil.ChangeBtnAtt(true, btnAttInv);
         }
     }
 }
