@@ -31,18 +31,6 @@ namespace Core.DataWrapper
             base.dbCon.Open();
         }
 
-        public override void Dispose()
-        {
-            try
-            {
-                base.dbCon.Dispose();
-            }
-            catch (Exception ex)
-            {
-                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
-            }
-        }
-
         /// <summary>
         /// Execute stored procedure of given spName and with parameters
         /// </summary>
@@ -58,6 +46,18 @@ namespace Core.DataWrapper
             cmnd.Connection = currentCon;
 
             return cmnd.ExecuteReader();
+        }
+
+        public override void Dispose()
+        {
+            try
+            {
+                base.dbCon.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Fatal, ex);
+            }
         }
     }
 }

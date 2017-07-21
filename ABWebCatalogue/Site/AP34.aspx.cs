@@ -145,12 +145,12 @@ namespace ABWebCatalogue.Site
             if (pnlCatGeraisContent.Visible == false)
             {
                 pnlCatGeraisContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCaracGerais);
+                WebUtil.ChangeBtnAtt(true, btnCaracGerais);
             }
             else
             {
                 pnlCatGeraisContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCaracGerais);
+                WebUtil.ChangeBtnAtt(false, btnCaracGerais);
             }
         }
         
@@ -159,12 +159,12 @@ namespace ABWebCatalogue.Site
             if (pnlRenovacoesContent.Visible == false)
             {
                 pnlRenovacoesContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnRenovacoes);
+                WebUtil.ChangeBtnAtt(true, btnRenovacoes);
             }
             else
             {
                 pnlRenovacoesContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnRenovacoes);
+                WebUtil.ChangeBtnAtt(false, btnRenovacoes);
             }
         }
 
@@ -173,12 +173,12 @@ namespace ABWebCatalogue.Site
             if (pnlOperacoesContent.Visible == false)
             {
                 pnlOperacoesContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnOperacoes);
+                WebUtil.ChangeBtnAtt(true, btnOperacoes);
             }
             else
             {
                 pnlOperacoesContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnOperacoes);
+                WebUtil.ChangeBtnAtt(false, btnOperacoes);
             }
         }
 
@@ -187,12 +187,12 @@ namespace ABWebCatalogue.Site
             if (pnlDebitoContent.Visible == false)
             {
                 pnlDebitoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnDebito);
+                WebUtil.ChangeBtnAtt(true, btnDebito);
             }
             else
             {
                 pnlDebitoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnDebito);
+                WebUtil.ChangeBtnAtt(false, btnDebito);
             }
         }
 
@@ -201,12 +201,12 @@ namespace ABWebCatalogue.Site
             if (pnlValidacaoContent.Visible == false)
             {
                 pnlValidacaoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnValidacao);
+                WebUtil.ChangeBtnAtt(true, btnValidacao);
             }
             else
             {
                 pnlValidacaoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnValidacao);
+                WebUtil.ChangeBtnAtt(false, btnValidacao);
             }
         }
 
@@ -215,12 +215,12 @@ namespace ABWebCatalogue.Site
             if (pnlCrossSellingContent.Visible == false)
             {
                 pnlCrossSellingContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCrossSelling);
+                WebUtil.ChangeBtnAtt(true, btnCrossSelling);
             }
             else
             {
                 pnlCrossSellingContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCrossSelling);
+                WebUtil.ChangeBtnAtt(false, btnCrossSelling);
             }
         }
 
@@ -229,12 +229,12 @@ namespace ABWebCatalogue.Site
             if (pnlAtributoInvestimentoContent.Visible == false)
             {
                 pnlAtributoInvestimentoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
+                WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
             }
             else
             {
                 pnlAtributoInvestimentoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
+                WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
             }
         }
         
@@ -318,37 +318,37 @@ namespace ABWebCatalogue.Site
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
             pnlCatGeraisContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCaracGerais);
+            WebUtil.ChangeBtnAtt(false, btnCaracGerais);
             pnlRenovacoesContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnRenovacoes);
+            WebUtil.ChangeBtnAtt(false, btnRenovacoes);
             pnlOperacoesContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnOperacoes);
+            WebUtil.ChangeBtnAtt(false, btnOperacoes);
             pnlDebitoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnDebito);
+            WebUtil.ChangeBtnAtt(false, btnDebito);
             pnlValidacaoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnValidacao);
+            WebUtil.ChangeBtnAtt(false, btnValidacao);
             pnlCrossSellingContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCrossSelling);
+            WebUtil.ChangeBtnAtt(false, btnCrossSelling);
             pnlAtributoInvestimentoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
+            WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
         }
 
         protected void btnOpenAll_Click(object sender, EventArgs e)
         {
             pnlCatGeraisContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCaracGerais);
+            WebUtil.ChangeBtnAtt(true, btnCaracGerais);
             pnlRenovacoesContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnRenovacoes);
+            WebUtil.ChangeBtnAtt(true, btnRenovacoes);
             pnlOperacoesContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnOperacoes);
+            WebUtil.ChangeBtnAtt(true, btnOperacoes);
             pnlDebitoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnDebito);
+            WebUtil.ChangeBtnAtt(true, btnDebito);
             pnlValidacaoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnValidacao);
+            WebUtil.ChangeBtnAtt(true, btnValidacao);
             pnlCrossSellingContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCrossSelling);
+            WebUtil.ChangeBtnAtt(true, btnCrossSelling);
             pnlAtributoInvestimentoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
+            WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
         }
 
     }

@@ -6,7 +6,7 @@ using System.Web.UI.HtmlControls;
 
 namespace Core.Utils
 {
-    public static class WebUtils
+    public static class WebUtil
     {
         public static void ChangeBtnAtt(Boolean b, HtmlButton btn)
         {
