@@ -55,12 +55,12 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblCEstado" runat="server" class="t-label-1"></asp:Label>
+                    <asp:Label ID="lblGEstado" runat="server" class="t-label-1"></asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:DropDownList ID="cmbCEstado" CssClass="t-field-14" runat="server">
+                    <asp:TextBox ID="txtCEstado" runat="server" MaxLength="30" CssClass="t-field-15"></asp:TextBox>
+                    <asp:DropDownList ID="cmbGEstado" CssClass="t-field-14" runat="server">
                     </asp:DropDownList>
-                    <asp:TextBox ID="txtGEstado" runat="server" MaxLength="30" CssClass="t-field-15"></asp:TextBox>
                 </td>
             </tr>
             <tr>

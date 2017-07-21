@@ -48,7 +48,7 @@ namespace Core.Models
                             fieldName = "txt" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
                             if (curControl != null)
-                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho.Value;
                             else
                                 errorLst += fieldName + "\n";
 
@@ -70,7 +70,7 @@ namespace Core.Models
                                 fieldName = "cmb" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
                                 if(curControl != null)
-                                    (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho;
+                                    (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho.Value;
                                 else
                                     errorLst += fieldName + "\n";
                             }
