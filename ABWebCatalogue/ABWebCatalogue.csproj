@@ -161,7 +161,7 @@
     <Content Include="scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
     <Content Include="Site\AP34.aspx" />
-    <Content Include="Site\CA25.aspx" />
+    <Content Include="Site\CA29.aspx" />
     <Content Include="Site\Create.aspx" />
     <Content Include="Site\CA58.aspx" />
     <Content Include="Site\ErrorPage.aspx" />
@@ -204,12 +204,12 @@
     <Compile Include="Site\AP34.aspx.designer.cs">
       <DependentUpon>AP34.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site\CA25.aspx.cs">
-      <DependentUpon>CA25.aspx</DependentUpon>
+    <Compile Include="Site\CA29.aspx.cs">
+      <DependentUpon>CA29.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site\CA25.aspx.designer.cs">
-      <DependentUpon>CA25.aspx</DependentUpon>
+    <Compile Include="Site\CA29.aspx.designer.cs">
+      <DependentUpon>CA29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>

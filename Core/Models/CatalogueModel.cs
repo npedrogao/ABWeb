@@ -37,26 +37,26 @@ namespace Core.Models
                         case TipoCampoEnum.String:
                         case TipoCampoEnum.Decimal:
                         case TipoCampoEnum.Data:
-                            fieldName = "lbl" + itm.CopyBook;
+                            fieldName = "lbl" + itm.CopyBook.Trim();
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
-                            if(curControl != null)
+                            if (curControl != null)
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
                                 errorLst += fieldName + "\n";
 
-                            fieldName = "txt" + itm.CopyBook;
+                            fieldName = "txt" + itm.CopyBook.Trim();
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            if (curControl != null)
-                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho.Value;
+                            if (curControl != null && itm.Tamanho.HasValue)
+                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                             else
                                 errorLst += fieldName + "\n";
 
                             break;
                         case TipoCampoEnum.ComboBox:
-                            if(itm.Tabela == TabelaEnum.NULL)
+                            if (itm.Tabela == TabelaEnum.NULL)
                             {
-                                fieldName = "lbl" + itm.CopyBook;
+                                fieldName = "lbl" + itm.CopyBook.Trim();
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
                                 if (curControl != null)
@@ -67,11 +67,9 @@ namespace Core.Models
                             {
                                 //todo: carrega 
 
-                                fieldName = "cmb" + itm.CopyBook;
+                                fieldName = "cmb" + itm.CopyBook.Trim();
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                                if(curControl != null)
-                                    (curControl as System.Web.UI.WebControls.TextBox).MaxLength = itm.Tamanho.Value;
-                                else
+                                if (curControl == null)
                                     errorLst += fieldName + "\n";
                             }
 
@@ -85,7 +83,7 @@ namespace Core.Models
             {
                 throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
             }
-            
+
         }
 
         public static string Terminal { get; set; }
