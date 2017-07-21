@@ -31,8 +31,7 @@ namespace Core.Models
 
         public string DescCol { get; set; }
 
-        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, 
-            TabelaEnum validaTabela, string descCol)
+        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, string descCol)
         {
             this.Tabela = tabelaId;
             this.Ecran = ecra;
