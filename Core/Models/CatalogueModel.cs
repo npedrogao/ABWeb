@@ -79,9 +79,9 @@ namespace Core.Models
 
                             break;
                     }
-                    if(errorLst.Length > 0)
-                        throw new Exception("Campos errados: "+ errorLst);
                 }
+                if (errorLst.Length > 0)
+                    throw new Exception("Campos errados: " + errorLst);
             }
             catch (Exception ex)
             {
