@@ -32,7 +32,7 @@ namespace ABWebCatalogue.Site
             cmbIAutRef.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIDiaNUt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
 
-            cmbCEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
+            cmbGEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
             cmbQDiasAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIDebFor.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIPrClNew.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
@@ -66,8 +66,8 @@ namespace ABWebCatalogue.Site
                         txtGClaPrz.Text = model.GClaPrz;
                         txtCMoeda.Text = model.CMoeda;
                         txtGMoeda.Text = model.GMoeda;
-                        cmbCEstado.SelectedValue = model.CEstado;
-                        txtGEstado.Text = model.GEstado;
+                        txtCEstado.Text = model.CEstado;
+                        cmbGEstado.SelectedValue = model.GEstado;
                         txtDIniVal.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
                         txtDFimVal.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
 
@@ -257,8 +257,8 @@ namespace ABWebCatalogue.Site
             model.GClaPrz = form.GetStr(txtGClaPrz.ID);
             model.CMoeda = form.GetStr(txtCMoeda.ID);
             model.GMoeda = form.GetStr(txtGMoeda.ID);
-            model.CEstado = form.GetStr(cmbCEstado.ID);
-            model.GEstado = form.GetStr(txtGEstado.ID);
+            model.CEstado = form.GetStr(txtCEstado.ID);
+            model.GEstado = form.GetStr(cmbGEstado.ID);
             //Características Gerais
             model.IPrzAbs = form.GetStr(cmbIPrzAbs.ID);
             model.CProdCnt = form.GetStr(txtCProdCnt.ID);
