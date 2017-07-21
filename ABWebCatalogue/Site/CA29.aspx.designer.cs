@@ -2047,13 +2047,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label78;
         
         /// <summary>
-        /// Label79 control.
+        /// Label103 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label79;
+        protected global::System.Web.UI.WebControls.Label Label103;
+        
+        /// <summary>
+        /// Label106 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label106;
         
         /// <summary>
         /// Label80 control.

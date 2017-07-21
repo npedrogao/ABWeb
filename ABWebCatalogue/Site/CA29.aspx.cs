@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Core.Models;
 
 namespace ABWebCatalogue.Site
 {
@@ -13,7 +14,7 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ModelCata
+            CatalogueModel.ApplyModel(this);
         }
 
         protected void btnClaBank_Click(object sender, EventArgs e)

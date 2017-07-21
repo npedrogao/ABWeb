@@ -116,6 +116,8 @@
 
             <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
         </div>
+        <br />
+        <br />
     </asp:Panel>
 
     <button id="btnClaBank" class="titleAccordion-plus" runat="server" onserverclick="btnClaBank_Click">Classificação Bankinter</button>
@@ -923,18 +925,25 @@
         </table>
     </asp:Panel>
 
+    <br />
+    <br />
+
     <button id="btnCanalDist" class="titleAccordion-plus" runat="server" onserverclick="btnCanalDist_Click">Canal de Distribuição</button>
     <asp:Panel ID="pnlCanalDist" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
 
             <tr>
-                <th class="t-table-col-1">
-                    <asp:Label ID="Label78" runat="server" class="t-label-1">Regates</asp:Label>
-                </th>
-                <th class="t-table-col-1">
-                    <asp:Label ID="Label79" runat="server" class="t-label-1">Subscrições</asp:Label>
-                </th>
+                <td class="t-table-col-1">
+                    <asp:Label ID="Label78" runat="server" class="t-label-1"></asp:Label>
+                </td>
+                 <td class="t-table-col-2">
+                    <asp:Label ID="Label103" runat="server" class="t-label-1 martelada2">Resgates  </asp:Label>
+                  
+                     <asp:Label ID="Label106" runat="server" class="t-label-1 martelada1"> Subscrições </asp:Label>
+
+                </td>
+          
             </tr>
             <tr>
                 <td class="t-table-col-1">
@@ -1095,7 +1104,7 @@
 
             </tr>
 
-                <tr>
+            <tr>
                 <td class="t-table-col-1">
                     <asp:Label ID="Label96" runat="server" class="t-label-1">ESTAT:</asp:Label>
                 </td>
@@ -1116,7 +1125,7 @@
                 </td>
             </tr>
 
-                   <tr>
+            <tr>
                 <td class="t-table-col-1">
                     <asp:Label ID="Label99" runat="server" class="t-label-1">SEGM:</asp:Label>
                 </td>
@@ -1137,20 +1146,23 @@
                 </td>
             </tr>
 
-                  <tr>
+            <tr>
                 <td class="t-table-col-1">
                     <asp:Label ID="Label102" runat="server" class="t-label-1">PER.EXT.:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="TextBox75" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
-               
+
             </tr>
 
         </table>
     </asp:Panel>
 
-     <button id="btnAttInv" class="titleAccordion-plus" runat="server" onserverclick="btnAttInv_Click">Atributos de Investimento</button>
+    <br />
+    <br />
+
+    <button id="btnAttInv" class="titleAccordion-plus" runat="server" onserverclick="btnAttInv_Click">Atributos de Investimento</button>
     <asp:Panel ID="pnlAttInvContent" runat="server" Visible="false">
         <br />
         <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
@@ -1243,40 +1255,42 @@
             </tr>
 
 
-            
+
             <tr>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbCatClass" runat="server" class="t-label-1">Cat./Class.activ.:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbCatClass" runat="server" class="t-label-1">Cat./Class.activ.:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <asp:TextBox ID="txtCatClass" runat="server" CssClass="t-field-14"></asp:TextBox>
-            <asp:TextBox ID="TXTCatClassDesc" runat="server" CssClass="t-field-14"></asp:TextBox>
-                             </td>
+                    <asp:TextBox ID="txtCatClass" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="TXTCatClassDesc" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbSolicitarClassRisco" runat="server" class="t-label-1">Solicitar classificação de Risco:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbSolicitarClassRisco" runat="server" class="t-label-1">Solicitar classificação de Risco:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <select id="ddlSolicitarClassRisco" runat="server" class="t-field-14"></select>
-                             </td>
+                    <select id="ddlSolicitarClassRisco" runat="server" class="t-field-14"></select>
+                </td>
                 <td class="t-table-col-1">
-            <asp:Label ID="lbDataActivacao" runat="server" class="t-label-1">Data de Activação:</asp:Label>
-                       </td>
+                    <asp:Label ID="lbDataActivacao" runat="server" class="t-label-1">Data de Activação:</asp:Label>
+                </td>
                 <td class="t-table-col-2">
-            <asp:TextBox ID="txtDataActivacao" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtDataActivacao" runat="server" CssClass="t-field-14"></asp:TextBox>
 
-               </td>
+                </td>
             </tr>
 
         </table>
     </asp:Panel>
 
-    <br /> <br />
+    <br />
+    <br />
 
-       <hr class="hr" /> 
-       <br /> 
+    <hr class="hr" />
+    <br />
     <div class="btnLeft">
         <button id="btnClear" class="t-btn-2" runat="server" onserverclick="btnClear_Click">Limpar</button>
         <button id="btnSave" class="t-btn-2" runat="server" onserverclick="btnSave_Click">Guardar</button>
     </div>
-    <br /> <br />
+    <br />
+    <br />
 </asp:Content>
