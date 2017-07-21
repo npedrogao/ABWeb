@@ -14,21 +14,23 @@
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <label class="col-xs-4 control-label">Produto</label>
+                    <label class="t-label-1">Produto</label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtProd" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtProd" runat="server" CssClass="t-field-14"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <label class="col-xs-4 control-label">Sub Produto</label>
+                    <label class="t-label-1">Sub Produto</label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtSubProd" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSubProd" runat="server" CssClass="t-field-14"></asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
+                <td class="t-table-col-1">
+                    <label class="t-label-1">Nome</label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="txtName" runat="server" CssClass="t-field-14"></asp:TextBox>
+                </td>
             </tr>
         </table>
         <br />
@@ -37,178 +39,91 @@
             <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
         </div>
     </asp:Panel>
+    <br />
+    <br />
+    <button id="btnParametrosGerais" class="titleAccordion-plus" runat="server" onserverclick="btnParametrosGerais_Click">Parametros Gerais</button>
+    <asp:Panel ID="pnlParametrosGeraisContent" runat="server" Visible="false">
+        <br />
+        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+            <tr>
+                <label class="col-xs-4 control-label">Tipo Produto</label>
+                <asp:TextBox ID="txtTipo" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtGtip" runat="server" CssClass="form-control"></asp:TextBox>
+            </tr>
+            <tr>
+                <label class="col-xs-4 control-label">Moeda</label>
+                <asp:TextBox ID="txtCmoe" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtGmoe" runat="server" CssClass="form-control"></asp:TextBox>
+            </tr>
+            <tr>
+                <label class="col-xs-4 control-label">Conta Produto</label>
+                <asp:TextBox ID="txtCbal" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtNcta" runat="server" CssClass="form-control"></asp:TextBox>
+            </tr>
+            <tr>
+                <label class="col-xs-4 control-label">CAPOANO</label>
+                <asp:TextBox ID="txtCapo" runat="server" CssClass="form-control"></asp:TextBox>
+                <label class="col-xs-4 control-label">ZAPOLICE</label>
+                <asp:TextBox ID="txtZapo" runat="server" CssClass="form-control"></asp:TextBox>
+                <label class="col-xs-4 control-label">CCERTIF</label>
+                <asp:TextBox ID="txtCeti" runat="server" CssClass="form-control"></asp:TextBox>
+                <label class="col-xs-4 control-label">CCERANO</label>
+                <asp:TextBox ID="txtCera" runat="server" CssClass="form-control"></asp:TextBox>
+
+            </tr>
+            <tr>
+                <td>
+
+                    <label class="col-xs-4 control-label">Conta IT'S</label>
+                    <asp:TextBox ID="txtCba1" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtNct1" runat="server" CssClass="form-control"></asp:TextBox>
+                </td>
+                <td>
+                    <label class="col-xs-4 control-label">NIB da Conta GV</label>
+                    <asp:TextBox ID="txtBank" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtBalc" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCnum" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtDigc" runat="server" CssClass="form-control"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="col-xs-4 control-label">Base Cálculo</label>
+                    <asp:TextBox ID="txtQbas" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCseq" runat="server" CssClass="form-control"></asp:TextBox>
+                </td>
+                <td>
+                    <label class="col-xs-4 control-label">Decimais UP'S</label>
+                    <asp:TextBox ID="txtQdec" runat="server" CssClass="form-control"></asp:TextBox>
+
+                </td>
+                <td>
+                    <label class="col-xs-4 control-label">Número de Alterações</label>
+                    <asp:TextBox ID="txtQalt" runat="server" CssClass="form-control"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <label class="col-xs-4 control-label">Validade Propostas:</label>
+                    <asp:TextBox ID="txtQprp" runat="server" CssClass="form-control"></asp:TextBox>
+                </td>
+                <td>
+                    <label class="col-xs-4 control-label">Dias úteis:</label>
+
+                    <select id="cmbDuti" runat="server" class="form-control"></select>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </asp:Panel>
+
 
 
     <div class="panel-content panel-body container-fluid form-horizontal">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row form-group">
-                    <div class="col-xs-6">
-                        <div class="col-xs-4">
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="col-xs-4">
-                        </div>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-xs-6">
-                        <label class="col-xs-4 control-label">Nome</label>
-                        <div class="col-xs-8">
-                            <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="panel panel-default">
-            <div class="panel-title">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse1">Parametros Gerais<span class="glyphicon glyphicon-plus pull-right"></span></a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-content panel-collapse collapse">
-                <div class="row panel-body container-fluid form-horizontal">
-                    <div class="col-xs-12 ">
-                        <div class="row from-group">
-                            <div class="col-xs-8">
-                                <label class="col-xs-4 control-label">Tipo Produto</label>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtTipo" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtGtip" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row from-group">
-                            <div class="col-xs-8">
-                                <label class="col-xs-4 control-label">Moeda</label>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtCmoe" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtGmoe" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-8">
-                                <label class="col-xs-4 control-label">Conta Produto</label>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtCbal" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtNcta" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-4">
-                                <label class="col-xs-4 control-label">CAPOANO</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtCapo" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="col-xs-4 control-label">ZAPOLICE</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtZapo" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="col-xs-4 control-label">CCERTIF</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtCeti" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <label class="col-xs-4 control-label">CCERANO</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtCera" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Conta IT'S</label>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtCba1" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtNct1" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">NIB da Conta GV</label>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtBank" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtBalc" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtCnum" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-xs-2">
-                                    <asp:TextBox ID="txtDigc" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Base Cálculo</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtQbas" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Sequenciador de Apolices</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtCseq" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Decimais UP'S</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtQdec" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Número de Alterações</label>
-                                <div class="col-xs-6">
-                                    <asp:TextBox ID="txtQalt" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row from-group">
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Validade Propostas:</label>
-                                <div class="col-xs-4">
-                                    <asp:TextBox ID="txtQprp" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <label class="col-xs-4 control-label">Dias úteis:</label>
-                                <div class="col-xs-4">
-                                    <select id="cmbDuti" runat="server" class="form-control"></select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="panel panel-default">
             <div class="panel-title">

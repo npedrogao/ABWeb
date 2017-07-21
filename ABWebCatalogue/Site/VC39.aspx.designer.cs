@@ -49,6 +49,15 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtSubProd;
         
         /// <summary>
+        /// txtName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtName;
+        
+        /// <summary>
         /// btnCloseAll control.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnOpenAll;
         
         /// <summary>
-        /// txtName control.
+        /// btnParametrosGerais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnParametrosGerais;
+        
+        /// <summary>
+        /// pnlParametrosGeraisContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlParametrosGeraisContent;
         
         /// <summary>
         /// txtTipo control.
