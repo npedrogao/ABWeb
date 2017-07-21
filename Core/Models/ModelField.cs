@@ -41,7 +41,6 @@ namespace Core.Models
             this.TipoDeCampo = tipoCampo;
             this.ValidaCol = validaCol;
             this.DescricaoLbl = description;
-            this.ValidaTab = validaTabela;
             this.DescCol = descCol;
         }
 
