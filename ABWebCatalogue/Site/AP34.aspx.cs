@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Core.Utils;
 
 namespace ABWebCatalogue.Site
 {
@@ -31,7 +32,7 @@ namespace ABWebCatalogue.Site
             cmbIAutRef.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIDiaNUt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
 
-            cmbCEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
+            cmbGEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
             cmbQDiasAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIDebFor.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
             cmbIPrClNew.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
@@ -65,8 +66,8 @@ namespace ABWebCatalogue.Site
                         txtGClaPrz.Text = model.GClaPrz;
                         txtCMoeda.Text = model.CMoeda;
                         txtGMoeda.Text = model.GMoeda;
-                        cmbCEstado.SelectedValue = model.CEstado;
-                        txtGEstado.Text = model.GEstado;
+                        txtCEstado.Text = model.CEstado;
+                        cmbGEstado.SelectedValue = model.GEstado;
                         txtDIniVal.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
                         txtDFimVal.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
 
@@ -139,41 +140,31 @@ namespace ABWebCatalogue.Site
             }
         }
 
-        protected void Page_PreRender(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void btnCaracGerais_Click(object sender, EventArgs e)
         {
             if (pnlCatGeraisContent.Visible == false)
             {
                 pnlCatGeraisContent.Visible = true;
-                btnCaracGerais.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnCaracGerais.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnCaracGerais);
             }
             else
             {
                 pnlCatGeraisContent.Visible = false;
-                btnCaracGerais.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnCaracGerais.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnCaracGerais);
             }
         }
-
-
+        
         protected void btnRenovacoes_Click(object sender, EventArgs e)
         {
             if (pnlRenovacoesContent.Visible == false)
             {
                 pnlRenovacoesContent.Visible = true;
-                btnRenovacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnRenovacoes.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnRenovacoes);
             }
             else
             {
                 pnlRenovacoesContent.Visible = false;
-                btnRenovacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnRenovacoes.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnRenovacoes);
             }
         }
 
@@ -182,15 +173,12 @@ namespace ABWebCatalogue.Site
             if (pnlOperacoesContent.Visible == false)
             {
                 pnlOperacoesContent.Visible = true;
-                btnOperacoes.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnOperacoes.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnOperacoes);
             }
             else
             {
                 pnlOperacoesContent.Visible = false;
-
-                btnOperacoes.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnOperacoes.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnOperacoes);
             }
         }
 
@@ -199,16 +187,12 @@ namespace ABWebCatalogue.Site
             if (pnlDebitoContent.Visible == false)
             {
                 pnlDebitoContent.Visible = true;
-
-                btnDebito.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnDebito.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnDebito);
             }
             else
             {
                 pnlDebitoContent.Visible = false;
-
-                btnDebito.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnDebito.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnDebito);
             }
         }
 
@@ -217,16 +201,12 @@ namespace ABWebCatalogue.Site
             if (pnlValidacaoContent.Visible == false)
             {
                 pnlValidacaoContent.Visible = true;
-
-                btnValidacao.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnValidacao.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnValidacao);
             }
             else
             {
                 pnlValidacaoContent.Visible = false;
-
-                btnValidacao.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnValidacao.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnValidacao);
             }
         }
 
@@ -235,16 +215,12 @@ namespace ABWebCatalogue.Site
             if (pnlCrossSellingContent.Visible == false)
             {
                 pnlCrossSellingContent.Visible = true;
-
-                btnCrossSelling.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnCrossSelling.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnCrossSelling);
             }
             else
             {
                 pnlCrossSellingContent.Visible = false;
-
-                btnCrossSelling.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnCrossSelling.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnCrossSelling);
             }
         }
 
@@ -253,20 +229,15 @@ namespace ABWebCatalogue.Site
             if (pnlAtributoInvestimentoContent.Visible == false)
             {
                 pnlAtributoInvestimentoContent.Visible = true;
-
-                btnAtributoInvestimento.Attributes.CssStyle.Remove("titleAccordion-plus");
-                btnAtributoInvestimento.Attributes.Add("class", "titleAccordion-less");
+                WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
             }
             else
             {
                 pnlAtributoInvestimentoContent.Visible = false;
-
-                btnAtributoInvestimento.Attributes.CssStyle.Remove("titleAccordion-less");
-                btnAtributoInvestimento.Attributes.Add("class", "titleAccordion-plus");
+                WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
             }
         }
-
-
+        
         protected void btnClear_Click(object sender, EventArgs e)
         {
 
@@ -286,8 +257,8 @@ namespace ABWebCatalogue.Site
             model.GClaPrz = form.GetStr(txtGClaPrz.ID);
             model.CMoeda = form.GetStr(txtCMoeda.ID);
             model.GMoeda = form.GetStr(txtGMoeda.ID);
-            model.CEstado = form.GetStr(cmbCEstado.ID);
-            model.GEstado = form.GetStr(txtGEstado.ID);
+            model.CEstado = form.GetStr(txtCEstado.ID);
+            model.GEstado = form.GetStr(cmbGEstado.ID);
             //Características Gerais
             model.IPrzAbs = form.GetStr(cmbIPrzAbs.ID);
             model.CProdCnt = form.GetStr(txtCProdCnt.ID);
@@ -342,6 +313,42 @@ namespace ABWebCatalogue.Site
             //model.DataActivacao = form.GetStr(txtDataActivacao.ID);
 
 
+        }
+        
+        protected void btnCloseAll_Click(object sender, EventArgs e)
+        {
+            pnlCatGeraisContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnCaracGerais);
+            pnlRenovacoesContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnRenovacoes);
+            pnlOperacoesContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnOperacoes);
+            pnlDebitoContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnDebito);
+            pnlValidacaoContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnValidacao);
+            pnlCrossSellingContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnCrossSelling);
+            pnlAtributoInvestimentoContent.Visible = false;
+            WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
+        }
+
+        protected void btnOpenAll_Click(object sender, EventArgs e)
+        {
+            pnlCatGeraisContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnCaracGerais);
+            pnlRenovacoesContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnRenovacoes);
+            pnlOperacoesContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnOperacoes);
+            pnlDebitoContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnDebito);
+            pnlValidacaoContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnValidacao);
+            pnlCrossSellingContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnCrossSelling);
+            pnlAtributoInvestimentoContent.Visible = true;
+            WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
         }
 
     }

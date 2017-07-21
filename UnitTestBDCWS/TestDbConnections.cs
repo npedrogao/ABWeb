@@ -16,7 +16,7 @@ namespace UnitTestBDCWS
         public void TestCatalogueDbConnection()
         {
             // arrange
-            string transactionName = @"AP69";
+            string transactionName = @"AP69C";
             string connectionString = @"Data Source = C301BTC005.corebus2.barclays.org\TC005,5660; Initial Catalog = catalogue; User Id = Catalogue; Password = p@$$w0rd; Integrated Security = False; MultipleActiveResultSets = True";
 
             // act           

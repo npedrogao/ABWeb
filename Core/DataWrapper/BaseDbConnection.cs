@@ -5,9 +5,11 @@ using System.Text;
 
 namespace Core.DataWrapper
 {
+    //
+    // Summary:
+    //     Represents an open connection to a data source.
     public abstract class BaseDbConnection : IDisposable
-    {
-
+    {  
         protected System.Data.Common.DbConnection dbCon;
 
         public BaseDbConnection(string connectionString)

@@ -34,18 +34,21 @@ namespace Core.DataWrapper
 
                                 newField.Ecran = dr.GetDbStr("Ecra");
                                 newField.CopyBook = dr.GetDbStr("CopyBook");
-                                newField.Tamanho = dr.GetDbInt("Tamanho");
-                                var tabID = dr.GetDbIntNull("TabelaID");
+                                                        
+                                var size = dr.GetDbIntNull("Tamanho");
+                                if (size.HasValue)
+                                    newField.Tamanho = size;
+
+                                var tabID = dr.GetDbIntNull("TabelaId");
                                 if (tabID.HasValue)
                                     newField.Tabela = (TabelaEnum)tabID;
 
-                                newField.ValidaCol = dr.GetDbStr("ValidaCol");
-                                newField.DescricaoLbl = dr.GetDbStr("Descritivo");
-                                var validaTb = dr.GetDbIntNull("ValidaTblID");
-                                if (validaTb.HasValue)
-                                    newField.ValidaTab = (TabelaEnum)validaTb;
+                                newField.ValidaCol = dr.GetDbStr("IDCol");
 
-                                switch (dr.GetDbStr("ValType"))
+                                newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                                newField.DescCol = dr.GetDbStr("DescCol");
+
+                        switch (dr.GetDbStr("ValType"))
                                 {
                                     case "STR":
                                         newField.TipoDeCampo = TipoCampoEnum.String;
@@ -58,6 +61,9 @@ namespace Core.DataWrapper
                                         break;
                                     case "CMB":
                                         newField.TipoDeCampo = TipoCampoEnum.ComboBox;
+                                        break;
+                                    case "CUST":
+                                        newField.TipoDeCampo = TipoCampoEnum.CustomMask;
                                         break;
                                     default:
                                         break;

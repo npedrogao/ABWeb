@@ -139,31 +139,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtGMoeda;
         
         /// <summary>
-        /// lblCEstado control.
+        /// lblGEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCEstado;
+        protected global::System.Web.UI.WebControls.Label lblGEstado;
         
         /// <summary>
-        /// cmbCEstado control.
+        /// txtCEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbCEstado;
+        protected global::System.Web.UI.WebControls.TextBox txtCEstado;
         
         /// <summary>
-        /// txtGEstado control.
+        /// cmbGEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGEstado;
+        protected global::System.Web.UI.WebControls.DropDownList cmbGEstado;
         
         /// <summary>
         /// lblDIniVal control.
@@ -200,6 +200,24 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDFimVal;
+        
+        /// <summary>
+        /// btnCloseAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCloseAll;
+        
+        /// <summary>
+        /// btnOpenAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnOpenAll;
         
         /// <summary>
         /// btnCaracGerais control.
