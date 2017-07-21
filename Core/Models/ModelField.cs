@@ -16,11 +16,6 @@ namespace Core.Models
         public TabelaEnum Tabela { get; set; }
 
         /// <summary>
-        /// Tabela usada para validar a key inserida pelo utilizador
-        /// </summary>
-        public TabelaEnum ValidaTab { get; set; }
-
-        /// <summary>
         /// Tipologia do campo em questão
         /// </summary>
         public TipoCampoEnum TipoDeCampo { get; set; }
@@ -34,8 +29,10 @@ namespace Core.Models
 
         public string ValidaCol { get; set; }
 
+        public string DescCol { get; set; }
+
         public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, 
-            TabelaEnum validaTabela)
+            TabelaEnum validaTabela, string descCol)
         {
             this.Tabela = tabelaId;
             this.Ecran = ecra;
@@ -45,6 +42,7 @@ namespace Core.Models
             this.ValidaCol = validaCol;
             this.DescricaoLbl = description;
             this.ValidaTab = validaTabela;
+            this.DescCol = descCol;
         }
 
         public ModelField()

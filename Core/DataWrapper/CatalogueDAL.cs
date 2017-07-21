@@ -39,17 +39,16 @@ namespace Core.DataWrapper
                                 if (size.HasValue)
                                     newField.Tamanho = size;
 
-                                var tabID = dr.GetDbIntNull("TabelaID");
+                                var tabID = dr.GetDbIntNull("TabelaId");
                                 if (tabID.HasValue)
                                     newField.Tabela = (TabelaEnum)tabID;
 
-                                newField.ValidaCol = dr.GetDbStr("ValidaCol");
-                                newField.DescricaoLbl = dr.GetDbStr("Descritivo");
-                                var validaTb = dr.GetDbIntNull("ValidaTblID");
-                                if (validaTb.HasValue)
-                                    newField.ValidaTab = (TabelaEnum)validaTb;
+                                newField.ValidaCol = dr.GetDbStr("IDCol");
 
-                                switch (dr.GetDbStr("ValType"))
+                                newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                                newField.DescCol = dr.GetDbStr("DescCol");
+
+                        switch (dr.GetDbStr("ValType"))
                                 {
                                     case "STR":
                                         newField.TipoDeCampo = TipoCampoEnum.String;
