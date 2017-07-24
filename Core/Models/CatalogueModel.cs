@@ -50,7 +50,7 @@ namespace Core.Models
                                 fieldName = "lbl" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
-                                if (curControl != null)
+                                if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
                                     (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                                 else
                                     errorLst += fieldName + "\n";
@@ -69,18 +69,10 @@ namespace Core.Models
                                     errorLst += fieldName + "\n";
                             }
 
-                            if (itm.Tabela != TabelaEnum.NULL)
-                            {
-                                //todo: carrega 
+                            fieldName = "cmb" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
-                                fieldName = "cmb" + itm.CopyBook;
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                                
-                            }
-                            else
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                            if (curControl == null)
+                            if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
                                 errorLst += fieldName + "\n";
                             
 
