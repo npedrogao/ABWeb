@@ -64,9 +64,39 @@ namespace ABWebCatalogue.Site
             cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
             cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
 
-            string js = "CustodiaRulesSS(" + cmbICUSTODD.UniqueID + ", " + cmbICOMRES01.UniqueID + ");";
-            js += "CustodiaRulesSS(" + cmbICUSTODD.UniqueID + ", " + cmbICOMRES02.UniqueID + ");";
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "function JsServerSide(){"+ js + "}");
+
+
+            StringBuilder js = new StringBuilder();
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES01.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES02.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES06.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES07.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES08.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES09.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.UniqueID, cmbICOMRES10.UniqueID);
+
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB01.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB02.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB06.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB07.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB08.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB09.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.UniqueID, cmbICOMSUB10.UniqueID);
+
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMRES03.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMRES04.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMRES05.UniqueID);
+
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMSUB03.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMSUB04.UniqueID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.UniqueID, cmbICUSTODGA.UniqueID, cmbICOMSUB05.UniqueID);
+
+
+
+
+
+
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "function JsServerSide(){"+ js.ToString() + "}");
 
 
         }
