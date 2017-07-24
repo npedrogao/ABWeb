@@ -950,95 +950,95 @@
                     <asp:Label ID="lblICOMRES01" runat="server" class="t-label-1">Agências:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtICOMRES01" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox41" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES01" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB01" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label81" runat="server" class="t-label-1">Private:</asp:Label>
+                    <asp:Label ID="lblICOMRES02" runat="server" class="t-label-1">Private:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox42" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox43" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="t-table-col-1">
-                    <asp:Label ID="Label82" runat="server" class="t-label-1">Gestão de património:</asp:Label>
-                </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox44" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox45" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES02" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB02" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label83" runat="server" class="t-label-1">Bankinter Fundos:</asp:Label>
+                    <asp:Label ID="lblICOMRES03" runat="server" class="t-label-1">Gestão de património:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox46" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox47" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES03" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB03" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label84" runat="server" class="t-label-1">Bankinter Vida:</asp:Label>
+                    <asp:Label ID="lblICOMRES04" runat="server" class="t-label-1">Bankinter Fundos:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox48" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox49" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES04" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB04" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label85" runat="server" class="t-label-1">Internet:</asp:Label>
+                    <asp:Label ID="lblICOMRES05" runat="server" class="t-label-1">Bankinter Vida:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox50" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox51" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="t-table-col-1">
-                    <asp:Label ID="Label86" runat="server" class="t-label-1">NetBanking:</asp:Label>
-                </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox52" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox53" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="t-table-col-1">
-                    <asp:Label ID="Label87" runat="server" class="t-label-1">Banca telefónica:</asp:Label>
-                </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox54" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox55" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES05" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB05" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label88" runat="server" class="t-label-1">Corporate:</asp:Label>
+                    <asp:Label ID="lblICOMRES06" runat="server" class="t-label-1">Internet:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox56" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox57" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES06" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB06" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lblICOMRES07" runat="server" class="t-label-1">NetBanking:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="cmbICOMRES07" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB07" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lblICOMRES08" runat="server" class="t-label-1">Banca telefónica:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="cmbICOMRES08" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB08" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label89" runat="server" class="t-label-1">Peq./Médias Empresas:</asp:Label>
+                    <asp:Label ID="lblICOMRES09" runat="server" class="t-label-1">Corporate:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox58" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="TextBox59" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMRES09" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB09" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="t-table-col-1">
+                    <asp:Label ID="lblICOMRES10" runat="server" class="t-label-1">Peq./Médias Empresas:</asp:Label>
+                </td>
+                <td class="t-table-col-2">
+                    <asp:TextBox ID="cmbICOMRES10" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="cmbICOMSUB10" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
@@ -1089,7 +1089,7 @@
                     <asp:Label ID="lblCBALMOE" runat="server" class="t-label-1">CTA D.O. cliente s/Moeda Estrangeira:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtNUMCTMOE" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtCBALMOE" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                     <select id="cmbNUMCTMOE" runat="server" class="t-field-14"></select>
                 </td>
             </tr>
@@ -1200,11 +1200,11 @@
                     <select id="cmbCHORIZON" runat="server" class="t-field-14"></select>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="aiai" runat="server" class="t-label-1">Zona Geográfica:</asp:Label>
+                    <asp:Label ID="lblCZONANET" runat="server" class="t-label-1">Zona Geográfica:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="uiui" runat="server" CssClass="t-field-14"></asp:TextBox>
-                    <asp:TextBox ID="pila" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtCZONANET" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <select id="cmbCZONANET" runat="server" class="t-field-14"></select>
                 </td>
             </tr>
 
