@@ -11,10 +11,10 @@ namespace Core.Utils
         public static void ExecJsFunction(StringBuilder jsBuilder, String methodName, params string[] paramCol)
         {
             string separ = string.Empty;
-            jsBuilder.Append("function ").Append(methodName).Append("(");
+            jsBuilder.Append(methodName).Append("(");
             foreach (var param in paramCol)
             {
-                jsBuilder.Append(separ).Append(param);
+                jsBuilder.Append(separ).Append("'").Append(param).Append("'");
                 separ = ",";
             }
             jsBuilder.Append(");");

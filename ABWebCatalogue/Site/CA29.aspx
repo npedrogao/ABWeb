@@ -5,6 +5,60 @@
 
     <script src="../JavaScript/jquery-1.8.3.js"></script>
 
+       <script type="text/javascript">
+       
+
+        function CustodiaRulesSS(listener, target) {
+            $("#" + listener).change(function () {
+                var aux = $("#" + listener).val();
+                if (aux === "D" || aux === "C") {
+                    $("#" + target).val("S").change();
+                } else {
+                    $("#" + target).val("N").change();
+                }
+            })
+        };
+
+        function CustodiaRulesSN(listener, target) {
+            $("#" + listener).change(function () {
+                var aux = $("#" + listener).val();
+                if (aux === "D") {
+                    $("#" + target).val("S").change();
+                } else {
+                    $("#" + target).val("N").change();
+                }
+            })
+        };
+
+        function CustodiaRulesTwoList(listener1, listener2, target) {
+            $("#" + listener1).change(function () {
+                var value1 = $("#" + listener1).val();
+                var value2 = $("#" + listener2).val();
+                if ((value1 === "D" || value1 === "C") && value2 === "S") {
+                    $("#" + target).val("S").change();
+                } else {
+                    $("#" + target).val("N").change();
+                }
+            })
+        };
+
+        function CustodiaRulesTwoListComplex(listener1, listener2, target) {
+            $("#" + listener1).change(function () {
+                var value1 = $("#" + listener1).val();
+                var value2 = $("#" + listener2).val();
+                if (value1 === "D" && value2 === "S") {
+                    $("#" + target).val("S").change();
+                } else {
+                    $("#" + target).val("N").change();
+                }
+            })
+        };
+
+  
+
+
+    </script>
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -1296,48 +1350,13 @@
     <br />
     <br />
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-         
-            $(".custodia").change(function () {
-                var aux = $(".custodia").val();
-                if (aux === "C" || aux === "D") {
-                    $("#CPH_cmbICOMRES01").val("N").change();
-                } else {
-
-                }
-
-            function CustodiaRulesTwoList(listener1, listener2, target){
-                $("#"+ Listener).change(function () {
-                    var value1 = $("#"+ listener1).val();
-                    var value2 = $("#"+ listener2).val();
-                    if ((value1 === "D" || value1 === "C") && value2 ==="S"){
-                        $("#"+ target).val("S").change();
-                    } else{
-                        $("#"+ target).val("N").change();
-                    }
-                })
-            };
-
-            function CustodiaRulesTwoListComplex(listener1, listener2, target){
-                $("#"+ Listener).change(function () {
-                    var value1 = $("#"+ listener1).val();
-                    var value2 = $("#"+ listener2).val();
-                    if (value1 === "D" && value2 ==="S"){
-                        $("#"+ target).val("S").change();
-                    } else{
-                        $("#"+ target).val("N").change();
-                    }
-                })
-            };
-
-        });
-          
-   
-
-
-
-    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+     
+        JsServerSide();
+    });
+</script>
+ 
 
 
 </asp:Content>
