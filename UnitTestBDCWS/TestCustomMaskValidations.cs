@@ -44,5 +44,21 @@ namespace UnitTestBDCWS
             bool notValid = ValidaUtil.IsValidField("25:15", Core.Models.CustomMaskEnum.HoraMinuto);
             Assert.IsFalse(notValid);
         }
+
+        [TestMethod]
+        public void TestDecimalValidation()
+        {
+            bool isValid = ValidaUtil.IsValidField("13,555.111", 3, Core.Models.CustomMaskEnum.Decimal);
+            Assert.IsTrue(isValid);
+
+            isValid = ValidaUtil.IsValidField("13,55,5.111", 3, Core.Models.CustomMaskEnum.Decimal);
+            Assert.IsTrue(isValid);
+
+            isValid = ValidaUtil.IsValidField("13,55,5.11", 2, Core.Models.CustomMaskEnum.Decimal);
+            Assert.IsTrue(isValid);
+
+            bool notValid = ValidaUtil.IsValidField("13,55,5.111", 2, Core.Models.CustomMaskEnum.Decimal);
+            Assert.IsFalse(notValid);
+        }
     }
 }

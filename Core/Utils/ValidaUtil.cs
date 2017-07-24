@@ -9,7 +9,7 @@ namespace Core.Utils
 {
     public static class ValidaUtil
     {
-        public static bool IsValidField(string text, Models.CustomMaskEnum customMaskEnum)
+        public static bool IsValidField(string text, int inteiro, Models.CustomMaskEnum customMaskEnum)
         {
             bool valid = false;
             switch (customMaskEnum)
@@ -24,6 +24,7 @@ namespace Core.Utils
                     valid = ValidaMaskHora(text);
                     break;
                 case Models.CustomMaskEnum.Decimal:
+                    valid = ValidaMaskDecimal(text, inteiro);
                     break;
                 default:
                     break;
@@ -32,38 +33,52 @@ namespace Core.Utils
             return valid;
         }
 
+        public static bool IsValidField(string text,  Models.CustomMaskEnum customMaskEnum)
+        {
+            return IsValidField(text, 0, customMaskEnum);
+        }
+
         private static bool ValidaMaskData(string text)
         {
+            if (String.IsNullOrWhiteSpace(text))
+                return false;
+
             string[] formats = { "yyyy/MM/dd", "dd/MM/yyyy" };
 
             DateTime expectedDate;
 
             if (!DateTime.TryParseExact(text.Trim(), formats, CultureInfo.InvariantCulture,
                                         DateTimeStyles.None, out expectedDate))
-            {
                 return false;
-            }
 
             return true;
         }
 
         private static bool ValidaMaskHora(string text)
         {
-            DateTime time = new DateTime(); // Passed result if succeed 
-
-            if (DateTime.TryParseExact(text.Trim(), "HH:mm", CultureInfo.InvariantCulture,
-                                        DateTimeStyles.None, out time))
-            {
-                return true;
-            }
-            else {
+            if (String.IsNullOrWhiteSpace(text))
                 return false;
-            }
+
+            DateTime time = new DateTime();
+
+            if (!DateTime.TryParseExact(text.Trim(), "HH:mm", CultureInfo.InvariantCulture,
+                                        DateTimeStyles.None, out time))
+                return false;
+
+            return true;
         }
 
-        private static int ValidaMaskDecimal(string text, int inteiro)
+        private static bool ValidaMaskDecimal(string text, int inteiro)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(text) || inteiro < 1)
+                return false;
+
+            string [] splittedText = text.Trim().Replace(',', '\0' ).Split('.');
+
+            if (splittedText[1].Length != inteiro)
+                return false;
+
+            return true;
         }
     }
 }
