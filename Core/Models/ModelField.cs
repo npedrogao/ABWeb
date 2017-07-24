@@ -27,7 +27,7 @@ namespace Core.Models
         public string CopyBook { get; set; }
         public int ? Tamanho { get; set; }
 
-        public string ValidaCol { get; set; }
+        public string IDCol { get; set; }
 
         public string DescCol { get; set; }
 
@@ -40,7 +40,7 @@ namespace Core.Models
             this.CopyBook = copybook;
             this.Tamanho = tamanho;
             this.TipoDeCampo = tipoCampo;
-            this.ValidaCol = validaCol;
+            this.IDCol = validaCol;
             this.DescricaoLbl = description;
             this.DescCol = descCol;
             this.CasasDecimais = casasDec;
