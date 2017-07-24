@@ -31,7 +31,9 @@ namespace Core.Models
 
         public string DescCol { get; set; }
 
-        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, string descCol)
+        public int ? CasasDecimais { get; set; }
+
+        public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, string descCol, int ? casasDec)
         {
             this.Tabela = tabelaId;
             this.Ecran = ecra;
@@ -41,6 +43,7 @@ namespace Core.Models
             this.ValidaCol = validaCol;
             this.DescricaoLbl = description;
             this.DescCol = descCol;
+            this.CasasDecimais = casasDec;
         }
 
         public ModelField()

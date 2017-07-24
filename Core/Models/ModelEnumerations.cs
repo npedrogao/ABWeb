@@ -453,4 +453,17 @@ namespace Core.Models
         R = 'R'
     }
 
+    public enum CustomMaskEnum
+    {
+        [Description("")]
+        NULL = 0,
+        [Description("9(?)V9(?)")]
+        Decimal,
+        [Description("ZZZZ/ZZ/ZZ")]
+        AnoMesDia = 2,
+        [Description("ZZ/ZZ/ZZZZ")]
+        DiaMesAno = 3,
+        [Description("ZZ:ZZ")]
+        HoraMinuto = 4,
+    }
 }

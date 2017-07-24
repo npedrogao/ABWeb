@@ -24,19 +24,19 @@ namespace ABWebCatalogue.Site
 
             type = Request.QueryString["type"];
 
-            cmbIPrzAbs.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
-            cmbIIrs.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbITranche.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbIRenovac.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbILevAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbIAutRef.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbIDiaNUt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIPrzAbs.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
+            //cmbIIrs.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbITranche.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIRenovac.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbILevAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIAutRef.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIDiaNUt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
 
-            cmbGEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
-            cmbQDiasAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbIDebFor.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            cmbIPrClNew.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
-            ddlSolicitarClassRisco.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            //cmbGEstado.LoadWithEnum(IsPostBack, CatalogueModel.ListActive.ToList());
+            //cmbQDiasAnt.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIDebFor.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //cmbIPrClNew.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
+            //ddlSolicitarClassRisco.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
 
             //select.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
 
@@ -56,73 +56,73 @@ namespace ABWebCatalogue.Site
                     {
 
 
-                        txtCProduto.Text = model.CProduto;
-                        cmbGProduto.Value = model.GProduto;
-                        //txtGProduto.Text = model.GProduto;
-                        txtCSubProd.Text = model.CSubProd;
-                        cmbGSubProd.Value = model.GSubProd;
-                        //txtGSubProd.Text = model.GSubProd;
-                        txtCClaPrz.Text = model.CClaPrz;
-                        txtGClaPrz.Text = model.GClaPrz;
-                        txtCMoeda.Text = model.CMoeda;
-                        txtGMoeda.Text = model.GMoeda;
-                        txtCEstado.Text = model.CEstado;
-                        cmbGEstado.SelectedValue = model.GEstado;
-                        txtDIniVal.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
-                        txtDFimVal.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
+                        //txtCProduto.Text = model.CProduto;
+                        //cmbGProduto.Value = model.GProduto;
+                        ////txtGProduto.Text = model.GProduto;
+                        //txtCSubProd.Text = model.CSubProd;
+                        //cmbGSubProd.Value = model.GSubProd;
+                        ////txtGSubProd.Text = model.GSubProd;
+                        //txtCClaPrz.Text = model.CClaPrz;
+                        //txtGClaPrz.Text = model.GClaPrz;
+                        //txtCMoeda.Text = model.CMoeda;
+                        //txtGMoeda.Text = model.GMoeda;
+                        //txtCEstado.Text = model.CEstado;
+                        //cmbGEstado.SelectedValue = model.GEstado;
+                        //txtDIniVal.Text = model.DIniVal != null ? model.DIniVal.Value.ToString("yyyy-MM-dd") : "";
+                        //txtDFimVal.Text = model.DFimVal != null ? model.DFimVal.Value.ToString("yyyy-MM-dd") : "";
 
-                        //Características Gerais
-                        cmbIPrzAbs.SelectedValue = model.IPrzAbs;
-                        txtCProdCnt.Text = model.CProdCnt;
-                        txtCProdCnt2.Text = model.CProdCnt2;
-                        txtCSProCnt.Text = model.CSProCnt;
-                        txtCFinBb.Text = model.CFinBb;
-                        txtGFinBb.Text = model.GFinBb;
-                        cmbIIrs.SelectedValue = model.IIrs;
-                        cmbITranche.SelectedValue = model.ITranche;
-                        txtCAgregDp.Text = model.CAgregDp;
-                        //Renovações
-                        cmbIRenovac.SelectedValue = model.IRenovac;
-                        txtQMAXREN.Text = model.RNVA;
-                        //Operações
-                        cmbILevAnt.SelectedValue = model.ILevAnt;
-                        cmbIAutRef.SelectedValue = model.IAutRef;
-                        cmbIDiaNUt.SelectedValue = model.IDiaNUt;
-                        cmbQDiasAnt.SelectedValue = model.QDiasAnt;
-                        //Débito
-                        cmbIDebFor.SelectedValue = model.IDebFor;
-                        txtQTentDeb.Text = model.QTentDeb;
-                        //Validação Cliente
-                        cmbIPrClNew.SelectedValue = model.IPrClNew;
-                        txtQDiasNCli.Text = model.QDiasNCli;
-                        txtCCampNet.Text = model.CCampNet;
-                        txtGCampNet.Text = model.GCampNet;
-                        //Cross Selling
-                        txtCCxsCons.Text = model.CCxsCons;
-                        txtGCxsCons.Text = model.GCxsCons;
-                        txtCCxsVenc.Text = model.CCxsVenc;
-                        txtGCxsVenc.Text = model.GCxsVenc;
-                        //Atributos Investimento
-                        txtSubFamilia.Text = model.SubFamilia;
-                        txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
-                        txtLiquidez.Text = model.Liquidez;
-                        txtComplexidade.Text = model.Complexidade;
-                        txtComplexidadeDesc.Text = model.ComplexidadeDesc;
-                        txtHorizonteTemporal.Text = model.HorizonteTemporal;
-                        txtHorizonteTemporalDesc.Text = model.HorizonteTemporalDesc;
-                        txtZonaGeografica.Text = model.ZonaGeografica;
-                        txtZonaGeograficaDesc.Text = model.ZonaGeograficaDesc;
-                        txtOnOffRegular.Text = model.OnOffRegular;
-                        txtIpad.Text = model.Ipad;
-                        txtNivelRisco.Text = model.NivelRisco;
-                        txtVaR.Text = model.VaR;
-                        txtData.Text = model.Data != null ? model.Data.Value.ToString("yyyy-MM-dd") : "";
+                        ////Características Gerais
+                        //cmbIPrzAbs.SelectedValue = model.IPrzAbs;
+                        //txtCProdCnt.Text = model.CProdCnt;
+                        //txtCProdCnt2.Text = model.CProdCnt2;
+                        //txtCSProCnt.Text = model.CSProCnt;
+                        //txtCFinBb.Text = model.CFinBb;
+                        //txtGFinBb.Text = model.GFinBb;
+                        //cmbIIrs.SelectedValue = model.IIrs;
+                        //cmbITranche.SelectedValue = model.ITranche;
+                        //txtCAgregDp.Text = model.CAgregDp;
+                        ////Renovações
+                        //cmbIRenovac.SelectedValue = model.IRenovac;
+                        //txtQMAXREN.Text = model.RNVA;
+                        ////Operações
+                        //cmbILevAnt.SelectedValue = model.ILevAnt;
+                        //cmbIAutRef.SelectedValue = model.IAutRef;
+                        //cmbIDiaNUt.SelectedValue = model.IDiaNUt;
+                        //cmbQDiasAnt.SelectedValue = model.QDiasAnt;
+                        ////Débito
+                        //cmbIDebFor.SelectedValue = model.IDebFor;
+                        //txtQTentDeb.Text = model.QTentDeb;
+                        ////Validação Cliente
+                        //cmbIPrClNew.SelectedValue = model.IPrClNew;
+                        //txtQDiasNCli.Text = model.QDiasNCli;
+                        //txtCCampNet.Text = model.CCampNet;
+                        //txtGCampNet.Text = model.GCampNet;
+                        ////Cross Selling
+                        //txtCCxsCons.Text = model.CCxsCons;
+                        //txtGCxsCons.Text = model.GCxsCons;
+                        //txtCCxsVenc.Text = model.CCxsVenc;
+                        //txtGCxsVenc.Text = model.GCxsVenc;
+                        ////Atributos Investimento
+                        //txtSubFamilia.Text = model.SubFamilia;
+                        //txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
+                        //txtLiquidez.Text = model.Liquidez;
+                        //txtComplexidade.Text = model.Complexidade;
+                        //txtComplexidadeDesc.Text = model.ComplexidadeDesc;
+                        //txtHorizonteTemporal.Text = model.HorizonteTemporal;
+                        //txtHorizonteTemporalDesc.Text = model.HorizonteTemporalDesc;
+                        //txtZonaGeografica.Text = model.ZonaGeografica;
+                        //txtZonaGeograficaDesc.Text = model.ZonaGeograficaDesc;
+                        //txtOnOffRegular.Text = model.OnOffRegular;
+                        //txtIpad.Text = model.Ipad;
+                        //txtNivelRisco.Text = model.NivelRisco;
+                        //txtVaR.Text = model.VaR;
+                        //txtData.Text = model.Data != null ? model.Data.Value.ToString("yyyy-MM-dd") : "";
 
-                        txtDescricao.Value = model.Descricao;
-                        txtCatClass.Text = model.CatClassActiv;
-                        txtCatClassDesc.Text = model.CatClassActivDesc;
-                        ddlSolicitarClassRisco.SelectedValue = model.SoliClasRisco;
-                        txtDataActivacao.Text = model.DataActivacao != null ? model.DataActivacao.Value.ToString("yyyy-MM-dd") : "";
+                        //txtDescricao.Value = model.Descricao;
+                        //txtCatClass.Text = model.CatClassActiv;
+                        //txtCatClassDesc.Text = model.CatClassActivDesc;
+                        //ddlSolicitarClassRisco.SelectedValue = model.SoliClasRisco;
+                        //txtDataActivacao.Text = model.DataActivacao != null ? model.DataActivacao.Value.ToString("yyyy-MM-dd") : "";
 
                         if (type == "V")
                         {
@@ -145,12 +145,12 @@ namespace ABWebCatalogue.Site
             if (pnlCatGeraisContent.Visible == false)
             {
                 pnlCatGeraisContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCaracGerais);
+                WebUtil.ChangeBtnAtt(true, btnCaracGerais);
             }
             else
             {
                 pnlCatGeraisContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCaracGerais);
+                WebUtil.ChangeBtnAtt(false, btnCaracGerais);
             }
         }
         
@@ -159,12 +159,12 @@ namespace ABWebCatalogue.Site
             if (pnlRenovacoesContent.Visible == false)
             {
                 pnlRenovacoesContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnRenovacoes);
+                WebUtil.ChangeBtnAtt(true, btnRenovacoes);
             }
             else
             {
                 pnlRenovacoesContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnRenovacoes);
+                WebUtil.ChangeBtnAtt(false, btnRenovacoes);
             }
         }
 
@@ -173,12 +173,12 @@ namespace ABWebCatalogue.Site
             if (pnlOperacoesContent.Visible == false)
             {
                 pnlOperacoesContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnOperacoes);
+                WebUtil.ChangeBtnAtt(true, btnOperacoes);
             }
             else
             {
                 pnlOperacoesContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnOperacoes);
+                WebUtil.ChangeBtnAtt(false, btnOperacoes);
             }
         }
 
@@ -187,12 +187,12 @@ namespace ABWebCatalogue.Site
             if (pnlDebitoContent.Visible == false)
             {
                 pnlDebitoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnDebito);
+                WebUtil.ChangeBtnAtt(true, btnDebito);
             }
             else
             {
                 pnlDebitoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnDebito);
+                WebUtil.ChangeBtnAtt(false, btnDebito);
             }
         }
 
@@ -201,12 +201,12 @@ namespace ABWebCatalogue.Site
             if (pnlValidacaoContent.Visible == false)
             {
                 pnlValidacaoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnValidacao);
+                WebUtil.ChangeBtnAtt(true, btnValidacao);
             }
             else
             {
                 pnlValidacaoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnValidacao);
+                WebUtil.ChangeBtnAtt(false, btnValidacao);
             }
         }
 
@@ -215,12 +215,12 @@ namespace ABWebCatalogue.Site
             if (pnlCrossSellingContent.Visible == false)
             {
                 pnlCrossSellingContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnCrossSelling);
+                WebUtil.ChangeBtnAtt(true, btnCrossSelling);
             }
             else
             {
                 pnlCrossSellingContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnCrossSelling);
+                WebUtil.ChangeBtnAtt(false, btnCrossSelling);
             }
         }
 
@@ -229,12 +229,12 @@ namespace ABWebCatalogue.Site
             if (pnlAtributoInvestimentoContent.Visible == false)
             {
                 pnlAtributoInvestimentoContent.Visible = true;
-                WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
+                WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
             }
             else
             {
                 pnlAtributoInvestimentoContent.Visible = false;
-                WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
+                WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
             }
         }
         
@@ -249,68 +249,68 @@ namespace ABWebCatalogue.Site
         {
             var form = Request.Form;
 
-            model.CProduto = form.GetStr(txtCProduto.ID);
-            model.GProduto = form.GetStr(cmbGProduto.ID);
-            model.CSubProd = form.GetStr(txtCSubProd.ID);
-            model.GSubProd = form.GetStr(cmbGSubProd.ID);
-            model.CClaPrz = form.GetStr(txtCClaPrz.ID);
-            model.GClaPrz = form.GetStr(txtGClaPrz.ID);
-            model.CMoeda = form.GetStr(txtCMoeda.ID);
-            model.GMoeda = form.GetStr(txtGMoeda.ID);
-            model.CEstado = form.GetStr(txtCEstado.ID);
-            model.GEstado = form.GetStr(cmbGEstado.ID);
-            //Características Gerais
-            model.IPrzAbs = form.GetStr(cmbIPrzAbs.ID);
-            model.CProdCnt = form.GetStr(txtCProdCnt.ID);
-            model.CProdCnt2 = form.GetStr(txtCProdCnt2.ID);
-            model.CSProCnt = form.GetStr(txtCSProCnt.ID);
-            model.CFinBb = form.GetStr(txtCFinBb.ID);
-            model.GFinBb = form.GetStr(txtGFinBb.ID);
-            model.IIrs = form.GetStr(cmbIIrs.ID);
-            model.ITranche = form.GetStr(cmbITranche.ID);
-            model.CAgregDp = form.GetStr(txtCAgregDp.ID);
-            //Renovações
-            model.IRenovac = form.GetStr(cmbIRenovac.ID);
-            model.RNVA = form.GetStr(txtQMAXREN.ID);
-            //Operações
-            model.ILevAnt = form.GetStr(cmbILevAnt.ID);
-            model.IAutRef = form.GetStr(cmbIAutRef.ID);
-            model.IDiaNUt = form.GetStr(cmbIDiaNUt.ID);
-            model.QDiasAnt = form.GetStr(cmbQDiasAnt.ID);
-            //Débito
-            model.IDebFor = form.GetStr(cmbIDebFor.ID);
-            model.QTentDeb = form.GetStr(txtQTentDeb.ID);
-            //Validação Cliente
-            model.IPrClNew = form.GetStr(cmbIPrClNew.ID);
-            model.QDiasNCli = form.GetStr(txtQDiasNCli.ID);
-            model.CCampNet = form.GetStr(txtCCampNet.ID);
-            model.GCampNet = form.GetStr(txtGCampNet.ID);
-            //Cross Selling
-            model.CCxsCons = form.GetStr(txtCCxsCons.ID);
-            model.GCxsCons = form.GetStr(txtGCxsCons.ID);
-            model.CCxsVenc = form.GetStr(txtCCxsVenc.ID);
-            model.GCxsVenc = form.GetStr(txtGCxsVenc.ID);
-            //Atributos Investimento
-            model.SubFamilia = form.GetStr(txtSubFamilia.ID);
-            model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
-            model.Liquidez = form.GetStr(txtLiquidez.ID);
-            model.Complexidade = form.GetStr(txtComplexidade.ID);
-            model.ComplexidadeDesc = form.GetStr(txtComplexidadeDesc.ID);
-            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
-            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
+            //model.CProduto = form.GetStr(txtCProduto.ID);
+            //model.GProduto = form.GetStr(cmbGProduto.ID);
+            //model.CSubProd = form.GetStr(txtCSubProd.ID);
+            //model.GSubProd = form.GetStr(cmbGSubProd.ID);
+            //model.CClaPrz = form.GetStr(txtCClaPrz.ID);
+            //model.GClaPrz = form.GetStr(txtGClaPrz.ID);
+            //model.CMoeda = form.GetStr(txtCMoeda.ID);
+            //model.GMoeda = form.GetStr(txtGMoeda.ID);
+            //model.CEstado = form.GetStr(txtCEstado.ID);
+            //model.GEstado = form.GetStr(cmbGEstado.ID);
+            ////Características Gerais
+            //model.IPrzAbs = form.GetStr(cmbIPrzAbs.ID);
+            //model.CProdCnt = form.GetStr(txtCProdCnt.ID);
+            //model.CProdCnt2 = form.GetStr(txtCProdCnt2.ID);
+            //model.CSProCnt = form.GetStr(txtCSProCnt.ID);
+            //model.CFinBb = form.GetStr(txtCFinBb.ID);
+            //model.GFinBb = form.GetStr(txtGFinBb.ID);
+            //model.IIrs = form.GetStr(cmbIIrs.ID);
+            //model.ITranche = form.GetStr(cmbITranche.ID);
+            //model.CAgregDp = form.GetStr(txtCAgregDp.ID);
+            ////Renovações
+            //model.IRenovac = form.GetStr(cmbIRenovac.ID);
+            //model.RNVA = form.GetStr(txtQMAXREN.ID);
+            ////Operações
+            //model.ILevAnt = form.GetStr(cmbILevAnt.ID);
+            //model.IAutRef = form.GetStr(cmbIAutRef.ID);
+            //model.IDiaNUt = form.GetStr(cmbIDiaNUt.ID);
+            //model.QDiasAnt = form.GetStr(cmbQDiasAnt.ID);
+            ////Débito
+            //model.IDebFor = form.GetStr(cmbIDebFor.ID);
+            //model.QTentDeb = form.GetStr(txtQTentDeb.ID);
+            ////Validação Cliente
+            //model.IPrClNew = form.GetStr(cmbIPrClNew.ID);
+            //model.QDiasNCli = form.GetStr(txtQDiasNCli.ID);
+            //model.CCampNet = form.GetStr(txtCCampNet.ID);
+            //model.GCampNet = form.GetStr(txtGCampNet.ID);
+            ////Cross Selling
+            //model.CCxsCons = form.GetStr(txtCCxsCons.ID);
+            //model.GCxsCons = form.GetStr(txtGCxsCons.ID);
+            //model.CCxsVenc = form.GetStr(txtCCxsVenc.ID);
+            //model.GCxsVenc = form.GetStr(txtGCxsVenc.ID);
+            ////Atributos Investimento
+            //model.SubFamilia = form.GetStr(txtSubFamilia.ID);
+            //model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
+            //model.Liquidez = form.GetStr(txtLiquidez.ID);
+            //model.Complexidade = form.GetStr(txtComplexidade.ID);
+            //model.ComplexidadeDesc = form.GetStr(txtComplexidadeDesc.ID);
+            //model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
+            //model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
 
-            model.ZonaGeografica = form.GetStr(txtZonaGeografica.ID);
-            model.ZonaGeograficaDesc = form.GetStr(txtZonaGeograficaDesc.ID);
-            model.OnOffRegular = form.GetStr(txtOnOffRegular.ID);
-            model.Ipad = form.GetStr(txtIpad.ID);
-            model.NivelRisco = form.GetStr(txtNivelRisco.ID);
-            model.VaR = form.GetStr(txtVaR.ID);
-            // model.Data=  form.GetStr(txtData.ID);
-            model.Descricao = form.GetStr(txtDescricao.ID);
-            model.CatClassActiv = form.GetStr(txtCatClass.ID);
-            model.CatClassActivDesc = form.GetStr(txtCatClassDesc.ID);
-            model.SoliClasRisco = form.GetStr(ddlSolicitarClassRisco.ID);
-            //model.DataActivacao = form.GetStr(txtDataActivacao.ID);
+            //model.ZonaGeografica = form.GetStr(txtZonaGeografica.ID);
+            //model.ZonaGeograficaDesc = form.GetStr(txtZonaGeograficaDesc.ID);
+            //model.OnOffRegular = form.GetStr(txtOnOffRegular.ID);
+            //model.Ipad = form.GetStr(txtIpad.ID);
+            //model.NivelRisco = form.GetStr(txtNivelRisco.ID);
+            //model.VaR = form.GetStr(txtVaR.ID);
+            //// model.Data=  form.GetStr(txtData.ID);
+            //model.Descricao = form.GetStr(txtDescricao.ID);
+            //model.CatClassActiv = form.GetStr(txtCatClass.ID);
+            //model.CatClassActivDesc = form.GetStr(txtCatClassDesc.ID);
+            //model.SoliClasRisco = form.GetStr(ddlSolicitarClassRisco.ID);
+            ////model.DataActivacao = form.GetStr(txtDataActivacao.ID);
 
 
         }
@@ -318,37 +318,37 @@ namespace ABWebCatalogue.Site
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
             pnlCatGeraisContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCaracGerais);
+            WebUtil.ChangeBtnAtt(false, btnCaracGerais);
             pnlRenovacoesContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnRenovacoes);
+            WebUtil.ChangeBtnAtt(false, btnRenovacoes);
             pnlOperacoesContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnOperacoes);
+            WebUtil.ChangeBtnAtt(false, btnOperacoes);
             pnlDebitoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnDebito);
+            WebUtil.ChangeBtnAtt(false, btnDebito);
             pnlValidacaoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnValidacao);
+            WebUtil.ChangeBtnAtt(false, btnValidacao);
             pnlCrossSellingContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnCrossSelling);
+            WebUtil.ChangeBtnAtt(false, btnCrossSelling);
             pnlAtributoInvestimentoContent.Visible = false;
-            WebUtils.ChangeBtnAtt(false, btnAtributoInvestimento);
+            WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
         }
 
         protected void btnOpenAll_Click(object sender, EventArgs e)
         {
             pnlCatGeraisContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCaracGerais);
+            WebUtil.ChangeBtnAtt(true, btnCaracGerais);
             pnlRenovacoesContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnRenovacoes);
+            WebUtil.ChangeBtnAtt(true, btnRenovacoes);
             pnlOperacoesContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnOperacoes);
+            WebUtil.ChangeBtnAtt(true, btnOperacoes);
             pnlDebitoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnDebito);
+            WebUtil.ChangeBtnAtt(true, btnDebito);
             pnlValidacaoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnValidacao);
+            WebUtil.ChangeBtnAtt(true, btnValidacao);
             pnlCrossSellingContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnCrossSelling);
+            WebUtil.ChangeBtnAtt(true, btnCrossSelling);
             pnlAtributoInvestimentoContent.Visible = true;
-            WebUtils.ChangeBtnAtt(true, btnAtributoInvestimento);
+            WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
         }
 
     }
