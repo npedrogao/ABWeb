@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Core.Models;
+using System.Text;
 
 namespace ABWebCatalogue.Site
 {
@@ -370,6 +371,17 @@ namespace ABWebCatalogue.Site
             WebUtil.ChangeBtnAtt(true, btnContasDo);
             pnlAttInvContent.Visible = true;
             WebUtil.ChangeBtnAtt(true, btnAttInv);
+        }
+
+        protected void JsInjectCmbLookup(StringBuilder jsBuilder, int fieldSize, string copyBook)
+        {
+            string placeHolderName = "CPH";
+
+            //System.Web.UI.Control curControl = this.Page.Master.FindControl(placeHolderName).FindControl(fieldName);
+
+
+
+            jsBuilder.Append(false); //ToDo            
         }
     }
 }

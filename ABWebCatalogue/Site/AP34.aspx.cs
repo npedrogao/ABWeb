@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Core.Utils;
+using System.Text;
 
 namespace ABWebCatalogue.Site
 {
@@ -153,7 +154,7 @@ namespace ABWebCatalogue.Site
                 WebUtil.ChangeBtnAtt(false, btnCaracGerais);
             }
         }
-        
+
         protected void btnRenovacoes_Click(object sender, EventArgs e)
         {
             if (pnlRenovacoesContent.Visible == false)
@@ -237,7 +238,7 @@ namespace ABWebCatalogue.Site
                 WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
             }
         }
-        
+
         protected void btnClear_Click(object sender, EventArgs e)
         {
 
@@ -314,7 +315,7 @@ namespace ABWebCatalogue.Site
 
 
         }
-        
+
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
             pnlCatGeraisContent.Visible = false;
@@ -350,6 +351,5 @@ namespace ABWebCatalogue.Site
             pnlAtributoInvestimentoContent.Visible = true;
             WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
         }
-
     }
 }

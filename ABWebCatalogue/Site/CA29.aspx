@@ -1309,9 +1309,28 @@
 
             });
 
+            changeCombo(".custodia")
+            $(".custodia").change(function () {
+                var aux = $(".custodia").val();
+                if (aux === "C" || aux === "D") {
+                    $("#CPH_cmbICOMRES01").val("N").change();
+                } else {
 
+                }
 
+            });
 
+            $(".custodia").change(function () {
+                var aux = $(".custodia").val();
+                if (aux === "C" || aux === "D") {
+                    $("#CPH_cmbICOMRES01").val("N").change(function JsInjectCmbLookup() {
+
+                    });
+                } else {
+
+                }
+
+            });
 
 
         });
