@@ -69,7 +69,7 @@ namespace Core.Utils
             if (string.IsNullOrWhiteSpace(text) || inteiro < 1)
                 return false;
 
-            string [] splittedText = text.Trim().Replace(',', '\0' ).Split('.');
+            string [] splittedText = text.Trim().Replace(",", "" ).Split('.');
 
             if (splittedText[1].Length != inteiro)
                 return false;
