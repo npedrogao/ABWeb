@@ -461,7 +461,7 @@
                     <asp:Label ID="lblICUSTODD" runat="server" class="t-label-1">Custódia / Distribuição:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <select id="cmbICUSTODD" runat="server" class="t-field-14"></select>
+                    <select id="cmbICUSTODD" runat="server" class="t-field-14 custodia"></select>
                 </td>
                 <td class="t-table-col-1">
                     <asp:Label ID="lblIMULTCTA" runat="server" class="t-label-1">Multi Contas:</asp:Label>
@@ -1299,28 +1299,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
          
+            $(".custodia").change(function () {
+                var aux = $(".custodia").val();
+                if (aux === "C" || aux === "D") {
+                    $("#CPH_cmbICOMRES01").val("N").change();
+                } else {
 
-            function CustodiaRulesSS(listener, target){
-                $("#"+ listener).change(function () {
-                    var aux = $("#"+ listener).val();
-                    if (aux === "D" || aux === "C"){
-                        $("#"+ target).val("S").change();
-                    } else {
-                        $("#"+ target).val("N").change();
-                    }
-                })
-            };
-
-            function CustodiaRulesSN(listener, target){
-                $("#"+ listener).change(function () {
-                    var aux = $("#"+ listener).val();
-                    if (aux === "D"){
-                        $("#"+ target).val("S").change();
-                    } else{
-                        $("#"+ target).val("N").change();
-                    }
-                })
-            };
+                }
 
             function CustodiaRulesTwoList(listener1, listener2, target){
                 $("#"+ Listener).change(function () {
