@@ -74,7 +74,26 @@ namespace Core.Models
 
                             if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
                                 errorLst += fieldName + "\n";
-                            
+                            break;
+
+                        case TipoCampoEnum.CustomMask:
+                            fieldName = "txt" + itm.CopyBook;
+                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+                            if (curControl != null && itm.Tamanho.HasValue)
+                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
+                            else
+                                errorLst += fieldName + "\n";
+
+                            if (itm.DescricaoLbl != null)
+                            {
+                                fieldName = "lbl" + itm.CopyBook;
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+
+                                if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
+                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                                else
+                                    errorLst += fieldName + "\n";
+                            }
 
                             break;
                     }
