@@ -62,6 +62,12 @@ namespace ABWebCatalogue.Site
             cmbIALLFUND.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
             cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
+
+            string js = "CustodiaRulesSS(" + cmbICUSTODD.UniqueID + ", " + cmbICOMRES01.UniqueID + ");";
+            js += "CustodiaRulesSS(" + cmbICUSTODD.UniqueID + ", " + cmbICOMRES02.UniqueID + ");";
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "function JsServerSide(){"+ js + "}");
+
+
         }
 
         protected void btnClaBank_Click(object sender, EventArgs e)
