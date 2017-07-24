@@ -28,8 +28,6 @@ namespace UnitTestBDCWS
 
                 #region CL01
 
-                barclaysBTS.ObterCatalogo()
-
                 CL01Transaction cl01 = new CL01Transaction();
 
                 CL01Filter cl = new CL01Filter()

@@ -38,7 +38,7 @@ namespace Core.Models
                         case TipoCampoEnum.Decimal:
                         case TipoCampoEnum.Data:
                             
-                            fieldName = "txt" + itm.CopyBook.Trim();
+                            fieldName = "txt" + itm.CopyBook;
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
                             if (curControl != null && itm.Tamanho.HasValue)
                                 (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
@@ -47,7 +47,7 @@ namespace Core.Models
 
                             if (itm.DescricaoLbl != null)
                             {
-                                fieldName = "lbl" + itm.CopyBook.Trim();
+                                fieldName = "lbl" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
                                 if (curControl != null)
@@ -60,7 +60,7 @@ namespace Core.Models
                         case TipoCampoEnum.ComboBox:
                             if (itm.DescricaoLbl != null)
                             {
-                                fieldName = "lbl" + itm.CopyBook.Trim();
+                                fieldName = "lbl" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
                                 if (curControl != null)
@@ -73,24 +73,30 @@ namespace Core.Models
                             {
                                 //todo: carrega 
 
-                                fieldName = "cmb" + itm.CopyBook.Trim();
+                                fieldName = "cmb" + itm.CopyBook;
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                                if (curControl == null)
-                                    errorLst += fieldName + "\n";
-                                else
-                                    errorLst += fieldName + "\n";
+                                
                             }
+                            else
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+
+                            if (curControl == null)
+                                errorLst += fieldName + "\n";
+                            
 
                             break;
                     }
                 }
-                if (errorLst.Length > 0)
-                    throw new Exception("Campos errados: " + errorLst);
             }
             catch (Exception ex)
             {
-                throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
+                if (errorLst.Length > 0)
+                    throw new Exception("Campos errados: " + errorLst);
+                else
+                    throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
             }
+            if (errorLst.Length > 0)
+                throw new Exception("Campos errados: " + errorLst);
 
         }
 
