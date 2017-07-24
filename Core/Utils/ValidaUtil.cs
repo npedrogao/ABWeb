@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Core.Utils
 {
@@ -12,16 +14,17 @@ namespace Core.Utils
             bool valid = false;
             switch (customMaskEnum)
             {
-                case Models.CustomMaskEnum.NULL:                    
+                case Models.CustomMaskEnum.NULL:
                     break;
                 case Models.CustomMaskEnum.AnoMesDia:
-                    break;
                 case Models.CustomMaskEnum.DiaMesAno:
+                    valid = ValidaMaskData(text);
                     break;
                 case Models.CustomMaskEnum.HoraMinuto:
+                    valid = ValidaMaskHora(text);
                     break;
                 case Models.CustomMaskEnum.Decimal:
-                    break;    
+                    break;
                 default:
                     break;
             }
@@ -29,19 +32,33 @@ namespace Core.Utils
             return valid;
         }
 
-        private static bool ValidaMaskAnoMesDia(string text)
+        private static bool ValidaMaskData(string text)
         {
-            throw new NotImplementedException();
+            string[] formats = { "yyyy/MM/dd", "dd/MM/yyyy" };
+
+            DateTime expectedDate;
+
+            if (!DateTime.TryParseExact(text.Trim(), formats, CultureInfo.InvariantCulture,
+                                        DateTimeStyles.None, out expectedDate))
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        private static int ValidaMaskDiaMesAno(string text)
+        private static bool ValidaMaskHora(string text)
         {
-            throw new NotImplementedException();
-        }
+            DateTime time = new DateTime(); // Passed result if succeed 
 
-        private static int ValidaMaskHoraMinuto(string text, int inteiro)
-        {
-            throw new NotImplementedException();
+            if (DateTime.TryParseExact(text.Trim(), "HH:mm", CultureInfo.InvariantCulture,
+                                        DateTimeStyles.None, out time))
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
         private static int ValidaMaskDecimal(string text, int inteiro)
