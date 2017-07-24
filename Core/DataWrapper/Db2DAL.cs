@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using EnumExtensions;
 
 namespace Core.DataWrapper
 {
@@ -35,10 +36,34 @@ namespace Core.DataWrapper
 
             query.Append(" FROM ");
             query.Append("DB2PTUSER.");
-            query.Append(tabela);
+            query.Append(tabela.GetDesc());
             dataTable.Load(dbConnection.ExecSql(query.ToString()));
 
             return dataTable;
+        }
+
+        public static List<KeyValuePair<string, string>> GetDb2Lst(TabelaEnum tabela, OdbcDbConnection dbConnection, string idColName, string idColDesc)
+        {
+            List<KeyValuePair<string, string>> lst = new List<KeyValuePair<string, string>>();
+
+            if (tabela == TabelaEnum.NULL)
+                throw new ArgumentException("Necessário indicar tabela DB2!");
+
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT ");
+            query.Append(idColName).Append(", ").Append(idColDesc);
+            query.Append(" FROM ");
+            query.Append("DB2PTUSER.");
+            query.Append(tabela.GetDesc());
+
+            var reader = dbConnection.ExecSql(query.ToString());
+
+            while (reader.Read())
+            {
+                lst.Add(new KeyValuePair<string, string>(reader[idColName].ToString(), reader[idColDesc].ToString()));
+            }
+
+            return lst;
         }
     }
 }

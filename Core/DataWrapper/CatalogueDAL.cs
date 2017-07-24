@@ -43,10 +43,10 @@ namespace Core.DataWrapper
                         if (tabID.HasValue)
                             newField.Tabela = (TabelaEnum)tabID;
 
-                        newField.ValidaCol = dr.GetDbStr("IDCol");
-
-                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                        newField.IDCol = dr.GetDbStr("IDCol");
                         newField.DescCol = dr.GetDbStr("DescCol");
+
+                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");                        
 
                         var decSize = dr.GetDbIntNull("CasasDecimais");
                         if (decSize.HasValue)
