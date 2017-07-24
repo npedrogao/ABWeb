@@ -25,7 +25,7 @@ namespace Core.DataWrapper
             catch (Exception ex)
             {
                 LogUtils.Error(ex);
-                throw ex;
+                throw;
             }
             finally
             {

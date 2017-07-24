@@ -55,7 +55,7 @@ namespace Core.Utils
             if (String.IsNullOrWhiteSpace(text))
                 return false;
 
-            DateTime time = new DateTime();
+            DateTime time;
 
             if (!DateTime.TryParseExact(text.Trim(), "HH:mm", CultureInfo.InvariantCulture,
                                         DateTimeStyles.None, out time))
