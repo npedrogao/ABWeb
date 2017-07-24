@@ -49,112 +49,112 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlContent;
         
         /// <summary>
-        /// lbISIN control.
+        /// lblCISIN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbISIN;
+        protected global::System.Web.UI.WebControls.Label lblCISIN;
         
         /// <summary>
-        /// txtISIN control.
+        /// txtCISIN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtISIN;
+        protected global::System.Web.UI.WebControls.TextBox txtCISIN;
         
         /// <summary>
-        /// lbMoeda control.
+        /// lblCMOEDA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMoeda;
+        protected global::System.Web.UI.WebControls.Label lblCMOEDA;
         
         /// <summary>
-        /// txtMoeda control.
+        /// txtCMOEDA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMoeda;
+        protected global::System.Web.UI.WebControls.TextBox txtCMOEDA;
         
         /// <summary>
-        /// lbEstadoFundo control.
+        /// lblCESTADO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEstadoFundo;
+        protected global::System.Web.UI.WebControls.Label lblCESTADO;
         
         /// <summary>
-        /// txtEstadoFundo control.
+        /// txtCESTADO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEstadoFundo;
+        protected global::System.Web.UI.WebControls.TextBox txtCESTADO;
         
         /// <summary>
-        /// lbProduto control.
+        /// lblCPRODUTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbProduto;
+        protected global::System.Web.UI.WebControls.Label lblCPRODUTO;
         
         /// <summary>
-        /// txtProduto control.
+        /// txtCPRODUTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtCPRODUTO;
         
         /// <summary>
-        /// lbAntigoProduto control.
+        /// lblanti control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbAntigoProduto;
+        protected global::System.Web.UI.WebControls.Label lblanti;
         
         /// <summary>
-        /// txtAntigoProduto control.
+        /// txtanti control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAntigoProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtanti;
         
         /// <summary>
-        /// lbNomeCurto control.
+        /// lblGSUBPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNomeCurto;
+        protected global::System.Web.UI.WebControls.Label lblGSUBPROD;
         
         /// <summary>
-        /// txtNomeCurto control.
+        /// txtGSUBPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeCurto;
+        protected global::System.Web.UI.WebControls.TextBox txtGSUBPROD;
         
         /// <summary>
         /// lbClasseFundo control.
@@ -175,22 +175,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtClasseFundo;
         
         /// <summary>
-        /// lbSubProduto control.
+        /// lblCSUBPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSubProduto;
+        protected global::System.Web.UI.WebControls.Label lblCSUBPROD;
         
         /// <summary>
-        /// txtSubProduto control.
+        /// txtCSUBPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtCSUBPROD;
         
         /// <summary>
         /// lbAntigoSubProduto control.
@@ -211,22 +211,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtAntigoSubProduto;
         
         /// <summary>
-        /// lblNome control.
+        /// lblGSUBPR50 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
+        protected global::System.Web.UI.WebControls.Label lblGSUBPR50;
         
         /// <summary>
-        /// txtNome control.
+        /// txtGSUBPR50 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected global::System.Web.UI.WebControls.TextBox txtGSUBPR50;
         
         /// <summary>
         /// lblNomeLongo control.
@@ -283,31 +283,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlClaBankContent;
         
         /// <summary>
-        /// lbCategoriaAtivos control.
+        /// lblCCATACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbCategoriaAtivos;
+        protected global::System.Web.UI.WebControls.Label lblCCATACT;
         
         /// <summary>
-        /// txtCategoriaAtivos control.
+        /// txtCCATACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoriaAtivos;
+        protected global::System.Web.UI.WebControls.TextBox txtCCATACT;
         
         /// <summary>
-        /// TextBox1 control.
+        /// cmbCCATACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCATACT;
         
         /// <summary>
         /// Label3 control.
@@ -328,31 +328,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// lbClassesAtivos control.
+        /// lblCCLASSACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbClassesAtivos;
+        protected global::System.Web.UI.WebControls.Label lblCCLASSACT;
         
         /// <summary>
-        /// txtClassesAtivos control.
+        /// txtCCLASSACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClassesAtivos;
+        protected global::System.Web.UI.WebControls.TextBox txtCCLASSACT;
         
         /// <summary>
-        /// TextBox2 control.
+        /// cmbCCLASSACT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCLASSACT;
         
         /// <summary>
         /// btnClaAllFunds control.
@@ -373,58 +373,58 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel PnlClaAllFunds;
         
         /// <summary>
-        /// Label1 control.
+        /// lblCCLASSACTFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblCCLASSACTFU;
         
         /// <summary>
-        /// txtClassesAtivosAll control.
+        /// txtCCLASSACTFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClassesAtivosAll;
+        protected global::System.Web.UI.WebControls.TextBox txtCCLASSACTFU;
         
         /// <summary>
-        /// txtClassesAtivosAllDesc control.
+        /// cmbCCLASSACTFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClassesAtivosAllDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCLASSACTFU;
         
         /// <summary>
-        /// Label2 control.
+        /// lblCTIPACTIVO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblCTIPACTIVO;
         
         /// <summary>
-        /// txtTipoAtivos control.
+        /// txtCTIPACTIVO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoAtivos;
+        protected global::System.Web.UI.WebControls.TextBox txtCTIPACTIVO;
         
         /// <summary>
-        /// txtTipoAtivosDesc control.
+        /// cmbCTIPACTIVO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoAtivosDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCTIPACTIVO;
         
         /// <summary>
         /// Label7 control.
@@ -436,112 +436,112 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// lblAreaGeo control.
+        /// lblCAREAGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAreaGeo;
+        protected global::System.Web.UI.WebControls.Label lblCAREAGEOG;
         
         /// <summary>
-        /// txtAreaGeo control.
+        /// txtCAREAGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAreaGeo;
+        protected global::System.Web.UI.WebControls.TextBox txtCAREAGEOG;
         
         /// <summary>
-        /// txtAreaGeoDesc control.
+        /// cmbCAREAGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAreaGeoDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCAREAGEOG;
         
         /// <summary>
-        /// lblRange control.
+        /// lblCRANGE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRange;
+        protected global::System.Web.UI.WebControls.Label lblCRANGE;
         
         /// <summary>
-        /// txtRange control.
+        /// txtCRANGE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRange;
+        protected global::System.Web.UI.WebControls.TextBox txtCRANGE;
         
         /// <summary>
-        /// txtRangeDesc control.
+        /// cmbCRANGE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRangeDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCRANGE;
         
         /// <summary>
-        /// Label5 control.
+        /// lblCZONGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblCZONGEOG;
         
         /// <summary>
-        /// txtZonaGeo control.
+        /// txtCZONGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZonaGeo;
+        protected global::System.Web.UI.WebControls.TextBox txtCZONGEOG;
         
         /// <summary>
-        /// txtZonaGeoDesc control.
+        /// cmbCZONGEOG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZonaGeoDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCZONGEOG;
         
         /// <summary>
-        /// lblTipoFundo control.
+        /// lblCTIPFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipoFundo;
+        protected global::System.Web.UI.WebControls.Label lblCTIPFU;
         
         /// <summary>
-        /// txtTipoFundo control.
+        /// txtCTIPFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoFundo;
+        protected global::System.Web.UI.WebControls.TextBox txtCTIPFU;
         
         /// <summary>
-        /// txtTipoFundoDesc control.
+        /// cmbCTIPFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoFundoDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCTIPFU;
         
         /// <summary>
         /// btnSociGest control.
@@ -562,40 +562,40 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlSociGest;
         
         /// <summary>
-        /// lblCodSocGestora control.
+        /// lblCIDSOCGEST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCodSocGestora;
+        protected global::System.Web.UI.WebControls.Label lblCIDSOCGEST;
         
         /// <summary>
-        /// txtCodSocGestora control.
+        /// txtCIDSOCGEST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodSocGestora;
+        protected global::System.Web.UI.WebControls.TextBox txtCIDSOCGEST;
         
         /// <summary>
-        /// lblNomeSocGestora control.
+        /// lblGSGC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNomeSocGestora;
+        protected global::System.Web.UI.WebControls.Label lblGSGC;
         
         /// <summary>
-        /// txtNomeSocGestora control.
+        /// txtGSGC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeSocGestora;
+        protected global::System.Web.UI.WebControls.TextBox txtGSGC;
         
         /// <summary>
         /// Label8 control.
@@ -607,40 +607,40 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// lblPaisSocGestora control.
+        /// lblCPAISSG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaisSocGestora;
+        protected global::System.Web.UI.WebControls.Label lblCPAISSG;
         
         /// <summary>
-        /// txtPaisSocGestora control.
+        /// txtCPAISSG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaisSocGestora;
+        protected global::System.Web.UI.WebControls.TextBox txtCPAISSG;
         
         /// <summary>
-        /// lblPaisEmiFundo control.
+        /// lblCPAISISO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaisEmiFundo;
+        protected global::System.Web.UI.WebControls.Label lblCPAISISO;
         
         /// <summary>
-        /// txtPaisEmiFundo control.
+        /// txtCPAISISO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaisEmiFundo;
+        protected global::System.Web.UI.WebControls.TextBox txtCPAISISO;
         
         /// <summary>
         /// btnSicav control.
@@ -661,94 +661,94 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlSicav;
         
         /// <summary>
-        /// Label11 control.
+        /// lblCSICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label lblCSICAV;
         
         /// <summary>
-        /// txtcodSICAV control.
+        /// txtCSICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcodSICAV;
+        protected global::System.Web.UI.WebControls.TextBox txtCSICAV;
         
         /// <summary>
-        /// Label12 control.
+        /// lblCPAISICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label lblCPAISICAV;
         
         /// <summary>
-        /// txtPaisSICAV control.
+        /// txtCPAISICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaisSICAV;
+        protected global::System.Web.UI.WebControls.TextBox txtCPAISICAV;
         
         /// <summary>
-        /// Label13 control.
+        /// lblCSICAVDOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label lblCSICAVDOM;
         
         /// <summary>
-        /// txtdomicilioSICAV control.
+        /// txtCSICAVDOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdomicilioSICAV;
+        protected global::System.Web.UI.WebControls.TextBox txtCSICAVDOM;
         
         /// <summary>
-        /// Label14 control.
+        /// lblNSICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label lblNSICAV;
         
         /// <summary>
-        /// txtNomeSICAV control.
+        /// txtNSICAV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeSICAV;
+        protected global::System.Web.UI.WebControls.TextBox txtNSICAV;
         
         /// <summary>
-        /// Label15 control.
+        /// lblCNIFEMITE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
+        protected global::System.Web.UI.WebControls.Label lblCNIFEMITE;
         
         /// <summary>
-        /// txtNIFEmitente control.
+        /// txtCNIFEMITE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNIFEmitente;
+        protected global::System.Web.UI.WebControls.TextBox txtCNIFEMITE;
         
         /// <summary>
         /// btnKiid control.
@@ -769,58 +769,58 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlKiid;
         
         /// <summary>
-        /// Label16 control.
+        /// lblCSRRI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
+        protected global::System.Web.UI.WebControls.Label lblCSRRI;
         
         /// <summary>
-        /// txtRiscoKIID control.
+        /// txtCSRRI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRiscoKIID;
+        protected global::System.Web.UI.WebControls.TextBox txtCSRRI;
         
         /// <summary>
-        /// Label17 control.
+        /// lblDKIID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.Label lblDKIID;
         
         /// <summary>
-        /// txtDataKIID control.
+        /// txtDKIID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDataKIID;
+        protected global::System.Web.UI.WebControls.TextBox txtDKIID;
         
         /// <summary>
-        /// Label18 control.
+        /// lblTOGC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label lblTOGC;
         
         /// <summary>
-        /// txtOngoingCharge control.
+        /// txtTOGC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOngoingCharge;
+        protected global::System.Web.UI.WebControls.TextBox txtTOGC;
         
         /// <summary>
         /// btnDivid control.
@@ -841,58 +841,58 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlDivid;
         
         /// <summary>
-        /// Label19 control.
+        /// lblIDIVIDEND control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.Label lblIDIVIDEND;
         
         /// <summary>
-        /// txtCOMDividendos control.
+        /// txtIDIVIDEND control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCOMDividendos;
+        protected global::System.Web.UI.WebControls.TextBox txtIDIVIDEND;
         
         /// <summary>
-        /// Label20 control.
+        /// lblIPRDPGDIV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label lblIPRDPGDIV;
         
         /// <summary>
-        /// txtPeriodicidadePagDividendos control.
+        /// txtIPRDPGDIV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPeriodicidadePagDividendos;
+        protected global::System.Web.UI.WebControls.TextBox txtIPRDPGDIV;
         
         /// <summary>
-        /// Label21 control.
+        /// lblITIPRETDIV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::System.Web.UI.WebControls.Label lblITIPRETDIV;
         
         /// <summary>
-        /// txtTipoRetencaoDividendos control.
+        /// txtITIPRETDIV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoRetencaoDividendos;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPRETDIV;
         
         /// <summary>
         /// btnOutrasCaract control.
@@ -913,112 +913,112 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlOutrasCaract;
         
         /// <summary>
-        /// Label22 control.
+        /// lblIUCIT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
+        protected global::System.Web.UI.WebControls.Label lblIUCIT;
         
         /// <summary>
-        /// txtUCIT control.
+        /// txtIUCIT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUCIT;
+        protected global::System.Web.UI.WebControls.TextBox txtIUCIT;
         
         /// <summary>
-        /// Label23 control.
+        /// lblCMOETRFEES control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
+        protected global::System.Web.UI.WebControls.Label lblCMOETRFEES;
         
         /// <summary>
-        /// txtMoedaTrailerFees control.
+        /// txtCMOETRFEES control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMoedaTrailerFees;
+        protected global::System.Web.UI.WebControls.TextBox txtCMOETRFEES;
         
         /// <summary>
-        /// Label24 control.
+        /// lblITIPOPAG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
+        protected global::System.Web.UI.WebControls.Label lblITIPOPAG;
         
         /// <summary>
-        /// txtTipoPFundosEqual control.
+        /// txtITIPOPAG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoPFundosEqual;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPOPAG;
         
         /// <summary>
-        /// Label25 control.
+        /// lblIDECMTE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
+        protected global::System.Web.UI.WebControls.Label lblIDECMTE;
         
         /// <summary>
-        /// txtDecMontantes control.
+        /// txtIDECMTE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDecMontantes;
+        protected global::System.Web.UI.WebControls.TextBox txtIDECMTE;
         
         /// <summary>
-        /// Label26 control.
+        /// lblINSCOPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::System.Web.UI.WebControls.Label lblINSCOPE;
         
         /// <summary>
-        /// txtINIESCOPEESD control.
+        /// txtINSCOPE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtINIESCOPEESD;
+        protected global::System.Web.UI.WebControls.TextBox txtINSCOPE;
         
         /// <summary>
-        /// Label27 control.
+        /// lblCBLOOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
+        protected global::System.Web.UI.WebControls.Label lblCBLOOM;
         
         /// <summary>
-        /// txtIniscope control.
+        /// txtCBLOOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIniscope;
+        protected global::System.Web.UI.WebControls.TextBox txtCBLOOM;
         
         /// <summary>
         /// Label28 control.
@@ -1039,148 +1039,148 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtDecQtds;
         
         /// <summary>
-        /// Label29 control.
+        /// lblICUSTODD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label29;
+        protected global::System.Web.UI.WebControls.Label lblICUSTODD;
         
         /// <summary>
-        /// txtCustodiaDistribuicao control.
+        /// txtICUSTODD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustodiaDistribuicao;
+        protected global::System.Web.UI.WebControls.TextBox txtICUSTODD;
         
         /// <summary>
-        /// Label30 control.
+        /// lblIMULTCTA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label30;
+        protected global::System.Web.UI.WebControls.Label lblIMULTCTA;
         
         /// <summary>
-        /// txtMultiContas control.
+        /// txtIMULTCTA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMultiContas;
+        protected global::System.Web.UI.WebControls.TextBox txtIMULTCTA;
         
         /// <summary>
-        /// Label35 control.
+        /// lblCINDSELO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label35;
+        protected global::System.Web.UI.WebControls.Label lblCINDSELO;
         
         /// <summary>
-        /// txtRetImpostoSelo control.
+        /// txtCINDSELO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRetImpostoSelo;
+        protected global::System.Web.UI.WebControls.TextBox txtCINDSELO;
         
         /// <summary>
-        /// Label31 control.
+        /// lblCBOPER control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label31;
+        protected global::System.Web.UI.WebControls.Label lblCBOPER;
         
         /// <summary>
-        /// txtBalcaoOper control.
+        /// txtCBOPER control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBalcaoOper;
+        protected global::System.Web.UI.WebControls.TextBox txtCBOPER;
         
         /// <summary>
-        /// Label32 control.
+        /// lblICUSTODGA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label32;
+        protected global::System.Web.UI.WebControls.Label lblICUSTODGA;
         
         /// <summary>
-        /// txtGestaoAtivos control.
+        /// txtICUSTODGA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGestaoAtivos;
+        protected global::System.Web.UI.WebControls.TextBox txtICUSTODGA;
         
         /// <summary>
-        /// Label33 control.
+        /// lblIBENEFIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label33;
+        protected global::System.Web.UI.WebControls.Label lblIBENEFIC;
         
         /// <summary>
-        /// txtBenef control.
+        /// txtIBENEFIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBenef;
+        protected global::System.Web.UI.WebControls.TextBox txtIBENEFIC;
         
         /// <summary>
-        /// Label36 control.
+        /// lblCVALORIM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label36;
+        protected global::System.Web.UI.WebControls.Label lblCVALORIM;
         
         /// <summary>
-        /// txtTipoVal control.
+        /// txtCVALORIM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoVal;
+        protected global::System.Web.UI.WebControls.TextBox txtCVALORIM;
         
         /// <summary>
-        /// Label34 control.
+        /// lblCBALADIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label34;
+        protected global::System.Web.UI.WebControls.Label lblCBALADIC;
         
         /// <summary>
-        /// txtBalcaoAdicional control.
+        /// txtCBALADIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBalcaoAdicional;
+        protected global::System.Web.UI.WebControls.TextBox txtCBALADIC;
         
         /// <summary>
         /// Label37 control.
@@ -1201,22 +1201,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtInfBancoPortugal;
         
         /// <summary>
-        /// Label38 control.
+        /// lblITIPPROC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label38;
+        protected global::System.Web.UI.WebControls.Label lblITIPPROC;
         
         /// <summary>
-        /// txtTipoProcess control.
+        /// txtITIPPROC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoProcess;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPPROC;
         
         /// <summary>
         /// Label40 control.
@@ -1237,31 +1237,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtClienteObrig;
         
         /// <summary>
-        /// Label41 control.
+        /// lblCGRUPEST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label41;
+        protected global::System.Web.UI.WebControls.Label lblCGRUPEST;
         
         /// <summary>
-        /// txtAgrupExtrato control.
+        /// txtCGRUPEST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAgrupExtrato;
+        protected global::System.Web.UI.WebControls.TextBox txtCGRUPEST;
         
         /// <summary>
-        /// txtAgrupExtratoDesc control.
+        /// cmbCGRUPEST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAgrupExtratoDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCGRUPEST;
         
         /// <summary>
         /// btnComi control.
@@ -1300,22 +1300,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
         
         /// <summary>
-        /// Label10 control.
+        /// lblITIPOCOMSG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lblITIPOCOMSG;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtITIPOCOMSG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPOCOMSG;
         
         /// <summary>
         /// lblComMaxSubs control.
@@ -1334,6 +1334,60 @@ namespace ABWebCatalogue.Site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        
+        /// <summary>
+        /// Label42 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label42;
+        
+        /// <summary>
+        /// TextBox6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        
+        /// <summary>
+        /// Label43 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label43;
+        
+        /// <summary>
+        /// TextBox7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        
+        /// <summary>
+        /// Label44 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label44;
+        
+        /// <summary>
+        /// TextBox8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox8;
         
         /// <summary>
         /// Label45 control.
@@ -1408,22 +1462,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox12;
         
         /// <summary>
-        /// Label49 control.
+        /// lblITIPOCOMFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label49;
+        protected global::System.Web.UI.WebControls.Label lblITIPOCOMFU;
         
         /// <summary>
-        /// TextBox13 control.
+        /// txtITIPOCOMFU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPOCOMFU;
         
         /// <summary>
         /// Label50 control.
@@ -1552,40 +1606,40 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlCot;
         
         /// <summary>
-        /// Label39 control.
+        /// lblCPERIODO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label39;
+        protected global::System.Web.UI.WebControls.Label lblCPERIODO;
         
         /// <summary>
-        /// txtPeriodoCotacao control.
+        /// txtCPERIODO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPeriodoCotacao;
+        protected global::System.Web.UI.WebControls.TextBox txtCPERIODO;
         
         /// <summary>
-        /// Label42 control.
+        /// lblICOTREDE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label42;
+        protected global::System.Web.UI.WebControls.Label lblICOTREDE;
         
         /// <summary>
-        /// txtCotAgencias control.
+        /// txtICOTREDE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCotAgencias;
+        protected global::System.Web.UI.WebControls.TextBox txtICOTREDE;
         
         /// <summary>
         /// Label56 control.
@@ -1597,40 +1651,40 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label56;
         
         /// <summary>
-        /// Label44 control.
+        /// lblIDECCOT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label44;
+        protected global::System.Web.UI.WebControls.Label lblIDECCOT;
         
         /// <summary>
-        /// txtDecCotacoes control.
+        /// txtIDECCOT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDecCotacoes;
+        protected global::System.Web.UI.WebControls.TextBox txtIDECCOT;
         
         /// <summary>
-        /// Label43 control.
+        /// lblICOTNET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label43;
+        protected global::System.Web.UI.WebControls.Label lblICOTNET;
         
         /// <summary>
-        /// txtCotServicos control.
+        /// txtICOTNET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCotServicos;
+        protected global::System.Web.UI.WebControls.TextBox txtICOTNET;
         
         /// <summary>
         /// btnNego control.
@@ -1651,22 +1705,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlNego;
         
         /// <summary>
-        /// Label57 control.
+        /// lblHCUTSUBS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label57;
+        protected global::System.Web.UI.WebControls.Label lblHCUTSUBS;
         
         /// <summary>
-        /// TextBox20 control.
+        /// txtHCUTSUBS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox20;
+        protected global::System.Web.UI.WebControls.TextBox txtHCUTSUBS;
         
         /// <summary>
         /// Label58 control.
@@ -1696,22 +1750,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label59;
         
         /// <summary>
-        /// Label60 control.
+        /// lblHCUTRESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label60;
+        protected global::System.Web.UI.WebControls.Label lblHCUTRESG;
         
         /// <summary>
-        /// TextBox22 control.
+        /// txtHCUTRESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox22;
+        protected global::System.Web.UI.WebControls.TextBox txtHCUTRESG;
         
         /// <summary>
         /// Label61 control.
@@ -1804,22 +1858,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox27;
         
         /// <summary>
-        /// Label66 control.
+        /// lblINSUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label66;
+        protected global::System.Web.UI.WebControls.Label lblINSUBSC;
         
         /// <summary>
-        /// TextBox28 control.
+        /// txtINSUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox28;
+        protected global::System.Web.UI.WebControls.TextBox txtINSUBSC;
         
         /// <summary>
         /// Label67 control.
@@ -1840,22 +1894,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox29;
         
         /// <summary>
-        /// Label68 control.
+        /// lblCTIPRESGA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label68;
+        protected global::System.Web.UI.WebControls.Label lblCTIPRESGA;
         
         /// <summary>
-        /// TextBox30 control.
+        /// txtCTIPRESGA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox30;
+        protected global::System.Web.UI.WebControls.TextBox txtCTIPRESGA;
         
         /// <summary>
         /// Label69 control.
@@ -1876,130 +1930,130 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox31;
         
         /// <summary>
-        /// Label70 control.
+        /// lblITIPOSETTSUB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label70;
+        protected global::System.Web.UI.WebControls.Label lblITIPOSETTSUB;
         
         /// <summary>
-        /// TextBox32 control.
+        /// txtITIPOSETTSUB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox32;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPOSETTSUB;
         
         /// <summary>
-        /// Label71 control.
+        /// lblQDIASUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label71;
+        protected global::System.Web.UI.WebControls.Label lblQDIASUBSC;
         
         /// <summary>
-        /// TextBox33 control.
+        /// txtQDIASUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox33;
+        protected global::System.Web.UI.WebControls.TextBox txtQDIASUBSC;
         
         /// <summary>
-        /// Label72 control.
+        /// lblITIPOSETTRES control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label72;
+        protected global::System.Web.UI.WebControls.Label lblITIPOSETTRES;
         
         /// <summary>
-        /// TextBox34 control.
+        /// txtITIPOSETTRES control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox34;
+        protected global::System.Web.UI.WebControls.TextBox txtITIPOSETTRES;
         
         /// <summary>
-        /// Label73 control.
+        /// lblIDIASUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label73;
+        protected global::System.Web.UI.WebControls.Label lblIDIASUBSC;
         
         /// <summary>
-        /// TextBox35 control.
+        /// txtIDIASUBSC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox35;
+        protected global::System.Web.UI.WebControls.TextBox txtIDIASUBSC;
         
         /// <summary>
-        /// Label74 control.
+        /// lblIALLFUND control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label74;
+        protected global::System.Web.UI.WebControls.Label lblIALLFUND;
         
         /// <summary>
-        /// TextBox36 control.
+        /// txtIALLFUND control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox36;
+        protected global::System.Web.UI.WebControls.TextBox txtIALLFUND;
         
         /// <summary>
-        /// Label75 control.
+        /// lblINRESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label75;
+        protected global::System.Web.UI.WebControls.Label lblINRESG;
         
         /// <summary>
-        /// TextBox37 control.
+        /// txtINRESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox37;
+        protected global::System.Web.UI.WebControls.TextBox txtINRESG;
         
         /// <summary>
-        /// Label76 control.
+        /// lblQDIARESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label76;
+        protected global::System.Web.UI.WebControls.Label lblQDIARESG;
         
         /// <summary>
-        /// TextBox38 control.
+        /// txtQDIARESG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox38;
+        protected global::System.Web.UI.WebControls.TextBox txtQDIARESG;
         
         /// <summary>
         /// Label77 control.
@@ -2065,22 +2119,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label106;
         
         /// <summary>
-        /// Label80 control.
+        /// lblICOMRES01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label80;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES01;
         
         /// <summary>
-        /// TextBox40 control.
+        /// txtICOMRES01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox40;
+        protected global::System.Web.UI.WebControls.TextBox txtICOMRES01;
         
         /// <summary>
         /// TextBox41 control.
@@ -2353,58 +2407,58 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlContasDo;
         
         /// <summary>
-        /// Label90 control.
+        /// lblCBALJDC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label90;
+        protected global::System.Web.UI.WebControls.Label lblCBALJDC;
         
         /// <summary>
-        /// TextBox60 control.
+        /// txtCBALJDC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox60;
+        protected global::System.Web.UI.WebControls.TextBox txtCBALJDC;
         
         /// <summary>
-        /// TextBox62 control.
+        /// txtNUMCONTA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox62;
+        protected global::System.Web.UI.WebControls.TextBox txtNUMCONTA;
         
         /// <summary>
-        /// Label91 control.
+        /// lblCBALSACO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label91;
+        protected global::System.Web.UI.WebControls.Label lblCBALSACO;
         
         /// <summary>
-        /// TextBox61 control.
+        /// txtCBALSACO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox61;
+        protected global::System.Web.UI.WebControls.TextBox txtCBALSACO;
         
         /// <summary>
-        /// TextBox63 control.
+        /// txtNUMCTSACO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox63;
+        protected global::System.Web.UI.WebControls.TextBox txtNUMCTSACO;
         
         /// <summary>
         /// Label92 control.
@@ -2416,76 +2470,76 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label Label92;
         
         /// <summary>
-        /// Label93 control.
+        /// lblCBALCOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label93;
+        protected global::System.Web.UI.WebControls.Label lblCBALCOM;
         
         /// <summary>
-        /// TextBox64 control.
+        /// txtCBALCOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox64;
+        protected global::System.Web.UI.WebControls.TextBox txtCBALCOM;
         
         /// <summary>
-        /// TextBox65 control.
+        /// txtNUMCTCOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox65;
+        protected global::System.Web.UI.WebControls.TextBox txtNUMCTCOM;
         
         /// <summary>
-        /// Label94 control.
+        /// lblCBALMOE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label94;
+        protected global::System.Web.UI.WebControls.Label lblCBALMOE;
         
         /// <summary>
-        /// TextBox66 control.
+        /// txtNUMCTMOE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox66;
+        protected global::System.Web.UI.WebControls.TextBox txtNUMCTMOE;
         
         /// <summary>
-        /// TextBox67 control.
+        /// cmbNUMCTMOE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox67;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbNUMCTMOE;
         
         /// <summary>
-        /// Label95 control.
+        /// lblGOBSRVMOT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label95;
+        protected global::System.Web.UI.WebControls.Label lblGOBSRVMOT;
         
         /// <summary>
-        /// TextBox68 control.
+        /// txtGOBSRVMOT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox68;
+        protected global::System.Web.UI.WebControls.TextBox txtGOBSRVMOT;
         
         /// <summary>
         /// Label96 control.
@@ -2632,193 +2686,193 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Panel pnlAttInvContent;
         
         /// <summary>
-        /// lbSubFamilia control.
+        /// lblCSUBFAM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSubFamilia;
+        protected global::System.Web.UI.WebControls.Label lblCSUBFAM;
         
         /// <summary>
-        /// txtSubFamilia control.
+        /// txtCSUBFAM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubFamilia;
+        protected global::System.Web.UI.WebControls.TextBox txtCSUBFAM;
         
         /// <summary>
-        /// txtSubFamiliaDesc control.
+        /// cmbCSUBFAM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubFamiliaDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCSUBFAM;
         
         /// <summary>
-        /// lbLiquidez control.
+        /// lblCLIQUIDPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbLiquidez;
+        protected global::System.Web.UI.WebControls.Label lblCLIQUIDPROD;
         
         /// <summary>
-        /// txtLiquidez control.
+        /// txtCLIQUIDPROD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLiquidez;
+        protected global::System.Web.UI.WebControls.TextBox txtCLIQUIDPROD;
         
         /// <summary>
-        /// lbComplexidade control.
+        /// lblCCOMPLEXINV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbComplexidade;
+        protected global::System.Web.UI.WebControls.Label lblCCOMPLEXINV;
         
         /// <summary>
-        /// txtComplexidade control.
+        /// txtCCOMPLEXINV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComplexidade;
+        protected global::System.Web.UI.WebControls.TextBox txtCCOMPLEXINV;
         
         /// <summary>
-        /// txtComplexidadeDesc control.
+        /// cmbCCOMPLEXINV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComplexidadeDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCOMPLEXINV;
         
         /// <summary>
-        /// lbHorizonteTemporal control.
+        /// lblCHORIZON control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbHorizonteTemporal;
+        protected global::System.Web.UI.WebControls.Label lblCHORIZON;
         
         /// <summary>
-        /// txtHorizonteTemporal control.
+        /// txtCHORIZON control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHorizonteTemporal;
+        protected global::System.Web.UI.WebControls.TextBox txtCHORIZON;
         
         /// <summary>
-        /// txtHorizonteTemporalDesc control.
+        /// cmbCHORIZON control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHorizonteTemporalDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCHORIZON;
         
         /// <summary>
-        /// lbZonaGeografica control.
+        /// aiai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbZonaGeografica;
+        protected global::System.Web.UI.WebControls.Label aiai;
         
         /// <summary>
-        /// txtZonaGeografica control.
+        /// uiui control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZonaGeografica;
+        protected global::System.Web.UI.WebControls.TextBox uiui;
         
         /// <summary>
-        /// txtZonaGeograficaDesc control.
+        /// pila control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZonaGeograficaDesc;
+        protected global::System.Web.UI.WebControls.TextBox pila;
         
         /// <summary>
-        /// lbOnOffRegular control.
+        /// lblCONOFFREGU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbOnOffRegular;
+        protected global::System.Web.UI.WebControls.Label lblCONOFFREGU;
         
         /// <summary>
-        /// txtOnOffRegular control.
+        /// txtCONOFFREGU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOnOffRegular;
+        protected global::System.Web.UI.WebControls.TextBox txtCONOFFREGU;
         
         /// <summary>
-        /// lbIpad control.
+        /// lblCIPAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbIpad;
+        protected global::System.Web.UI.WebControls.Label lblCIPAD;
         
         /// <summary>
-        /// txtIpad control.
+        /// txtCIPAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIpad;
+        protected global::System.Web.UI.WebControls.TextBox txtCIPAD;
         
         /// <summary>
-        /// lbNivelRisco control.
+        /// lblCNIVELRISCO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNivelRisco;
+        protected global::System.Web.UI.WebControls.Label lblCNIVELRISCO;
         
         /// <summary>
-        /// txtNivelRisco control.
+        /// txtCNIVELRISCO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNivelRisco;
+        protected global::System.Web.UI.WebControls.TextBox txtCNIVELRISCO;
         
         /// <summary>
-        /// lbVaR control.
+        /// lblVaR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbVaR;
+        protected global::System.Web.UI.WebControls.Label lblVaR;
         
         /// <summary>
         /// txtVaR control.
@@ -2830,103 +2884,103 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtVaR;
         
         /// <summary>
-        /// lbData control.
+        /// lblDVAR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbData;
+        protected global::System.Web.UI.WebControls.Label lblDVAR;
         
         /// <summary>
-        /// txtData control.
+        /// txtDVAR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtData;
+        protected global::System.Web.UI.WebControls.TextBox txtDVAR;
         
         /// <summary>
-        /// lbDescricao control.
+        /// lblGOBSRV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDescricao;
+        protected global::System.Web.UI.WebControls.Label lblGOBSRV;
         
         /// <summary>
-        /// txtDescricao control.
+        /// txtGOBSRV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescricao;
+        protected global::System.Web.UI.WebControls.TextBox txtGOBSRV;
         
         /// <summary>
-        /// lbCatClass control.
+        /// lblCCLAACTI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbCatClass;
+        protected global::System.Web.UI.WebControls.Label lblCCLAACTI;
         
         /// <summary>
-        /// txtCatClass control.
+        /// txtCCLAACTI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCatClass;
+        protected global::System.Web.UI.WebControls.TextBox txtCCLAACTI;
         
         /// <summary>
-        /// TXTCatClassDesc control.
+        /// cmbCCLAACTI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TXTCatClassDesc;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCLAACTI;
         
         /// <summary>
-        /// lbSolicitarClassRisco control.
+        /// lblCCLASSRISC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSolicitarClassRisco;
+        protected global::System.Web.UI.WebControls.Label lblCCLASSRISC;
         
         /// <summary>
-        /// ddlSolicitarClassRisco control.
+        /// txtCCLASSRISC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlSolicitarClassRisco;
+        protected global::System.Web.UI.WebControls.TextBox txtCCLASSRISC;
         
         /// <summary>
-        /// lbDataActivacao control.
+        /// lblDTACTIVA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDataActivacao;
+        protected global::System.Web.UI.WebControls.Label lblDTACTIVA;
         
         /// <summary>
-        /// txtDataActivacao control.
+        /// txtDTACTIVA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDataActivacao;
+        protected global::System.Web.UI.WebControls.TextBox txtDTACTIVA;
         
         /// <summary>
         /// btnClear control.
