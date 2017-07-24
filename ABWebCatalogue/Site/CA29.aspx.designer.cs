@@ -2128,265 +2128,265 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblICOMRES01;
         
         /// <summary>
-        /// txtICOMRES01 control.
+        /// cmbICOMRES01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtICOMRES01;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES01;
         
         /// <summary>
-        /// TextBox41 control.
+        /// cmbICOMSUB01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox41;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB01;
         
         /// <summary>
-        /// Label81 control.
+        /// lblICOMRES02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label81;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES02;
         
         /// <summary>
-        /// TextBox42 control.
+        /// cmbICOMRES02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox42;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES02;
         
         /// <summary>
-        /// TextBox43 control.
+        /// cmbICOMSUB02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox43;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB02;
         
         /// <summary>
-        /// Label82 control.
+        /// lblICOMRES03 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label82;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES03;
         
         /// <summary>
-        /// TextBox44 control.
+        /// cmbICOMRES03 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox44;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES03;
         
         /// <summary>
-        /// TextBox45 control.
+        /// cmbICOMSUB03 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox45;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB03;
         
         /// <summary>
-        /// Label83 control.
+        /// lblICOMRES04 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label83;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES04;
         
         /// <summary>
-        /// TextBox46 control.
+        /// cmbICOMRES04 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox46;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES04;
         
         /// <summary>
-        /// TextBox47 control.
+        /// cmbICOMSUB04 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox47;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB04;
         
         /// <summary>
-        /// Label84 control.
+        /// lblICOMRES05 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label84;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES05;
         
         /// <summary>
-        /// TextBox48 control.
+        /// cmbICOMRES05 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox48;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES05;
         
         /// <summary>
-        /// TextBox49 control.
+        /// cmbICOMSUB05 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox49;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB05;
         
         /// <summary>
-        /// Label85 control.
+        /// lblICOMRES06 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label85;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES06;
         
         /// <summary>
-        /// TextBox50 control.
+        /// cmbICOMRES06 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox50;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES06;
         
         /// <summary>
-        /// TextBox51 control.
+        /// cmbICOMSUB06 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox51;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB06;
         
         /// <summary>
-        /// Label86 control.
+        /// lblICOMRES07 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label86;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES07;
         
         /// <summary>
-        /// TextBox52 control.
+        /// cmbICOMRES07 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox52;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES07;
         
         /// <summary>
-        /// TextBox53 control.
+        /// cmbICOMSUB07 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox53;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB07;
         
         /// <summary>
-        /// Label87 control.
+        /// lblICOMRES08 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label87;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES08;
         
         /// <summary>
-        /// TextBox54 control.
+        /// cmbICOMRES08 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox54;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES08;
         
         /// <summary>
-        /// TextBox55 control.
+        /// cmbICOMSUB08 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox55;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB08;
         
         /// <summary>
-        /// Label88 control.
+        /// lblICOMRES09 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label88;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES09;
         
         /// <summary>
-        /// TextBox56 control.
+        /// cmbICOMRES09 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox56;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES09;
         
         /// <summary>
-        /// TextBox57 control.
+        /// cmbICOMSUB09 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox57;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB09;
         
         /// <summary>
-        /// Label89 control.
+        /// lblICOMRES10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label89;
+        protected global::System.Web.UI.WebControls.Label lblICOMRES10;
         
         /// <summary>
-        /// TextBox58 control.
+        /// cmbICOMRES10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox58;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMRES10;
         
         /// <summary>
-        /// TextBox59 control.
+        /// cmbICOMSUB10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox59;
+        protected global::System.Web.UI.WebControls.TextBox cmbICOMSUB10;
         
         /// <summary>
         /// btnContasDo control.
@@ -2506,13 +2506,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblCBALMOE;
         
         /// <summary>
-        /// txtNUMCTMOE control.
+        /// txtCBALMOE control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNUMCTMOE;
+        protected global::System.Web.UI.WebControls.TextBox txtCBALMOE;
         
         /// <summary>
         /// cmbNUMCTMOE control.
@@ -2785,31 +2785,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCHORIZON;
         
         /// <summary>
-        /// aiai control.
+        /// lblCZONANET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label aiai;
+        protected global::System.Web.UI.WebControls.Label lblCZONANET;
         
         /// <summary>
-        /// uiui control.
+        /// txtCZONANET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uiui;
+        protected global::System.Web.UI.WebControls.TextBox txtCZONANET;
         
         /// <summary>
-        /// pila control.
+        /// cmbCZONANET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pila;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCZONANET;
         
         /// <summary>
         /// lblCONOFFREGU control.
