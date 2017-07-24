@@ -514,7 +514,6 @@ namespace Core.Models
                 en = RiscoProdutoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
 
                 en = RiscoProdutoEnum.Nivel1;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)

@@ -1308,27 +1308,12 @@
                 }
 
             });
+            
 
-            $(".custodia").change(function () {
-                var aux = $(".custodia").val();
-                if (aux === "C" || aux === "D") {
-                    $("#CPH_cmbICOMRES01").val("N").change();
-                } else {
-
-                }
-
+            $('#CPH_txtCNIVELRISCO').on('input', function () {
+                //serverSideInjectedFunction($('#CPH_txtCNIVELRISCO').val().length), '#CPH_txtCNIVELRISCO');
+                $('#CPH_cmbCNIVELRISCO').change($('#CPH_txtCNIVELRISCO').val());
             });
-
-            $(".custodia").change(function () {
-                var aux = $(".custodia").val();
-                if (aux === "C" || aux === "D") {
-                    $("#CPH_cmbICOMRES01").val("N").change(function myfunction() {
-                        $("#CPH_cmbICOMRES01").Post
-                    });
-                } 
-            });
-
-
 
 
         });

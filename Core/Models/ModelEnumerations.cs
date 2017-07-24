@@ -184,15 +184,15 @@ namespace Core.Models
         [Description(" ")]
         Empty = 9999,
         [Description("Nivel 1")]
-        Nivel1 = 1,      
+        Nivel1 = '1',      
         [Description("Nivel 2")]
-        Nivel2 = 2,      
+        Nivel2 = '2',      
         [Description("Nivel 3")]
-        Nivel3 = 3,      
+        Nivel3 = '3',      
         [Description("Nivel 4")]
-        Nivel4 = 4,      
+        Nivel4 = '4',      
         [Description("Nivel 5")]
-        Nivel5 = 5
+        Nivel5 = '5'
     }
 
     public enum TipoAmortizacaoEnum
