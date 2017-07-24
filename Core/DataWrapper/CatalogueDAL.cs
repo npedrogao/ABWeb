@@ -14,7 +14,7 @@ namespace Core.DataWrapper
     /// </summary>
     public static class CatalogueDAL
     {
-        public static List<ModelField> GetModelDb2(string ecra, SqlDbConnection dbConnection)
+        public static List<ModelField> GetModelDb2(string ecra, BaseDbConnection dbConnection)
         {
             List<ModelField> lst = new List<ModelField>();
 
@@ -43,10 +43,10 @@ namespace Core.DataWrapper
                         if (tabID.HasValue)
                             newField.Tabela = (TabelaEnum)tabID;
 
-                        newField.ValidaCol = dr.GetDbStr("IDCol");
-
-                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                        newField.IDCol = dr.GetDbStr("IDCol");
                         newField.DescCol = dr.GetDbStr("DescCol");
+
+                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");                        
 
                         var decSize = dr.GetDbIntNull("CasasDecimais");
                         if (decSize.HasValue)

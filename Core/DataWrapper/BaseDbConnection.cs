@@ -12,7 +12,7 @@ namespace Core.DataWrapper
     {  
         protected System.Data.Common.DbConnection dbCon;
 
-        public BaseDbConnection(string connectionString)
+        protected BaseDbConnection(string connectionString)
         {
             dbCon = GetNewConnection(connectionString);
             dbCon.Open();

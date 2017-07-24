@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using EnumExtensions;
 using Core.DataWrapper;
+using Core.WebExtensions;
+using System.Data.Odbc;
 
 namespace Core.Models
 {
@@ -15,100 +17,118 @@ namespace Core.Models
         /// <param name="page"></param>
         public static void ApplyModel(System.Web.UI.Page page)
         {
-            string transactionName, fieldName, placeHolderName, errorLst;
+            string transactionName, errorLst = null;
+            System.Web.UI.Control placeHolder;
 
             transactionName = page.Request.QueryString["transacao"];
-            fieldName = string.Empty;
-            errorLst = string.Empty;
-            placeHolderName = "CPH";
-            System.Web.UI.Control curControl = null;
-
+            placeHolder = page.Master.FindControl("CPH");
             var lst = DataManager.ModelDb2(transactionName);
 
             try
             {
-                foreach (var itm in lst)
+                using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
-                    if (String.IsNullOrEmpty(itm.CopyBook))
-                        continue;
-
-                    switch (itm.TipoDeCampo)
-                    {
-                        case TipoCampoEnum.String:
-                        case TipoCampoEnum.Decimal:
-                        case TipoCampoEnum.Data:
-                            
-                            fieldName = "txt" + itm.CopyBook;
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            if (curControl != null && itm.Tamanho.HasValue)
-                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
-                            else
-                                errorLst += fieldName + "\n";
-
-                            if (itm.DescricaoLbl != null)
-                            {
-                                fieldName = "lbl" + itm.CopyBook;
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                                if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
-                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                                else
-                                    errorLst += fieldName + "\n";
-                            }
-
-                            break;
-                        case TipoCampoEnum.ComboBox:
-                            if (itm.DescricaoLbl != null)
-                            {
-                                fieldName = "lbl" + itm.CopyBook;
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                                if (curControl != null)
-                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                                else
-                                    errorLst += fieldName + "\n";
-                            }
-
-                            fieldName = "cmb" + itm.CopyBook;
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                            if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
-                                errorLst += fieldName + "\n";
-                            break;
-
-                        case TipoCampoEnum.CustomMask:
-                            fieldName = "txt" + itm.CopyBook;
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-                            if (curControl != null && itm.Tamanho.HasValue)
-                                (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
-                            else
-                                errorLst += fieldName + "\n";
-
-                            if (itm.DescricaoLbl != null)
-                            {
-                                fieldName = "lbl" + itm.CopyBook;
-                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                                if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
-                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                                else
-                                    errorLst += fieldName + "\n";
-                            }
-
-                            break;
-                    }
-                }
+                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con);
+                }                    
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                if (errorLst.Length > 0)
+                if (errorLst != null && errorLst.Length > 0)
                     throw new Exception("Campos errados: " + errorLst);
                 else
-                    throw new Exception("curControl: " + fieldName + " Msg:" + ex.Message);
+                    throw;
             }
             if (errorLst.Length > 0)
                 throw new Exception("Campos errados: " + errorLst);
 
+        }
+
+        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con)
+        {
+            string fieldName, errorLst;
+            var lst = DataManager.ModelDb2(transactionName);
+            errorLst = string.Empty;
+            List<KeyValuePair<string, string>> tabelaLst = null;
+
+            System.Web.UI.Control curControl = null;
+            foreach (var itm in lst)
+            {
+                if (String.IsNullOrEmpty(itm.CopyBook))
+                    continue;
+
+                switch (itm.TipoDeCampo)
+                {
+                    case TipoCampoEnum.String:
+                    case TipoCampoEnum.Decimal:
+                    case TipoCampoEnum.Data:
+
+                        fieldName = "txt" + itm.CopyBook;
+                        curControl = placeHolder.FindControl(fieldName);
+                        if (curControl != null && itm.Tamanho.HasValue)
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
+                        else
+                            errorLst += fieldName + "\n";
+
+                        if (itm.DescricaoLbl != null)
+                        {
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = placeHolder.FindControl(fieldName);
+
+                            if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
+                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                            else
+                                errorLst += fieldName + "\n";
+                        }
+
+                        break;
+                    case TipoCampoEnum.ComboBox:
+                        if (itm.DescricaoLbl != null)
+                        {
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = placeHolder.FindControl(fieldName);
+
+                            if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
+                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                            else
+                                errorLst += fieldName + "\n";
+                        }
+
+                        fieldName = "cmb" + itm.CopyBook;
+                        curControl = placeHolder.FindControl(fieldName);
+
+                        if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
+                            errorLst += fieldName + "\n";
+                        else if(itm.Tabela != TabelaEnum.NULL)
+                        {
+                            var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
+                            tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
+                            cmb.LoadWithList(false, tabelaLst);
+                        }
+                        break;
+
+                    case TipoCampoEnum.CustomMask:
+                        fieldName = "txt" + itm.CopyBook;
+                        curControl = placeHolder.FindControl(fieldName);
+                        if (curControl != null && itm.Tamanho.HasValue)
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
+                        else
+                            errorLst += fieldName + "\n";
+
+                        if (itm.DescricaoLbl != null)
+                        {
+                            fieldName = "lbl" + itm.CopyBook;
+                            curControl = placeHolder.FindControl(fieldName);
+
+                            if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
+                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                            else
+                                errorLst += fieldName + "\n";
+                        }
+
+                        break;
+                }
+            }
+            return errorLst;
         }
 
         public static string Terminal { get; set; }
@@ -264,6 +284,24 @@ namespace Core.Models
                 en = ActivoInactivoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ActivoInactivoEnum.Activo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ActivoInactivoEnum.Inactivo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListActiveExclusivo
+        {
+            get
+            {
+                ActivoInactivoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
 
                 en = ActivoInactivoEnum.Activo;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -572,6 +610,30 @@ namespace Core.Models
                 en = TipoResgateEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.Q;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListTipoResgateExclusivo
+        {
+            get
+            {
+                TipoResgateEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
 
                 en = TipoResgateEnum.Q;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -1067,6 +1129,29 @@ namespace Core.Models
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
                 en = OnOffRegularEnum.R;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListZeroOrOne
+        {
+            get
+            {
+                ZeroOrOneEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ZeroOrOneEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ZeroOrOneEnum.Zero;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ZeroOrOneEnum.One;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
