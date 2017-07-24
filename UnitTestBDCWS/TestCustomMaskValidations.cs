@@ -10,28 +10,28 @@ namespace UnitTestBDCWS
         [TestMethod]
         public void TestDateValidation()
         {
-            bool isValid = ValidaUtil.IsValidField("2017/07/24", Core.Models.CustomMaskEnum.AnoMesDia);
+            bool isValid = ValidaUtil.ValidaData("2017/07/24");
             Assert.IsTrue(isValid);
 
-            isValid = ValidaUtil.IsValidField("15/09/2010", Core.Models.CustomMaskEnum.DiaMesAno);
+            isValid = ValidaUtil.ValidaData("15/09/2010");
             Assert.IsTrue(isValid);
 
-            isValid = ValidaUtil.IsValidField("2017/02/28", Core.Models.CustomMaskEnum.DiaMesAno);
+            isValid = ValidaUtil.ValidaData("2017/02/28");
             Assert.IsTrue(isValid);
 
-            isValid = ValidaUtil.IsValidField("28/02/2017", Core.Models.CustomMaskEnum.DiaMesAno);
+            isValid = ValidaUtil.ValidaData("28/02/2017");
             Assert.IsTrue(isValid);
 
-            bool notValid = ValidaUtil.IsValidField("2017/13/13", Core.Models.CustomMaskEnum.AnoMesDia);
+            bool notValid = ValidaUtil.ValidaData("2017/13/13");
             Assert.IsFalse(notValid);
 
-            notValid = ValidaUtil.IsValidField("2017/02/29", Core.Models.CustomMaskEnum.AnoMesDia);
+            notValid = ValidaUtil.ValidaData("2017/02/29");
             Assert.IsFalse(notValid);
 
-            notValid = ValidaUtil.IsValidField("2017/06/31", Core.Models.CustomMaskEnum.AnoMesDia);
+            notValid = ValidaUtil.ValidaData("2017/06/31");
             Assert.IsFalse(notValid);
 
-            notValid = ValidaUtil.IsValidField("11/13/2017", Core.Models.CustomMaskEnum.DiaMesAno);
+            notValid = ValidaUtil.ValidaData("11/13/2017");
             Assert.IsFalse(notValid);
         }
 

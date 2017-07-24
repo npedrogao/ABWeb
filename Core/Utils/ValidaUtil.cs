@@ -16,10 +16,6 @@ namespace Core.Utils
             {
                 case Models.CustomMaskEnum.NULL:
                     break;
-                case Models.CustomMaskEnum.AnoMesDia:
-                case Models.CustomMaskEnum.DiaMesAno:
-                    valid = ValidaMaskData(text);
-                    break;
                 case Models.CustomMaskEnum.HoraMinuto:
                     valid = ValidaMaskHora(text);
                     break;
@@ -38,7 +34,7 @@ namespace Core.Utils
             return IsValidField(text, 0, customMaskEnum);
         }
 
-        private static bool ValidaMaskData(string text)
+        public static bool ValidaData(string text)
         {
             if (String.IsNullOrWhiteSpace(text))
                 return false;
