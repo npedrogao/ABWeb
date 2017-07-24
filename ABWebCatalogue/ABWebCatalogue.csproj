@@ -88,14 +88,7 @@
     <Content Include="MasterPages\header.ascx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="scripts\bootstrap-datepicker.js" />
-    <Content Include="scripts\bootstrap-datepicker.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="packages.config" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.ar.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.az.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.bg.min.js" />
@@ -283,7 +276,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MasterPages\DefaultMaster.Master" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
