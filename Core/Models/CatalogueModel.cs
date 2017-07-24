@@ -37,14 +37,7 @@ namespace Core.Models
                         case TipoCampoEnum.String:
                         case TipoCampoEnum.Decimal:
                         case TipoCampoEnum.Data:
-                            fieldName = "lbl" + itm.CopyBook.Trim();
-                            curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
-
-                            if (curControl != null)
-                                (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-                            else
-                                errorLst += fieldName + "\n";
-
+                            
                             fieldName = "txt" + itm.CopyBook.Trim();
                             curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
                             if (curControl != null && itm.Tamanho.HasValue)
@@ -52,24 +45,39 @@ namespace Core.Models
                             else
                                 errorLst += fieldName + "\n";
 
-                            break;
-                        case TipoCampoEnum.ComboBox:
-                            if (itm.Tabela == TabelaEnum.NULL)
+                            if (itm.DescricaoLbl != null)
                             {
                                 fieldName = "lbl" + itm.CopyBook.Trim();
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
 
                                 if (curControl != null)
                                     (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
-
+                                else
+                                    errorLst += fieldName + "\n";
                             }
-                            else
+
+                            break;
+                        case TipoCampoEnum.ComboBox:
+                            if (itm.DescricaoLbl != null)
+                            {
+                                fieldName = "lbl" + itm.CopyBook.Trim();
+                                curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
+
+                                if (curControl != null)
+                                    (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+                                else
+                                    errorLst += fieldName + "\n";
+                            }
+
+                            if (itm.Tabela != TabelaEnum.NULL)
                             {
                                 //todo: carrega 
 
                                 fieldName = "cmb" + itm.CopyBook.Trim();
                                 curControl = page.Master.FindControl(placeHolderName).FindControl(fieldName);
                                 if (curControl == null)
+                                    errorLst += fieldName + "\n";
+                                else
                                     errorLst += fieldName + "\n";
                             }
 
