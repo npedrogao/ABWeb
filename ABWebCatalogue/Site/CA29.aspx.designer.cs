@@ -10,7 +10,7 @@
 namespace ABWebCatalogue.Site {
     
     
-    public partial class CA25spx {
+    public partial class CA29 {
         
         /// <summary>
         /// ScriptManager1 control.
@@ -1885,13 +1885,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblQPOSMAXC;
         
         /// <summary>
-        /// cmbQPOSMAXC control.
+        /// txtQPOSMAXC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbQPOSMAXC;
+        protected global::System.Web.UI.WebControls.TextBox txtQPOSMAXC;
         
         /// <summary>
         /// lblCTIPRESGA control.
@@ -2632,22 +2632,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox TextBox73;
         
         /// <summary>
-        /// Label101 control.
+        /// lblMNOMIN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label101;
+        protected global::System.Web.UI.WebControls.Label lblMNOMIN;
         
         /// <summary>
-        /// TextBox74 control.
+        /// txtMNOMIN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox74;
+        protected global::System.Web.UI.WebControls.TextBox txtMNOMIN;
         
         /// <summary>
         /// Label102 control.
@@ -2866,22 +2866,31 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCNIVELRISCO;
         
         /// <summary>
-        /// lblVaR control.
+        /// cmbCNIVELRISCO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaR;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCNIVELRISCO;
         
         /// <summary>
-        /// txtVaR control.
+        /// lblMVAR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVaR;
+        protected global::System.Web.UI.WebControls.Label lblMVAR;
+        
+        /// <summary>
+        /// txtMVAR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMVAR;
         
         /// <summary>
         /// lblDVAR control.

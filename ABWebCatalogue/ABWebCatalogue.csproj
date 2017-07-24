@@ -83,6 +83,8 @@
     <Content Include="images\logo.png" />
     <Content Include="JavaScript\bankinter.js" />
     <Content Include="JavaScript\GenericFramework.js" />
+    <Content Include="JavaScript\jquery-1.8.3.js" />
+    <Content Include="JavaScript\jquery-1.8.3.min.js" />
     <Content Include="MasterPages\header.ascx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />

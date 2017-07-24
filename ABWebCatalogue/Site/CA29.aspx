@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="CA29.aspx.cs" Inherits="ABWebCatalogue.Site.CA25spx" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="CA29.aspx.cs" Inherits="ABWebCatalogue.Site.CA29" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
-    <script src="../scripts/jquery-1.9.1.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/bootstrap-datepicker.min.js"></script>
+
+
+    <script src="../JavaScript/jquery-1.8.3.js"></script>
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -461,7 +461,7 @@
                     <asp:Label ID="lblICUSTODD" runat="server" class="t-label-1">Custódia / Distribuição:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <select id="cmbICUSTODD" runat="server" class="t-field-14"></select>
+                    <select id="cmbICUSTODD" runat="server" class="t-field-14 custodia"></select>
                 </td>
                 <td class="t-table-col-1">
                     <asp:Label ID="lblIMULTCTA" runat="server" class="t-label-1">Multi Contas:</asp:Label>
@@ -834,7 +834,7 @@
                     <asp:Label ID="lblQPOSMAXC" runat="server" class="t-label-1">Posição máxima:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <select id="cmbQPOSMAXC" runat="server" class="t-field-14"></select>
+                    <asp:TextBox ID="txtQPOSMAXC" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
@@ -1140,10 +1140,10 @@
                     <asp:TextBox ID="TextBox73" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="Label101" runat="server" class="t-label-1">Valor Nominal:</asp:Label>
+                    <asp:Label ID="lblMNOMIN" runat="server" class="t-label-1">Valor Nominal:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="TextBox74" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtMNOMIN" runat="server" MaxLength="2" CssClass="t-field-14"></asp:TextBox>
                 </td>
             </tr>
 
@@ -1231,12 +1231,13 @@
                 </td>
                 <td class="t-table-col-2">
                     <asp:TextBox ID="txtCNIVELRISCO" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <select id="cmbCNIVELRISCO" runat="server" class="t-field-14"></select>
                 </td>
                 <td class="t-table-col-1">
-                    <asp:Label ID="lblVaR" runat="server" class="t-label-1">VaR:</asp:Label>
+                    <asp:Label ID="lblMVAR" runat="server" class="t-label-1">VaR:</asp:Label>
                 </td>
                 <td class="t-table-col-2">
-                    <asp:TextBox ID="txtVaR" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <asp:TextBox ID="txtMVAR" runat="server" CssClass="t-field-14"></asp:TextBox>
                 </td>
                 <td class="t-table-col-1">
                     <asp:Label ID="lblDVAR" runat="server" class="t-label-1">Data:</asp:Label>
@@ -1294,4 +1295,30 @@
     </div>
     <br />
     <br />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+         
+            $(".custodia").change(function () {
+                var aux = $(".custodia").val();
+                if (aux === "C" || aux === "D") {
+                    $("#CPH_cmbICOMRES01").val("N").change();
+                } else {
+
+                }
+
+            });
+
+
+
+
+
+
+        });
+
+
+
+    </script>
+
+
 </asp:Content>

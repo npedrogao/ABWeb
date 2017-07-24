@@ -453,6 +453,16 @@ namespace Core.Models
         R = 'R'
     }
 
+    public enum ZeroOrOneEnum
+    {
+        [Description(" ")]
+        Empty = ' ',
+        [Description("0")]
+        Zero = '0',
+        [Description("1")]
+        One = '1'
+    }
+
     public enum CustomMaskEnum
     {
         [Description("")]
