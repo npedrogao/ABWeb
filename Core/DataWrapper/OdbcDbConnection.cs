@@ -8,9 +8,9 @@ using System.Text;
 
 namespace Core.DataWrapper
 {
-    public class OdbcDbConnection : BaseDbConnection
+    public sealed class OdbcDbConnection : BaseDbConnection
     {
-        private System.Data.Odbc.OdbcConnection currentCon;
+        private readonly System.Data.Odbc.OdbcConnection currentCon;
 
         public OdbcDbConnection(string connectionString) : base(connectionString)
         {
@@ -45,7 +45,7 @@ namespace Core.DataWrapper
         public override DbDataReader ExecSp(string spName, params DbParameter[] spParams)
         {
             if (String.IsNullOrWhiteSpace(spName))
-                throw new ArgumentNullException("Stored procedure name is null or empty!");
+                throw new ArgumentNullException(spName);
 
             OdbcCommand cmnd = new OdbcCommand(spName);
 
