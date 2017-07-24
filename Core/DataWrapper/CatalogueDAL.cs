@@ -14,7 +14,7 @@ namespace Core.DataWrapper
     /// </summary>
     public static class CatalogueDAL
     {
-        public static List<ModelField> GetModelDb2(string ecra, SqlDbConnection dbConnection)
+        public static List<ModelField> GetModelDb2(string ecra, BaseDbConnection dbConnection)
         {
             List<ModelField> lst = new List<ModelField>();
 

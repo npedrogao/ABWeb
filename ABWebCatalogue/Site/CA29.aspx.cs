@@ -10,11 +10,58 @@ using Core.Models;
 
 namespace ABWebCatalogue.Site
 {
-    public partial class CA25spx : System.Web.UI.Page
+    public partial class CA29 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             CatalogueModel.ApplyModel(this);
+            cmbICOMRES01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbCESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActiveExclusivo);
+            cmbCSRRI.LoadWithList(IsPostBack, CatalogueModel.ListRiscoKidd);
+            cmbIDIVIDEND.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIDIVIDEND.Value = cmbIDIVIDEND.Items[2].Value;
+            cmbIUCIT.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIUCIT.Value = cmbIUCIT.Items[0].Value;
+            cmbINSCOPE.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbINSCOPE.Value = cmbINSCOPE.Items[0].Value;
+            cmbICUSTODD.LoadWithList(IsPostBack, CatalogueModel.ListPricing);
+            cmbICUSTODD.Value = cmbICUSTODD.Items[2].Value;
+            cmbIMULTCTA.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIMULTCTA.Value = cmbIMULTCTA.Items[2].Value;
+            cmbICUSTODGA.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbICUSTODGA.Value = cmbICUSTODGA.Items[1].Value;
+            cmbIBENEFIC.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIBENEFIC.Value = cmbIBENEFIC.Items[2].Value;
+            cmbCVALORIM.LoadWithList(IsPostBack, CatalogueModel.ListTipoValoracao);
+            cmbCVALORIM.Value = cmbCVALORIM.Items[1].Value;
+            cmbCPERIODO.LoadWithList(IsPostBack, CatalogueModel.ListPeriodoCoracao);
+            cmbCPERIODO.Value = cmbCPERIODO.Items[1].Value;
+            cmbICOTNET.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOTNET.Value = cmbICOTNET.Items[1].Value;
+            cmbINSUBSC.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgateExclusivo);
+            cmbCTIPRESGA.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgate);
+            cmbIALLFUND.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
+            cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
         }
 
         protected void btnClaBank_Click(object sender, EventArgs e)

@@ -9,7 +9,7 @@ namespace Core.DataWrapper
 {
     public class SqlDbConnection : BaseDbConnection
     {
-        private System.Data.SqlClient.SqlConnection currentCon;
+        private readonly System.Data.SqlClient.SqlConnection currentCon;
 
         public SqlDbConnection(string connectionString) : base(connectionString)
         {

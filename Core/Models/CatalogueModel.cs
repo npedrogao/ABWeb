@@ -296,6 +296,24 @@ namespace Core.Models
             }
         }
 
+        public static List<KeyValuePair<string, string>> ListActiveExclusivo
+        {
+            get
+            {
+                ActivoInactivoEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ActivoInactivoEnum.Activo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ActivoInactivoEnum.Inactivo;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                return lst;
+            }
+        }
+
         public static List<KeyValuePair<string, string>> ListPricing
         {
             get
@@ -592,6 +610,30 @@ namespace Core.Models
                 en = TipoResgateEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.Q;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.T;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = TipoResgateEnum.A;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListTipoResgateExclusivo
+        {
+            get
+            {
+                TipoResgateEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
 
                 en = TipoResgateEnum.Q;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -1087,6 +1129,29 @@ namespace Core.Models
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
                 en = OnOffRegularEnum.R;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+            }
+        }
+
+        public static List<KeyValuePair<string, string>> ListZeroOrOne
+        {
+            get
+            {
+                ZeroOrOneEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ZeroOrOneEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ZeroOrOneEnum.Zero;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ZeroOrOneEnum.One;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
