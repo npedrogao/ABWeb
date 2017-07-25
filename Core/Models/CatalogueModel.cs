@@ -18,20 +18,20 @@ namespace Core.Models
         /// Applys the model definitions to page
         /// </summary>
         /// <param name="page"></param>
-        public static void ApplyModel(System.Web.UI.Page page)
+        public static void ApplyModel(System.Web.UI.Page page, ref StringBuilder js)
         {
             string transactionName, errorLst = null;
             System.Web.UI.Control placeHolder;
 
             transactionName = page.Request.QueryString["transacao"];
-            placeHolder = page.Master.FindControl("CPH");            
+            placeHolder = page.Master.FindControl("CPH");
 
             try
             {
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
-                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con);
-                }                                                    
+                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js);
+                }
             }
             catch (Exception)
             {
@@ -43,9 +43,11 @@ namespace Core.Models
             if (errorLst.Length > 0)
                 throw new InvalidFieldsException(errorLst);
 
+
+
         }
 
-        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con)
+        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con, ref StringBuilder js)
         {
             string fieldName;
             StringBuilder errorLst = new StringBuilder();
@@ -53,6 +55,7 @@ namespace Core.Models
             List<KeyValuePair<string, string>> tabelaLst = null;
 
             System.Web.UI.Control curControl = null;
+
             foreach (var itm in lst)
             {
                 if (String.IsNullOrEmpty(itm.CopyBook))
@@ -70,13 +73,13 @@ namespace Core.Models
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
                             errorLst.Append(fieldName).Append("\n");
-                                                   
+
                         if (itm.DescricaoLbl != null)
                         {
                             fieldName = "lbl" + itm.CopyBook;
                             curControl = placeHolder.FindControl(fieldName);
 
-                            if (curControl != null && (curControl is System.Web.UI.WebControls.TextBox))
+                            if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
                                 errorLst.Append(fieldName).Append("\n");
@@ -105,17 +108,11 @@ namespace Core.Models
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
                             cmb.LoadWithList(false, tabelaLst);
+                            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID, cmb.ClientID.Replace("cmb", "txt"));
                         }
                         break;
 
                     case TipoCampoEnum.CustomMask:
-                        fieldName = "txt" + itm.CopyBook;
-                        curControl = placeHolder.FindControl(fieldName);
-                        if (curControl != null && itm.Tamanho.HasValue)
-                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
-                        else
-                            errorLst.Append(fieldName).Append("\n");
-
                         if (itm.DescricaoLbl != null)
                         {
                             fieldName = "lbl" + itm.CopyBook;
@@ -127,6 +124,13 @@ namespace Core.Models
                                 errorLst.Append(fieldName).Append("\n");
                         }
 
+                        fieldName = "txt" + itm.CopyBook;
+                        curControl = placeHolder.FindControl(fieldName);
+
+                        if (curControl != null && itm.Tamanho.HasValue)
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
+                        else
+                            errorLst.Append(fieldName).Append("\n");
                         break;
                 }
             }
@@ -458,7 +462,7 @@ namespace Core.Models
                 en = PrazoAbsolutoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                
+
 
                 en = PrazoAbsolutoEnum.A;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -487,7 +491,7 @@ namespace Core.Models
                 en = TipoMercadoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-              
+
                 en = TipoMercadoEnum.MER;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
@@ -1183,6 +1187,6 @@ namespace Core.Models
 
             }
             return list;
-        }        
+        }
     }
 }

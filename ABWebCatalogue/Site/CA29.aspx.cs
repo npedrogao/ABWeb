@@ -15,11 +15,13 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CatalogueModel.ApplyModel(this);
+            StringBuilder js = new StringBuilder();
+            CatalogueModel.ApplyModel(this, ref js);
             LoadCombos();          
-            InjectJs();
+            InjectJs(ref js);
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
 
-            if(IsPostBack)
+            if (IsPostBack)
             {
                 //empty
             }
@@ -391,9 +393,8 @@ namespace ABWebCatalogue.Site
             cmbCCATACT.LoadWithList(IsPostBack, xpto);
         }
 
-        private void InjectJs()
-        {
-            StringBuilder js = new StringBuilder();
+        private void InjectJs(ref StringBuilder js)
+        {         
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES01.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES02.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES06.ClientID);
@@ -416,10 +417,7 @@ namespace ABWebCatalogue.Site
 
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB03.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB04.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);
-            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", "3", txtCCATACT.ClientID, cmbCCATACT.ClientID);
-            
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);                    
         }
     }
 }

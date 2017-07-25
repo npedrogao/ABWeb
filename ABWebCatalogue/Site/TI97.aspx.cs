@@ -8,6 +8,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Core.Utils;
 using Core.Models;
+using System.Text;
 
 namespace ABWebCatalogue.Site
 {
@@ -48,6 +49,9 @@ namespace ABWebCatalogue.Site
 
 
 
+            StringBuilder js = new StringBuilder();
+            CatalogueModel.ApplyModel(this, ref js);
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
         }
 
         protected void btnDadComp_Click(object sender, EventArgs e)
