@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="titleAccordion">
-        <asp:Label ID="lblTransaction" runat="server"> AP34C </asp:Label>
+        <asp:Label ID="lblTransaction" runat="server"></asp:Label>
     </div>
 
     <asp:Panel ID="pnlContent" runat="server">
@@ -431,13 +431,14 @@
     <button id="btnResseguro" class="titleAccordion-plus" runat="server" onserverclick="btnResseguro_Click">Resseguro</button>
     <asp:Panel ID="pnlResseguro" runat="server" Visible="false">
         <br />
-        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+        <table class="t-table-t">
             <tr>
-                <td class="t-table-col-1">
-                    <label id="lblCTRATADO" runat="server" class="t-label-1">Cód. Tratado:</label>
+                <td class="t-label-r">
+                    <label id="lblCTRATADO" runat="server">Cód. Tratado:</label>
                 </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="txtCTRATADO" runat="server" CssClass="t-field-14"></asp:TextBox>%
+                <td class="t-label-r">
+                    <asp:TextBox ID="txtCTRATADO" runat="server" CssClass="t-field-14"></asp:TextBox>
+                    <span class="span">%</span>
                 </td>
             </tr>
         </table>
@@ -448,19 +449,21 @@
     <button id="btnCustos" class="titleAccordion-plus" runat="server" onserverclick="btnCustos_Click">Custos</button>
     <asp:Panel ID="pnlCustos" runat="server" Visible="false">
         <br />
-        <table cellpadding="0" border="0" cellspacing="0" width="100%" class="t-table-0">
+        <table class="t-table-t">
             <tr>
-                <td class="t-table-col-1">
-                    <label id="lblMACTA" runat="server" class="t-label-1">Acta:</label>
+                <td class="t-label-r">
+                    <label id="lblMACTA" runat="server">Acta:</label>
                 </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="txtMACTA" runat="server" CssClass="t-field-14"></asp:TextBox>%
+                <td>
+                    <asp:TextBox ID="txtMACTA" runat="server" CssClass="t-field-t"></asp:TextBox>
+                    <span class="span">%</span>
                 </td>
-                <td class="t-table-col-1">
-                    <label id="lblMCAPOL" class="t-label-1">Apólice:</label>
+                <td class="t-label-r">
+                    <label id="lblMCAPOL" runat="server">Apólice:</label>
                 </td>
-                <td class="t-table-col-2">
-                    <asp:TextBox ID="txtMCAPOL" runat="server" CssClass="t-field-14"></asp:TextBox>%
+                <td>
+                    <asp:TextBox ID="txtMCAPOL" runat="server" CssClass="t-field-t"></asp:TextBox>
+                    <span class="span">%</span>
                 </td>
             </tr>
         </table>
@@ -571,6 +574,7 @@
                     <asp:TextBox ID="txtTPARESG6" runat="server" class="t-field-t"></asp:TextBox>
                     <span class="span">%</span>
                 </td>
+                <td class="tdvazio"></td>
             </tr>
             <tr>
                 <td class="t-label-r">
@@ -600,6 +604,7 @@
                     <asp:TextBox ID="txtQANORES6" runat="server" class="t-field-t"></asp:TextBox>
                     <span class="span">ºAno</span>
                 </td>
+                <td class="tdvazio"></td>
             </tr>
         </table>
         <br />

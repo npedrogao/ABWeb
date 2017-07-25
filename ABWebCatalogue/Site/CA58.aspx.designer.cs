@@ -13,21 +13,48 @@ namespace ABWebCatalogue.Site {
     public partial class CA58 {
         
         /// <summary>
-        /// btnPesquisar control.
+        /// cmbFamilia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPesquisar;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbFamilia;
         
         /// <summary>
-        /// btnCriar control.
+        /// cmbSubFamilia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCriar;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbSubFamilia;
+        
+        /// <summary>
+        /// cmbEmComercializacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbEmComercializacao;
+        
+        /// <summary>
+        /// cmbEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbEstado;
+        
+        /// <summary>
+        /// cmbProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbProduto;
     }
 }
