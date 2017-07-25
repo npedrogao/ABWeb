@@ -37,7 +37,7 @@ namespace Core.DataWrapper
 
                         //Fix para usar o copybook como nome no aspx
                         if (!String.IsNullOrEmpty(newField.CopyBook))
-                            newField.CopyBook = newField.CopyBook.Replace("-", "#");
+                            newField.CopyBook = newField.CopyBook.Replace("-", "_");
 
                         var size = dr.GetDbIntNull("Tamanho");
                         if (size.HasValue)
