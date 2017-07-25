@@ -47,9 +47,9 @@ namespace Core.Models
 
         private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con)
         {
-            string fieldName, errorLst;
+            string fieldName;
+            StringBuilder errorLst = new StringBuilder();
             var lst = DataManager.ModelDb2(transactionName);
-            errorLst = string.Empty;
             List<KeyValuePair<string, string>> tabelaLst = null;
 
             System.Web.UI.Control curControl = null;
@@ -69,8 +69,8 @@ namespace Core.Models
                         if (curControl != null && itm.Tamanho.HasValue)
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
-                            errorLst += fieldName + "\n";
-
+                            errorLst.Append(fieldName).Append("\n");
+                                                   
                         if (itm.DescricaoLbl != null)
                         {
                             fieldName = "lbl" + itm.CopyBook;
@@ -79,7 +79,7 @@ namespace Core.Models
                             if (curControl != null && (curControl is System.Web.UI.WebControls.TextBox))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
                         break;
@@ -92,15 +92,15 @@ namespace Core.Models
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
                         fieldName = "cmb" + itm.CopyBook;
                         curControl = placeHolder.FindControl(fieldName);
 
                         if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
-                            errorLst += fieldName + "\n";
-                        else if(itm.Tabela != TabelaEnum.NULL)
+                            errorLst.Append(fieldName).Append("\n");
+                        else if (itm.Tabela != TabelaEnum.NULL)
                         {
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
@@ -114,7 +114,7 @@ namespace Core.Models
                         if (curControl != null && itm.Tamanho.HasValue)
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
-                            errorLst += fieldName + "\n";
+                            errorLst.Append(fieldName).Append("\n");
 
                         if (itm.DescricaoLbl != null)
                         {
@@ -124,13 +124,13 @@ namespace Core.Models
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
                         break;
                 }
             }
-            return errorLst;
+            return errorLst.ToString();
         }
 
         public static string Terminal { get; set; }
