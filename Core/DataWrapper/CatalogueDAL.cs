@@ -35,6 +35,10 @@ namespace Core.DataWrapper
                         newField.Ecran = dr.GetDbStr("Ecra");
                         newField.CopyBook = dr.GetDbStr("CopyBook");
 
+                        //Fix para usar o copybook como nome no aspx
+                        if (!String.IsNullOrEmpty(newField.CopyBook))
+                            newField.CopyBook = newField.CopyBook.Replace("-", "_");
+
                         var size = dr.GetDbIntNull("Tamanho");
                         if (size.HasValue)
                             newField.Tamanho = size;
