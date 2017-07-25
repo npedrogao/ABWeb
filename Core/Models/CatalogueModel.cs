@@ -74,7 +74,7 @@ namespace Core.Models
                             fieldName = "lbl" + itm.CopyBook;
                             curControl = placeHolder.FindControl(fieldName);
 
-                            if (curControl != null || !(curControl is System.Web.UI.WebControls.TextBox))
+                            if (curControl != null && (curControl is System.Web.UI.WebControls.TextBox))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
                                 errorLst += fieldName + "\n";

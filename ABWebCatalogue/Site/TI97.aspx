@@ -401,9 +401,9 @@
         </table>
 
         <br />
+          <br />
         <div class="divCollapseLeft">
             <button id="btnCloseAll" class="btnCollapse" runat="server" onserverclick="btnCloseAll_Click">Fechar todos</button>
-
             <button id="btnOpenAll" class="btnCollapse" runat="server" onserverclick="btnOpenAll_Click">Abrir todos</button>
         </div>
     </asp:Panel>
