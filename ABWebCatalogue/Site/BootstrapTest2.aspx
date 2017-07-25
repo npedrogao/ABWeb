@@ -10,8 +10,7 @@
     <link href="~\css\bankinter.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <script src="../JavaScript/jquery-1.8.3.js" type="text/javascript"></script>
-    <script src="../JavaScript/bootstrap.js" type="text/javascript"></script>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">

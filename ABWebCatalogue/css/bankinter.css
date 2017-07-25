@@ -1360,9 +1360,6 @@ button.btn {
     text-align: center;
 }
 
-button.btn-btn {
-    margin-left: 20px;
-}
 
 a {
     text-decoration: none;
@@ -1374,6 +1371,9 @@ hr.hr {
     color: rgb(253, 101, 0);
 }
 
+.margin-btn{
+    margin-right:5%;
+}
 
 
 .titleAccordion {
@@ -1512,6 +1512,8 @@ font.font {
     margin-left: 7%;
 }
 
+
+
 .t-table-t {
     width: 80%;
     margin-left: 10%;
@@ -1539,6 +1541,9 @@ font.font {
 
 .span{
     color: #555;
+}
+.tdvazio{
+    width: 10%;
 }
 
 

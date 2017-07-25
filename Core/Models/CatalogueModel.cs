@@ -106,9 +106,13 @@ namespace Core.Models
                         else if (itm.Tabela != TabelaEnum.NULL)
                         {
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
+
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
-                            cmb.LoadWithList(false, tabelaLst);
-                            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID, cmb.ClientID.Replace("cmb", "txt"));
+                            if (tabelaLst?.Count > 0)
+                            {
+                                cmb.LoadWithList(false, tabelaLst);
+                                JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID);
+                            }
                         }
                         break;
 
