@@ -16,7 +16,7 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CatalogueModel.ApplyModel(this);
+            
             cmbITITDEF.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbICOTADO.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbNEGOCIAV.LoadWithList(IsPostBack, CatalogueModel.ListNegociavel);
