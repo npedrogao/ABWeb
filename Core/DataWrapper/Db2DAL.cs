@@ -49,6 +49,12 @@ namespace Core.DataWrapper
             if (tabela == TabelaEnum.NULL)
                 throw new ArgumentException("Necessário indicar tabela DB2!");
 
+            if (string.IsNullOrWhiteSpace(idColName))
+                throw new ArgumentException("Necessário indicar idColName!");
+
+            if (string.IsNullOrWhiteSpace(idColName))
+                throw new ArgumentException("Necessário indicar idColDesc!");
+
             StringBuilder query = new StringBuilder();
             query.Append("SELECT ");
             query.Append(idColName).Append(", ").Append(idColDesc);

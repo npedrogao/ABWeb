@@ -15,7 +15,7 @@
             if (typeof txtField !== "undefined")
                 txtField.on('input', function (e) {
 
-                    if (txtField.val().length === parseInt(maxLength)) {
+                    if (txtField.val().length <= parseInt(maxLength)) {
                         var textToCompare = txtField.val().trim().toLocaleLowerCase();
 
                         $(cmbFieldID + " option").each(function () {
