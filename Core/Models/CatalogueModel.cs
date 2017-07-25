@@ -6,6 +6,8 @@ using EnumExtensions;
 using Core.DataWrapper;
 using Core.WebExtensions;
 using System.Data.Odbc;
+using System.Text;
+using Core.Utils;
 
 namespace Core.Models
 {
@@ -29,7 +31,7 @@ namespace Core.Models
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
                     errorLst = IterateModelElements(placeHolder, transactionName, db2Con);
-                }                    
+                }                                                    
             }
             catch (Exception)
             {
