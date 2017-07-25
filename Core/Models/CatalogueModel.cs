@@ -8,6 +8,7 @@ using Core.WebExtensions;
 using System.Data.Odbc;
 using System.Text;
 using Core.Utils;
+using Core.CustomExceptions;
 
 namespace Core.Models
 {
@@ -23,8 +24,7 @@ namespace Core.Models
             System.Web.UI.Control placeHolder;
 
             transactionName = page.Request.QueryString["transacao"];
-            placeHolder = page.Master.FindControl("CPH");
-            var lst = DataManager.ModelDb2(transactionName);
+            placeHolder = page.Master.FindControl("CPH");            
 
             try
             {
@@ -36,12 +36,12 @@ namespace Core.Models
             catch (Exception)
             {
                 if (errorLst != null && errorLst.Length > 0)
-                    throw new Exception("Campos errados: " + errorLst);
+                    throw new InvalidFieldsException(errorLst);
                 else
                     throw;
             }
             if (errorLst.Length > 0)
-                throw new Exception("Campos errados: " + errorLst);
+                throw new InvalidFieldsException(errorLst);
 
         }
 
@@ -436,7 +436,6 @@ namespace Core.Models
                 en = TipoLiquidaEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
 
                 en = TipoLiquidaEnum.Financeira;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -459,7 +458,7 @@ namespace Core.Models
                 en = PrazoAbsolutoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
+                
 
                 en = PrazoAbsolutoEnum.A;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -488,8 +487,7 @@ namespace Core.Models
                 en = TipoMercadoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
-
+              
                 en = TipoMercadoEnum.MER;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
@@ -1185,6 +1183,6 @@ namespace Core.Models
 
             }
             return list;
-        }
+        }        
     }
 }

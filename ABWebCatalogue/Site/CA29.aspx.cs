@@ -18,6 +18,11 @@ namespace ABWebCatalogue.Site
             CatalogueModel.ApplyModel(this);
             LoadCombos();          
             InjectJs();
+
+            if(IsPostBack)
+            {
+                //empty
+            }
         }
 
         protected void btnClaBank_Click(object sender, EventArgs e)

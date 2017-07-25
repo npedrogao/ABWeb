@@ -79,7 +79,7 @@ namespace Core.DataWrapper
             {
                 Logging.LoggingHelper.LogException(ex.Message, Logging.LoggingType.Error, ex);
                 LogUtils.Error(ex);
-                throw ex;
+                throw;
             }
 
             return lst;
