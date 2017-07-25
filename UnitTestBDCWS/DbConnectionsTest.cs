@@ -10,7 +10,7 @@ using System.Data;
 namespace UnitTestBDCWS
 {
     [TestClass]
-    public class TestDbConnections
+    public class DbConnectionsTest
     {
         [TestMethod]
         public void TestCatalogueDbConnection()
