@@ -5,7 +5,7 @@ using Core.Utils;
 namespace UnitTestBDCWS
 {
     [TestClass]
-    public class TestCustomMaskValidations
+    public class CustomMaskValidationsTest
     {
         [TestMethod]
         public void TestDateValidation()

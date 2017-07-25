@@ -6,6 +6,9 @@ using EnumExtensions;
 using Core.DataWrapper;
 using Core.WebExtensions;
 using System.Data.Odbc;
+using System.Text;
+using Core.Utils;
+using Core.CustomExceptions;
 
 namespace Core.Models
 {
@@ -15,42 +18,44 @@ namespace Core.Models
         /// Applys the model definitions to page
         /// </summary>
         /// <param name="page"></param>
-        public static void ApplyModel(System.Web.UI.Page page)
+        public static void ApplyModel(System.Web.UI.Page page, ref StringBuilder js)
         {
             string transactionName, errorLst = null;
             System.Web.UI.Control placeHolder;
 
             transactionName = page.Request.QueryString["transacao"];
             placeHolder = page.Master.FindControl("CPH");
-            var lst = DataManager.ModelDb2(transactionName);
 
             try
             {
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
-                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con);
-                }                    
+                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js);
+                }
             }
             catch (Exception)
             {
                 if (errorLst != null && errorLst.Length > 0)
-                    throw new Exception("Campos errados: " + errorLst);
+                    throw new InvalidFieldsException(errorLst);
                 else
                     throw;
             }
             if (errorLst.Length > 0)
-                throw new Exception("Campos errados: " + errorLst);
+                throw new InvalidFieldsException(errorLst);
+
+
 
         }
 
-        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con)
+        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con, ref StringBuilder js)
         {
-            string fieldName, errorLst;
+            string fieldName;
+            StringBuilder errorLst = new StringBuilder();
             var lst = DataManager.ModelDb2(transactionName);
-            errorLst = string.Empty;
             List<KeyValuePair<string, string>> tabelaLst = null;
 
             System.Web.UI.Control curControl = null;
+
             foreach (var itm in lst)
             {
                 if (String.IsNullOrEmpty(itm.CopyBook))
@@ -67,17 +72,17 @@ namespace Core.Models
                         if (curControl != null && itm.Tamanho.HasValue)
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
-                            errorLst += fieldName + "\n";
+                            errorLst.Append(fieldName).Append("\n");
 
                         if (itm.DescricaoLbl != null)
                         {
                             fieldName = "lbl" + itm.CopyBook;
                             curControl = placeHolder.FindControl(fieldName);
 
-                            if (curControl != null && (curControl is System.Web.UI.WebControls.TextBox))
+                            if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
                         break;
@@ -90,30 +95,24 @@ namespace Core.Models
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
                         fieldName = "cmb" + itm.CopyBook;
                         curControl = placeHolder.FindControl(fieldName);
 
                         if (curControl == null || !(curControl is System.Web.UI.HtmlControls.HtmlSelect))
-                            errorLst += fieldName + "\n";
-                        else if(itm.Tabela != TabelaEnum.NULL)
+                            errorLst.Append(fieldName).Append("\n");
+                        else if (itm.Tabela != TabelaEnum.NULL)
                         {
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
                             cmb.LoadWithList(false, tabelaLst);
+                            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID, cmb.ClientID.Replace("cmb", "txt"));
                         }
                         break;
 
                     case TipoCampoEnum.CustomMask:
-                        fieldName = "txt" + itm.CopyBook;
-                        curControl = placeHolder.FindControl(fieldName);
-                        if (curControl != null && itm.Tamanho.HasValue)
-                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
-                        else
-                            errorLst += fieldName + "\n";
-
                         if (itm.DescricaoLbl != null)
                         {
                             fieldName = "lbl" + itm.CopyBook;
@@ -122,13 +121,20 @@ namespace Core.Models
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
                             else
-                                errorLst += fieldName + "\n";
+                                errorLst.Append(fieldName).Append("\n");
                         }
 
+                        fieldName = "txt" + itm.CopyBook;
+                        curControl = placeHolder.FindControl(fieldName);
+
+                        if (curControl != null && itm.Tamanho.HasValue)
+                            (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
+                        else
+                            errorLst.Append(fieldName).Append("\n");
                         break;
                 }
             }
-            return errorLst;
+            return errorLst.ToString();
         }
 
         public static string Terminal { get; set; }
@@ -434,7 +440,6 @@ namespace Core.Models
                 en = TipoLiquidaEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
 
                 en = TipoLiquidaEnum.Financeira;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -457,7 +462,7 @@ namespace Core.Models
                 en = PrazoAbsolutoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
+
 
                 en = PrazoAbsolutoEnum.A;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
@@ -486,7 +491,6 @@ namespace Core.Models
                 en = TipoMercadoEnum.Empty;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
-                return lst;
 
                 en = TipoMercadoEnum.MER;
                 lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)

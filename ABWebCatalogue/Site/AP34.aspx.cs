@@ -20,8 +20,9 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             //this.LoadComplete += AP34_LoadComplete;
-
-            CatalogueModel.ApplyModel(this);
+            StringBuilder js = new StringBuilder();
+            CatalogueModel.ApplyModel(this, ref js);
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
 
             type = Request.QueryString["type"];
 

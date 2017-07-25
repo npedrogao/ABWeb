@@ -15,91 +15,16 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CatalogueModel.ApplyModel(this);
-            cmbICOMRES01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMRES10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOMSUB10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbCESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActiveExclusivo);
-            cmbCSRRI.LoadWithList(IsPostBack, CatalogueModel.ListRiscoKidd);
-            cmbIDIVIDEND.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbIDIVIDEND.Value = cmbIDIVIDEND.Items[2].Value;
-            cmbIUCIT.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbIUCIT.Value = cmbIUCIT.Items[0].Value;
-            cmbINSCOPE.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            cmbINSCOPE.Value = cmbINSCOPE.Items[0].Value;
-            cmbICUSTODD.LoadWithList(IsPostBack, CatalogueModel.ListPricing);
-            cmbICUSTODD.Value = cmbICUSTODD.Items[2].Value;
-            cmbIMULTCTA.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbIMULTCTA.Value = cmbIMULTCTA.Items[2].Value;
-            cmbICUSTODGA.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            cmbICUSTODGA.Value = cmbICUSTODGA.Items[1].Value;
-            cmbIBENEFIC.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbIBENEFIC.Value = cmbIBENEFIC.Items[2].Value;
-            cmbCVALORIM.LoadWithList(IsPostBack, CatalogueModel.ListTipoValoracao);
-            cmbCVALORIM.Value = cmbCVALORIM.Items[1].Value;
-            cmbCPERIODO.LoadWithList(IsPostBack, CatalogueModel.ListPeriodoCoracao);
-            cmbCPERIODO.Value = cmbCPERIODO.Items[1].Value;
-            cmbICOTNET.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
-            cmbICOTNET.Value = cmbICOTNET.Items[1].Value;
-            cmbINSUBSC.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgateExclusivo);
-            cmbCTIPRESGA.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgate);
-            cmbIALLFUND.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
-            cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
-
-
-
             StringBuilder js = new StringBuilder();
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES01.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES02.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES06.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES07.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES08.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES09.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES10.ClientID);
+            CatalogueModel.ApplyModel(this, ref js);
+            LoadCombos();          
+            InjectJs(ref js);
+            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
 
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB01.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB02.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB06.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB07.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB08.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB09.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB10.ClientID);
-
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES03.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES04.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES05.ClientID);
-
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB03.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB04.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);
-
-
-
-
-
-
-            //ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "function JsServerSide(){"+ js.ToString() + "}");
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){"+ js.ToString() +"};</script>", false);
-
-
+            if (IsPostBack)
+            {
+                //empty
+            }
         }
 
         protected void btnClaBank_Click(object sender, EventArgs e)
@@ -410,15 +335,89 @@ namespace ABWebCatalogue.Site
             WebUtil.ChangeBtnAtt(true, btnAttInv);
         }
 
-        protected void JsInjectCmbLookup(StringBuilder jsBuilder, int fieldSize, string copyBook)
+        private void LoadCombos()
         {
-            string placeHolderName = "CPH";
+            cmbICOMRES01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB01.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB02.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB03.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB04.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB05.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB06.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB07.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB08.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB09.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMRES10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOMSUB10.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbCESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActiveExclusivo);
+            cmbCSRRI.LoadWithList(IsPostBack, CatalogueModel.ListRiscoKidd);
+            cmbIDIVIDEND.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIDIVIDEND.Value = cmbIDIVIDEND.Items[2].Value;
+            cmbIUCIT.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIUCIT.Value = cmbIUCIT.Items[0].Value;
+            cmbINSCOPE.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbINSCOPE.Value = cmbINSCOPE.Items[0].Value;
+            cmbICUSTODD.LoadWithList(IsPostBack, CatalogueModel.ListPricing);
+            cmbICUSTODD.Value = cmbICUSTODD.Items[2].Value;
+            cmbIMULTCTA.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIMULTCTA.Value = cmbIMULTCTA.Items[2].Value;
+            cmbICUSTODGA.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbICUSTODGA.Value = cmbICUSTODGA.Items[1].Value;
+            cmbIBENEFIC.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbIBENEFIC.Value = cmbIBENEFIC.Items[2].Value;
+            cmbCVALORIM.LoadWithList(IsPostBack, CatalogueModel.ListTipoValoracao);
+            cmbCVALORIM.Value = cmbCVALORIM.Items[1].Value;
+            cmbCPERIODO.LoadWithList(IsPostBack, CatalogueModel.ListPeriodoCoracao);
+            cmbCPERIODO.Value = cmbCPERIODO.Items[1].Value;
+            cmbICOTNET.LoadWithList(IsPostBack, CatalogueModel.ListSimNaoExclusivo);
+            cmbICOTNET.Value = cmbICOTNET.Items[1].Value;
+            cmbINSUBSC.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgateExclusivo);
+            cmbCTIPRESGA.LoadWithList(IsPostBack, CatalogueModel.ListTipoResgate);
+            cmbIALLFUND.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
+            cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
+            //ToDo popular cmbCCATACT
+            var xpto = new List<KeyValuePair<string, string>>();
+            xpto.Add(new KeyValuePair<string, string>("ABC", "ABCKK"));
+            xpto.Add(new KeyValuePair<string, string>("ZDA", "ZDAKK"));
+            xpto.Add(new KeyValuePair<string, string>("OPC", "OPCKK"));
+            xpto.Add(new KeyValuePair<string, string>("SSS", "OPCSSS"));
+            cmbCCATACT.LoadWithList(IsPostBack, xpto);
+        }
 
-            //System.Web.UI.Control curControl = this.Page.Master.FindControl(placeHolderName).FindControl(fieldName);
+        private void InjectJs(ref StringBuilder js)
+        {         
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES01.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES02.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES06.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES07.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES08.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES09.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES10.ClientID);
 
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB01.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB02.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB06.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB07.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB08.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB09.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesSN", cmbICUSTODD.ClientID, cmbICOMSUB10.ClientID);
 
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES03.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES04.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoList", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMRES05.ClientID);
 
-            jsBuilder.Append(false); //ToDo            
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB03.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB04.ClientID);
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);                    
         }
     }
 }

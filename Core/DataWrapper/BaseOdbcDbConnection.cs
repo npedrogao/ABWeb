@@ -13,7 +13,7 @@ namespace Core.DataWrapper
 
         private System.Data.Odbc.OdbcConnection currentCon = null;
         private OdbcTransaction transact = null;
-        private string connectionName;
+        private readonly string connectionName;
 
         public BaseOdbcDbConnection(string connectionName)
         {
