@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ABWebCatalogue.MasterPages
+namespace ABWebCatalogue.Site
 {
-    public partial class header : System.Web.UI.UserControl
+    public partial class BootstrapTest : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ToDo
+
         }
     }
 }

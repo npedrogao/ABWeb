@@ -9,8 +9,8 @@
 	 <div class="container-fluid">
 		<div class="row">
 				<div class="col-md-12">
-			
-					<div class="col-md-1 col-md-offset-10" >	
+			        <div class="col-xs-10">&nbsp;</div>
+					<div class="col-md-1">	
                         <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" class="btn btn-primary btn-lg" style="background-color: #F06F24; border-color: #F06F24;" OnClick="btnPesquisar_Click" />
 						<%--<a href="filtrar.html">					
 						<button class="btn btn-primary btn-lg" style="background-color: #F06F24; border-color: #F06F24;" type="button">

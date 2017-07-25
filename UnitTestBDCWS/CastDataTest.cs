@@ -5,7 +5,7 @@ using Core.Utils;
 namespace UnitTestBDCWS
 {
     [TestClass]
-    public class UnitTest2
+    public class CastDataTest
     {
         [TestMethod]
         public void TestConversaoData()
