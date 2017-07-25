@@ -64,6 +64,13 @@ namespace ABWebCatalogue.Site
             cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
             cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
 
+            var xpto = new List<KeyValuePair<string, string>>();
+            xpto.Add(new KeyValuePair<string, string>("ABC", "ABCKK"));
+            xpto.Add(new KeyValuePair<string, string>("ZDA", "ZDAKK"));
+            xpto.Add(new KeyValuePair<string, string>("OPC", "OPCKK"));
+            xpto.Add(new KeyValuePair<string, string>("SSS", "OPCSSS"));
+            cmbCCATACT.LoadWithList(IsPostBack, xpto);
+
 
 
             StringBuilder js = new StringBuilder();
@@ -90,12 +97,8 @@ namespace ABWebCatalogue.Site
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB03.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB04.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);
-
-
-
-
-
-
+            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", "3", txtCCATACT.ClientID, cmbCCATACT.ClientID);
+            
             //ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "function JsServerSide(){"+ js.ToString() + "}");
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){"+ js.ToString() +"};</script>", false);
 
