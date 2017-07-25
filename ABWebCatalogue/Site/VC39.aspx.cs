@@ -1,4 +1,5 @@
 ﻿using Core.Models;
+using Core.Utils;
 using Core.WebExtensions;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace ABWebCatalogue.Site
             {
                 case "C":
                     {
-                        lblTransaction.Text = "VC39A";
+                        lblTransaction.Text = "VC39C";
 
 
                         break;
@@ -34,34 +35,34 @@ namespace ABWebCatalogue.Site
                     {
                         lblTransaction.Text = "VC39A";
 
-                        txtProd.Text = model.Cpro;
-                        txtSubProd.Text = model.Spro;
-                        txtName.Text = model.Nome;
+                        //txtProd.Text = model.Cpro;
+                        //txtSubProd.Text = model.Spro;
+                        //txtName.Text = model.Nome;
 
-                        //Parametros Gerais
-                        txtTipo.Text = model.Tipo;
-                        txtGtip.Text = model.Gtip;
-                        txtCmoe.Text = model.Cmoe;
-                        txtGmoe.Text = model.Gmoe;
-                        txtCbal.Text = model.Cbal;
-                        txtNcta.Text = model.Ncta;
-                        txtCapo.Text = model.Capoano;
-                        txtZapo.Text = model.Zapolice;
-                        txtCeti.Text = model.Ccertif;
-                        txtCera.Text = model.Ccerano;
-                        txtCba1.Text = model.Cbalsaco;
-                        txtNct1.Text = model.Cctasaco;
-                        txtBank.Text = model.Cbannib;
-                        txtBalc.Text = model.Cbalnib;
-                        txtCnum.Text = model.Cnumnib;
-                        txtDigc.Text = model.Cdignib;
-                        txtQbas.Text = model.Qbascalc;
-                        txtCseq.Text = model.Csequen;
-                        txtQdec.Text = model.Qdeciups;
-                        txtQprp.Text = model.Qpropval;
-                        cmbDuti.Value = model.Ctipodias;
-                        txtQalt.Text = model.Qaltmod;
-                        txtProd.Text = model.Criscoprd;
+                        ////Parametros Gerais
+                        //txtTipo.Text = model.Tipo;
+                        //txtGtip.Text = model.Gtip;
+                        //txtCmoe.Text = model.Cmoe;
+                        //txtGmoe.Text = model.Gmoe;
+                        //txtCbal.Text = model.Cbal;
+                        //txtNcta.Text = model.Ncta;
+                        //txtCapo.Text = model.Capoano;
+                        //txtZapo.Text = model.Zapolice;
+                        //txtCeti.Text = model.Ccertif;
+                        //txtCera.Text = model.Ccerano;
+                        //txtCba1.Text = model.Cbalsaco;
+                        //txtNct1.Text = model.Cctasaco;
+                        //txtBank.Text = model.Cbannib;
+                        //txtBalc.Text = model.Cbalnib;
+                        //txtCnum.Text = model.Cnumnib;
+                        //txtDigc.Text = model.Cdignib;
+                        //txtQbas.Text = model.Qbascalc;
+                        //txtCseq.Text = model.Csequen;
+                        //txtQdec.Text = model.Qdeciups;
+                        //txtQprp.Text = model.Qpropval;
+                        //cmbDuti.Value = model.Ctipodias;
+                        //txtQalt.Text = model.Qaltmod;
+                        //txtProd.Text = model.Criscoprd;
 
                         //DURAÇÕES
                         txtQANOMIN.Text = model.Qanomin;
@@ -76,20 +77,20 @@ namespace ABWebCatalogue.Site
                         txtTPENTRFO.Text = model.Tpentrfo;
                         txtMRESGMIN.Text = model.Mresgmin;
 
-                        //Atributos Investimento
-                        txtSubFamilia.Text = model.SubFamilia;
-                        txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
-                        txtLiquidez.Text = model.Liquidez;
-                        txtComplexidade.Text = model.Complexidade;
-                        txtComplexidadeDesc.Text = model.ComplexidadeDesc;
-                        txtHorizonteTemporal.Text = model.HorizonteTemporal;
-                        txtHorizonteTemporalDesc.Text = model.HorizonteTemporalDesc;
-                        txtZonaGeografica.Text = model.ZonaGeografica;
-                        txtZonaGeograficaDesc.Text = model.ZonaGeograficaDesc;
-                        txtOnOffRegular.Text = model.OnOffRegular;
-                        cmbIpad.Value = model.Ipad;
-                        txtNivelRisco.Text = model.NivelRisco;
-                        txtVaR.Text = model.VaR;
+                        ////Atributos Investimento
+                        //txtSubFamilia.Text = model.SubFamilia;
+                        //txtSubFamiliaDesc.Text = model.SubFamiliaDesc;
+                        //txtLiquidez.Text = model.Liquidez;
+                        //txtComplexidade.Text = model.Complexidade;
+                        //txtComplexidadeDesc.Text = model.ComplexidadeDesc;
+                        //txtHorizonteTemporal.Text = model.HorizonteTemporal;
+                        //txtHorizonteTemporalDesc.Text = model.HorizonteTemporalDesc;
+                        //txtZonaGeografica.Text = model.ZonaGeografica;
+                        //txtZonaGeograficaDesc.Text = model.ZonaGeograficaDesc;
+                        //txtOnOffRegular.Text = model.OnOffRegular;
+                        //cmbIpad.Value = model.Ipad;
+                        //txtNivelRisco.Text = model.NivelRisco;
+                        //txtVaR.Text = model.VaR;
 
                         //TOMADOR e PESSOAS SEGURAS
                         txtQIDADMIN.Text = model.Qidadmin;
@@ -212,75 +213,75 @@ namespace ABWebCatalogue.Site
 
         }
 
-        protected void btnClean_Click(object sender, EventArgs e)
+        protected void btnClear_Click(object sender, EventArgs e)
         {
+
             Master.FindControl("CPH").Controls.SetCleanField();
 
-            Page_Load(sender, e);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
             var form = Request.Form;
 
-            model.Cpro = form.GetStr(txtProd.ID);
-            model.Spro = form.GetStr(txtSubProd.ID);
-            model.Nome = form.GetStr(txtName.ID);
+            //model.Cpro = form.GetStr(txtProd.ID);
+            //model.Spro = form.GetStr(txtSubProd.ID);
+            //model.Nome = form.GetStr(txtName.ID);
 
-            //Parametros Gerais
-            model.Tipo = form.GetStr(txtTipo.ID);
-            model.Gtip = form.GetStr(txtGtip.ID);
-            model.Cmoe = form.GetStr(txtCmoe.ID);
-            model.Gmoe = form.GetStr(txtGmoe.ID);
-            model.Cbal = form.GetStr(txtCbal.ID);
-            model.Ncta = form.GetStr(txtNcta.ID);
-            model.Capoano = form.GetStr(txtCapo.ID);
-            model.Zapolice = form.GetStr(txtZapo.ID);
-            model.Ccertif = form.GetStr(txtCeti.ID);
-            model.Ccerano = form.GetStr(txtCera.ID);
-            model.Cbalsaco = form.GetStr(txtCba1.ID);
-            model.Cctasaco = form.GetStr(txtNct1.ID);
-            model.Cbannib = form.GetStr(txtBank.ID);
-            model.Cbalnib = form.GetStr(txtBalc.ID);
-            model.Cnumnib = form.GetStr(txtCnum.ID);
-            model.Cdignib = form.GetStr(txtDigc.ID);
-            model.Qbascalc = form.GetStr(txtQbas.ID);
-            model.Csequen = form.GetStr(txtCseq.ID);
-            model.Qdeciups = form.GetStr(txtQdec.ID);
-            model.Qpropval = form.GetStr(txtQprp.ID);
-            model.Ctipodias = form.GetStr(cmbDuti.ID);
-            model.Qaltmod = form.GetStr(txtQalt.ID);
-            model.Criscoprd = form.GetStr(txtProd.ID);
+            ////Parametros Gerais
+            //model.Tipo = form.GetStr(txtTipo.ID);
+            //model.Gtip = form.GetStr(txtGtip.ID);
+            //model.Cmoe = form.GetStr(txtCmoe.ID);
+            //model.Gmoe = form.GetStr(txtGmoe.ID);
+            //model.Cbal = form.GetStr(txtCbal.ID);
+            //model.Ncta = form.GetStr(txtNcta.ID);
+            //model.Capoano = form.GetStr(txtCapo.ID);
+            //model.Zapolice = form.GetStr(txtZapo.ID);
+            //model.Ccertif = form.GetStr(txtCeti.ID);
+            //model.Ccerano = form.GetStr(txtCera.ID);
+            //model.Cbalsaco = form.GetStr(txtCba1.ID);
+            //model.Cctasaco = form.GetStr(txtNct1.ID);
+            //model.Cbannib = form.GetStr(txtBank.ID);
+            //model.Cbalnib = form.GetStr(txtBalc.ID);
+            //model.Cnumnib = form.GetStr(txtCnum.ID);
+            //model.Cdignib = form.GetStr(txtDigc.ID);
+            //model.Qbascalc = form.GetStr(txtQbas.ID);
+            //model.Csequen = form.GetStr(txtCseq.ID);
+            //model.Qdeciups = form.GetStr(txtQdec.ID);
+            //model.Qpropval = form.GetStr(txtQprp.ID);
+            //model.Ctipodias = form.GetStr(cmbDuti.ID);
+            //model.Qaltmod = form.GetStr(txtQalt.ID);
+            //model.Criscoprd = form.GetStr(txtProd.ID);
 
-            //DURAÇÕES
-            model.Qanomin = form.GetStr(txtQANOMIN.ID);
-            model.Qmindia = form.GetStr(txtQMINDIA.ID);
-            model.Qanomax = form.GetStr(txtQANOMAX.ID);
-            model.Qmaxdia = form.GetStr(txtQMAXDIA.ID);
-            model.Dvencim = form.GetStr(txtDVENCIM.ID);
+            ////DURAÇÕES
+            //model.Qanomin = form.GetStr(txtQANOMIN.ID);
+            //model.Qmindia = form.GetStr(txtQMINDIA.ID);
+            //model.Qanomax = form.GetStr(txtQANOMAX.ID);
+            //model.Qmaxdia = form.GetStr(txtQMAXDIA.ID);
+            //model.Dvencim = form.GetStr(txtDVENCIM.ID);
 
-            //TAXAS e ENCARGOS
-            model.Tbonemp = form.GetStr(txtTBONEMP.ID);
-            model.Tcomiss = form.GetStr(txtTCOMISS.ID);
-            model.Tpentrfo = form.GetStr(txtTPENTRFO.ID);
-            model.Mresgmin = form.GetStr(txtMRESGMIN.ID);
-            //model.Tencges1 = form.GetStr();
+            ////TAXAS e ENCARGOS
+            //model.Tbonemp = form.GetStr(txtTBONEMP.ID);
+            //model.Tcomiss = form.GetStr(txtTCOMISS.ID);
+            //model.Tpentrfo = form.GetStr(txtTPENTRFO.ID);
+            //model.Mresgmin = form.GetStr(txtMRESGMIN.ID);
+            ////model.Tencges1 = form.GetStr();
 
-            //Atributos Investimento
-            model.SubFamilia = form.GetStr(txtSubFamilia.ID);
-            model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
-            model.Liquidez = form.GetStr(txtLiquidez.ID);
-            model.Complexidade = form.GetStr(txtComplexidade.ID);
-            model.ComplexidadeDesc = form.GetStr(txtComplexidadeDesc.ID);
-            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
-            model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
+            ////Atributos Investimento
+            //model.SubFamilia = form.GetStr(txtSubFamilia.ID);
+            //model.SubFamiliaDesc = form.GetStr(txtSubFamiliaDesc.ID);
+            //model.Liquidez = form.GetStr(txtLiquidez.ID);
+            //model.Complexidade = form.GetStr(txtComplexidade.ID);
+            //model.ComplexidadeDesc = form.GetStr(txtComplexidadeDesc.ID);
+            //model.HorizonteTemporal = form.GetStr(txtHorizonteTemporal.ID);
+            //model.HorizonteTemporal = form.GetStr(txtHorizonteTemporalDesc.ID);
 
-            model.ZonaGeografica = form.GetStr(txtZonaGeografica.ID);
-            model.ZonaGeograficaDesc = form.GetStr(txtZonaGeograficaDesc.ID);
-            model.OnOffRegular = form.GetStr(txtOnOffRegular.ID);
-            model.Ipad = form.GetStr(cmbIpad.ID);
-            model.NivelRisco = form.GetStr(txtNivelRisco.ID);
-            model.VaR = form.GetStr(txtVaR.ID);
+            //model.ZonaGeografica = form.GetStr(txtZonaGeografica.ID);
+            //model.ZonaGeograficaDesc = form.GetStr(txtZonaGeograficaDesc.ID);
+            //model.OnOffRegular = form.GetStr(txtOnOffRegular.ID);
+            //model.Ipad = form.GetStr(cmbIpad.ID);
+            //model.NivelRisco = form.GetStr(txtNivelRisco.ID);
+            //model.VaR = form.GetStr(txtVaR.ID);
 
             //TOMADOR e PESSOAS SEGURAS
             model.Qidadmin = form.GetStr(txtQIDADMIN.ID);
@@ -386,6 +387,289 @@ namespace ABWebCatalogue.Site
             ////DPM
             //model.Idpm = form.GetStr(txtIdpm.ID);
 
+        }
+
+        protected void btnCloseAll_Click(object sender, EventArgs e)
+        {
+            pnlAtribInvest.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnAtribInvest);
+            pnlContabilidade.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnContabilidade);
+            pnlCoperacs.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnCoperacs);
+            pnlCustos.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnCustos);
+            pnlDuracoes.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnDuracoes);
+            pnlEncargosAltModal.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnEncargosAltModal);
+            pnlFundoAssociado.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnFundoAssociado);
+            pnlIncentivos.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnIncentivos);
+            pnlINDICADORES.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnINDICADORES);
+            pnlPRORROGAMENTO.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnPRORROGAMENTO);
+            pnlParametrosGeraisContent.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnParametrosGerais);
+            pnlResseguro.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnResseguro);
+            pnlRevalidacaoCapital.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnRevalidacaoCapital);
+            pnlTaxasEncargos.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnTaxasEncargos);
+            pnlTomadorPessoaSeguras.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnTomadorPessoaSeguras);
+            pnlValidacoes.Visible = false;
+            WebUtil.ChangeBtnAtt(false, btnValidacoes);
+        }
+
+        protected void btnOpenAll_Click(object sender, EventArgs e)
+        {
+            pnlAtribInvest.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnAtribInvest);
+            pnlContabilidade.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnContabilidade);
+            pnlCoperacs.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnCoperacs);
+            pnlCustos.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnCustos);
+            pnlDuracoes.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnDuracoes);
+            pnlEncargosAltModal.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnEncargosAltModal);
+            pnlFundoAssociado.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnFundoAssociado);
+            pnlIncentivos.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnIncentivos);
+            pnlINDICADORES.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnINDICADORES);
+            pnlPRORROGAMENTO.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnPRORROGAMENTO);
+            pnlParametrosGeraisContent.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnParametrosGerais);
+            pnlResseguro.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnResseguro);
+            pnlRevalidacaoCapital.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnRevalidacaoCapital);
+            pnlTaxasEncargos.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnTaxasEncargos);
+            pnlTomadorPessoaSeguras.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnTomadorPessoaSeguras);
+            pnlValidacoes.Visible = true;
+            WebUtil.ChangeBtnAtt(true, btnValidacoes);
+        }
+
+        protected void btnAtribInvest_Click(object sender, EventArgs e)
+        {
+            if (!pnlAtribInvest.Visible)
+            {
+                pnlAtribInvest.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnAtribInvest);
+            }
+            else
+            {
+                pnlAtribInvest.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnAtribInvest);
+            }
+        }
+
+        protected void btnContabilidade_Click(object sender, EventArgs e)
+        {
+            if (!pnlContabilidade.Visible)
+            {
+                pnlContabilidade.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnContabilidade);
+            }
+            else
+            {
+                pnlContabilidade.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnContabilidade);
+            }
+        }
+
+        protected void btnCoperacs_Click(object sender, EventArgs e)
+        {
+            if (!pnlCoperacs.Visible)
+            {
+                pnlCoperacs.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnCoperacs);
+            }
+            else
+            {
+                pnlCoperacs.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnCoperacs);
+            }
+        }
+        protected void btnCustos_Click(object sender, EventArgs e)
+        {
+            if (!pnlCustos.Visible)
+            {
+                pnlCustos.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnCustos);
+            }
+            else
+            {
+                pnlCustos.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnCustos);
+            }
+        }
+        protected void btnDuracoes_Click(object sender, EventArgs e)
+        {
+            if (!pnlDuracoes.Visible)
+            {
+                pnlDuracoes.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnDuracoes);
+            }
+            else
+            {
+                pnlDuracoes.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnDuracoes);
+            }
+        }
+        protected void btnEncargosAltModal_Click(object sender, EventArgs e)
+        {
+            if (!pnlEncargosAltModal.Visible)
+            {
+                pnlEncargosAltModal.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnEncargosAltModal);
+            }
+            else
+            {
+                pnlEncargosAltModal.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnEncargosAltModal);
+            }
+        }
+        protected void btnFundoAssociado_Click(object sender, EventArgs e)
+        {
+            if (!pnlFundoAssociado.Visible)
+            {
+                pnlFundoAssociado.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnFundoAssociado);
+            }
+            else
+            {
+                pnlFundoAssociado.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnFundoAssociado);
+            }
+        }
+        protected void btnIncentivos_Click(object sender, EventArgs e)
+        {
+            if (!pnlIncentivos.Visible)
+            {
+                pnlIncentivos.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnIncentivos);
+            }
+            else
+            {
+                pnlIncentivos.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnIncentivos);
+            }
+        }
+        protected void btnINDICADORES_Click(object sender, EventArgs e)
+        {
+            if (!pnlINDICADORES.Visible)
+            {
+                pnlINDICADORES.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnINDICADORES);
+            }
+            else
+            {
+                pnlINDICADORES.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnINDICADORES);
+            }
+        }
+        protected void btnPRORROGAMENTO_Click(object sender, EventArgs e)
+        {
+            if (!pnlPRORROGAMENTO.Visible)
+            {
+                pnlPRORROGAMENTO.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnPRORROGAMENTO);
+            }
+            else
+            {
+                pnlPRORROGAMENTO.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnPRORROGAMENTO);
+            }
+        }
+        protected void btnParametrosGerais_Click(object sender, EventArgs e)
+        {
+            if (!pnlParametrosGeraisContent.Visible)
+            {
+                pnlParametrosGeraisContent.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnParametrosGerais);
+            }
+            else
+            {
+                pnlParametrosGeraisContent.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnParametrosGerais);
+            }
+        }
+        protected void btnResseguro_Click(object sender, EventArgs e)
+        {
+            if (!pnlResseguro.Visible)
+            {
+                pnlResseguro.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnResseguro);
+            }
+            else
+            {
+                pnlResseguro.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnResseguro);
+            }
+        }
+        protected void btnRevalidacaoCapital_Click(object sender, EventArgs e)
+        {
+            if (!pnlRevalidacaoCapital.Visible)
+            {
+                pnlRevalidacaoCapital.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnRevalidacaoCapital);
+            }
+            else
+            {
+                pnlRevalidacaoCapital.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnRevalidacaoCapital);
+            }
+        }
+        protected void btnTaxasEncargos_Click(object sender, EventArgs e)
+        {
+            if (!pnlTaxasEncargos.Visible)
+            {
+                pnlTaxasEncargos.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnTaxasEncargos);
+            }
+            else
+            {
+                pnlTaxasEncargos.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnTaxasEncargos);
+            }
+        }
+        protected void btnTomadorPessoaSeguras_Click(object sender, EventArgs e)
+        {
+            if (!pnlTomadorPessoaSeguras.Visible)
+            {
+                pnlTomadorPessoaSeguras.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnTomadorPessoaSeguras);
+            }
+            else
+            {
+                pnlTomadorPessoaSeguras.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnTomadorPessoaSeguras);
+            }
+        }
+        protected void btnValidacoes_Click(object sender, EventArgs e)
+        {
+            if (!pnlValidacoes.Visible)
+            {
+                pnlValidacoes.Visible = true;
+                WebUtil.ChangeBtnAtt(true, btnValidacoes);
+            }
+            else
+            {
+                pnlValidacoes.Visible = false;
+                WebUtil.ChangeBtnAtt(false, btnValidacoes);
+            }
         }
     }
 }

@@ -1485,17 +1485,17 @@ font.font {
     color: #63544A;
 }
 
-.btnLeft{
+.btnLeft {
     margin-left: 91%;
 }
 
-.divCollapseLeft{
+.divCollapseLeft {
     margin-left: 88%;
 }
 
 
 .btnCollapse {
-     width: 108px;
+    width: 108px;
     height: 26px;
     background: #F56600;
     border: 1px solid #F56600;
@@ -1504,11 +1504,41 @@ font.font {
     font-weight: bold;
 }
 
-.martelada1{
-    margin-left:16%
+.martelada1 {
+    margin-left: 16%;
 }
 
-.martelada2{
-    margin-left:7%
+.martelada2 {
+    margin-left: 7%;
 }
+
+.t-table-t {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.t-label-c {
+    color: #555;
+    text-align: center;
+}
+
+.t-label-r {
+    color: #555;
+    text-align: right;
+}
+
+.t-field-t {
+    height: 20px;
+    line-height: 20px;
+}
+
+.t-table-dt {
+    width: 40%;
+    margin-left: 12%;
+}
+
+.span{
+    color: #555;
+}
+
 
