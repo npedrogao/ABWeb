@@ -33,6 +33,8 @@ namespace Core.Models
 
         public int ? CasasDecimais { get; set; }
 
+        public int? HelpId { get; set; }
+
         public ModelField(TabelaEnum tabelaId, string ecra, string copybook, int tamanho, TipoCampoEnum tipoCampo, string validaCol, string description, string descCol, int ? casasDec)
         {
             this.Tabela = tabelaId;
