@@ -38,30 +38,20 @@ namespace Core.DataWrapper
                         //Fix para usar o copybook como nome no aspx
                         if (!String.IsNullOrEmpty(newField.CopyBook))
                             newField.CopyBook = newField.CopyBook.Replace("-", "_");
-
-                        var size = dr.GetDbIntNull("Tamanho");
-                        if (size.HasValue)
-                            newField.Tamanho = size;
-
+                        
                         var tabID = dr.GetDbIntNull("TabelaId");
                         if (tabID.HasValue)
                             newField.Tabela = (TabelaEnum)tabID;
 
+                        newField.Tamanho = dr.GetDbIntNull("Tamanho");
                         newField.IDCol = dr.GetDbStr("IDCol");
                         newField.DescCol = dr.GetDbStr("DescCol");
-
-                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");                        
-
-                        var decSize = dr.GetDbIntNull("CasasDecimais");
-                        if (decSize.HasValue)
-                            newField.CasasDecimais = decSize;
-
                         newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+                        newField.CasasDecimais = dr.GetDbIntNull("CasasDecimais");
+                        
 
-                        var help = dr.GetDbIntNull("Help");
-                        if (help.HasValue)
-                            newField.HelpId = help;
-
+                        newField.HelpId = dr.GetDbIntNull("HelpID");
+                        
                         switch (dr.GetDbStr("ValType"))
                         {
                             case "STR":
