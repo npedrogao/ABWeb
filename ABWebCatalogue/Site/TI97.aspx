@@ -226,14 +226,7 @@
                         <asp:TextBox ID="txtDCUSTOD" runat="server" CssClass="t-field-14 "></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="t-table-col-1">
-                        <asp:Label ID="lblCRISCOPRD" runat="server" class="t-label-1">Risco Produto:</asp:Label>
-                    </td>
-                    <td class="t-table-col-2">
-                        <select id="cmbCRISCOPRD" runat="server" class="t-field-14"></select>
-                    </td>
-                </tr>
+            
                 <tr>
                     <td class="t-table-col-1">
                         <asp:Label ID="lblCPAISEMI" runat="server" class="t-label-1">Pais Emitente:</asp:Label>
