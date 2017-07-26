@@ -69,7 +69,7 @@ namespace Core.Models
 
                         fieldName = "txt" + itm.CopyBook;
                         curControl = placeHolder.FindControl(fieldName);
-                        if (curControl != null && itm.Tamanho.HasValue)
+                        if (curControl != null && itm.Tamanho.HasValue && (curControl is System.Web.UI.WebControls.TextBox))
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
                             errorLst.Append(fieldName).Append("\n");
@@ -81,6 +81,7 @@ namespace Core.Models
 
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
                             else
                                 errorLst.Append(fieldName).Append("\n");
                         }
@@ -106,9 +107,13 @@ namespace Core.Models
                         else if (itm.Tabela != TabelaEnum.NULL)
                         {
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
+
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
-                            cmb.LoadWithList(false, tabelaLst);
-                            JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID, cmb.ClientID.Replace("cmb", "txt"));
+                            if (tabelaLst?.Count > 0)
+                            {
+                                cmb.LoadWithList(false, tabelaLst);
+                                JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID);
+                            }
                         }
                         break;
 

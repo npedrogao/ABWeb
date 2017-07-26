@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Core.Utils;
+using System.Linq;
 
 namespace UnitTestBDCWS
 {
@@ -24,6 +24,16 @@ namespace UnitTestBDCWS
 
             teste2 = CastUtil.ToAnoMesDia(teste2);
             Assert.IsTrue(teste2 == "20171023");
+        }
+
+        [TestMethod]
+        public void TestIteradorEnumerado()
+        {
+        
+            var aslist2 = EnumExtensions.EnumExtensions.ConvertEnumToList<Core.Models.H1971Enum>();
+
+
+
         }
     }
 }
