@@ -29,8 +29,7 @@ namespace Core.WebExtensions
                 ddl.DataBind();
             }
         }
-
-
+        
         public static void LoadWithEnum(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, IEnumerable<KeyValuePair<string, string>> lst)
         {
             if (!isPostBack)

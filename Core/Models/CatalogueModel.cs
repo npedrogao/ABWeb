@@ -81,6 +81,7 @@ namespace Core.Models
 
                             if (curControl != null && (curControl is System.Web.UI.WebControls.Label))
                                 (curControl as System.Web.UI.WebControls.Label).Text = itm.DescricaoLbl;
+
                             else
                                 errorLst.Append(fieldName).Append("\n");
                         }
