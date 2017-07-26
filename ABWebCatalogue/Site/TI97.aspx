@@ -1,11 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI97.aspx.cs" Inherits="ABWebCatalogue.Site.TI97" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
-    <script src="../scripts/jquery-1.9.1.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/bootstrap-datepicker.min.js"></script>
-    <meta http-equiv="Cache-Control" content="no-store" />
+    <script type="text/javascript">
+
+        function fLookupCmbOnChange(maxLength, txtID, cmbID) {
+            //text change
+            var cmbFieldID = "#" + cmbID;
+            var txtField = $("#" + txtID);
+
+            if (typeof txtField !== "undefined")
+                txtField.on('input', function (e) {
+
+                    if (txtField.val().length <= parseInt(maxLength)) {
+                        var textToCompare = txtField.val().trim().toLocaleLowerCase();
+
+                        $(cmbFieldID + " option").each(function () {
+                            if (textToCompare == $(this).val().toLocaleLowerCase()) {
+                                $(cmbFieldID).val(textToCompare.toLocaleUpperCase());
+
+                            }
+                        });
+                    }
+                });
+            //combo change
+            if (typeof $(cmbFieldID) !== "undefined")
+                $(cmbFieldID).change(function myfunction() {
+                    txtField.val($(cmbFieldID + " option:selected").text());
+                });
+        }
+    </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -226,14 +249,7 @@
                         <asp:TextBox ID="txtDCUSTOD" runat="server" CssClass="t-field-14 "></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="t-table-col-1">
-                        <asp:Label ID="lblCRISCOPRD" runat="server" class="t-label-1">Risco Produto:</asp:Label>
-                    </td>
-                    <td class="t-table-col-2">
-                        <select id="cmbCRISCOPRD" runat="server" class="t-field-14"></select>
-                    </td>
-                </tr>
+            
                 <tr>
                     <td class="t-table-col-1">
                         <asp:Label ID="lblCPAISEMI" runat="server" class="t-label-1">Pais Emitente:</asp:Label>
