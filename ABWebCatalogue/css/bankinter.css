@@ -22,10 +22,10 @@ h1#title {
     display: none;
 }
 
-a, a:visited {
+/*a, a:visited {
     color: #F56600 !important;
     text-decoration: none !important;
-}
+}*/
 /*
 textarea {
     resize: none;
@@ -124,11 +124,11 @@ textarea {
     color: #000000;
 }
 
-.panel {
+/*.panel {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #eeeeee;
-}
+}*/
 /* Control label */
 .control-label {
     width: 48%;
@@ -1116,7 +1116,7 @@ table.dataTable tr {
 
 .t-btn-2 {
     width: 80px;
-    height: 26px;
+    height: 28px;
     background: #F56600;
     border: 1px solid #F56600;
     color: #fff;
@@ -1340,43 +1340,28 @@ table.dataTable tr {
     width: 20px;
 }
 
-
-div.content {
-    margin: 16px;
-    width: 100%;
-    font-family: Bankinter;
-}
-
-div.panel-content {
-    background-color: rgb(242, 242, 242);
-    color: rgb(66, 99, 145);
-}
-
-button.btn {
-    background: rgb(253, 101, 0);
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-a {
+.a {
     text-decoration: none;
+    color: #FFF;
 }
 
-hr.hr {
-    background: rgb(253, 101, 0);
-    height: 0.5px;
-    color: rgb(253, 101, 0);
-}
-
-.margin-btn{
-    margin-right:5%;
+.margin-btn {
+    margin-right: 5%;
 }
 
 
 .titleAccordion {
+    background-color: rgb(245, 102, 0);
+    color: #FFF;
+    padding: 10px;
+    width: 99%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.titleTransaction {
     background-color: rgb(245, 102, 0);
     color: #FFF;
     padding: 10px;
@@ -1389,63 +1374,23 @@ hr.hr {
 }
 
 .panel-content {
-    /*padding: 0 18px;*/
+    background-color: rgb(242, 242, 242);
+    color: rgb(66, 99, 145);
     background-color: #eee;
     max-height: 0;
     transition: max-height 0.2s ease-out;
     font-size: 12px;
 }
 
-.titleAccordion-plus {
-    background-color: rgb(245, 102, 0);
-    color: #FFF;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
 
-    .titleAccordion-plus:after {
-        content: '\002B';
-        color: #FFF;
-        font-weight: bold;
-        float: right;
-        margin-left: 10px;
-    }
-
-.titleAccordion-less {
-    background-color: rgb(245, 102, 0);
-    color: #FFF;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-
-    .titleAccordion-less:after {
-        content: "\2212";
-        color: #FFF;
-        font-weight: bold;
-        float: right;
-        margin-left: 10px;
-    }
-
-.panel {
-    padding: 0 18px;
-    background-color: #eee;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-    font-size: 12px;
-}
+/*.panel {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}*/
 
 hr.hr {
     background: rgb(245, 102, 0);
@@ -1458,12 +1403,6 @@ hr.hr {
 img.imgTitle {
     float: right;
     margin-top: 8px;
-}
-
-div.content {
-    margin: 16px;
-    width: 95%;
-    font-family: Bankinter;
 }
 
 hr.hr {
@@ -1486,13 +1425,8 @@ font.font {
 }
 
 .btnLeft {
-    margin-left: 91%;
+    margin-left: 90%;
 }
-
-.divCollapseLeft {
-    margin-left: 88%;
-}
-
 
 .btnCollapse {
     width: 108px;
@@ -1512,8 +1446,6 @@ font.font {
     margin-left: 7%;
 }
 
-
-
 .t-table-t {
     width: 80%;
     margin-left: 10%;
@@ -1530,8 +1462,9 @@ font.font {
 }
 
 .t-field-t {
-    height: 20px;
-    line-height: 20px;
+    height: 22px;
+    line-height: 22px;
+    min-height: 22px;
 }
 
 .t-table-dt {
@@ -1539,11 +1472,116 @@ font.font {
     margin-left: 12%;
 }
 
-.span{
+.span {
     color: #555;
 }
-.tdvazio{
+
+.tdvazio {
     width: 10%;
 }
 
+.padding-row {
+    padding-bottom: 10px;
+}
 
+.panel-title {
+    width: 100%;
+    background-color: rgb(253, 101, 0);
+    color: #FFF;
+    font-size: 15px;
+    padding: 10px;
+}
+
+p.title-create {
+    text-align: center;
+    font-size: xx-large;
+}
+
+div.title {
+    width: 100%;
+    background-color: rgb(253, 101, 0);
+    color: #FFF;
+    font-size: 15px;
+    text-align: right;
+    padding: 10px;
+}
+
+.content {
+    width: 1200px;
+    font-family: Bankinter;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button.btn {
+    background: rgb(253, 101, 0);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divCollapseLeft {
+    margin-left: 80%;
+}
+
+.btns {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-family: Bankinter;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #F56600;
+    border: 1px solid #F56600;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .btns:hover {
+        background: #F56600;
+        border-color: #F56600;
+    }
+
+
+a.accordion {
+    background-color: rgb(253, 101, 0);
+    color: #FFF;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    text-decoration-line: none;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    a.accordion.active, a.accordion:hover {
+        text-decoration-line: none;
+    }
+
+    a.accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        float: right;
+        margin-left: 5px;
+    }
+
+    a.accordion.active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+
+/* Style the accordion panel. Note: hidden by default */
+
+div.panel-accordion {
+    padding: 0 18px;
+    background-color: white;
+    transition: max-height 0.2s ease-out;
+}

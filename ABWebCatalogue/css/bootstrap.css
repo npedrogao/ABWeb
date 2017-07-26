@@ -2647,7 +2647,6 @@ input[type="button"].btn-block {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .glyphicon:empty {

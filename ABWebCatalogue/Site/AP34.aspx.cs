@@ -19,12 +19,12 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this.LoadComplete += AP34_LoadComplete;
-            StringBuilder js = new StringBuilder();
-            CatalogueModel.ApplyModel(this, ref js);
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            ////this.LoadComplete += AP34_LoadComplete;
+            //StringBuilder js = new StringBuilder();
+            //CatalogueModel.ApplyModel(this, ref js);
+            //ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
 
-            type = Request.QueryString["type"];
+            //type = Request.QueryString["type"];
 
             //cmbIPrzAbs.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
             //cmbIIrs.LoadWithEnum(IsPostBack, CatalogueModel.ListSimNao.ToList());
@@ -144,100 +144,100 @@ namespace ABWebCatalogue.Site
 
         protected void btnCaracGerais_Click(object sender, EventArgs e)
         {
-            if (pnlCatGeraisContent.Visible == false)
-            {
-                pnlCatGeraisContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnCaracGerais);
-            }
-            else
-            {
-                pnlCatGeraisContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnCaracGerais);
-            }
+            //if (pnlCatGeraisContent.Visible == false)
+            //{
+            //    pnlCatGeraisContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnCaracGerais);
+            //}
+            //else
+            //{
+            //    pnlCatGeraisContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnCaracGerais);
+            //}
         }
 
         protected void btnRenovacoes_Click(object sender, EventArgs e)
         {
-            if (pnlRenovacoesContent.Visible == false)
-            {
-                pnlRenovacoesContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnRenovacoes);
-            }
-            else
-            {
-                pnlRenovacoesContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnRenovacoes);
-            }
+            //if (pnlRenovacoesContent.Visible == false)
+            //{
+            //    pnlRenovacoesContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnRenovacoes);
+            //}
+            //else
+            //{
+            //    pnlRenovacoesContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnRenovacoes);
+            //}
         }
 
         protected void btnOperacoes_Click(object sender, EventArgs e)
         {
-            if (pnlOperacoesContent.Visible == false)
-            {
-                pnlOperacoesContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnOperacoes);
-            }
-            else
-            {
-                pnlOperacoesContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnOperacoes);
-            }
+            //if (pnlOperacoesContent.Visible == false)
+            //{
+            //    pnlOperacoesContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnOperacoes);
+            //}
+            //else
+            //{
+            //    pnlOperacoesContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnOperacoes);
+            //}
         }
 
         protected void btnDebito_Click(object sender, EventArgs e)
         {
-            if (pnlDebitoContent.Visible == false)
-            {
-                pnlDebitoContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDebito);
-            }
-            else
-            {
-                pnlDebitoContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDebito);
-            }
+            //if (pnlDebitoContent.Visible == false)
+            //{
+            //    pnlDebitoContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnDebito);
+            //}
+            //else
+            //{
+            //    pnlDebitoContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnDebito);
+            //}
         }
 
         protected void btnValidacao_Click(object sender, EventArgs e)
         {
-            if (pnlValidacaoContent.Visible == false)
-            {
-                pnlValidacaoContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnValidacao);
-            }
-            else
-            {
-                pnlValidacaoContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnValidacao);
-            }
+            //if (pnlValidacaoContent.Visible == false)
+            //{
+            //    pnlValidacaoContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnValidacao);
+            //}
+            //else
+            //{
+            //    pnlValidacaoContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnValidacao);
+            //}
         }
 
         protected void btnCrossSelling_Click(object sender, EventArgs e)
         {
-            if (pnlCrossSellingContent.Visible == false)
-            {
-                pnlCrossSellingContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnCrossSelling);
-            }
-            else
-            {
-                pnlCrossSellingContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnCrossSelling);
-            }
+            //if (pnlCrossSellingContent.Visible == false)
+            //{
+            //    pnlCrossSellingContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnCrossSelling);
+            //}
+            //else
+            //{
+            //    pnlCrossSellingContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnCrossSelling);
+            //}
         }
 
         protected void btnAtributoInvestimento_Click(object sender, EventArgs e)
         {
-            if (pnlAtributoInvestimentoContent.Visible == false)
-            {
-                pnlAtributoInvestimentoContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
-            }
-            else
-            {
-                pnlAtributoInvestimentoContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
-            }
+            //if (pnlAtributoInvestimentoContent.Visible == false)
+            //{
+            //    pnlAtributoInvestimentoContent.Visible = true;
+            //    WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
+            //}
+            //else
+            //{
+            //    pnlAtributoInvestimentoContent.Visible = false;
+            //    WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
+            //}
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -319,38 +319,38 @@ namespace ABWebCatalogue.Site
 
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
-            pnlCatGeraisContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnCaracGerais);
-            pnlRenovacoesContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnRenovacoes);
-            pnlOperacoesContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnOperacoes);
-            pnlDebitoContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDebito);
-            pnlValidacaoContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnValidacao);
-            pnlCrossSellingContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnCrossSelling);
-            pnlAtributoInvestimentoContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
+            //pnlCatGeraisContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnCaracGerais);
+            //pnlRenovacoesContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnRenovacoes);
+            //pnlOperacoesContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnOperacoes);
+            //pnlDebitoContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDebito);
+            //pnlValidacaoContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnValidacao);
+            //pnlCrossSellingContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnCrossSelling);
+            //pnlAtributoInvestimentoContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnAtributoInvestimento);
         }
 
         protected void btnOpenAll_Click(object sender, EventArgs e)
         {
-            pnlCatGeraisContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnCaracGerais);
-            pnlRenovacoesContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnRenovacoes);
-            pnlOperacoesContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnOperacoes);
-            pnlDebitoContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDebito);
-            pnlValidacaoContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnValidacao);
-            pnlCrossSellingContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnCrossSelling);
-            pnlAtributoInvestimentoContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
+            //pnlCatGeraisContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnCaracGerais);
+            //pnlRenovacoesContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnRenovacoes);
+            //pnlOperacoesContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnOperacoes);
+            //pnlDebitoContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDebito);
+            //pnlValidacaoContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnValidacao);
+            //pnlCrossSellingContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnCrossSelling);
+            //pnlAtributoInvestimentoContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnAtributoInvestimento);
         }
     }
 }
