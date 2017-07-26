@@ -8,6 +8,14 @@ namespace Core.Utils
 {
     public static class WebUtil
     {
+        public static void HideShowControls(Boolean visible, params System.Web.UI.Control[] ctrls)
+        {
+            foreach (var ctrl in ctrls)
+            {
+                ctrl.Visible = visible;
+            }
+        }
+
         public static void ChangeBtnAtt(Boolean b, HtmlButton btn)
         {
             if (b)
