@@ -15,7 +15,7 @@ namespace ABWebCatalogue.Site
     public partial class TI97 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { 
+        {
             cmbITITDEF.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbICOTADO.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbNEGOCIAV.LoadWithList(IsPostBack, CatalogueModel.ListNegociavel);

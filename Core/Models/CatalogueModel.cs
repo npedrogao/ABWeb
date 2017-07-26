@@ -69,7 +69,7 @@ namespace Core.Models
 
                         fieldName = "txt" + itm.CopyBook;
                         curControl = placeHolder.FindControl(fieldName);
-                        if (curControl != null && itm.Tamanho.HasValue)
+                        if (curControl != null && itm.Tamanho.HasValue && (curControl is System.Web.UI.WebControls.TextBox))
                             (curControl as System.Web.UI.WebControls.TextBox).MaxLength = (int)itm.Tamanho;
                         else
                             errorLst.Append(fieldName).Append("\n");
