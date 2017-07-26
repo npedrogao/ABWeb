@@ -56,6 +56,12 @@ namespace Core.DataWrapper
                         if (decSize.HasValue)
                             newField.CasasDecimais = decSize;
 
+                        newField.DescricaoLbl = dr.GetDbStr("Descritivo");
+
+                        var help = dr.GetDbIntNull("Help");
+                        if (help.HasValue)
+                            newField.HelpId = help;
+
                         switch (dr.GetDbStr("ValType"))
                         {
                             case "STR":
