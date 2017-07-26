@@ -48,16 +48,16 @@ namespace UnitTestBDCWS
         {
             // arrange
             List<string> transactions = new List<string>();
-            transactions.Add("26");
-            transactions.Add("88");
-            transactions.Add("192");
-            transactions.Add("196");
-            transactions.Add("234");
-            transactions.Add("61");
-            transactions.Add("18");
-            DataTable tabela; 
+            transactions.Add("TB026");
+            transactions.Add("TB088");
+            transactions.Add("TB192");
+            transactions.Add("TB196");
+            transactions.Add("TB234");
+            transactions.Add("TB061");
+            transactions.Add("TB018");
+            DataTable tabela;
 
-            string connectionString = @"Data Source = C301BTC005.corebus2.barclays.org\TC005,5660; Initial Catalog = catalogue; User Id = Catalogue; Password = p@$$w0rd; Integrated Security = False; MultipleActiveResultSets = True";
+            string connectionString = @"Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein";
 
             // act           
             using (OdbcDbConnection dbConn = new OdbcDbConnection(connectionString))
