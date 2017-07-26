@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -43,6 +44,24 @@ namespace EnumExtensions
                 return attributes[0].Description;
             else
                 return value.ToString();
+        }
+
+        public static List<KeyValuePair<string, string>> ConvertEnumToList<T>()
+        {
+            Dictionary<string, string> myDict = new Dictionary<string, string>();
+            
+            IEnumerable <T> listaEnums  = Enum.GetValues(typeof(T)).Cast<T>();
+
+            foreach (T meuEnum in listaEnums)
+            {
+                string key = GetDesc((Enum)(object)meuEnum)?.Trim();
+                if (!myDict.ContainsKey(key))
+                {
+                    myDict.Add(key, meuEnum?.ToString());
+                }                
+            }
+                       
+            return myDict.ToList();
         }
     }
 }
