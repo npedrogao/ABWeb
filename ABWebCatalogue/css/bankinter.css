@@ -1396,23 +1396,13 @@ table.dataTable tr {
     transition: 0.4s;
 }
 
-.panel-content {
+/*.panel-content {
     background-color: rgb(242, 242, 242);
     color: rgb(66, 99, 145);
     background-color: #eee;
     max-height: 0;
     transition: max-height 0.2s ease-out;
     font-size: 12px;
-}
-
-
-/*.panel {
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }*/
 
 hr.hr {
@@ -1536,7 +1526,7 @@ div.title {
 }
 
 .content {
-    width: 1900px;
+    
     font-family: Bankinter;
     padding-right: 15px;
     padding-left: 15px;
@@ -1562,8 +1552,8 @@ button.btn {
     margin-bottom: 0;
     font-size: 14px;
     font-family: Bankinter;
-    width: 90px;
-    height: 30px;
+    width: 95px;
+    height: 35px;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1573,12 +1563,14 @@ button.btn {
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 5%;
 }
 
     .btns:hover {
         background: #F56600;
         border-color: #F56600;
     }
+
 
 
 a.accordion {
@@ -1615,6 +1607,7 @@ div.panel-accordion {
     transition: max-height 0.2s ease-out;
 }
 
-.lbl{
-    margin-top: 4px !important;
+.lbl {
+    margin-top: 5px !important;
+    color: #63544A;
 }

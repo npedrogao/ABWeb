@@ -112,7 +112,7 @@ namespace Core.Models
                             if (tabelaLst?.Count > 0)
                             {
                                 cmb.LoadWithList(false, tabelaLst);
-                                JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", itm?.Tamanho.ToString(), cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID);
+                                JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID);
                             }
                         }
                         break;
