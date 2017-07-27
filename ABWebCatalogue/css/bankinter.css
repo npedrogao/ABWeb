@@ -1591,3 +1591,7 @@ div.panel-accordion {
     background-color: white;
     transition: max-height 0.2s ease-out;
 }
+
+.lbl{
+    margin-top: 4px !important;
+}

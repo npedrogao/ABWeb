@@ -1,34 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI97.aspx.cs" Inherits="ABWebCatalogue.Site.TI97" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript">
-
-        function fLookupCmbOnChange(maxLength, txtID, cmbID) {
-            //text change
-            var cmbFieldID = "#" + cmbID;
-            var txtField = $("#" + txtID);
-
-            if (typeof txtField !== "undefined")
-                txtField.on('input', function (e) {
-
-                    if (txtField.val().length <= parseInt(maxLength)) {
-                        var textToCompare = txtField.val().trim().toLocaleLowerCase();
-
-                        $(cmbFieldID + " option").each(function () {
-                            if (textToCompare == $(this).val().toLocaleLowerCase()) {
-                                $(cmbFieldID).val(textToCompare.toLocaleUpperCase());
-
-                            }
-                        });
-                    }
-                });
-            //combo change
-            if (typeof $(cmbFieldID) !== "undefined")
-                $(cmbFieldID).change(function myfunction() {
-                    txtField.val($(cmbFieldID + " option:selected").text());
-                });
-        }
-    </script>
+<script src="../js/commonAB.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -1315,5 +1288,23 @@
         </div>
         <br />
         <br />
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            JsServerSide();
+
+            
+            
+            
+
+
+
+
+        });
+    </script>
+
+
 
 </asp:Content>
