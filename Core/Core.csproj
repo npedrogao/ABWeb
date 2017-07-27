@@ -117,6 +117,7 @@
     <Compile Include="Logging\Log\SharpZipLib\Zip\ZipOutputStream.cs" />
     <Compile Include="Models\AP34Model.cs" />
     <Compile Include="Models\CA29Model.cs" />
+    <Compile Include="Models\CA58Item.cs" />
     <Compile Include="Models\CatalogueModel.cs" />
     <Compile Include="DataWrapper\DataAccess.cs" />
     <Compile Include="Models\ModelEnumerations.cs" />

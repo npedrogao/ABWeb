@@ -8,6 +8,16 @@ namespace Core.WebExtensions
 {
     public static class WebExtensions
     {
+        public static void RemoveClass(this System.Web.UI.HtmlControls.HtmlGenericControl ctrl, string cssClass)
+        {
+            ctrl.Style.Remove(cssClass);
+        }
+
+        public static void AddClass(this System.Web.UI.HtmlControls.HtmlGenericControl ctrl, string cssProp, string cssValue)
+        {
+            ctrl.Style.Add(cssProp, cssValue);
+        }
+
         public static void LoadWithList(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, List<KeyValuePair<string, string>> lst)
         {
             if (!isPostBack)

@@ -37,6 +37,29 @@ textarea {
     font-family: Verdana;
 }
 
+.gRow {
+    border-bottom: 2px solid #dddddd;
+    vertical-align: top;
+    line-height: 1.428571429;
+}
+
+.gRowAlt {
+    border-bottom: 2px solid #dddddd;
+    background: #f9f9f9 !important;
+    vertical-align: top;
+    line-height: 1.428571429;
+}
+
+.gHdr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.gHdr > div {
+    vertical-align: bottom;    
+    line-height: 1.428571429;
+    font-weight: bold;
+}
+
 .fileUpload {
     color: white;
     font-family: Verdana;
