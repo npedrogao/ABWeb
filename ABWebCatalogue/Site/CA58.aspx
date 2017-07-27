@@ -5,64 +5,60 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
-    <div class="container">
-        <div class="panel-content container-fluid form-horizontal">
+    <div class="content">
+        <div class="container-fluid form-horizontal">
             <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="col-sm-8 col-md-8"></div>
-                    <div class="col-sm-4 col-md-4 text-right">
-                        <button name="button" type="button" id="btnCriar" class="btns" runat="server" onserverclick="btnCriar_Click">Criar</button>
-                        <button name="button" type="button" id="btnEnd" class="btns">Sair</button>
+                <div class="col-lg-12">
+                    <div class="row form-group padding-row">
+                        <div class="col-lg-8"></div>
+                        <div class="col-lg-4 text-right">
+                            <button name="button" type="button" id="btnCriar" class="btns" runat="server" onserverclick="btnCriar_Click">Criar</button>
+                            <button name="button" type="button" id="btnEnd" class="btns">Sair</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <br />
-            <br />
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="col-sm-10 col-md-10">
-                        <div class="row form-group">
-                            <div class="col-sm-4 col-md-4">
-                                <label class="col-sm-4 col-md-4 control-label">Familia:</label>
-                                <div class="col-sm-6 col-md-6">
-                                    <select id="cmbFamilia" runat="server" class="form-control t-field-t"></select>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <label class="col-sm-4 col-md-4 control-label">Sub Familia:</label>
-                                <div class="col-sm-6 col-md-6">
-                                    <select id="cmbSubFamilia" runat="server" class="form-control t-field-t"></select>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <label class="col-sm-8 col-md-8 control-label">Em Comercialização:</label>
-                                <div class="col-sm-3 col-md-3">
-                                    <select id="cmbEmComercializacao" runat="server" class="form-control t-field-t"></select>
-                                </div>
+                    <br />
+                    <br />
+                    <div class="row form-group padding-row">
+                        <div class="col-lg-4">
+                            <label class="col-lg-4 lbl text-right">Familia:</label>
+                            <div class="col-lg-8">
+                                <select id="cmbFamilia" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
-                        <br />
-                        <div class="row form-group">
-                            <div class="col-sm-4 col-md-4">
-                                <label class="col-sm-4 col-md-4 control-label">Estado:</label>
-                                <div class="col-sm-6 col-md-6">
-                                    <select id="cmbEstado" runat="server" class="form-control t-field-t"></select>
-                                </div>
+                        <div class="col-lg-4">
+                            <label class="col-lg-4 lbl text-right">Sub Familia:</label>
+                            <div class="col-lg-8">
+                                <select id="cmbSubFamilia" runat="server" class="form-control t-field-t"></select>
                             </div>
-                            <div class="col-sm-4 col-md-4">
-                                <label class="col-sm-4 col-md-4 control-label">Produto:</label>
-                                <div class="col-sm-6 col-md-6">
-                                    <select id="cmbProduto" runat="server" class="form-control t-field-t"></select>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="col-lg-4 lbl text-right">Produto:</label>
+                            <div class="col-lg-8">
+                                <select id="cmbProduto" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2 col-md-2">
-                        <div class="col-sm-4 col-md-4"></div>
-                        <div class="col-sm-4 col-md-4 text-right">
-                            <button name="button" type="button" id="btnPesquisar" class="btn">Pesquisar</button>
+                    <div class="row form-group padding-row">
+                        <div class="col-lg-4">
+                            <label class="col-lg-4 lbl text-right">Em Comercialização:</label>
+                            <div class="col-lg-4">
+                                <select id="cmbEmComercializacao" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="col-lg-4 lbl text-right">Estado:</label>
+                            <div class="col-lg-4">
+                                <select id="cmbEstado" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-right">
+                        </div>
+                    </div>
+                    <div class="row form-group padding-row">
+                        <div class="col-lg-8"></div>
+                        <div class="col-lg-4 text-right">
+                            <div class="col-lg-4"></div>
+                            <button name="button" type="button" id="btnPesquisar" class="btns">Pesquisar</button>
                         </div>
                     </div>
                 </div>
@@ -72,6 +68,8 @@
         <br />
         <br />
         <br />
+
+
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 <table class="table table-striped">

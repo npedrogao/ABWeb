@@ -10,7 +10,7 @@
         <div class="titleTransaction">
             <asp:Label ID="lblTransaction" runat="server"> AP34C </asp:Label>
         </div>
-        <div class="panel-content container-fluid form-horizontal">
+        <div class="container-fluid form-horizontal">
             <div class="row">
                 <div class="col-lg-12">
                     <br />

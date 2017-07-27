@@ -1503,7 +1503,6 @@ div.title {
 }
 
 .content {
-    width: 1900px;
     font-family: Bankinter;
     padding-right: 15px;
     padding-left: 15px;
@@ -1529,8 +1528,8 @@ button.btn {
     margin-bottom: 0;
     font-size: 14px;
     font-family: Bankinter;
-    width: 90px;
-    height: 30px;
+    width: 95px;
+    height: 35px;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1540,12 +1539,14 @@ button.btn {
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 5%;
 }
 
     .btns:hover {
         background: #F56600;
         border-color: #F56600;
     }
+
 
 
 a.accordion {
