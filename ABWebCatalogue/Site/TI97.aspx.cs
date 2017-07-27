@@ -53,110 +53,38 @@ namespace ABWebCatalogue.Site
         protected void btnDadComp_Click(object sender, EventArgs e)
         {
 
-            if (!pnlDadCompContent.Visible)
-            {
-                pnlDadCompContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadComp);
-
-            }
-            else
-            {
-                pnlDadCompContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadComp);
-
-            }
+           
 
         }
 
         protected void btnDadsCOmpWarra_Click(object sender, EventArgs e)
         {
-            if (!pnlDadsCOmpWarraContent.Visible)
-            {
-                pnlDadsCOmpWarraContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadsCOmpWarra);
-            }
-            else
-            {
-                pnlDadsCOmpWarraContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadsCOmpWarra);
-            }
+            
         }
 
         protected void btnDadsCompWarrAUto_Click(object sender, EventArgs e)
         {
-            if (!pnlDadsCompWarrAUtoContent.Visible)
-            {
-                pnlDadsCompWarrAUtoContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadsCompWarrAuto);
-
-            }
-            else
-            {
-                pnlDadsCompWarrAUtoContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadsCompWarrAuto);
-
-            }
+          
         }
 
         protected void btnDadsComp_Click(object sender, EventArgs e)
         {
-            if (!pnlDadsCompContent.Visible)
-            {
-                pnlDadsCompContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadsComp);
-
-            }
-            else
-            {
-                pnlDadsCompContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadsComp);
-
-            }
+            
         }
 
         protected void btnDadosTec_Click(object sender, EventArgs e)
         {
-            if (!pnlDadosTecContent.Visible)
-            {
-                pnlDadosTecContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadosTec);
-
-            }
-            else
-            {
-                pnlDadosTecContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadosTec);
-            }
+           
         }
 
         protected void btnDadsCompEle_Click(object sender, EventArgs e)
         {
-            if (!pnlDadsCompEleContent.Visible)
-            {
-                pnlDadsCompEleContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadsCompEle);
-
-            }
-            else
-            {
-                pnlDadsCompEleContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadsCompEle);
-            }
+            
         }
 
         protected void btnDadosCompImp_Click(object sender, EventArgs e)
         {
-            if (!pnlDadosCompImpContent.Visible)
-            {
-                pnlDadosCompImpContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDadosCompImp);
-
-            }
-            else
-            {
-                pnlDadosCompImpContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDadosCompImp);
-            }
+            
         }
 
         protected void btnAttInv_Click(object sender, EventArgs e)
@@ -189,42 +117,42 @@ namespace ABWebCatalogue.Site
         protected void btnCloseAll_Click(object sender, EventArgs e)
         {
 
-            pnlDadCompContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadComp);
-            pnlDadsCOmpWarraContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadsCOmpWarra);
-            pnlDadsCompWarrAUtoContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadsCompWarrAuto);
-            pnlDadsCompContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadsComp);
-            pnlDadosTecContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadosTec);
-            pnlDadsCompEleContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadsCompEle);
-            pnlDadosCompImpContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDadosCompImp);
-            pnlAttInvContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnAttInv);
+            //pnlDadCompContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadComp);
+            //pnlDadsCOmpWarraContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadsCOmpWarra);
+            //pnlDadsCompWarrAUtoContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadsCompWarrAuto);
+            //pnlDadsCompContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadsComp);
+            //pnlDadosTecContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadosTec);
+            //pnlDadsCompEleContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadsCompEle);
+            //pnlDadosCompImpContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnDadosCompImp);
+            //pnlAttInvContent.Visible = false;
+            //WebUtil.ChangeBtnAtt(false, btnAttInv);
 
         }
         protected void btnOpenAll_Click(object sender, EventArgs e)
         {
-            pnlDadCompContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadComp);
-            pnlDadsCOmpWarraContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadsCOmpWarra);
-            pnlDadsCompWarrAUtoContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadsCompWarrAuto);
-            pnlDadsCompContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadsComp);
-            pnlDadosTecContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadosTec);
-            pnlDadsCompEleContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadsCompEle);
-            pnlDadosCompImpContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDadosCompImp);
-            pnlAttInvContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnAttInv);
+            //pnlDadCompContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadComp);
+            //pnlDadsCOmpWarraContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadsCOmpWarra);
+            //pnlDadsCompWarrAUtoContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadsCompWarrAuto);
+            //pnlDadsCompContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadsComp);
+            //pnlDadosTecContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadosTec);
+            //pnlDadsCompEleContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadsCompEle);
+            //pnlDadosCompImpContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnDadosCompImp);
+            //pnlAttInvContent.Visible = true;
+            //WebUtil.ChangeBtnAtt(true, btnAttInv);
         }
 
         protected void TypeLoad(String type)
@@ -466,21 +394,21 @@ namespace ABWebCatalogue.Site
 
         protected void ShowHideContent(Boolean b)
         {
-            WebUtil.HideShowControls(b, pnlContent, pnlDadCompContent, pnlDadsCOmpWarraContent, pnlDadsCompWarrAUtoContent, pnlDadsCompContent, pnlDadosTecContent, pnlDadsCompEleContent, pnlDadosCompImpContent, pnlAttInvContent);
+            //WebUtil.HideShowControls(b, pnlContent, pnlDadCompContent, pnlDadsCOmpWarraContent, pnlDadsCompWarrAUtoContent, pnlDadsCompContent, pnlDadosTecContent, pnlDadsCompEleContent, pnlDadosCompImpContent, pnlAttInvContent);
         }
 
         protected void ShowHideButtons(Boolean b)
         {
-            btnDadComp.Visible = b;
-            btnDadsCOmpWarra.Visible = b;
-            btnDadsCompWarrAuto.Visible = b;
-            btnDadsComp.Visible = b;
-            btnDadosTec.Visible = b;
-            btnDadsCompEle.Visible = b;
-            btnDadosCompImp.Visible = b;
-            btnAttInv.Visible = b;
-            cleanSave.Visible = b;
-            searchButton.Visible = !b;
+            //btnDadComp.Visible = b;
+            //btnDadsCOmpWarra.Visible = b;
+            //btnDadsCompWarrAuto.Visible = b;
+            //btnDadsComp.Visible = b;
+            //btnDadosTec.Visible = b;
+            //btnDadsCompEle.Visible = b;
+            //btnDadosCompImp.Visible = b;
+            //btnAttInv.Visible = b;
+            //cleanSave.Visible = b;
+            //searchButton.Visible = !b;
 
         }
 
