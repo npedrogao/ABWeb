@@ -9,8 +9,8 @@
     <link href="~\css\bootstrap-ie7fix.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <script src="../JavaScript/jquery-1.8.3.js" type="text/javascript"></script>
-    <script src="../JavaScript/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container-fluid">

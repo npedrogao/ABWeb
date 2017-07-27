@@ -535,24 +535,6 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtDCUSTOD;
         
         /// <summary>
-        /// lblCRISCOPRD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCRISCOPRD;
-        
-        /// <summary>
-        /// cmbCRISCOPRD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCRISCOPRD;
-        
-        /// <summary>
         /// lblCPAISEMI control.
         /// </summary>
         /// <remarks>
