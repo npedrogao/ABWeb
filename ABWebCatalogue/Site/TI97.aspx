@@ -1289,4 +1289,22 @@
         <br />
         <br />
 
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            JsServerSide();
+
+            
+            
+            
+
+
+
+
+        });
+    </script>
+
+
+
 </asp:Content>

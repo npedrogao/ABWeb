@@ -19,10 +19,13 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-        
-                ShowHideButtons(false);
-                ShowHideContent(false);
+            if (!IsPostBack)
+                ComboLoad();
+
+            ShowHideButtons(false);
+            ShowHideContent(false);
             
+
             StringBuilder js = new StringBuilder();
             CatalogueModel.ApplyModel(this, ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
@@ -40,7 +43,7 @@ namespace ABWebCatalogue.Site
             {
                 TypeLoad(type);
             }
-            ComboLoad();
+      
             txtDINDPRI.ReadOnly = true;
             txtDINDSEC.ReadOnly = true;
         }
