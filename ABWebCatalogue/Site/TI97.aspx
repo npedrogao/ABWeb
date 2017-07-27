@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI97.aspx.cs" Inherits="ABWebCatalogue.Site.TI97" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script src="../scripts/common-custom-rules.js"></script>
+<script src="../js/commonAB.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">

@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="CA29.aspx.cs" Inherits="ABWebCatalogue.Site.CA29" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
-    <script src="../JavaScript/jquery-1.8.3.js"></script>
-    <script src="../scripts/commonAB.js"></script>
+    <script src="../js/commonAB.js"></script>
 
     <script type="text/javascript">     
         function CustodiaRulesSS(listener, target) {
