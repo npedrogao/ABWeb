@@ -23,7 +23,7 @@ namespace ABWebCatalogue.Site
             {
                 case "C":
                     {
-                        lblTransaction.Text = "VC39A";
+                        lblTransaction.Text = "TI96C";
                         break;
                     }
                 case "M":
@@ -38,7 +38,7 @@ namespace ABWebCatalogue.Site
                     }
                 case "A":
                     {
-                        lblTransaction.Text = "VC39A";
+                        lblTransaction.Text = "TI96A";
                         break;
                     }
             }
