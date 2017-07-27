@@ -27,7 +27,9 @@ namespace ABWebCatalogue.Site
 
             if (IsPostBack)
             {
-              
+                pnlBtnSearch.AddClass("style","display:none");
+                pnlBtn.RemoveClass("hidden");
+                pnlSearchContent.RemoveClass("hidden");
             }
 
             ////this.LoadComplete += AP34_LoadComplete;
