@@ -11,8 +11,8 @@
                 <div class="col-sm-12 col-md-12">
                     <div class="col-sm-8 col-md-8"></div>
                     <div class="col-sm-4 col-md-4 text-right">
-                        <button name="button" type="button" id="btnCriar" class="btn">Criar</button>
-                        <button name="button" type="button" id="btnEnd" class="btn">Sair</button>
+                        <button name="button" type="button" id="btnCriar" class="btns" runat="server" onserverclick="btnCriar_Click">Criar</button>
+                        <button name="button" type="button" id="btnEnd" class="btns">Sair</button>
                     </div>
                 </div>
             </div>
