@@ -13,13 +13,13 @@ namespace ABWebCatalogue.Site {
     public partial class Create {
         
         /// <summary>
-        /// ddlMicroFamilia control.
+        /// cmbMicroFamilia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMicroFamilia;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbMicroFamilia;
         
         /// <summary>
         /// btnCreate control.

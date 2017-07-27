@@ -1,4 +1,5 @@
-﻿using Core.Models;
+﻿
+using Core.Models;
 using Core.WebExtensions;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,17 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlMicroFamilia.LoadWithList(IsPostBack, CatalogueModel.ListMicroFamilias);
+            cmbMicroFamilia.LoadWithList(IsPostBack, CatalogueModel.ListMicroFamilias);
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("CA58.aspx");
         }
 
         protected void btnCreate_Click(object sender, EventArgs e)
         {
-            string page = ddlMicroFamilia.SelectedValue;
+            string page = cmbMicroFamilia.Value;
 
             Response.Redirect(page+".aspx?type=C");
         }
