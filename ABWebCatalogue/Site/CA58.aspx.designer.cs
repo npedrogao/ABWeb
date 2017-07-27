@@ -13,6 +13,15 @@ namespace ABWebCatalogue.Site {
     public partial class CA58 {
         
         /// <summary>
+        /// btnCriar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnCriar;
+        
+        /// <summary>
         /// cmbFamilia control.
         /// </summary>
         /// <remarks>
