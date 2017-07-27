@@ -71,5 +71,35 @@ namespace Core.DataWrapper
 
             return lst;
         }
+
+        public static List<ErrorCodeModel> GetErrorCodeByHelpId(OdbcDbConnection dbConnection, string filter)
+        {
+            if (string.IsNullOrWhiteSpace(idColName))
+                throw new ArgumentException("Necessário indicar COPCAO!");
+
+            List<ErrorCodeModel> lst = new List<ErrorCodeModel>();
+
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT ");
+            query.Append("CODERRO").Append(", ").Append("MENSAGEM").Append(", ").Append("COPCAO");
+            query.Append(" FROM ");
+            query.Append("DB2PTUSER.");
+            query.Append(TabelaEnum.AB_WEB_CORE_ERRORCODES.GetDesc());
+            query.Append(" WHERE ").Append("COPCAO").Append( "=").Append("'").Append(filter).Append("'");
+
+            var reader = dbConnection.ExecSql(query.ToString());
+
+            while (reader.Read())
+            {
+                ErrorCodeModel erro = new ErrorCodeModel();
+                erro.CodigoErro = (int)reader["CODERRO"];
+                erro.Mensagem = reader["MENSAGEM"]?.ToString();
+                erro.Help = reader["COPCAO"]?.ToString();
+
+                lst.Add(erro);
+            }
+
+            return lst;
+        }
     }
 }

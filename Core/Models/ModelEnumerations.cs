@@ -98,6 +98,8 @@ namespace Core.Models
         TB061 = 6,
         [Description("TB018")]
         TB018 = 7,
+        [Description("AB_WEB_CORE_ERRORCODES")]
+        AB_WEB_CORE_ERRORCODES = 8,       
     }
 
     public enum TipoArredonEnum

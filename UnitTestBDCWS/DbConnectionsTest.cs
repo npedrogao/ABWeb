@@ -90,5 +90,23 @@ namespace UnitTestBDCWS
             // assert
             Assert.IsTrue(colunas.Length == tabela.Columns.Count);
         }
+
+        [TestMethod]
+        public void TestGetErrorCodesFromDb2()
+        {
+            List<ErrorCodeModel> lista;
+            // arrange
+            string connectionString = @"Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein";            
+       
+
+            // act           
+            using (OdbcDbConnection dbConn = new OdbcDbConnection(connectionString))
+            {
+                lista = Db2DAL.GetErrorCodeByHelpId(dbConn, "ARGS");
+            }
+
+            // assert
+            Assert.IsTrue(lista.Count == 2);
+        }
     }
 }
