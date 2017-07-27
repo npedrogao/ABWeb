@@ -98,6 +98,8 @@ namespace Core.Models
         TB061 = 6,
         [Description("TB018")]
         TB018 = 7,
+        [Description("AB_WEB_CORE_ERRORCODES")]
+        AB_WEB_CORE_ERRORCODES = 8,       
     }
 
     public enum TipoArredonEnum
@@ -1323,33 +1325,33 @@ namespace Core.Models
         [Description("")]
         NULL,
         [Description("402")]
-        EURIBOR365_1M,
+        EURIBOR365_1M = 1,
         [Description("702")]
-        EURIBOR365_1W,
+        EURIBOR365_1W = 2,
         [Description("705")]
-        EURIBOR365_2M,
+        EURIBOR365_2M = 3,
         [Description("703")]
-        EURIBOR365_2W,
+        EURIBOR365_2W = 4,
         [Description("404")]
-        EURIBOR365_3M,
+        EURIBOR365_3M = 5,
         [Description("704")]
-        EURIBOR365_3W,
+        EURIBOR365_3W = 6,
         [Description("706")]
-        EURIBOR365_4M,
+        EURIBOR365_4M = 7,
         [Description("707")]
-        EURIBOR365_7M,
+        EURIBOR365_7M = 8,
         [Description("407")]
-        EURIBOR365_6M,
+        EURIBOR365_6M = 9,
         [Description("708")]
-        EURIBOR365_7M2,
+        EURIBOR365_7M2 = 10,
         [Description("709")]
-        EURIBOR365_8M,
+        EURIBOR365_8M = 11,
         [Description("710")]
-        EURIBOR365_9M,
+        EURIBOR365_9M = 11,
         [Description("711")]
-        EURIBOR365_10M,
+        EURIBOR365_10M = 12,
         [Description("712")]
-        EURIBOR365_12M,
+        EURIBOR365_12M = 13,
     }
     #endregion
 }
