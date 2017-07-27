@@ -48,8 +48,6 @@ namespace Core.DataWrapper
                         newField.DescCol = dr.GetDbStr("DescCol");
                         newField.DescricaoLbl = dr.GetDbStr("Descritivo");
                         newField.CasasDecimais = dr.GetDbIntNull("CasasDecimais");
-                        
-
                         newField.HelpId = dr.GetDbIntNull("HelpID");
                         
                         switch (dr.GetDbStr("ValType"))
