@@ -11,7 +11,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
         <div class="titleTransaction">
-            <asp:Label ID="lblTransaction" runat="server"> AP34C </asp:Label>
+            <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
             <div class="row">
@@ -92,10 +92,12 @@
                     <button id="searchKeys" class="btns" runat="server">Search</button>
                 
                 </div>
+
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
                     <a id="btnCloseAll" class="btns" runat="server">Fechar</a>
                     <a id="btnOpenAll" class="btns" runat="server">Abrir</a>
                 </div>
+                <br /><br />
             </div>
             <div id="pnlSearchContent" runat="server" class="hidden">
                 <div class="col-lg-12 titleAccordion">
