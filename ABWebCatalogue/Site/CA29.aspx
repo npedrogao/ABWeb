@@ -4,35 +4,9 @@
 
 
     <script src="../JavaScript/jquery-1.8.3.js"></script>
+    <script src="../scripts/commonAB.js"></script>
 
-    <script type="text/javascript">
-
-        function fLookupCmbOnChange(maxLength, txtID, cmbID) {
-            //text change
-            var cmbFieldID = "#" + cmbID;
-            var txtField = $("#" + txtID);
-
-            if (typeof txtField !== "undefined")
-                txtField.on('input', function (e) {
-
-                    if (txtField.val().length <= parseInt(maxLength)) {
-                        var textToCompare = txtField.val().trim().toLocaleLowerCase();
-
-                        $(cmbFieldID + " option").each(function () {
-                            if (textToCompare == $(this).val().toLocaleLowerCase()) {
-                                $(cmbFieldID).val(textToCompare.toLocaleUpperCase());
-
-                            }
-                        });
-                    }
-                });
-            //combo change
-            if (typeof $(cmbFieldID) !== "undefined")
-                $(cmbFieldID).change(function myfunction() {
-                    txtField.val($(cmbFieldID + " option:selected").text());
-                });
-        }
-
+    <script type="text/javascript">     
         function CustodiaRulesSS(listener, target) {
             $("#" + listener).change(function () {
                 var aux = $("#" + listener).val();
