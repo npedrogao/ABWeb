@@ -13,57 +13,12 @@ namespace ABWebCatalogue.Site {
     public partial class CA58 {
         
         /// <summary>
-        /// btnCriar control.
+        /// rptLista control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnCriar;
-        
-        /// <summary>
-        /// cmbFamilia control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbFamilia;
-        
-        /// <summary>
-        /// cmbSubFamilia control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbSubFamilia;
-        
-        /// <summary>
-        /// cmbProduto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbProduto;
-        
-        /// <summary>
-        /// cmbEmComercializacao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbEmComercializacao;
-        
-        /// <summary>
-        /// cmbEstado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbEstado;
+        protected global::System.Web.UI.WebControls.Repeater rptLista;
     }
 }

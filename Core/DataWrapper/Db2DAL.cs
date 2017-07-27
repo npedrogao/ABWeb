@@ -74,7 +74,7 @@ namespace Core.DataWrapper
 
         public static List<ErrorCodeModel> GetErrorCodeByHelpId(OdbcDbConnection dbConnection, string filter)
         {
-            if (string.IsNullOrWhiteSpace(idColName))
+            if (string.IsNullOrWhiteSpace(filter))
                 throw new ArgumentException("Necessário indicar COPCAO!");
 
             List<ErrorCodeModel> lst = new List<ErrorCodeModel>();
