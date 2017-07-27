@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web.UI.HtmlControls;
+using Core.WebExtensions;
 
 namespace Core.Utils
 {
@@ -21,6 +19,18 @@ namespace Core.Utils
                 return dt.Value.ToShortDateString();
             else
                 return nullText;
+        }
+
+        public static void AddRemoveHidden(bool visible, params System.Web.UI.HtmlControls.HtmlGenericControl[] ctrls)
+        {
+            string cssClass = "hidden";
+            if (visible)
+                foreach (var ctrl in ctrls)
+                    ctrl.RemoveClass(cssClass);
+            else
+                foreach (var ctrl in ctrls)
+                    ctrl.AddClass(cssClass);
+
         }
 
         public static void HideShowControls(Boolean visible, params System.Web.UI.Control[] ctrls)
