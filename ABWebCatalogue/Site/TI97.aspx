@@ -7,13 +7,13 @@
             //text change
             var cmbFieldID = "#" + cmbID;
             var txtField = $("#" + txtID);
-
+            
             if (typeof txtField !== "undefined")
-                txtField.on('input', function (e) {
-
+            {
+                //txtField.on('input', function () {
+                txtField.keyup(function () {
                     if (txtField.val().length <= parseInt(maxLength)) {
                         var textToCompare = txtField.val().trim().toLocaleLowerCase();
-
                         $(cmbFieldID + " option").each(function () {
                             if (textToCompare == $(this).val().toLocaleLowerCase()) {
                                 $(cmbFieldID).val(textToCompare.toLocaleUpperCase());
@@ -22,10 +22,12 @@
                         });
                     }
                 });
+            }
+                
             //combo change
             if (typeof $(cmbFieldID) !== "undefined")
                 $(cmbFieldID).change(function myfunction() {
-                    txtField.val($(cmbFieldID + " option:selected").text());
+                    txtField.val($(cmbFieldID + " option:selected").val());
                 });
         }
     </script>
@@ -1315,5 +1317,23 @@
         </div>
         <br />
         <br />
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            JsServerSide();
+
+            
+            
+            
+
+
+
+
+        });
+    </script>
+
+
 
 </asp:Content>
