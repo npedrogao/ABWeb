@@ -29,6 +29,7 @@ namespace ABWebCatalogue.Site
             {
                 pnlBtnSearch.AddClass("style","display:none");
                 pnlBtn.RemoveClass("hidden");
+                pnlBtn.Attributes
                 pnlSearchContent.RemoveClass("hidden");
             }
 
