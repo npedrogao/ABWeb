@@ -54,11 +54,11 @@ textarea {
     border-bottom: 2px solid #dddddd;
 }
 
-.gHdr > div {
-    vertical-align: bottom;    
-    line-height: 1.428571429;
-    font-weight: bold;
-}
+    .gHdr > div {
+        vertical-align: bottom;
+        line-height: 1.428571429;
+        font-weight: bold;
+    }
 
 .fileUpload {
     color: white;
@@ -1526,7 +1526,6 @@ div.title {
 }
 
 .content {
-    
     font-family: Bankinter;
     padding-right: 15px;
     padding-left: 15px;
@@ -1560,7 +1559,8 @@ button.btn {
     cursor: pointer;
     background: #F56600;
     border: 1px solid #F56600;
-    color: #fff;
+    text-decoration: none;
+    color: #FFF;
     cursor: pointer;
     font-weight: bold;
     margin-left: 5%;
@@ -1569,6 +1569,8 @@ button.btn {
     .btns:hover {
         background: #F56600;
         border-color: #F56600;
+        text-decoration: none;
+        color: #FFF;
     }
 
 

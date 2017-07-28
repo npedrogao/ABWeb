@@ -17,250 +17,283 @@ namespace ABWebCatalogue.Site
         {
             StringBuilder js = new StringBuilder();
             CatalogueModel.ApplyModel(this, ref js);
-            LoadCombos();          
+            string transaccao = Request.QueryString["transacao"];
+            string type = transaccao.Substring(transaccao.Length - 1, 1);
+            LoadCombos();
             InjectJs(ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
 
             if (IsPostBack)
             {
-                //empty
+                pnlBtnSearch.AddClass("hidden");
+                WebUtil.AddRemoveHidden(true, pnlCA, pnlBtn, pnlSearchContent);
+
+                if (type != null)
+                {
+
+                    TypeLoad(type);
+                }
             }
         }
 
-        protected void btnClaBank_Click(object sender, EventArgs e)
+        private void TypeLoad(string type)
         {
-
-            if (!pnlClaBankContent.Visible)
+            switch (type)
             {
-                pnlClaBankContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnClaBank);
+                case "C":
+                    lblTransaction.Text = "CA39C";
 
+                    break;
+                case "M":
+                    lblTransaction.Text = "CA39M";
+
+                    break;
+                case "V":
+                    lblTransaction.Text = "CA39V";
+
+                    break;
+                case "A":
+                    lblTransaction.Text = "CA39A";
+
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                pnlClaBankContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnClaBank);
-
-            }
-
         }
 
-        protected void btnClaAllFunds_Click(object sender, EventArgs e)
-        {
+        //protected void btnClaBank_Click(object sender, EventArgs e)
+        //{
 
-            if (!PnlClaAllFunds.Visible)
-            {
-                PnlClaAllFunds.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
+        //    if (!pnlClaBankContent.Visible)
+        //    {
+        //        pnlClaBankContent.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnClaBank);
 
-            }
-            else
-            {
-                PnlClaAllFunds.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
+        //    }
+        //    else
+        //    {
+        //        pnlClaBankContent.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnClaBank);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnSociGest_Click(object sender, EventArgs e)
-        {
+        //protected void btnClaAllFunds_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlSociGest.Visible)
-            {
-                pnlSociGest.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnSociGest);
+        //    if (!PnlClaAllFunds.Visible)
+        //    {
+        //        PnlClaAllFunds.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
 
-            }
-            else
-            {
-                pnlSociGest.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnSociGest);
+        //    }
+        //    else
+        //    {
+        //        PnlClaAllFunds.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnSicav_Click(object sender, EventArgs e)
-        {
+        //protected void btnSociGest_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlSicav.Visible)
-            {
-                pnlSicav.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnSicav);
+        //    if (!pnlSociGest.Visible)
+        //    {
+        //        pnlSociGest.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnSociGest);
 
-            }
-            else
-            {
-                pnlSicav.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnSicav);
+        //    }
+        //    else
+        //    {
+        //        pnlSociGest.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnSociGest);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnKiid_Click(object sender, EventArgs e)
-        {
+        //protected void btnSicav_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlKiid.Visible)
-            {
-                pnlKiid.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnKiid);
+        //    if (!pnlSicav.Visible)
+        //    {
+        //        pnlSicav.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnSicav);
 
-            }
-            else
-            {
-                pnlKiid.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnKiid);
+        //    }
+        //    else
+        //    {
+        //        pnlSicav.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnSicav);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnDivid_Click(object sender, EventArgs e)
-        {
+        //protected void btnKiid_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlDivid.Visible)
-            {
-                pnlDivid.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnDivid);
+        //    if (!pnlKiid.Visible)
+        //    {
+        //        pnlKiid.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnKiid);
 
-            }
-            else
-            {
-                pnlDivid.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnDivid);
+        //    }
+        //    else
+        //    {
+        //        pnlKiid.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnKiid);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnOutrasCaract_Click(object sender, EventArgs e)
-        {
+        //protected void btnDivid_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlOutrasCaract.Visible)
-            {
-                pnlOutrasCaract.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
+        //    if (!pnlDivid.Visible)
+        //    {
+        //        pnlDivid.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnDivid);
 
-            }
-            else
-            {
-                pnlOutrasCaract.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
+        //    }
+        //    else
+        //    {
+        //        pnlDivid.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnDivid);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnComi_Click(object sender, EventArgs e)
-        {
+        //protected void btnOutrasCaract_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlComi.Visible)
-            {
-                pnlComi.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnComi);
+        //    if (!pnlOutrasCaract.Visible)
+        //    {
+        //        pnlOutrasCaract.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
 
-            }
-            else
-            {
-                pnlComi.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnComi);
+        //    }
+        //    else
+        //    {
+        //        pnlOutrasCaract.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnCot_Click(object sender, EventArgs e)
-        {
+        //protected void btnComi_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlCot.Visible)
-            {
-                pnlCot.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnCot);
+        //    if (!pnlComi.Visible)
+        //    {
+        //        pnlComi.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnComi);
 
-            }
-            else
-            {
-                pnlCot.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnCot);
+        //    }
+        //    else
+        //    {
+        //        pnlComi.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnComi);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnNego_Click(object sender, EventArgs e)
-        {
+        //protected void btnCot_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlNego.Visible)
-            {
-                pnlNego.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnNego);
+        //    if (!pnlCot.Visible)
+        //    {
+        //        pnlCot.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnCot);
 
-            }
-            else
-            {
-                pnlNego.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnNego);
+        //    }
+        //    else
+        //    {
+        //        pnlCot.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnCot);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnCanalDist_Click(object sender, EventArgs e)
-        {
+        //protected void btnNego_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlCanalDist.Visible)
-            {
-                pnlCanalDist.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnCanalDist);
+        //    if (!pnlNego.Visible)
+        //    {
+        //        pnlNego.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnNego);
 
-            }
-            else
-            {
-                pnlCanalDist.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnCanalDist);
+        //    }
+        //    else
+        //    {
+        //        pnlNego.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnNego);
 
-            }
+        //    }
 
-        }
+        //}
 
-        protected void btnContasDo_Click(object sender, EventArgs e)
-        {
+        //protected void btnCanalDist_Click(object sender, EventArgs e)
+        //{
 
-            if (!pnlContasDo.Visible)
-            {
-                pnlContasDo.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnContasDo);
+        //    if (!pnlCanalDist.Visible)
+        //    {
+        //        pnlCanalDist.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnCanalDist);
 
-            }
-            else
-            {
-                pnlContasDo.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnContasDo);
+        //    }
+        //    else
+        //    {
+        //        pnlCanalDist.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnCanalDist);
 
-            }
+        //    }
 
-        }
+        //}
 
+        //protected void btnContasDo_Click(object sender, EventArgs e)
+        //{
 
-        protected void btnAttInv_Click(object sender, EventArgs e)
-        {
+        //    if (!pnlContasDo.Visible)
+        //    {
+        //        pnlContasDo.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnContasDo);
 
-            if (!pnlAttInvContent.Visible)
-            {
-                pnlAttInvContent.Visible = true;
-                WebUtil.ChangeBtnAtt(true, btnAttInv);
+        //    }
+        //    else
+        //    {
+        //        pnlContasDo.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnContasDo);
 
-            }
-            else
-            {
-                pnlAttInvContent.Visible = false;
-                WebUtil.ChangeBtnAtt(false, btnAttInv);
+        //    }
 
-            }
+        //}
 
-        }
+        //protected void btnAttInv_Click(object sender, EventArgs e)
+        //{
+
+        //    if (!pnlAttInvContent.Visible)
+        //    {
+        //        pnlAttInvContent.Visible = true;
+        //        WebUtil.ChangeBtnAtt(true, btnAttInv);
+
+        //    }
+        //    else
+        //    {
+        //        pnlAttInvContent.Visible = false;
+        //        WebUtil.ChangeBtnAtt(false, btnAttInv);
+
+        //    }
+
+        //}
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
@@ -273,66 +306,6 @@ namespace ABWebCatalogue.Site
         {
 
 
-        }
-
-        protected void btnCloseAll_Click(object sender, EventArgs e)
-        {
-            pnlClaBankContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnClaBank);
-            PnlClaAllFunds.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
-            pnlSociGest.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnSociGest);
-            pnlSicav.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnSicav);
-            pnlKiid.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnKiid);
-            pnlDivid.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnDivid);
-            pnlOutrasCaract.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
-            pnlComi.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnComi);
-            pnlCot.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnCot);
-            pnlNego.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnNego);
-            pnlCanalDist.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnCanalDist);
-            pnlContasDo.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnContasDo);
-            pnlAttInvContent.Visible = false;
-            WebUtil.ChangeBtnAtt(false, btnAttInv);
-        }
-
-        protected void btnOpenAll_Click(object sender, EventArgs e)
-        {
-            pnlClaBankContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnClaBank);
-            PnlClaAllFunds.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
-            pnlSociGest.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnSociGest);
-            pnlSicav.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnSicav);
-            pnlKiid.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnKiid);
-            pnlDivid.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnDivid);
-            pnlOutrasCaract.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
-            pnlComi.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnComi);
-            pnlCot.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnCot);
-            pnlNego.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnNego);
-            pnlCanalDist.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnCanalDist);
-            pnlContasDo.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnContasDo);
-            pnlAttInvContent.Visible = true;
-            WebUtil.ChangeBtnAtt(true, btnAttInv);
         }
 
         private void LoadCombos()
@@ -394,7 +367,7 @@ namespace ABWebCatalogue.Site
         }
 
         private void InjectJs(ref StringBuilder js)
-        {         
+        {
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES01.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES02.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesSS", cmbICUSTODD.ClientID, cmbICOMRES06.ClientID);
@@ -417,7 +390,7 @@ namespace ABWebCatalogue.Site
 
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB03.ClientID);
             JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB04.ClientID);
-            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);                    
+            JsUtil.ExecJsFunction(js, "CustodiaRulesTwoListComplex", cmbICUSTODD.ClientID, cmbICUSTODGA.ClientID, cmbICOMSUB05.ClientID);
         }
     }
 }
