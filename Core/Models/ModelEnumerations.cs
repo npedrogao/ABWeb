@@ -16,6 +16,32 @@ namespace Core.Models
         Inactivo = 'I'
     }
 
+    public enum KeyValueSourceEnum
+    {
+        /// <summary>
+        /// O valor vem do valor interno do enumerado e o texto do próprio enumerado
+        /// Ex: Empty = 'D' 
+        ///     Output: Valor: D Texto: Empty
+        /// </summary>
+        ValueFromEnumVal_TextFromEnum = 1,
+
+        /// <summary>
+        /// O value vem da anotação "Description" e o texto do próprio enumerado
+        /// Ex: Description("ABC")
+        ///     Empty = 'D'
+        ///     Output: Valor: ABC Texto: ABC
+        /// </summary>
+        ValueFromDescTextFromEnum = 2,
+
+        /// <summary>
+        /// O texto vem da anotação "Description" e o valor do próprio texto do enumerado
+        /// Ex: Description("XPTO")
+        ///     F42 = 'D'
+        ///     Output: Valor: F42 Texto: XPTO
+        /// </summary>
+        ValueFromFromEnumTxtTextFromDesc = 3,
+    }
+
     public enum PricingEnum
     {
         [Description(" ")]

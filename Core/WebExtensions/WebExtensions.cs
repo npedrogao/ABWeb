@@ -8,6 +8,19 @@ namespace Core.WebExtensions
 {
     public static class WebExtensions
     {
+        public static void RemoveClass(this System.Web.UI.HtmlControls.HtmlGenericControl ctrl, string cssClass)
+        {   
+            ctrl.Attributes["Class"] = ctrl.Attributes["Class"].Replace(cssClass, string.Empty);
+        }
+
+        public static void AddClass(this System.Web.UI.HtmlControls.HtmlGenericControl ctrl, string newCssClass)
+        {
+            string classCss, attClass = "Class";
+            classCss = ctrl.Attributes[attClass];
+            if(classCss != null && !classCss.Contains(newCssClass))
+                ctrl.Attributes[attClass] = classCss + " "+ newCssClass;
+        }
+
         public static void LoadWithList(this System.Web.UI.WebControls.DropDownList ddl, bool isPostBack, List<KeyValuePair<string, string>> lst)
         {
             if (!isPostBack)
