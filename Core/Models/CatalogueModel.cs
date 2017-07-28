@@ -493,39 +493,39 @@ namespace Core.Models
                 var lst = new List<KeyValuePair<string, string>>();
 
                 en = H2527Enum.NULL;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
 
-                en = H2527Enum.Accoes;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.ACC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
-                en = H2527Enum.Indices;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.IND;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
-                en = H2527Enum.TaxasJuroCurtoPrazo;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.TJC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
-                en = H2527Enum.TaxasJuroMedioLongoPrazo;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.TJL;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
-                en = H2527Enum.TaxasCambio;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.TCB;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
-                en = H2527Enum.ContratosDerivados;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
-                en = H2527Enum.Mercadorias;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
-                en = H2527Enum.Outros;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetDesc(en)
-                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+                en = H2527Enum.CDV;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+                en = H2527Enum.MEC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+                en = H2527Enum.OUT;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
 
                 return lst;
             }
