@@ -133,6 +133,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ServiceWrapper\Helper\ProxyConfig.cs" />
+    <Compile Include="ServiceWrapper\ListaOperacoesCentral.cs" />
     <Compile Include="ServiceWrapper\ServiceProxy.cs" />
     <Compile Include="ServiceWrapper\StaticServiceProxy.cs" />
     <Compile Include="ServiceWrapper\WSDLReferences\BcdwsReference.cs" />

@@ -148,22 +148,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblGESTADO;
         
         /// <summary>
-        /// cmbCEstado control.
+        /// txtCESTADO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCEstado;
+        protected global::System.Web.UI.WebControls.TextBox txtCESTADO;
         
         /// <summary>
-        /// txtGESTADO control.
+        /// cmbGESTADO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGESTADO;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGESTADO;
         
         /// <summary>
         /// lblDINIVAL control.

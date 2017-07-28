@@ -17,43 +17,48 @@ namespace ABWebCatalogue.Site
         {
             StringBuilder js = new StringBuilder();
             CatalogueModel.ApplyModel(this, ref js);
-            string transaccao = Request.QueryString["transacao"];
-            string type = transaccao.Substring(transaccao.Length - 1, 1);
-            LoadCombos();
-            InjectJs(ref js);
+
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            InjectJs(ref js);
+
+            string transaccao = Request.QueryString["transacao"];
+            lblTransaction.Text = transaccao;
 
             if (IsPostBack)
             {
                 pnlBtnSearch.AddClass("hidden");
                 WebUtil.AddRemoveHidden(true, pnlCA, pnlBtn, pnlSearchContent);
 
-                if (type != null)
+                if (transaccao != null)
                 {
 
-                    TypeLoad(type);
+                    TypeLoad(transaccao);
                 }
             }
+            LoadCombos();
+
         }
 
-        private void TypeLoad(string type)
+        private void TypeLoad(string transaccao)
         {
+            lblTransaction.Text = transaccao;
+            string type = transaccao.Substring(transaccao.Length - 1, 1);
             switch (type)
             {
                 case "C":
-                    lblTransaction.Text = "CA39C";
+                    ReadOnlyCommonFields();
 
                     break;
                 case "M":
-                    lblTransaction.Text = "CA39M";
+                    ReadOnlyCommonFields();
 
                     break;
                 case "V":
-                    lblTransaction.Text = "CA39V";
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
 
                     break;
                 case "A":
-                    lblTransaction.Text = "CA39A";
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
 
                     break;
                 default:
@@ -61,250 +66,8 @@ namespace ABWebCatalogue.Site
             }
         }
 
-        //protected void btnClaBank_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlClaBankContent.Visible)
-        //    {
-        //        pnlClaBankContent.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnClaBank);
-
-        //    }
-        //    else
-        //    {
-        //        pnlClaBankContent.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnClaBank);
-
-        //    }
-
-        //}
-
-        //protected void btnClaAllFunds_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!PnlClaAllFunds.Visible)
-        //    {
-        //        PnlClaAllFunds.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnClaAllFunds);
-
-        //    }
-        //    else
-        //    {
-        //        PnlClaAllFunds.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnClaAllFunds);
-
-        //    }
-
-        //}
-
-        //protected void btnSociGest_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlSociGest.Visible)
-        //    {
-        //        pnlSociGest.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnSociGest);
-
-        //    }
-        //    else
-        //    {
-        //        pnlSociGest.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnSociGest);
-
-        //    }
-
-        //}
-
-        //protected void btnSicav_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlSicav.Visible)
-        //    {
-        //        pnlSicav.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnSicav);
-
-        //    }
-        //    else
-        //    {
-        //        pnlSicav.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnSicav);
-
-        //    }
-
-        //}
-
-        //protected void btnKiid_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlKiid.Visible)
-        //    {
-        //        pnlKiid.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnKiid);
-
-        //    }
-        //    else
-        //    {
-        //        pnlKiid.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnKiid);
-
-        //    }
-
-        //}
-
-        //protected void btnDivid_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlDivid.Visible)
-        //    {
-        //        pnlDivid.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnDivid);
-
-        //    }
-        //    else
-        //    {
-        //        pnlDivid.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnDivid);
-
-        //    }
-
-        //}
-
-        //protected void btnOutrasCaract_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlOutrasCaract.Visible)
-        //    {
-        //        pnlOutrasCaract.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnOutrasCaract);
-
-        //    }
-        //    else
-        //    {
-        //        pnlOutrasCaract.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnOutrasCaract);
-
-        //    }
-
-        //}
-
-        //protected void btnComi_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlComi.Visible)
-        //    {
-        //        pnlComi.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnComi);
-
-        //    }
-        //    else
-        //    {
-        //        pnlComi.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnComi);
-
-        //    }
-
-        //}
-
-        //protected void btnCot_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlCot.Visible)
-        //    {
-        //        pnlCot.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnCot);
-
-        //    }
-        //    else
-        //    {
-        //        pnlCot.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnCot);
-
-        //    }
-
-        //}
-
-        //protected void btnNego_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlNego.Visible)
-        //    {
-        //        pnlNego.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnNego);
-
-        //    }
-        //    else
-        //    {
-        //        pnlNego.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnNego);
-
-        //    }
-
-        //}
-
-        //protected void btnCanalDist_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlCanalDist.Visible)
-        //    {
-        //        pnlCanalDist.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnCanalDist);
-
-        //    }
-        //    else
-        //    {
-        //        pnlCanalDist.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnCanalDist);
-
-        //    }
-
-        //}
-
-        //protected void btnContasDo_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlContasDo.Visible)
-        //    {
-        //        pnlContasDo.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnContasDo);
-
-        //    }
-        //    else
-        //    {
-        //        pnlContasDo.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnContasDo);
-
-        //    }
-
-        //}
-
-        //protected void btnAttInv_Click(object sender, EventArgs e)
-        //{
-
-        //    if (!pnlAttInvContent.Visible)
-        //    {
-        //        pnlAttInvContent.Visible = true;
-        //        WebUtil.ChangeBtnAtt(true, btnAttInv);
-
-        //    }
-        //    else
-        //    {
-        //        pnlAttInvContent.Visible = false;
-        //        WebUtil.ChangeBtnAtt(false, btnAttInv);
-
-        //    }
-
-        //}
-
-        protected void btnClear_Click(object sender, EventArgs e)
+        protected void ReadOnlyCommonFields()
         {
-
-            Master.FindControl("CPH").Controls.SetCleanField();
-
-        }
-
-        protected void btnSave_Click(object sender, EventArgs e)
-        {
-
 
         }
 
@@ -364,6 +127,19 @@ namespace ABWebCatalogue.Site
             xpto.Add(new KeyValuePair<string, string>("OPC", "OPCKK"));
             xpto.Add(new KeyValuePair<string, string>("SSS", "OPCSSS"));
             cmbCCATACT.LoadWithList(IsPostBack, xpto);
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
+            Master.FindControl("CPH").Controls.SetCleanField();
+
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+
+
         }
 
         private void InjectJs(ref StringBuilder js)
