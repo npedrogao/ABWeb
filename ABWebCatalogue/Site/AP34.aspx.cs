@@ -24,35 +24,34 @@ namespace ABWebCatalogue.Site
             StringBuilder js = new StringBuilder();
             CatalogueModel.ApplyModel(this, ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
-            string transaccao = Request.QueryString["transacao"];
-            string type = transaccao.Substring(transaccao.Length - 1, 1);
-            lblTransaction.Text = "AP34" + type;
+            string transaccao = Request.QueryString["transacao"].ToUpper();
+            lblTransaction.Text = transaccao;
             if (IsPostBack)
             {
                 pnlBtnSearch.AddClass("hidden");
                 WebUtil.AddRemoveHidden(true, pnlBtn, pnlGESTADO, pnlDFIMVAL, pnlSearchContent);
  
-                if (type != null)
+                if (transaccao != null)
                 {
                     
-                    TypeLoad(type);
+                    TypeLoad(transaccao);
                 }
             }
             ComboLoad();
         }
 
-        private void TypeLoad(string type)
+        private void TypeLoad(string transaccao)
         {
-
+            lblTransaction.Text = transaccao;
+            string type = transaccao.Substring(transaccao.Length - 1, 1);
             switch (type)
             {
                 case "C":
-                    lblTransaction.Text = "AP34C";
+                    
                     ReadOnlyCommonFields();
 
                     break;
                 case "M":
-                    lblTransaction.Text = "AP34M";
                     txtCClaPrz.ReadOnly = true;
                     cmbGCLAPRZ.Disabled = true;
                     txtCMOEDA.ReadOnly = true;
@@ -63,78 +62,78 @@ namespace ABWebCatalogue.Site
                     ReadOnlyCommonFields();
                     break;
                 case "V":
-                    lblTransaction.Text = "AP34V";
-                    cmbITRANCHE.Disabled = true;
-                    txtCAGREGDP.ReadOnly = true;
-                    cmbIRenovac.Disabled = true;
-                    txtQMAXREN.ReadOnly = true;
-                    cmbILEVANT.Disabled = true;
-                    cmbIAUTREF.Disabled = true;
-                    cmbIDiaNUt.Disabled = true;
-                    txtQDIASANT.ReadOnly = true;
-                    cmbIDEBFOR.Disabled = true;
-                    txtQTENTDEB.ReadOnly = true;
-                    cmbIPRCLNEW.Disabled = true;
-                    txtQDIASNCLI.ReadOnly = true;
-                    txtCCAMPNET.ReadOnly = true;
-                    cmbGCAMPNET.Disabled = true;
-                    cmbCCXSCONS.Disabled = true;
-                    txtCCXSCONS.ReadOnly = true;
-                    cmbCCXSVENC.Disabled = true;
-                    txtCCXSVENC.ReadOnly = true;
-                    txtCONOFFREGU.ReadOnly = true;
-                    txtCIPAD.ReadOnly = true;
-                    txtMVAR.ReadOnly = true;
-                    txtDVAR.ReadOnly = true;
-                    txtGOBSRV.ReadOnly = true;
-                    txtCCLAACTI.ReadOnly = true;
-                    txtCCLASSRISC.ReadOnly = true;
-                    txtDTACTIVA.ReadOnly = true;
-                    ReadOnlyCommonFields();
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
+                    //cmbITRANCHE.Disabled = true;
+                    //txtCAGREGDP.ReadOnly = true;
+                    //cmbIRenovac.Disabled = true;
+                    //txtQMAXREN.ReadOnly = true;
+                    //cmbILEVANT.Disabled = true;
+                    //cmbIAUTREF.Disabled = true;
+                    //cmbIDiaNUt.Disabled = true;
+                    //txtQDIASANT.ReadOnly = true;
+                    //cmbIDEBFOR.Disabled = true;
+                    //txtQTENTDEB.ReadOnly = true;
+                    //cmbIPRCLNEW.Disabled = true;
+                    //txtQDIASNCLI.ReadOnly = true;
+                    //txtCCAMPNET.ReadOnly = true;
+                    //cmbGCAMPNET.Disabled = true;
+                    //cmbCCXSCONS.Disabled = true;
+                    //txtCCXSCONS.ReadOnly = true;
+                    //cmbCCXSVENC.Disabled = true;
+                    //txtCCXSVENC.ReadOnly = true;
+                    //txtCONOFFREGU.ReadOnly = true;
+                    //txtCIPAD.ReadOnly = true;
+                    //txtMVAR.ReadOnly = true;
+                    //txtDVAR.ReadOnly = true;
+                    //txtGOBSRV.ReadOnly = true;
+                    //txtCCLAACTI.ReadOnly = true;
+                    //txtCCLASSRISC.ReadOnly = true;
+                    //txtDTACTIVA.ReadOnly = true;
+                    //ReadOnlyCommonFields();
                     break;
                 case "A":
-                    lblTransaction.Text = "AP34A";
-                    txtCClaPrz.ReadOnly = true;
-                    cmbGCLAPRZ.Disabled = true;
-                    txtCMOEDA.ReadOnly = true;
-                    cmbGMOEDA.Disabled = true;
-                    cmbCEstado.Disabled = true;
-                    txtGESTADO.ReadOnly = true;
-                    txtDINIVAL.ReadOnly = true;
-                    txtDFIMVAL.ReadOnly = true;
-                    cmbIPRZABS.Disabled = true;
-                    txtCPRODCNT.ReadOnly = true;
-                    txtCSPROCNT.ReadOnly = true;
-                    txtCFINBB.ReadOnly = true;
-                    cmbCFINBB.Disabled = true;
-                    cmbIIRS.Disabled = true;
-                    cmbITRANCHE.Disabled = true;
-                    txtCAGREGDP.ReadOnly = true;
-                    cmbIRenovac.Disabled = true;
-                    txtQMAXREN.ReadOnly = true;
-                    cmbILEVANT.Disabled = true;
-                    cmbIAUTREF.Disabled = true;
-                    cmbIDiaNUt.Disabled = true;
-                    txtQDIASANT.ReadOnly = true;
-                    cmbIDEBFOR.Disabled = true;
-                    txtQTENTDEB.ReadOnly = true;
-                    cmbIPRCLNEW.Disabled = true;
-                    txtQDIASNCLI.ReadOnly = true;
-                    txtCCAMPNET.ReadOnly = true;
-                    cmbGCAMPNET.Disabled = true;
-                    txtCCXSCONS.ReadOnly = true;
-                    cmbCCXSCONS.Disabled = true;
-                    cmbCCXSVENC.Disabled = true;
-                    txtCCXSVENC.ReadOnly = true;
-                    txtCONOFFREGU.ReadOnly = true;
-                    txtCIPAD.ReadOnly = true;
-                    txtMVAR.ReadOnly = true;
-                    txtDVAR.ReadOnly = true;
-                    txtGOBSRV.ReadOnly = true;
-                    txtCCLAACTI.ReadOnly = true;
-                    txtCCLASSRISC.ReadOnly = true;
-                    txtDTACTIVA.ReadOnly = true;
-                    ReadOnlyCommonFields();
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
+                    //txtCClaPrz.ReadOnly = true;
+                    //cmbGCLAPRZ.Disabled = true;
+                    //txtCMOEDA.ReadOnly = true;
+                    //cmbGMOEDA.Disabled = true;
+                    //cmbGESTADO.Disabled = true;
+                    //txtCESTADO.ReadOnly = true;
+                    //txtDINIVAL.ReadOnly = true;
+                    //txtDFIMVAL.ReadOnly = true;
+                    //cmbIPRZABS.Disabled = true;
+                    //txtCPRODCNT.ReadOnly = true;
+                    //txtCSPROCNT.ReadOnly = true;
+                    //txtCFINBB.ReadOnly = true;
+                    //cmbCFINBB.Disabled = true;
+                    //cmbIIRS.Disabled = true;
+                    //cmbITRANCHE.Disabled = true;
+                    //txtCAGREGDP.ReadOnly = true;
+                    //cmbIRenovac.Disabled = true;
+                    //txtQMAXREN.ReadOnly = true;
+                    //cmbILEVANT.Disabled = true;
+                    //cmbIAUTREF.Disabled = true;
+                    //cmbIDiaNUt.Disabled = true;
+                    //txtQDIASANT.ReadOnly = true;
+                    //cmbIDEBFOR.Disabled = true;
+                    //txtQTENTDEB.ReadOnly = true;
+                    //cmbIPRCLNEW.Disabled = true;
+                    //txtQDIASNCLI.ReadOnly = true;
+                    //txtCCAMPNET.ReadOnly = true;
+                    //cmbGCAMPNET.Disabled = true;
+                    //txtCCXSCONS.ReadOnly = true;
+                    //cmbCCXSCONS.Disabled = true;
+                    //cmbCCXSVENC.Disabled = true;
+                    //txtCCXSVENC.ReadOnly = true;
+                    //txtCONOFFREGU.ReadOnly = true;
+                    //txtCIPAD.ReadOnly = true;
+                    //txtMVAR.ReadOnly = true;
+                    //txtDVAR.ReadOnly = true;
+                    //txtGOBSRV.ReadOnly = true;
+                    //txtCCLAACTI.ReadOnly = true;
+                    //txtCCLASSRISC.ReadOnly = true;
+                    //txtDTACTIVA.ReadOnly = true;
+                    //ReadOnlyCommonFields();
                     break;
                 default:
                     break;
@@ -186,6 +185,7 @@ namespace ABWebCatalogue.Site
             cmbIDiaNUt.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbIDEBFOR.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbIPRCLNEW.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
+            cmbGESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActive);
 
         }
 
