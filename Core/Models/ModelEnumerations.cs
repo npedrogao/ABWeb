@@ -8,7 +8,7 @@ namespace Core.Models
 {
     public enum ActivoInactivoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Activo")]
         Activo = 'A',
@@ -44,7 +44,7 @@ namespace Core.Models
 
     public enum PricingEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Clean")]
         Clean = 'C',
@@ -54,7 +54,7 @@ namespace Core.Models
 
     public enum SimNaoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Sim")]
         Sim = 'S',
@@ -65,7 +65,7 @@ namespace Core.Models
 
     public enum EstadoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Em Criação")]
         Criacao = 'C',
@@ -130,7 +130,7 @@ namespace Core.Models
 
     public enum TipoArredonEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description(" Excesso")]
         Excesso = 'E',
@@ -141,7 +141,7 @@ namespace Core.Models
 
     public enum TipoWarrantEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Call")]
         Call = 'C',
@@ -152,7 +152,7 @@ namespace Core.Models
 
     public enum EstiloWarrantEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Europeu")]
         Europeu = 'E',
@@ -163,7 +163,7 @@ namespace Core.Models
 
     public enum TipoExercicioEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Automático")]
         Automatico = 'E',
@@ -174,18 +174,18 @@ namespace Core.Models
 
     public enum TipoLiquidaEnum
     {
-        [Description(" ")]
-        Empty = ' ',
+        [Description("")]
+        Empty = 0,
         [Description("Fisica")]
-        Fisica = 'A',
+        FIS = 1,
         [Description("Financeira")]
-        Financeira = 'N'
+        FIN = 2
 
     }
 
     public enum PrazoAbsolutoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("A")]
         A = 'A',
@@ -197,7 +197,7 @@ namespace Core.Models
 
     public enum TipoMercadoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("MER")]
         MER = 'A',
@@ -209,7 +209,7 @@ namespace Core.Models
 
     public enum RiscoProdutoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 9999,
         [Description("Nivel 1")]
         Nivel1 = '1',
@@ -225,7 +225,7 @@ namespace Core.Models
 
     public enum TipoAmortizacaoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Q")]
         Q = 'Q',
@@ -237,7 +237,7 @@ namespace Core.Models
 
     public enum TipoSubscricaoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("T")]
         T = 'T',
@@ -251,7 +251,7 @@ namespace Core.Models
 
     public enum TipoResgateEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Q")]
         Q = 'Q',
@@ -263,7 +263,7 @@ namespace Core.Models
 
     public enum PeriodoCoracaoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("D")]
         D = 'D',
@@ -280,7 +280,7 @@ namespace Core.Models
 
     public enum TipoValoracaoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("F")]
         F = 'F',
@@ -291,7 +291,7 @@ namespace Core.Models
 
     public enum CustodiaEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("C")]
         C = 'C',
@@ -301,7 +301,7 @@ namespace Core.Models
 
     public enum ElegivelEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 9999,
         [Description("0")]
         Nivel0 = 0,
@@ -311,7 +311,7 @@ namespace Core.Models
 
     public enum RiscoKiddEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 9999,
         [Description("Nivel 1")]
         Nivel1 = 1,
@@ -331,7 +331,7 @@ namespace Core.Models
 
     public enum EstadoFundoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("I")]
         I = 'I',
@@ -341,7 +341,7 @@ namespace Core.Models
 
     public enum SitsNegociavelEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("N")]
         N = 'N',
@@ -356,7 +356,7 @@ namespace Core.Models
 
     public enum IbanNetEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 9999,
         [Description("Nivel 1")]
         Nivel1 = 1,
@@ -368,7 +368,7 @@ namespace Core.Models
 
     public enum NegociavelEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("S")]
         S = 'S',
@@ -382,7 +382,7 @@ namespace Core.Models
 
     public enum ElegibilidadeEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 0,
         [Description("BOE")]
         BOE = 1,
@@ -399,7 +399,7 @@ namespace Core.Models
 
     public enum TipoJuroEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 9999,
         [Description("Fixo")]
         Fixo = 'F',
@@ -411,7 +411,7 @@ namespace Core.Models
 
     public enum ModalidadeEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("C")]
         C = 'C',
@@ -421,7 +421,7 @@ namespace Core.Models
 
     public enum TipoCalculoJurosEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("Mês")]
         Mes = 'T',
@@ -431,7 +431,7 @@ namespace Core.Models
 
     public enum SenioridadeEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("S")]
         S = 'S',
@@ -441,7 +441,7 @@ namespace Core.Models
 
     public enum NumAnoEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = 0,
         [Description("1")]
         N1 = 1,
@@ -461,7 +461,7 @@ namespace Core.Models
 
     public enum IndiceActivoSubjacenteEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("A")]
         A = 'A',
@@ -473,7 +473,7 @@ namespace Core.Models
 
     public enum OnOffRegularEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("O")]
         O = 'O',
@@ -483,7 +483,7 @@ namespace Core.Models
 
     public enum ZeroOrOneEnum
     {
-        [Description(" ")]
+        [Description("")]
         Empty = ' ',
         [Description("0")]
         Zero = '0',
