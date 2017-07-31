@@ -23,10 +23,10 @@
                         <div class="col-lg-6 ">
                             <asp:Label ID="lblCProduto" runat="server" CssClass="col-lg-2 text-right lbl">Produto:</asp:Label>
                             <div class="col-lg-1">
-                                <asp:TextBox ID="txtCProduto" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                <asp:TextBox ID="txtCPRODUTO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
                             <div class="col-lg-4">
-                                <select id="cmbGPRODUTO" runat="server" class="form-control t-field-t"></select>
+                                <select id="cmbCPRODUTO" runat="server" class="form-control t-field-t"></select>
                                 <%--<asp:TextBox ID="txtGProduto" runat="server" CssClass="form-control t-field-t"></asp:TextBox>--%>
                             </div>
                         </div>

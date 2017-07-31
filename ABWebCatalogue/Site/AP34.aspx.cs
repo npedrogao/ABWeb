@@ -159,8 +159,8 @@ namespace ABWebCatalogue.Site
 
         protected void ReadOnlyCommonFields()
         {
-            txtCProduto.ReadOnly = true;
-            cmbGPRODUTO.Disabled = true;
+            txtCPRODUTO.ReadOnly = true;
+            //cmbGPRODUTO.Disabled = true;
             txtCSubProd.ReadOnly = true;
             cmbGSubProd.Disabled = true;
             txtCSUBFAM.ReadOnly = true;

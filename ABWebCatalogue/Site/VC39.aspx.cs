@@ -75,12 +75,12 @@ namespace ABWebCatalogue.Site
      
         }
 
-        protected void btnClear_Click(object sender, EventArgs e)
-        {
+//        protected void btnClear_Click(object sender, EventArgs e)
+//        {
 
-            Master.FindControl("CPH").Controls.SetCleanField();
+//            Master.FindControl("CPH").Controls.SetCleanField();
 
-        }
+//        }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {

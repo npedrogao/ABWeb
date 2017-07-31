@@ -31,22 +31,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblCProduto;
         
         /// <summary>
-        /// txtCProduto control.
+        /// txtCPRODUTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtCPRODUTO;
         
         /// <summary>
-        /// cmbGPRODUTO control.
+        /// cmbCPRODUTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGPRODUTO;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCPRODUTO;
         
         /// <summary>
         /// lblCSubProd control.
