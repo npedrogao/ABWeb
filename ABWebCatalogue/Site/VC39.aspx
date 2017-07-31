@@ -889,7 +889,7 @@
 
             JsServerSide();
 
-            AccordionController();
+            fAccordionController();
         });
 
     </script>
