@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="../js/commonAB.js"></script>
     <script src="../js/util.js"></script>
-            <script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
 
 
 </asp:Content>
@@ -90,17 +90,16 @@
                     </div>
                 </div>
                 <br />
-                <br />
-                   <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
+                <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
                     <button id="searchKeys" class="btns" runat="server">Search</button>
-                
-                </div>
 
+                </div>
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
                     <a id="btnCloseAll" class="btns" runat="server">Fechar</a>
                     <a id="btnOpenAll" class="btns" runat="server">Abrir</a>
                 </div>
-                <br /><br />
+                <br />
+                <br />
             </div>
             <div id="pnlSearchContent" runat="server" class="hidden">
                 <div class="col-lg-12 titleAccordion">

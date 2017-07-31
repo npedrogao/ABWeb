@@ -448,15 +448,15 @@ namespace Core.Models
                 var lst = new List<KeyValuePair<string, string>>();
 
                 en = TipoLiquidaEnum.Empty;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                lst.Add(new KeyValuePair<string, string>(string.Empty
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
-                en = TipoLiquidaEnum.Financeira;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                en = TipoLiquidaEnum.FIS;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
 
-                en = TipoLiquidaEnum.Fisica;
-                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                en = TipoLiquidaEnum.FIN;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
                     , EnumExtensions.EnumExtensions.GetDesc(en)));
                 return lst;
             }
@@ -489,6 +489,53 @@ namespace Core.Models
                 return lst;
             }
         }
+
+        public static List<KeyValuePair<string, string>> ListH2527
+        {
+            get
+            {
+                H2527Enum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = H2527Enum.NULL;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+
+                en = H2527Enum.ACC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                en = H2527Enum.IND;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                en = H2527Enum.TJC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                en = H2527Enum.TJL;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                en = H2527Enum.TCB;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                en = H2527Enum.CDV;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+                en = H2527Enum.MEC;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+                en = H2527Enum.OUT;
+                lst.Add(new KeyValuePair<string, string>(en.ToString()
+                    , en.ToString()));
+
+                return lst;
+            }
+        }
+
 
         public static List<KeyValuePair<string, string>> ListTipoMercado
         {
