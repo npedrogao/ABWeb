@@ -1,20 +1,17 @@
 ﻿using Core.Models;
-using Core.WebExtensions;
+using Core.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Core.Utils;
-using System.Text;
-
-
+using Core.WebExtensions;
 namespace ABWebCatalogue.Site
 {
-    public partial class AP34 : System.Web.UI.Page
+    public partial class Ap34BootstrapTest : System.Web.UI.Page
     {
-
 
 
 
@@ -25,16 +22,17 @@ namespace ABWebCatalogue.Site
             var cat = new CatalogueModel();
             cat.ApplyModel(this, ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
             if (IsPostBack)
             {
                 pnlBtnSearch.AddClass("hidden");
                 WebUtil.AddRemoveHidden(true, pnlBtn, pnlGESTADO, pnlDFIMVAL, pnlSearchContent);
- 
+
                 if (transaccao != null)
                 {
-                    
+
                     TypeLoad(transaccao);
                 }
             }
@@ -48,7 +46,7 @@ namespace ABWebCatalogue.Site
             switch (type)
             {
                 case "C":
-                    
+
                     ReadOnlyCommonFields();
 
                     break;
@@ -60,7 +58,6 @@ namespace ABWebCatalogue.Site
                     cmbIRenovac.Disabled = true;
                     txtQMAXREN.ReadOnly = true;
                     cmbGCAMPNET.Disabled = true;
-                    txtCCAMPNET.ReadOnly = true;
                     ReadOnlyCommonFields();
                     break;
                 case "V":
@@ -187,7 +184,7 @@ namespace ABWebCatalogue.Site
             cmbIDiaNUt.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbIDEBFOR.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbIPRCLNEW.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
-            //cmbGESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActive);
+            cmbGESTADO.LoadWithList(IsPostBack, CatalogueModel.ListActive);
 
         }
 
