@@ -1214,7 +1214,7 @@
 
             JsServerSide();
 
-            AccordionController();
+            fAccordionController();
         });
     </script>
 

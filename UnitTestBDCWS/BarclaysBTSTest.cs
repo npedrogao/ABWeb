@@ -4,10 +4,10 @@ using Microsoft.Win32;
 namespace UnitTestBDCWS
 {
     [TestClass]
-    public class UnitTest1
+    public class BarclaysBTSTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void BarclaysBTSTestMethod1()
         {
 
             BarclaysBTS barclaysBTS = new BarclaysBTS("http://bpcfsptln197.corebus2.barclays.org:8100/bcdws/bcdws.asmx");
@@ -48,11 +48,11 @@ namespace UnitTestBDCWS
                     Cestado = "A",
                     Cisin = "IE00B43VK078",
                     Codvalor = "0000000000000",
-                    Cproduto = "  ",
-                    Csubprod = "  ",
+                    Cproduto = "",
+                    Csubprod = "",
                     Ddiaevento_CH = "30032017",
-                    Dfimevento = "2017-04-27",
-                    Dinievento = "24.11.2014",
+                    Dfimevento = "2017-04-28",
+                    Dinievento = "2017-04-27",//24.11.2014
                     Zseqvento_CH = "000"
                 };
 

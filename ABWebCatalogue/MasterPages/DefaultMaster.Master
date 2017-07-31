@@ -15,17 +15,14 @@
     <link href="~\css\bootstrap-ie7fix.css" type="text/css" rel="stylesheet" />
     <link href="~\css\bankinter.css" type="text/css" rel="stylesheet" />
 </head>
-
 <uc1:header runat="server" ID="header" />
-
 <body class="t-body-1">
     <form id="form1" runat="server">
-        <script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="~\js\jquery-1.8.3.js" type="text/javascript"></script>
+        <script src="~\js\bootstrap.js" type="text/javascript"></script>
+        <script src="~\js\commonAB.js"></script>
         <asp:ContentPlaceHolder ID="CPH" runat="server">
         </asp:ContentPlaceHolder>
-        
     </form>
 </body>
-
 </html>

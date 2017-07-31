@@ -16,7 +16,8 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             StringBuilder js = new StringBuilder();
-            CatalogueModel.ApplyModel(this, ref js);
+            var model = new CatalogueModel();
+            model.ApplyModel(this, ref js);
             LoadCombos();          
             InjectJs(ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
