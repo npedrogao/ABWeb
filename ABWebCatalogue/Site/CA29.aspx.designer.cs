@@ -706,13 +706,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblTOGC;
         
         /// <summary>
-        /// txtTOGC control.
+        /// cmbTOGC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTOGC;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbTOGC;
         
         /// <summary>
         /// lblIDIVIDEND control.
@@ -2533,13 +2533,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblCONOFFREGU;
         
         /// <summary>
-        /// txtCONOFFREGU control.
+        /// cmbCONOFFREGU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCONOFFREGU;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCONOFFREGU;
         
         /// <summary>
         /// lblCIPAD control.
@@ -2551,13 +2551,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblCIPAD;
         
         /// <summary>
-        /// txtCIPAD control.
+        /// cmbCIPAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCIPAD;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCIPAD;
         
         /// <summary>
         /// lblCNIVELRISCO control.
@@ -2677,13 +2677,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.Label lblCCLASSRISC;
         
         /// <summary>
-        /// txtCCLASSRISC control.
+        /// cmbCCLASSRISC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCCLASSRISC;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCLASSRISC;
         
         /// <summary>
         /// lblDTACTIVA control.

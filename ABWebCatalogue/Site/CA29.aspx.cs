@@ -120,6 +120,7 @@ namespace ABWebCatalogue.Site
             cmbIALLFUND.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbITIPPROC.LoadWithList(IsPostBack, CatalogueModel.ListZeroOrOne);
             cmbCNIVELRISCO.LoadWithList(IsPostBack, CatalogueModel.ListRiscoProduto);
+            cmbCIPAD.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             //ToDo popular cmbCCATACT
             var xpto = new List<KeyValuePair<string, string>>();
             xpto.Add(new KeyValuePair<string, string>("ABC", "ABCKK"));
