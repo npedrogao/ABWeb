@@ -884,58 +884,100 @@
                     <div class="col-lg-12">
                         <%--tabela--%>
                         <div class="row form-group padding-row">
-                            <asp:Label ID="Label103" runat="server" class="col-lg-2 text-right lbl martelada2">Resgates  </asp:Label>
-                            <asp:Label ID="Label106" runat="server" class="col-lg-2 text-right lbl martelada1"> Subscrições </asp:Label>
-
+                            <div class="col-lg-2">
+                            </div>
+                            <asp:Label ID="Label103" runat="server" class="col-lg-1 text-center lbl martelada2">Resgates  </asp:Label>
+                            <asp:Label ID="Label106" runat="server" class="col-lg-1 text-center lbl martelada1"> Subscrições </asp:Label>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES01" runat="server" class="col-lg-2 text-right lbl">Agências:</asp:Label>
-                            <select id="cmbICOMRES01" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB01" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES01" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB01" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES02" runat="server" class="col-lg-2 text-right lbl">Private:</asp:Label>
-                            <select id="cmbICOMRES02" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB02" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES02" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB02" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES03" runat="server" class="col-lg-2 text-right lbl">Gestão de património:</asp:Label>
-                            <select id="cmbICOMRES03" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB03" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES03" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB03" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES04" runat="server" class="col-lg-2 text-right lbl">Bankinter Fundos:</asp:Label>
-                            <select id="cmbICOMRES04" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB04" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES04" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB04" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES05" runat="server" class="col-lg-2 text-right lbl">Bankinter Vida:</asp:Label>
-                            <select id="cmbICOMRES05" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB05" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES05" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB05" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES06" runat="server" class="col-lg-2 text-right lbl">Internet:</asp:Label>
-                            <select id="cmbICOMRES06" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB06" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES06" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB06" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES07" runat="server" class="col-lg-2 text-right lbl">NetBanking:</asp:Label>
-                            <select id="cmbICOMRES07" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB07" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES07" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB07" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES08" runat="server" class="col-lg-2 text-right lbl">Banca telefónica:</asp:Label>
-                            <select id="cmbICOMRES08" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB08" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES08" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB08" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES09" runat="server" class="col-lg-2 text-right lbl">Corporate:</asp:Label>
-                            <select id="cmbICOMRES09" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB09" runat="server" class="form-control t-field-t"></select>
-
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES09" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB09" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
                             <asp:Label ID="lblICOMRES10" runat="server" class="col-lg-2 text-right lbl">Peq./Médias Empresas:</asp:Label>
-                            <select id="cmbICOMRES10" runat="server" class="form-control t-field-t"></select>
-                            <select id="cmbICOMSUB10" runat="server" class="form-control t-field-t"></select>
-
+                            <div class="col-lg-1">
+                                <select id="cmbICOMRES10" runat="server" class="form-control t-field-t"></select>
+                            </div>
+                            <div class="col-lg-1">
+                                <select id="cmbICOMSUB10" runat="server" class="form-control t-field-t"></select>
+                            </div>
                         </div>
                     </div>
                 </div>
