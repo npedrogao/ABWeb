@@ -26,12 +26,12 @@ namespace Core.Models
 
             transactionName = page.Request.QueryString["transacao"];
             placeHolder = page.Master.FindControl("CPH");
-
+        
             try
             {
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
-                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js);
+                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js, jsFunctionNames);
                 }
             }
             catch (Exception)
