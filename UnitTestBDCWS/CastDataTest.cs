@@ -30,9 +30,13 @@ namespace UnitTestBDCWS
         public void TestIteradorEnumerado()
         {
         
-            var aslist2 = EnumExtensions.EnumExtensions.ConvertEnumToList<Core.Models.H1971Enum>();
+            var aslist2 = EnumExtensions.EnumExtensions.ConvertEnumToListDescValue<Core.Models.H1971Enum>();
 
+            var aslistxpto = EnumExtensions.EnumExtensions.ConvertEnumToListValueDesc<Core.Models.H1971Enum>();
 
+            var tosco = EnumExtensions.EnumExtensions.ConvertEnumToListValueText<Core.Models.H1971Enum>();
+
+        
 
         }
     }
