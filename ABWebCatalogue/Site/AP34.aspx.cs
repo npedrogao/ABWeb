@@ -59,6 +59,7 @@ namespace ABWebCatalogue.Site
                     cmbIRenovac.Disabled = true;
                     txtQMAXREN.ReadOnly = true;
                     cmbGCAMPNET.Disabled = true;
+                    txtCCAMPNET.ReadOnly = true;
                     ReadOnlyCommonFields();
                     break;
                 case "V":

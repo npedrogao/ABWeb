@@ -73,7 +73,7 @@ namespace ABWebCatalogue.Site
                     break;
                 case "C":
                     txtCODVALOR.ReadOnly = true;
-                    txtSITUACA.ReadOnly = true;
+                    txtSITUACA.ReadOnly = true; 
                     txtSEGCART.ReadOnly = true;
                     cmbDSEGCART.Disabled = true;
                     txtCTIPESC.ReadOnly = true;
@@ -82,13 +82,14 @@ namespace ABWebCatalogue.Site
                     txtNOMIN.ReadOnly = true;
                     txtZCLIENTE.ReadOnly = true;
                     txtZSEQ.ReadOnly = true;
+                    txtCPAISEMI.ReadOnly = true;
                     txtDLGUARDA.ReadOnly = true;
                     txtDCUSTOD.ReadOnly = true;
                     txtRETEN.ReadOnly = true;
                     txtTISENIE.ReadOnly = true;
                     cmbDPERCOTA.Disabled = true;
                     txtIORIGEMPREC.ReadOnly = true;
-                    cmbIORIGEMPREC.Disabled = true;
+                    txtIORIGEMPREC.ReadOnly = true;
                     txtCODPAIS.ReadOnly = true;
                     txtCINDPRI.ReadOnly = true;
                     txtDINDPRI.ReadOnly = true;
@@ -160,16 +161,23 @@ namespace ABWebCatalogue.Site
                     txtCODFTT.ReadOnly = true;
                     txtCSUBFAM.ReadOnly = true;
                     txtCLIQUIDPROD.ReadOnly = true;
-                    cmbCCOMPLEXINV.Disabled = true;
+                    txtCCOMPLEXINV.ReadOnly = true;
                     txtCCOMPLEXINV.ReadOnly = true;
                     txtCHORIZON.ReadOnly = true;
-                    cmbCZONGEOG.Disabled = true;
+                    txtCZONGEOG.ReadOnly = true;
                     txtCNIVELRISCO.ReadOnly = true;
+                    txtCNIVELRISCO.ReadOnly = true;
+                    cmbNOMBREV.Disabled = true;
+                    cmbSITUACA.Disabled = true;
+                    cmbCPAISEMI.Disabled = true;
+                    cmbCSUBFAM.Disabled = true;
+                    cmbCCOMPLEXINV.Disabled = true;
+                    cmbCZONGEOG.Disabled = true;
+                    cmbCHORIZON.Disabled = true;
                     cmbCNIVELRISCO.Disabled = true;
-
                     break;
                 case "M":
-                    txtCODVALOR.ReadOnly = true;
+                    txtCODVALOR.ReadOnly = true; 
                     txtSITUACA.ReadOnly = true;
                     cmbDSEGCART.Disabled = true;
                     txtCTIPESC.ReadOnly = true;
@@ -179,12 +187,13 @@ namespace ABWebCatalogue.Site
                     txtAMORPARC.ReadOnly = true;
                     txtZCLIENTE.ReadOnly = true;
                     txtZSEQ.ReadOnly = true;
+                    txtCPAISEMI.ReadOnly = true;
                     txtDLGUARDA.ReadOnly = true;
                     txtDCUSTOD.ReadOnly = true;
                     txtRETEN.ReadOnly = true;
                     txtTISENIE.ReadOnly = true;
                     cmbDPERCOTA.Disabled = true;
-                    cmbIORIGEMPREC.Disabled = true;
+                    txtIORIGEMPREC.ReadOnly = true;
                     txtIORIGEMPREC.ReadOnly = true;
                     txtCODPAIS.ReadOnly = true;
                     txtCINDPRI.ReadOnly = true;
@@ -257,8 +266,11 @@ namespace ABWebCatalogue.Site
                     txtCODFTT.ReadOnly = true;
                     txtCLIQUIDPROD.ReadOnly = true;
                     txtCCOMPLEXINV.ReadOnly = true;
-                    cmbCNIVELRISCO.Disabled = true;
+                    txtCNIVELRISCO.ReadOnly = true;
                     txtAMORPARC.ReadOnly = true;
+                    cmbCODPAIS.Disabled = true;
+                    txtIPERCOTA.ReadOnly = true;
+                    cmbIORIGEMPREC.Disabled = true;
                     break;
                 default:
 
