@@ -434,10 +434,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-
-            JsServerSide();
-
-            fAccordionController();
+            JsServerSide();            
         });
 
 

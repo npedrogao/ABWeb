@@ -9,7 +9,8 @@ using System.Web.UI.WebControls;
 
 using Core.Utils;
 using System.Text;
-
+using System.Resources;
+using System.Reflection;
 
 namespace ABWebCatalogue.Site
 {
@@ -22,8 +23,11 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             StringBuilder js = new StringBuilder();
-            string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
+            string[] jsFunctionNames = new string[] { Resources.resJS.LookupCmbOnChange };
+
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+            js.Append(Resources.resJS.AccordionController);
+
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
