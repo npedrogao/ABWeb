@@ -31,7 +31,7 @@ namespace ABWebCatalogue.Site
         {
             string page = cmbMicroFamilia.Value;
 
-            Response.Redirect(page+".aspx?type=C");
+            Response.Redirect(page + ".aspx?transacao=" + page + "C");
         }
     }
 }

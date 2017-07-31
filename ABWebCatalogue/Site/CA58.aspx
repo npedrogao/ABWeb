@@ -25,36 +25,36 @@
                     <div class="row form-group">
                         <div class="col-sm-4 col-md-4 col-lg-2">
                             <label class="col-lg-2 text-right lbl">Familia:</label>
-                            <div class="col-sm-6 col-md-6">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbFamilia" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-3">
                             <label class="col-lg-4 text-right lbl">Sub Familia:</label>
-                            <div class="col-sm-6 col-md-6">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbSubFamilia" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-2">
                             <label class="col-lg-6 text-right lbl">Em Comercialização:</label>
-                            <div class="col-sm-3 col-md-3">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
                                 <select id="cmbEmComercializacao" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-2">
                             <label class="col-lg-2 text-right lbl">Estado:</label>
-                            <div class="col-sm-6 col-md-6">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbEstado" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-3">
                             <label class="col-lg-2 text-right lbl">Produto:</label>
-                            <div class="col-sm-6 col-md-6">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbProduto" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                     </div>
-                    <div class="row form-group text-right">
+                    <div class="row text-right">
                         <button name="button" type="button" id="btnPesquisar" class="btns">Pesquisar</button>
                     </div>
                 </div>
@@ -87,7 +87,11 @@
                         <div class="col-sm-1"><%# Eval("UltimaAlteracao") %></div>
                         <div class="col-sm-1"><%# WebUtil.DtToStr(Eval("DataActivacao"), "N/A")%></div>
                         <div class="col-sm-1"><%# WebUtil.DtToStr(Eval("DataInactivacao"), "N/A")%></div>
-                        <div class="col-sm-1">boteos</div>
+                        <div class="col-sm-1 accoes">
+                            <a class="glyphicon glyphicon-edit" title="Modificar"></a>
+                            <a class="glyphicon glyphicon-remove-circle" title="Anular"></a>
+                            <a class="glyphicon glyphicon-th-list" title="Visualizar"></a>
+                        </div>
                     </div>
                 </ItemTemplate>
                 <FooterTemplate>

@@ -40,18 +40,25 @@ textarea {
 .gRow {
     border-bottom: 2px solid #dddddd;
     vertical-align: top;
-    line-height: 1.428571429;
+    line-height: 2.428571;
+    height: 30px;
+}
+
+.accoes a {
+color: #F56600;
 }
 
 .gRowAlt {
     border-bottom: 2px solid #dddddd;
     background: #f9f9f9 !important;
     vertical-align: top;
-    line-height: 1.428571429;
+    line-height: 2.428571;
+    height: 30px;
 }
 
 .gHdr {
     border-bottom: 2px solid #dddddd;
+    height: 25px;
 }
 
     .gHdr > div {
