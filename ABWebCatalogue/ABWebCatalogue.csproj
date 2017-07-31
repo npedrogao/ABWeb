@@ -165,6 +165,7 @@
     <Content Include="scripts\locales\bootstrap-datepicker.vi.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Site\ABTest.aspx" />
     <Content Include="Site\AP34.aspx" />
     <Content Include="Site\Ap34BootstrapTest.aspx" />
     <Content Include="Site\BootstrapTest.aspx" />
@@ -289,7 +290,6 @@
     </Compile>
     <Compile Include="Site\VC39.aspx.cs">
       <DependentUpon>VC39.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\VC39.aspx.designer.cs">
       <DependentUpon>VC39.aspx</DependentUpon>

@@ -16,7 +16,8 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             StringBuilder js = new StringBuilder();
-            CatalogueModel.ApplyModel(this, ref js);
+            string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
+            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
 
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             InjectJs(ref js);
@@ -74,12 +75,12 @@ namespace ABWebCatalogue.Site
      
         }
 
-        protected void btnClear_Click(object sender, EventArgs e)
-        {
+//        protected void btnClear_Click(object sender, EventArgs e)
+//        {
 
-            Master.FindControl("CPH").Controls.SetCleanField();
+//            Master.FindControl("CPH").Controls.SetCleanField();
 
-        }
+//        }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
