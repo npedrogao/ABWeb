@@ -19,8 +19,8 @@ namespace ABWebCatalogue.Site
         {
 
             StringBuilder js = new StringBuilder();
-            var cat = new CatalogueModel();
-            cat.ApplyModel(this, ref js);
+            
+            CatalogueModel.ApplyModel(this, ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             
             string transaccao = Request.QueryString["transacao"].ToUpper();

@@ -21,10 +21,8 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            StringBuilder js = new StringBuilder();
-            var cat = new CatalogueModel();
-            cat.ApplyModel(this, ref js);
+            StringBuilder js = new StringBuilder();           
+            CatalogueModel.ApplyModel(this, ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
