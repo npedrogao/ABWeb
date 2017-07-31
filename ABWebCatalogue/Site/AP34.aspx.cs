@@ -23,7 +23,8 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             StringBuilder js = new StringBuilder();
-            string[] jsFunctionNames = new string[] { Resources.resJS.LookupCmbOnChange };
+            // Resources.resJS.LookupCmbOnChange
+            string[] jsFunctionNames = new string[] { Resx.AtuaPrima.LookupCmbOnChange };
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
             js.Append(Resources.resJS.AccordionController);

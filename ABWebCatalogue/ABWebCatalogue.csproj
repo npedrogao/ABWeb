@@ -206,6 +206,11 @@
       <DependentUpon>header.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resx\AtuaPrima.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtuaPrima.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resx\resJS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -330,10 +335,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resx\resJS.resx">
+    <EmbeddedResource Include="Resx\AtuaPrima.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AtuaPrima.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Resx\resJS.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>resJS.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    </Resource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

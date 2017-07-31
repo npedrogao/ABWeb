@@ -1221,8 +1221,7 @@ namespace Core.Models
 
         static CatalogueModel()
         {
-
-            ResourceManager.res
+            
         }
 
 
