@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,19 +19,19 @@ namespace Core.Models
         /// Applys the model definitions to page
         /// </summary>
         /// <param name="page"></param>
-        public static void ApplyModel(System.Web.UI.Page page, ref StringBuilder js)
+        public static void ApplyModel(System.Web.UI.Page page, ref StringBuilder js, params string[] jsFunctionNames)
         {
             string transactionName, errorLst = null;
             System.Web.UI.Control placeHolder;
 
             transactionName = page.Request.QueryString["transacao"];
             placeHolder = page.Master.FindControl("CPH");
-
+        
             try
             {
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
                 {
-                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js);
+                    errorLst = IterateModelElements(placeHolder, transactionName, db2Con, ref js, jsFunctionNames);
                 }
             }
             catch (Exception)
@@ -47,7 +48,11 @@ namespace Core.Models
 
         }
 
-        private static string IterateModelElements(System.Web.UI.Control placeHolder, string transactionName, OdbcDbConnection db2Con, ref StringBuilder js)
+        private static string IterateModelElements(System.Web.UI.Control placeHolder
+                                                , string transactionName
+                                                , OdbcDbConnection db2Con
+                                                , ref StringBuilder js
+                                                , params string[] jsFunctionNames)
         {
             string fieldName;
             StringBuilder errorLst = new StringBuilder();
@@ -112,7 +117,7 @@ namespace Core.Models
                             if (tabelaLst?.Count > 0)
                             {
                                 cmb.LoadWithList(false, tabelaLst);
-                                JsUtil.ExecJsFunction(js, "fLookupCmbOnChange", cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID);
+                                JsUtil.ExecJsFunction(js, jsFunctionNames[0], cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID); //aplica fLookupCmbOnChange
                             }
                         }
                         break;

@@ -1,15 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BootstrapTest2.aspx.cs" Inherits="ABWebCatalogue.Site.BootstrapTest2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/MasterPages/DefaultMaster.Master" CodeBehind="BootstrapTest2.aspx.cs" Inherits="ABWebCatalogue.Site.BootstrapTest2" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <link href="~\css\bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="~\css\bootstrap-ie7fix.css" type="text/css" rel="stylesheet" />
-    <link href="~\css\bankinter.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
 
     <div class="container-fluid">
         <div class="row">
@@ -389,9 +383,4 @@
             </div>
         </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+</asp:Content>

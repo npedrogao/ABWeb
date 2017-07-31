@@ -17,7 +17,8 @@ namespace ABWebCatalogue.Site
         {
             StringBuilder js = new StringBuilder();
             CatalogueModel.ApplyModel(this, ref js);
-
+            LoadCombos();          
+            InjectJs(ref js);
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             InjectJs(ref js);
 

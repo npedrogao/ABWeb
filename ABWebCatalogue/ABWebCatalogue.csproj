@@ -167,6 +167,7 @@
     <Content Include="scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
     <Content Include="Site\ABTest.aspx" />
     <Content Include="Site\AP34.aspx" />
+    <Content Include="Site\Ap34BootstrapTest.aspx" />
     <Content Include="Site\BootstrapTest.aspx" />
     <Content Include="Site\BootstrapTest2.aspx" />
     <Content Include="Site\CA29.aspx" />
@@ -205,12 +206,10 @@
       <DependentUpon>header.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site\ABTest.aspx.cs">
-      <DependentUpon>ABTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site\ABTest.aspx.designer.cs">
-      <DependentUpon>ABTest.aspx</DependentUpon>
+    <Compile Include="Resx\resJS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resJS.resx</DependentUpon>
     </Compile>
     <Compile Include="Site\AP34.aspx.cs">
       <DependentUpon>AP34.aspx</DependentUpon>
@@ -218,6 +217,13 @@
     </Compile>
     <Compile Include="Site\AP34.aspx.designer.cs">
       <DependentUpon>AP34.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Ap34BootstrapTest.aspx.cs">
+      <DependentUpon>Ap34BootstrapTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Ap34BootstrapTest.aspx.designer.cs">
+      <DependentUpon>Ap34BootstrapTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\BootstrapTest.aspx.cs">
       <DependentUpon>BootstrapTest.aspx</DependentUpon>
@@ -323,7 +329,12 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resx\resJS.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>resJS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
