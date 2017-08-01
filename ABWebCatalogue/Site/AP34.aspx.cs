@@ -17,13 +17,10 @@ namespace ABWebCatalogue.Site
     public partial class AP34 : System.Web.UI.Page
     {
 
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            btnClearKeys.HRef = WebUtil.GetPageRoot(this) + this.Request.Url.Query;
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this); // + this.Request.Url.Query;
 
             StringBuilder js = new StringBuilder();
             //StringBuilder lib = new StringBuilder();
