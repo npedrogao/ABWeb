@@ -8,7 +8,7 @@
             <asp:Label ID="lblTransaction" runat="server"></asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
-            <div class="row">
+            <div class="row colorbck">
                 <div class="col-lg-12">
                     <br />
                     <div class="row form-group padding-row">
@@ -40,6 +40,7 @@
                 </div>
                 <br />
                 <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
+                    <a id="btnClearKeys" class="btns btns-alt" runat="server">Limpar</a>
                     <button id="searchKeys" class="btns" runat="server">Search</button>
                 </div>
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
@@ -53,7 +54,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Parametros Gerais">Parametros Gerais</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -193,7 +194,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Durações">Durações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -232,7 +233,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Taxas e Encargos">Taxas e Encargos</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -283,7 +284,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Atributos de Investimento">Atributos de Investimento</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -405,7 +406,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Incentivos">Incentivos</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -424,7 +425,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Tomador e Pessoas Seguras">Tomador e Pessoas Seguras</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -471,7 +472,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Resseguro">Resseguro</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -490,7 +491,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Custos">Custos</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -513,7 +514,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Coperacs">Coperacs</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -643,7 +644,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Contabilidade">Contabilidade</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -676,7 +677,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Fundo Associado">Fundo Associado</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -699,7 +700,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Encargos de Alterção Modalidade">Encargos de Alterção Modalidade</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -786,7 +787,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="PRORROGAMENTO">PRORROGAMENTO</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -805,7 +806,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="VALIDAÇÕES">VALIDAÇÕES (vida risco)</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -828,7 +829,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="REVALIDAÇÃO de CAPITAL">REVALIDAÇÃO de CAPITAL</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -851,7 +852,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="INDICADORES">INDICADORES</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">

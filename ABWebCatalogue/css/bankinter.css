@@ -45,7 +45,7 @@ textarea {
 }
 
 .accoes a {
-color: #F56600;
+    color: #F56600;
 }
 
 .gRowAlt {
@@ -1383,24 +1383,26 @@ table.dataTable tr {
 .titleAccordion {
     background-color: rgb(245, 102, 0);
     color: #FFF;
-    padding: 10px;
-    width: 99%;
+    padding: 5px;
     border: none;
     outline: none;
-    font-size: 15px;
+    font-size: 12px;
     transition: 0.4s;
 }
 
 .titleTransaction {
     background-color: rgb(245, 102, 0);
     color: #FFF;
-    padding: 10px;
-    width: 99%;
+    padding: 2px;
     border: none;
+    font-family: Verdana;
     text-align: right;
+    font-size: 12px;
     outline: none;
-    font-size: 15px;
     transition: 0.4s;
+    margin:auto;
+    width:auto;
+    height:auto;
 }
 
 /*.panel-content {
@@ -1482,9 +1484,15 @@ font.font {
 }
 
 .t-field-t {
-    height: 22px;
-    line-height: 22px;
-    min-height: 22px;
+    height: 19px;
+    line-height: 20px;
+    min-height: 20px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0 0 0.2em;
+    border: 1px solid #999;
+    border-radius:0;
+    color:black;
 }
 
 t-field-sel {
@@ -1496,14 +1504,6 @@ t-field-sel {
 .t-table-dt {
     width: 40%;
     margin-left: 12%;
-}
-
-.span {
-    color: #555;
-}
-
-.tdvazio {
-    width: 10%;
 }
 
 .padding-row {
@@ -1538,6 +1538,11 @@ div.title {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    color: #63544A;
+}
+
+.colorbck {
+    background-color: #eee;
 }
 
 button.btn {
@@ -1549,17 +1554,19 @@ button.btn {
 }
 
 .divCollapseLeft {
-    margin-left: 80%;
+    margin-left: 90%
 }
 
 .btns {
     display: inline-block;
-    padding: 8px 12px;
+    /*padding: 8px 12px;*/
+    padding: 5px 10px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 12px;
     font-family: Bankinter;
-    width: 95px;
-    height: 35px;
+    /*width: 95px;*/
+    /*height: 35px;*/
+    height: 26px;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1580,6 +1587,17 @@ button.btn {
         color: #FFF;
     }
 
+.btns-alt {
+    min-width: 50px;
+    margin: 0 10px;
+    background: #ddd;
+    color: #555;
+}
+
+    .btns-alt:hover {
+        background: #ccc;
+        color: #000;
+    }
 
 
 a.accordion {
@@ -1591,6 +1609,8 @@ a.accordion {
     border: none;
     outline: none;
     text-decoration-line: none;
+    font-weight: bold;
+    font-size: 12px;
 }
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -1617,6 +1637,7 @@ div.panel-accordion {
 }
 
 .lbl {
-    margin-top: 5px !important;
-    color: #63544A;
+    margin-top: 2px !important;
+    color: #555;
+    font-family:Verdana;
 }

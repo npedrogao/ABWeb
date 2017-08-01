@@ -6,6 +6,14 @@ namespace Core.Utils
 {
     public static class WebUtil
     {
+
+        public static string GetPageRoot(System.Web.UI.Page page)
+        {
+            return page.Request.Url.ToString();
+            //return @"http://localhost:63213/Site/AP34.aspx";
+        }
+
+
         /// <summary>
         /// Converte um objecto cujo valor deverá ser um DateTime ou um null numa string no formato de data
         /// </summary>

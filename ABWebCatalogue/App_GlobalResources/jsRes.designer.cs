@@ -106,6 +106,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to lockUnlockField.
+        /// </summary>
+        internal static string LockUnlockField {
+            get {
+                return ResourceManager.GetString("LockUnlockField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to fLookupCmbOnChange.
         /// </summary>
         internal static string LookupCmbOnChange {

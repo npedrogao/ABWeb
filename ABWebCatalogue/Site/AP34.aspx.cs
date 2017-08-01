@@ -17,19 +17,23 @@ namespace ABWebCatalogue.Site
     public partial class AP34 : System.Web.UI.Page
     {
 
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this); // + this.Request.Url.Query;
+
             StringBuilder js = new StringBuilder();
+            //StringBuilder lib = new StringBuilder();
             // Resources.resJS.LookupCmbOnChange
             string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+            
+            //JsUtil.AppendJsLib("/js/AP34.js", lib);
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
             JsUtil.InjectJsServerSide(this, js);
-
+            
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
             if (IsPostBack)
@@ -59,9 +63,9 @@ namespace ABWebCatalogue.Site
                     break;
                 case "M":
                     txtCClaPrz.ReadOnly = true;
-                    cmbGCLAPRZ.Disabled = true;
+                    cmbCClaPrz.Disabled = true;
                     txtCMOEDA.ReadOnly = true;
-                    cmbGMOEDA.Disabled = true;
+                    cmbCMOEDA.Disabled = true;
                     cmbIRenovac.Disabled = true;
                     txtQMAXREN.ReadOnly = true;
                     cmbGCAMPNET.Disabled = true;
@@ -167,7 +171,7 @@ namespace ABWebCatalogue.Site
             txtCPRODUTO.ReadOnly = true;
             //cmbGPRODUTO.Disabled = true;
             txtCSubProd.ReadOnly = true;
-            cmbGSubProd.Disabled = true;
+            cmbCSubProd.Disabled = true;
             txtCSUBFAM.ReadOnly = true;
             cmbCSUBFAM.Disabled = true;
             txtCLIQUIDPROD.ReadOnly = true;

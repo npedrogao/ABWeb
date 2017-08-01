@@ -15,6 +15,8 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this);
+
             StringBuilder js = new StringBuilder();
             string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
