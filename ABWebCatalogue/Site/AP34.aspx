@@ -9,11 +9,11 @@
             <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
-            <div class="row">
+            <div class="row colorbck">
                 <div class="col-lg-12">
                     <br />
                     <div class="row form-group padding-row">
-                        <div class="col-lg-6 ">
+                        <div class="col-lg-6">
                             <asp:Label ID="lblCProduto" runat="server" CssClass="col-lg-2 text-right lbl">Produto:</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtCPRODUTO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
@@ -98,7 +98,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Características Gerais">Características Gerais</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -158,7 +158,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Renovações">Renovações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -179,7 +179,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Operações">Operações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -214,7 +214,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Débito">Débito</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -235,7 +235,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Validação Cliente</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -268,7 +268,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Cross Selling</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -295,7 +295,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Atributos de Investimento</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">

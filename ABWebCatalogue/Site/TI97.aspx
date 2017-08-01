@@ -12,7 +12,7 @@
         </div>
         <div class="container-fluid form-horizontal">
             <br />
-            <div class="row">
+            <div class="row colorbck">
                 <div class="col-lg-12">
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -462,7 +462,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares: OBRIGAÇÕES/V.M. CONVERTÍVEIS</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="col-lg-12">
                     <div class="row form-group padding-row">
@@ -748,7 +748,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares WARRANTS DESTACADOS / V.M.CONVERTÍVEIS</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
@@ -838,7 +838,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares WARRANTS AUTÓNOMOS / WARRANTS ESTRUTURADOS</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
@@ -942,7 +942,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares DERIVADOS/FUTUROS</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
@@ -977,7 +977,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Técnicos espécie</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group">
                 </div>
@@ -1005,7 +1005,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares ELEGIBILIDADE</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
@@ -1050,7 +1050,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Dados Complementares Impostos FTT</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
@@ -1071,7 +1071,7 @@
             <div class="col-lg-12 titleAccordion">
                 <a class="accordion" title="Dados Complementares">Atributos de Investimento</a>
             </div>
-            <div class="row hidden closeAccordion">
+            <div class="row hidden closeAccordion colorbck">
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6">
