@@ -1209,16 +1209,4 @@
             </div>
         </div>
     </div>
-    <br />
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            JsServerSide();
-
-            fAccordionController();
-        });
-    </script>
-
-
-
 </asp:Content>

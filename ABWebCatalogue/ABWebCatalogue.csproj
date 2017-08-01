@@ -94,7 +94,7 @@
     <Content Include="js\GenericFramework.js" />
     <Content Include="js\jquery-1.8.3.js" />
     <Content Include="js\jquery-1.8.3.min.js" />
-    <Content Include="js\util.js" />
+    <Content Include="js\CA29.js" />
     <Content Include="MasterPages\header.ascx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -334,6 +334,7 @@
     <EmbeddedResource Include="App_GlobalResources\jsRes.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>jsRes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

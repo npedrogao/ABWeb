@@ -29,7 +29,8 @@ namespace ABWebCatalogue.Site
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
             js.Append(Resources.jsRes.AccordionController);
 
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            JsUtil.InjectJsServerSide(this, js);
+
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
             if (IsPostBack)
