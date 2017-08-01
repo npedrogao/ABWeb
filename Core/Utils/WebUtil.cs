@@ -41,6 +41,21 @@ namespace Core.Utils
 
         }
 
+        public static void SystemMessage(System.Web.UI.Control div, System.Web.UI.Control ul, params string[] txt)
+        {
+            div.Visible = true;
+           
+
+            foreach (var t in txt)
+            {
+                HtmlGenericControl li = new HtmlGenericControl("li");
+                li.InnerText = t;
+                ul.Controls.Add(li);
+            }
+       
+        }
+
+
         public static void HideShowControls(Boolean visible, params System.Web.UI.Control[] ctrls)
         {
             foreach (var ctrl in ctrls)

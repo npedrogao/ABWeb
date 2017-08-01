@@ -13,6 +13,24 @@ namespace ABWebCatalogue.Site {
     public partial class AP34 {
         
         /// <summary>
+        /// messageDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl messageDiv;
+        
+        /// <summary>
+        /// bulletUl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bulletUl;
+        
+        /// <summary>
         /// lblTransaction control.
         /// </summary>
         /// <remarks>
