@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +47,7 @@ namespace EnumExtensions
                 return value.ToString();
         }
 
-        public static List<KeyValuePair<string, string>> ConvertEnumToList<T>()
+        public static List<KeyValuePair<string, string>> ConvertEnumToListDescValue<T>()
         {
             Dictionary<string, string> myDict = new Dictionary<string, string>();
             
@@ -62,6 +63,54 @@ namespace EnumExtensions
             }
                        
             return myDict.ToList();
+        }
+
+        public static List<KeyValuePair<string, string>> ConvertEnumToListValueDesc<T>()
+        {
+            List<KeyValuePair<string, string>> result = new List<KeyValuePair<string, string>>();
+            IEnumerable<T> listaEnums = Enum.GetValues(typeof(T)).Cast<T>();
+
+            foreach (T meuEnum in listaEnums)
+            {                
+                result.Add(new KeyValuePair<string, string>(meuEnum?.ToString(), GetDesc((Enum)(object)meuEnum)?.Trim()));
+            }
+
+            return result;
+        }
+
+        public static List<KeyValuePair<string, string>> ConvertEnumToListValueText<T>()
+        {
+            List<KeyValuePair<string, string>> result = new List<KeyValuePair<string, string>>();
+            IEnumerable<T> listaEnums = Enum.GetValues(typeof(T)).Cast<T>();
+
+            foreach (T meuEnum in listaEnums)
+            {
+                result.Add(new KeyValuePair<string, string>(meuEnum?.ToString(), meuEnum?.GetHashCode().ToString()));
+            }
+
+            return result;
+        }
+
+        public static List<KeyValuePair<string, string>> ConvertEnumToList<T>(KeyValueSourceEnum type)
+        {
+            List<KeyValuePair<string, string>> result =  new List<KeyValuePair<string, string>>();
+
+            switch (int.Parse(type.GetValue()))
+            {
+                case 1:
+                    result = ConvertEnumToListDescValue<T>(); //todo
+                    break;
+                case 2:
+                    result = ConvertEnumToListDescValue<T>(); //descrição valor
+                    break;
+                case 3:
+                    result = ConvertEnumToListValueDesc<T>();
+                    break;
+                default:
+                    break;
+            }
+           
+            return result;
         }
     }
 }
