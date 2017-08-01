@@ -63,9 +63,9 @@ namespace ABWebCatalogue.Site
                     break;
                 case "M":
                     txtCClaPrz.ReadOnly = true;
-                    cmbGCLAPRZ.Disabled = true;
+                    cmbCClaPrz.Disabled = true;
                     txtCMOEDA.ReadOnly = true;
-                    cmbGMOEDA.Disabled = true;
+                    cmbCMOEDA.Disabled = true;
                     cmbIRenovac.Disabled = true;
                     txtQMAXREN.ReadOnly = true;
                     cmbGCAMPNET.Disabled = true;
@@ -171,7 +171,7 @@ namespace ABWebCatalogue.Site
             txtCPRODUTO.ReadOnly = true;
             //cmbGPRODUTO.Disabled = true;
             txtCSubProd.ReadOnly = true;
-            cmbGSubProd.Disabled = true;
+            cmbCSubProd.Disabled = true;
             txtCSUBFAM.ReadOnly = true;
             cmbCSUBFAM.Disabled = true;
             txtCLIQUIDPROD.ReadOnly = true;

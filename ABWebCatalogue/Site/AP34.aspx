@@ -30,7 +30,7 @@
                                 <asp:TextBox ID="txtCSubProd" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
                             <div class="col-lg-4 ">
-                                <select id="cmbGSubProd" runat="server" class="form-control t-field-t"></select>
+                                <select id="cmbCSubProd" runat="server" class="form-control t-field-t"></select>
                                 <%--<asp:TextBox ID="txtGSubProd" runat="server" CssClass="form-control t-field-t"></asp:TextBox>--%>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                                 <asp:TextBox ID="txtCClaPrz" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
                             <div class="col-lg-4 ">
-                                <select id="cmbGCLAPRZ" runat="server" class="form-control t-field-t"></select>
+                                <select id="cmbCClaPrz" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-lg-6 ">
@@ -51,7 +51,7 @@
                                 <asp:TextBox ID="txtCMOEDA" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
                             <div class="col-lg-4">
-                                <select id="cmbGMOEDA" runat="server" class="form-control t-field-t"></select>
+                                <select id="cmbCMOEDA" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                     </div>

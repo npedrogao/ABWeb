@@ -67,13 +67,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCSubProd;
         
         /// <summary>
-        /// cmbGSubProd control.
+        /// cmbCSubProd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGSubProd;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCSubProd;
         
         /// <summary>
         /// lblCClaPrz control.
@@ -94,13 +94,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCClaPrz;
         
         /// <summary>
-        /// cmbGCLAPRZ control.
+        /// cmbCClaPrz control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGCLAPRZ;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCClaPrz;
         
         /// <summary>
         /// lblCMOEDA control.
@@ -121,13 +121,13 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCMOEDA;
         
         /// <summary>
-        /// cmbGMOEDA control.
+        /// cmbCMOEDA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbGMOEDA;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCMOEDA;
         
         /// <summary>
         /// pnlGESTADO control.
