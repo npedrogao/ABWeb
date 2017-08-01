@@ -28,7 +28,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCPRODUTO;
+        protected global::System.Web.UI.WebControls.Label lblCPRODUTO;
         
         /// <summary>
         /// txtCPRODUTO control.
@@ -46,7 +46,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCSUBPROD;
+        protected global::System.Web.UI.WebControls.Label lblCSUBPROD;
         
         /// <summary>
         /// txtCSUBPROD control.
@@ -73,7 +73,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl GSUBPROD;
+        protected global::System.Web.UI.WebControls.Label GSUBPROD;
         
         /// <summary>
         /// txtGSUBPROD control.
@@ -154,7 +154,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCTIPOSG;
+        protected global::System.Web.UI.WebControls.Label lblCTIPOSG;
         
         /// <summary>
         /// txtCTIPOSG control.
@@ -181,7 +181,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCMOEDA;
+        protected global::System.Web.UI.WebControls.Label lblCMOEDA;
         
         /// <summary>
         /// txtCMOEDA control.
@@ -208,7 +208,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCBALCAO1;
+        protected global::System.Web.UI.WebControls.Label lblCBALCAO1;
         
         /// <summary>
         /// txtCBALCAO1 control.
@@ -235,7 +235,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCAPOANO;
+        protected global::System.Web.UI.WebControls.Label lblCAPOANO;
         
         /// <summary>
         /// txtCAPOANO control.
@@ -253,7 +253,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblZAPOLICE;
+        protected global::System.Web.UI.WebControls.Label lblZAPOLICE;
         
         /// <summary>
         /// txtZAPOLICE control.
@@ -271,7 +271,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCCERTIF;
+        protected global::System.Web.UI.WebControls.Label lblCCERTIF;
         
         /// <summary>
         /// txtCCERTIF control.
@@ -289,7 +289,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCCERANO;
+        protected global::System.Web.UI.WebControls.Label lblCCERANO;
         
         /// <summary>
         /// txtCCERANO control.
@@ -307,7 +307,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCBALSACO;
+        protected global::System.Web.UI.WebControls.Label lblCBALSACO;
         
         /// <summary>
         /// txtCBALSACO control.
@@ -334,7 +334,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCBANNIB;
+        protected global::System.Web.UI.WebControls.Label lblCBANNIB;
         
         /// <summary>
         /// txtCBANNIB control.
@@ -379,7 +379,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQBASCALC;
+        protected global::System.Web.UI.WebControls.Label lblQBASCALC;
         
         /// <summary>
         /// txtQBASCALC control.
@@ -397,7 +397,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCSEQUEN;
+        protected global::System.Web.UI.WebControls.Label lblCSEQUEN;
         
         /// <summary>
         /// txtCSEQUEN control.
@@ -415,7 +415,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQDECIUPS;
+        protected global::System.Web.UI.WebControls.Label lblQDECIUPS;
         
         /// <summary>
         /// txtQDECIUPS control.
@@ -433,7 +433,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQALTMOD;
+        protected global::System.Web.UI.WebControls.Label lblQALTMOD;
         
         /// <summary>
         /// txtQALTMOD control.
@@ -451,7 +451,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQPROPVAL;
+        protected global::System.Web.UI.WebControls.Label lblQPROPVAL;
         
         /// <summary>
         /// txtQPROPVAL control.
@@ -469,7 +469,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCTIPODIAS;
+        protected global::System.Web.UI.WebControls.Label lblCTIPODIAS;
         
         /// <summary>
         /// cmbCTIPODIAS control.
@@ -487,7 +487,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQANOMIN;
+        protected global::System.Web.UI.WebControls.Label lblQANOMIN;
         
         /// <summary>
         /// txtQANOMIN control.
@@ -514,7 +514,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQANOMAX;
+        protected global::System.Web.UI.WebControls.Label lblQANOMAX;
         
         /// <summary>
         /// txtQANOMAX control.
@@ -550,7 +550,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTBONEMP;
+        protected global::System.Web.UI.WebControls.Label lblTBONEMP;
         
         /// <summary>
         /// txtTBONEMP control.
@@ -568,7 +568,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTCOMISS;
+        protected global::System.Web.UI.WebControls.Label lblTCOMISS;
         
         /// <summary>
         /// txtTCOMISS control.
@@ -586,7 +586,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTPARRESG;
+        protected global::System.Web.UI.WebControls.Label lblTPARRESG;
         
         /// <summary>
         /// txtTPARRESG control.
@@ -604,7 +604,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTGARANT;
+        protected global::System.Web.UI.WebControls.Label lblTGARANT;
         
         /// <summary>
         /// txtTGARANT control.
@@ -622,7 +622,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTPENTRFO;
+        protected global::System.Web.UI.WebControls.Label lblTPENTRFO;
         
         /// <summary>
         /// txtTPENTRFO control.
@@ -640,7 +640,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMRESGMIN;
+        protected global::System.Web.UI.WebControls.Label lblMRESGMIN;
         
         /// <summary>
         /// txtMRESGMIN control.
@@ -829,7 +829,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblPCOMDIS;
+        protected global::System.Web.UI.WebControls.Label lblPCOMDIS;
         
         /// <summary>
         /// txtPCOMDIS control.
@@ -847,7 +847,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQIDADMIN;
+        protected global::System.Web.UI.WebControls.Label lblQIDADMIN;
         
         /// <summary>
         /// txtQIDADMIN control.
@@ -865,7 +865,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQIDADMAX;
+        protected global::System.Web.UI.WebControls.Label lblQIDADMAX;
         
         /// <summary>
         /// txtQIDADMAX control.
@@ -883,7 +883,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQIDADDEF;
+        protected global::System.Web.UI.WebControls.Label lblQIDADDEF;
         
         /// <summary>
         /// txtQIDADDEF control.
@@ -901,7 +901,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQIDADSUB;
+        protected global::System.Web.UI.WebControls.Label lblQIDADSUB;
         
         /// <summary>
         /// txtQIDADSUB control.
@@ -919,7 +919,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblNPESSSEG;
+        protected global::System.Web.UI.WebControls.Label lblNPESSSEG;
         
         /// <summary>
         /// txtNPESSSEG control.
@@ -937,7 +937,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCTRATADO;
+        protected global::System.Web.UI.WebControls.Label lblCTRATADO;
         
         /// <summary>
         /// txtCTRATADO control.
@@ -955,7 +955,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMACTA;
+        protected global::System.Web.UI.WebControls.Label lblMACTA;
         
         /// <summary>
         /// txtMACTA control.
@@ -973,7 +973,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMCAPOL;
+        protected global::System.Web.UI.WebControls.Label lblMCAPOL;
         
         /// <summary>
         /// txtMCAPOL control.
@@ -991,7 +991,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// txtCPREMCLI control.
@@ -1072,7 +1072,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label2;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// txtCPREMSOC control.
@@ -1153,7 +1153,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTPARESG1;
+        protected global::System.Web.UI.WebControls.Label lblTPARESG1;
         
         /// <summary>
         /// txtTPARESG1 control.
@@ -1216,7 +1216,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblQANORES1;
+        protected global::System.Web.UI.WebControls.Label lblQANORES1;
         
         /// <summary>
         /// txtQANORES1 control.
@@ -1279,7 +1279,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblDPRESG1;
+        protected global::System.Web.UI.WebControls.Label lblDPRESG1;
         
         /// <summary>
         /// txtDPRESG1 control.
@@ -1495,7 +1495,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblITIPOREV;
+        protected global::System.Web.UI.WebControls.Label lblITIPOREV;
         
         /// <summary>
         /// txtITIPOREV control.
@@ -1513,7 +1513,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCTABREV;
+        protected global::System.Web.UI.WebControls.Label lblCTABREV;
         
         /// <summary>
         /// txtCTABREV control.
@@ -1531,7 +1531,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblIMETRESG;
+        protected global::System.Web.UI.WebControls.Label lblIMETRESG;
         
         /// <summary>
         /// txtIMETRESG control.
@@ -1549,7 +1549,7 @@ namespace ABWebCatalogue.Site {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblICAPTLZ;
+        protected global::System.Web.UI.WebControls.Label lblICAPTLZ;
         
         /// <summary>
         /// txtICAPTLZ control.

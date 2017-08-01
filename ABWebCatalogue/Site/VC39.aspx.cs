@@ -19,10 +19,11 @@ namespace ABWebCatalogue.Site
 
             StringBuilder js = new StringBuilder();
             string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
-            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
-
-            InjectJs(ref js);
+            JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js);
             JsUtil.InjectJsServerSide(this, js);
+
+            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
 
             string transaccao = Request.QueryString["transacao"];
             lblTransaction.Text = transaccao;
