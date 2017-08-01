@@ -44,7 +44,7 @@ namespace UnitTestBDCWS
                 TJ21Transaction tr = new TJ21Transaction();
                 TJ21Filter input = new TJ21Filter()
                 {
-                    Ceventotit = "92760006090",
+                    Ceventotit = "35",
                     Cestado = "A",
                     Cisin = "IE00B43VK078",
                     Codvalor = "0000000000000",

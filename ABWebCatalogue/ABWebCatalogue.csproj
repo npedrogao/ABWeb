@@ -206,15 +206,10 @@
       <DependentUpon>header.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resx\AtuaPrima.Designer.cs">
+    <Compile Include="App_GlobalResources\jsRes.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AtuaPrima.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resx\resJS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>resJS.resx</DependentUpon>
+      <DependentUpon>jsRes.resx</DependentUpon>
     </Compile>
     <Compile Include="Site\AP34.aspx.cs">
       <DependentUpon>AP34.aspx</DependentUpon>
@@ -295,6 +290,7 @@
     </Compile>
     <Compile Include="Site\VC39.aspx.cs">
       <DependentUpon>VC39.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\VC39.aspx.designer.cs">
       <DependentUpon>VC39.aspx</DependentUpon>
@@ -335,14 +331,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resx\AtuaPrima.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AtuaPrima.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Resource Include="Resx\resJS.resx">
+    <EmbeddedResource Include="App_GlobalResources\jsRes.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>resJS.Designer.cs</LastGenOutput>
-    </Resource>
+      <LastGenOutput>jsRes.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resx\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

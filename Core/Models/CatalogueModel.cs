@@ -54,7 +54,7 @@ namespace Core.Models
                                                 , ref StringBuilder js
                                                 , params string[] jsFunctionNames)
         {
-            string fieldName;
+            string fieldName, clientID;
             StringBuilder errorLst = new StringBuilder();
             var lst = DataManager.ModelDb2(transactionName);
             List<KeyValuePair<string, string>> tabelaLst = null;
@@ -112,12 +112,13 @@ namespace Core.Models
                         else if (itm.Tabela != TabelaEnum.NULL)
                         {
                             var cmb = (curControl as System.Web.UI.HtmlControls.HtmlSelect);
+                            clientID = cmb.ClientID;
 
                             tabelaLst = Db2DAL.GetDb2Lst(itm.Tabela, db2Con, itm.IDCol, itm.DescCol);
                             if (tabelaLst?.Count > 0)
                             {
                                 cmb.LoadWithList(false, tabelaLst);
-                                JsUtil.ExecJsFunction(js, jsFunctionNames[0], cmb.ClientID.Replace("cmb", "txt"), cmb.ClientID); //aplica fLookupCmbOnChange
+                                JsUtil.ExecJsFunction(jsFunctionNames[0], js, clientID.Replace("cmb", "txt"), clientID); //aplica fLookupCmbOnChange
                             }
                         }
                         break;

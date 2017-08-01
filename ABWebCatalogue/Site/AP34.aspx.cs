@@ -24,10 +24,10 @@ namespace ABWebCatalogue.Site
         {
             StringBuilder js = new StringBuilder();
             // Resources.resJS.LookupCmbOnChange
-            string[] jsFunctionNames = new string[] { Resx.AtuaPrima.LookupCmbOnChange };
+            string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
-            js.Append(Resources.resJS.AccordionController);
+            js.Append(Resources.jsRes.AccordionController);
 
             ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             string transaccao = Request.QueryString["transacao"].ToUpper();

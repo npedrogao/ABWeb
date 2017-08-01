@@ -120,6 +120,18 @@
   <data name="AccordionController" xml:space="preserve">
     <value>fAccordionController</value>
   </data>
+  <data name="CustodiaRulesSN" xml:space="preserve">
+    <value>CustodiaRulesSN</value>
+  </data>
+  <data name="CustodiaRulesSS" xml:space="preserve">
+    <value>CustodiaRulesSS</value>
+  </data>
+  <data name="CustodiaRulesTwoList" xml:space="preserve">
+    <value>CustodiaRulesTwoList</value>
+  </data>
+  <data name="CustodiaRulesTwoListComplex" xml:space="preserve">
+    <value>CustodiaRulesTwoListComplex</value>
+  </data>
   <data name="LookupCmbOnChange" xml:space="preserve">
     <value>fLookupCmbOnChange</value>
   </data>

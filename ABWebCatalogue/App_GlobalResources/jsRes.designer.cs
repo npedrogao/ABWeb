@@ -22,14 +22,14 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class resJS {
+    internal class jsRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal resJS() {
+        internal jsRes() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.resJS", global::System.Reflection.Assembly.Load("App_GlobalResources"));
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.jsRes", global::System.Reflection.Assembly.Load("App_GlobalResources"));
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,42 @@ namespace Resources {
         internal static string AccordionController {
             get {
                 return ResourceManager.GetString("AccordionController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CustodiaRulesSN.
+        /// </summary>
+        internal static string CustodiaRulesSN {
+            get {
+                return ResourceManager.GetString("CustodiaRulesSN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CustodiaRulesSS.
+        /// </summary>
+        internal static string CustodiaRulesSS {
+            get {
+                return ResourceManager.GetString("CustodiaRulesSS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CustodiaRulesTwoList.
+        /// </summary>
+        internal static string CustodiaRulesTwoList {
+            get {
+                return ResourceManager.GetString("CustodiaRulesTwoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CustodiaRulesTwoListComplex.
+        /// </summary>
+        internal static string CustodiaRulesTwoListComplex {
+            get {
+                return ResourceManager.GetString("CustodiaRulesTwoListComplex", resourceCulture);
             }
         }
         
