@@ -9,7 +9,8 @@ namespace Core.Utils
 
         public static string GetPageRoot(System.Web.UI.Page page)
         {
-            return @"http://localhost:63213/Site/AP34.aspx";
+            return page.Request.Url.ToString();
+            //return @"http://localhost:63213/Site/AP34.aspx";
         }
 
 
