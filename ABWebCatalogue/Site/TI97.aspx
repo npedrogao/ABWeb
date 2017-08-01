@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI97.aspx.cs" Inherits="ABWebCatalogue.Site.TI97" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="../js/commonAB.js"></script>
-    <script src="../js/util.js"></script>
+    <script src="../js/TI97.js" type="text/javascript"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -1054,7 +1053,7 @@
                 <br />
                 <div class="row form-group padding-row">
                     <div class="col-lg-6 ">
-                        <asp:Label ID="lblIIMPFTT" runat="server" class="col-lg-2 control-label">Cobrar Imposto:</asp:Label>
+                        <asp:Label ID="lblIIMPFTT" runat="server" class="col-lg-2 text-right lbl">Cobrar Imposto:</asp:Label>
                         <div class="col-lg-1">
                             <asp:TextBox ID="txtIIMPFTT" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                         </div>

@@ -132,6 +132,9 @@
   <data name="CustodiaRulesTwoListComplex" xml:space="preserve">
     <value>CustodiaRulesTwoListComplex</value>
   </data>
+  <data name="LockUnlockField" xml:space="preserve">
+    <value>lockUnlockField</value>
+  </data>
   <data name="LookupCmbOnChange" xml:space="preserve">
     <value>fLookupCmbOnChange</value>
   </data>

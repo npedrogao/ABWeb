@@ -22,8 +22,12 @@ namespace ABWebCatalogue.Site
         {
             ComboLoad();
             StringBuilder js = new StringBuilder();
-            CatalogueModel.ApplyModel(this, ref js);
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
+            string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
+            JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js);
+            JsUtil.InjectJsServerSide(this, js);
+            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
 

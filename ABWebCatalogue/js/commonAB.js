@@ -1,4 +1,4 @@
-﻿function fLookupCmbOnChange( txtID, cmbID) {
+﻿function fLookupCmbOnChange(txtID, cmbID) {
     //text change
     var cmbFieldID = "#" + cmbID;
     var txtField = $("#" + txtID);
@@ -69,3 +69,5 @@ function fAccordionController() {
         });
     });
 }
+
+
