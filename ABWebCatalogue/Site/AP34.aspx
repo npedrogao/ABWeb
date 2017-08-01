@@ -10,11 +10,11 @@
             <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
-            <div class="row">
+            <div class="row colorbck">
                 <div class="col-lg-12">
                     <br />
                     <div class="row form-group padding-row">
-                        <div class="col-lg-6 ">
+                        <div class="col-lg-6">
                             <asp:Label ID="lblCProduto" runat="server" CssClass="col-lg-2 text-right lbl">Produto:</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtCPRODUTO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
@@ -85,8 +85,8 @@
                 </div>
                 <br />
                 <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
+                    <button id="btnClearKeys" class="btns btns-alt" runat="server" onserverclick="btnClear_Click">Limpar</button>
                     <button id="searchKeys" class="btns" runat="server">Search</button>
-
                 </div>
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
                     <a id="btnCloseAll" class="btns" runat="server">Fechar</a>
@@ -99,7 +99,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Características Gerais">Características Gerais</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -159,7 +159,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Renovações">Renovações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -180,7 +180,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Operações">Operações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -215,7 +215,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Débito">Débito</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -236,7 +236,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Validação Cliente</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -269,7 +269,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Cross Selling</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -296,7 +296,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Validação Cliente">Atributos de Investimento</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
@@ -419,7 +419,7 @@
                 <hr class="hr" />
                 <br />
                 <div class="divCollapseLeft">
-                    <button id="btnClear" class="btns" runat="server" onserverclick="btnClear_Click">Limpar</button>
+                    <button id="btnClear" class="btns btns-alt"  runat="server" onserverclick="btnClear_Click">Limpar</button>
                     <button id="btnSave" class="btns" runat="server" onserverclick="btnSave_Click">Guardar</button>
                 </div>
             </div>

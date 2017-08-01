@@ -10,7 +10,7 @@
             <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
-            <div class="row">
+            <div class="row colorbck">
                 <div class="col-lg-12">
                     <br />
                     <div class="row form-group padding-row">
@@ -113,7 +113,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Classificação Bankinter">Classificação Bankinter</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -142,7 +142,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Classificação All Funds">Classificação All Funds</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -211,7 +211,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Sociedade Gestora">Sociedade Gestora</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -248,7 +248,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="SICAV">SICAV</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -295,7 +295,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="KIID">KIID</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -328,7 +328,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Dividendos">Dividendos</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -361,7 +361,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Outras características">Outras características</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -509,7 +509,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Comissões">Comissões</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -640,7 +640,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Cotações">Cotações</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -677,7 +677,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Negociação">Negociação</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -826,7 +826,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Canal de Distribuição">Canal de Distribuição</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <%--tabela--%>
@@ -932,7 +932,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Contas D.O.">Contas D.O.</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
@@ -1037,7 +1037,7 @@
                 <div class="col-lg-12 titleAccordion">
                     <a class="accordion" title="Atributos de Investimento">Atributos de Investimento</a>
                 </div>
-                <div class="row hidden closeAccordion">
+                <div class="row hidden closeAccordion colorbck">
                     <br />
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">

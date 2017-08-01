@@ -85,7 +85,7 @@ namespace EnumExtensions
 
             foreach (T meuEnum in listaEnums)
             {
-                result.Add(new KeyValuePair<string, string>(meuEnum?.ToString(), meuEnum?.GetHashCode().ToString()));
+                result.Add(new KeyValuePair<string, string>(meuEnum?.ToString(), GetValue((Enum)(object)meuEnum)));
             }
 
             return result;
@@ -93,20 +93,21 @@ namespace EnumExtensions
 
         public static List<KeyValuePair<string, string>> ConvertEnumToList<T>(KeyValueSourceEnum type)
         {
-            List<KeyValuePair<string, string>> result =  new List<KeyValuePair<string, string>>();
+            List<KeyValuePair<string, string>> result;
 
-            switch (int.Parse(type.GetValue()))
+            switch ((int)type)
             {
                 case 1:
-                    result = ConvertEnumToListDescValue<T>(); //todo
+                    result = ConvertEnumToListValueText<T>();
                     break;
                 case 2:
-                    result = ConvertEnumToListDescValue<T>(); //descrição valor
+                    result = ConvertEnumToListDescValue<T>();
                     break;
                 case 3:
                     result = ConvertEnumToListValueDesc<T>();
                     break;
                 default:
+                    result = ConvertEnumToListDescValue<T>();
                     break;
             }
            
