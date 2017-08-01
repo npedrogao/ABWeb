@@ -20,7 +20,7 @@ namespace ABWebCatalogue.Site
             string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
 
-    
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this);
 
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.InjectJsServerSide(this, js);

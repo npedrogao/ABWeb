@@ -15,11 +15,12 @@ namespace ABWebCatalogue.Site
     public partial class TI97 : System.Web.UI.Page
     {
 
-        
         TI97Model model = new TI97Model();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this);
+
             ComboLoad();
             StringBuilder js = new StringBuilder();
             string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };

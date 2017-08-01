@@ -40,6 +40,7 @@
                 </div>
                 <br />
                 <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
+                    <a id="btnClearKeys" class="btns btns-alt" runat="server">Limpar</a>
                     <button id="searchKeys" class="btns" runat="server">Search</button>
                 </div>
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
