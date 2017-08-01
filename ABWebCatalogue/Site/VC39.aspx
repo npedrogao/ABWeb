@@ -13,13 +13,13 @@
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
-                            <label id="lblCPRODUTO" runat="server" class="col-lg-2 text-right lbl">Produto</label>
+                            <asp:Label id="lblCPRODUTO" runat="server" class="col-lg-2 text-right lbl">Produto</asp:Label>
                             <div class="col-lg-4">
                                 <asp:TextBox ID="txtCPRODUTO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-lg-6 ">
-                            <label id="lblCSUBPROD" runat="server" class="col-lg-2 text-right lbl">Sub Produto</label>
+                            <asp:Label id="lblCSUBPROD" runat="server" class="col-lg-2 text-right lbl">Sub Produto</asp:Label>
                             <div class="col-lg-4">
                                 <asp:TextBox ID="txtCSUBPROD" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -28,7 +28,7 @@
                     <div id="pnlVC" runat="server" class="hidden">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="GSUBPROD" runat="server" class="col-lg-2 text-right lbl">Nome</label>
+                                <asp:Label id="GSUBPROD" runat="server" class="col-lg-2 text-right lbl">Nome</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtGSUBPROD" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -59,7 +59,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCTIPOSG" runat="server" class="col-lg-2 text-right lbl">Tipo Produto</label>
+                                <asp:Label id="lblCTIPOSG" runat="server" class="col-lg-2 text-right lbl">Tipo Produto</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCTIPOSG" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCMOEDA" runat="server" class="col-lg-2 text-right lbl">Moeda</label>
+                                <asp:Label id="lblCMOEDA" runat="server" class="col-lg-2 text-right lbl">Moeda</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCMOEDA" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCBALCAO1" runat="server" class="col-lg-2 text-right lbl">Conta Produto</label>
+                                <asp:Label id="lblCBALCAO1" runat="server" class="col-lg-2 text-right lbl">Conta Produto</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCBALCAO1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCAPOANO" runat="server" class="col-lg-2 text-right lbl">CAPOANO</label>
+                                <asp:Label id="lblCAPOANO" runat="server" class="col-lg-2 text-right lbl">CAPOANO</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCAPOANO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -96,13 +96,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblZAPOLICE" runat="server" class="col-lg-2 text-right lbl">ZAPOLICE</label>
+                                <asp:Label id="lblZAPOLICE" runat="server" class="col-lg-2 text-right lbl">ZAPOLICE</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtZAPOLICE" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCCERTIF" runat="server" class="col-lg-2 text-right lbl">CCERTIF</label>
+                                <asp:Label id="lblCCERTIF" runat="server" class="col-lg-2 text-right lbl">CCERTIF</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCCERTIF" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -110,13 +110,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCCERANO" runat="server" class="col-lg-2 text-right lbl">CCERANO</label>
+                                <asp:Label id="lblCCERANO" runat="server" class="col-lg-2 text-right lbl">CCERANO</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCCERANO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCBALSACO" runat="server" class="col-lg-2 text-right lbl">Conta IT'S</label>
+                                <asp:Label id="lblCBALSACO" runat="server" class="col-lg-2 text-right lbl">Conta IT'S</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCBALSACO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -128,7 +128,7 @@
                         <br />
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCBANNIB" runat="server" class="col-lg-2 text-right lbl">NIB da Conta GV</label>
+                                <asp:Label id="lblCBANNIB" runat="server" class="col-lg-2 text-right lbl">NIB da Conta GV</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtCBANNIB" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -148,13 +148,13 @@
                         ´<br />
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQBASCALC" runat="server" class="col-lg-2 text-right lbl">Base Cálculo</label>
+                                <asp:Label id="lblQBASCALC" runat="server" class="col-lg-2 text-right lbl">Base Cálculo</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQBASCALC" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCSEQUEN" runat="server" class="col-lg-2 text-right lbl">Base Cálculo</label>
+                                <asp:Label id="lblCSEQUEN" runat="server" class="col-lg-2 text-right lbl">Base Cálculo</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCSEQUEN" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -162,13 +162,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQDECIUPS" runat="server" class="col-lg-2 text-right lbl">Decimais UP'S</label>
+                                <asp:Label id="lblQDECIUPS" runat="server" class="col-lg-2 text-right lbl">Decimais UP'S</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQDECIUPS" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblQALTMOD" runat="server" class="col-lg-2 text-right lbl">Número de Alterações</label>
+                                <asp:Label id="lblQALTMOD" runat="server" class="col-lg-2 text-right lbl">Número de Alterações</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQALTMOD" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -176,13 +176,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQPROPVAL" runat="server" class="col-lg-2 text-right lbl">Validade Propostas (Dias):</label>
+                                <asp:Label id="lblQPROPVAL" runat="server" class="col-lg-2 text-right lbl">Validade Propostas (Dias):</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQPROPVAL" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCTIPODIAS" runat="server" class="col-lg-2 text-right lbl">Dias úteis:</label>
+                                <asp:Label id="lblCTIPODIAS" runat="server" class="col-lg-2 text-right lbl">Dias úteis:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbCTIPODIAS" runat="server" class="form-control t-field-t"></select>
                                 </div>
@@ -199,7 +199,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQANOMIN" runat="server" class="col-lg-2 text-right lbl">Minimo (Anos|Dias):</label>
+                                <asp:Label id="lblQANOMIN" runat="server" class="col-lg-2 text-right lbl">Minimo (Anos|Dias):</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQANOMIN" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblQANOMAX" runat="server" class="col-lg-2 text-right lbl">Maximo (Anos|Dias):</label>
+                                <asp:Label id="lblQANOMAX" runat="server" class="col-lg-2 text-right lbl">Maximo (Anos|Dias):</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtQANOMAX" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -219,7 +219,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">Data De Vencimento:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">Data De Vencimento:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtDVENCIM" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -238,13 +238,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblTBONEMP" runat="server" class="col-lg-2 text-right lbl">Tx.Bonific. (%):</label>
+                                <asp:Label id="lblTBONEMP" runat="server" class="col-lg-2 text-right lbl">Tx.Bonific. (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTBONEMP" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblTCOMISS" runat="server" class="col-lg-2 text-right lbl">Tx.Comissão (%):</label>
+                                <asp:Label id="lblTCOMISS" runat="server" class="col-lg-2 text-right lbl">Tx.Comissão (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTCOMISS" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -252,13 +252,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblTPARRESG" runat="server" class="col-lg-2 text-right lbl">Tx.Par.Resg. (%):</label>
+                                <asp:Label id="lblTPARRESG" runat="server" class="col-lg-2 text-right lbl">Tx.Par.Resg. (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTPARRESG" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblTGARANT" runat="server" class="col-lg-2 text-right lbl">Tx.Garant. (%):</label>
+                                <asp:Label id="lblTGARANT" runat="server" class="col-lg-2 text-right lbl">Tx.Garant. (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTGARANT" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -266,13 +266,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblTPENTRFO" runat="server" class="col-lg-2 text-right lbl">Tx.Pen.Trfo (%):</label>
+                                <asp:Label id="lblTPENTRFO" runat="server" class="col-lg-2 text-right lbl">Tx.Pen.Trfo (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTPENTRFO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblMRESGMIN" runat="server" class="col-lg-2 text-right lbl">Vl.Resg.Min. (%):</label>
+                                <asp:Label id="lblMRESGMIN" runat="server" class="col-lg-2 text-right lbl">Vl.Resg.Min. (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMRESGMIN" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -289,7 +289,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCSUBFAM" class="col-lg-2 text-right lbl">SubFamilia:</label>
+                                <asp:Label id="lblCSUBFAM" class="col-lg-2 text-right lbl">SubFamilia:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCSUBFAM" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -298,7 +298,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCLIQUIDPROD" class="col-lg-2 text-right lbl">Liquidez:</label>
+                                <asp:Label id="lblCLIQUIDPROD" class="col-lg-2 text-right lbl">Liquidez:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCLIQUIDPROD" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -306,7 +306,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCCOMPLEXINV" class="col-lg-2 text-right lbl">Complexidade:</label>
+                                <asp:Label id="lblCCOMPLEXINV" class="col-lg-2 text-right lbl">Complexidade:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCCOMPLEXINV" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -315,7 +315,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCHORIZON" class="col-lg-2 text-right lbl">Horizonte Temporal:</label>
+                                <asp:Label id="lblCHORIZON" class="col-lg-2 text-right lbl">Horizonte Temporal:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCHORIZON" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -326,7 +326,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCZONGEOG" class="col-lg-2 text-right lbl">Zona Geográfica:</label>
+                                <asp:Label id="lblCZONGEOG" class="col-lg-2 text-right lbl">Zona Geográfica:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCZONGEOG" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -335,7 +335,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCONOFFREGU" class="col-lg-2 text-right lbl">OnOff/Regular:</label>
+                                <asp:Label id="lblCONOFFREGU" class="col-lg-2 text-right lbl">OnOff/Regular:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCONOFFREGU" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -343,13 +343,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lbCIPAD" class="col-lg-2 text-right lbl">iPAD:</label>
+                                <asp:Label id="lbCIPAD" class="col-lg-2 text-right lbl">iPAD:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbCIPAD" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCNIVELRISCO" class="col-lg-2 text-right lbl">Nivel Risco:</label>
+                                <asp:Label id="lblCNIVELRISCO" class="col-lg-2 text-right lbl">Nivel Risco:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCNIVELRISCO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -357,13 +357,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lbMVAR" class="col-lg-2 text-right lbl">VaR:</label>
+                                <asp:Label id="lbMVAR" class="col-lg-2 text-right lbl">VaR:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtMVAR" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblDVAR" class="col-lg-2 text-right lbl">Data:</label>
+                                <asp:Label id="lblDVAR" class="col-lg-2 text-right lbl">Data:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtDVAR" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -371,13 +371,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblGOBSRV" class="col-lg-2 text-right lbl">Descrição:</label>
+                                <asp:Label id="lblGOBSRV" class="col-lg-2 text-right lbl">Descrição:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtGOBSRV" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCCLAACTI" class="col-lg-2 text-right lbl">Cat./Class.activ.:</label>
+                                <asp:Label id="lblCCLAACTI" class="col-lg-2 text-right lbl">Cat./Class.activ.:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCCLAACTI" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -388,13 +388,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCCLASSRISC" class="col-lg-2 text-right lbl">Solicitar classificação de Risco:</label>
+                                <asp:Label id="lblCCLASSRISC" class="col-lg-2 text-right lbl">Solicitar classificação de Risco:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbCCLASSRISC" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblDTACTIVA" class="col-lg-2 text-right lbl">Data de Activação:</label>
+                                <asp:Label id="lblDTACTIVA" class="col-lg-2 text-right lbl">Data de Activação:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtDTACTIVA" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -411,7 +411,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblPCOMDIS" runat="server" class="col-lg-4 text-right lbl">Comissão de Distribuição:</label>
+                                <asp:Label id="lblPCOMDIS" runat="server" class="col-lg-4 text-right lbl">Comissão de Distribuição:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtPCOMDIS" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -430,13 +430,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQIDADMIN" runat="server" class="col-lg-3 text-right lbl">Idade Minima (%):</label>
+                                <asp:Label id="lblQIDADMIN" runat="server" class="col-lg-3 text-right lbl">Idade Minima (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtQIDADMIN" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblQIDADMAX" runat="server" class="col-lg-3 text-right lbl">Idade Máxima (%):</label>
+                                <asp:Label id="lblQIDADMAX" runat="server" class="col-lg-3 text-right lbl">Idade Máxima (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtQIDADMAX" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -444,13 +444,13 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblQIDADDEF" runat="server" class="col-lg-3 text-right lbl">Idade Default (%):</label>
+                                <asp:Label id="lblQIDADDEF" runat="server" class="col-lg-3 text-right lbl">Idade Default (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtQIDADDEF" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblQIDADSUB" runat="server" class="col-lg-3 text-right lbl">Idade Max. Subs. (%):</label>
+                                <asp:Label id="lblQIDADSUB" runat="server" class="col-lg-3 text-right lbl">Idade Max. Subs. (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtQIDADSUB" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -458,7 +458,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblNPESSSEG" runat="server" class="col-lg-3 text-right lbl">Nº Pessoas Seguras (%):</label>
+                                <asp:Label id="lblNPESSSEG" runat="server" class="col-lg-3 text-right lbl">Nº Pessoas Seguras (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtNPESSSEG" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -477,7 +477,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblCTRATADO" runat="server" class="col-lg-2 text-right lbl">Cód. Tratado (%):</label>
+                                <asp:Label id="lblCTRATADO" runat="server" class="col-lg-2 text-right lbl">Cód. Tratado (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtCTRATADO" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -496,13 +496,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblMACTA" runat="server" class="col-lg-2 text-right lbl">Acta (%):</label>
+                                <asp:Label id="lblMACTA" runat="server" class="col-lg-2 text-right lbl">Acta (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMACTA" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblMCAPOL" runat="server" class="col-lg-2 text-right lbl">Apólice (%):</label>
+                                <asp:Label id="lblMCAPOL" runat="server" class="col-lg-2 text-right lbl">Apólice (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMCAPOL" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -519,17 +519,17 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-2"></div>
-                            <label class="col-lg-1 text-center lbl">PREM</label>
-                            <label class="col-lg-1 text-center lbl">RESG.T</label>
-                            <label class="col-lg-1 text-center lbl">RESG.P</label>
-                            <label class="col-lg-1 text-center lbl">RED.T</label>
-                            <label class="col-lg-1 text-center lbl">RED.P</label>
-                            <label class="col-lg-1 text-center lbl">SIN</label>
-                            <label class="col-lg-1 text-center lbl">TRANSFO</label>
-                            <label class="col-lg-1 text-center lbl">TRANSFE</label>
+                            <asp:Label class="col-lg-1 text-center lbl">PREM</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">RESG.T</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">RESG.P</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">RED.T</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">RED.P</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">SIN</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">TRANSFO</asp:Label>
+                            <asp:Label class="col-lg-1 text-center lbl">TRANSFE</asp:Label>
                         </div>
                         <div class="row form-group padding-row">
-                            <label id="Label1" runat="server" class="col-lg-2 text-right lbl">CLI:</label>
+                            <asp:Label id="Label1" runat="server" class="col-lg-2 text-right lbl">CLI:</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtCPREMCLI" runat="server" class="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -556,7 +556,7 @@
                             </div>
                         </div>
                         <div class="row form-group padding-row">
-                            <label id="Label2" runat="server" class="col-lg-2 text-right lbl">SOC:</label>
+                            <asp:Label id="Label2" runat="server" class="col-lg-2 text-right lbl">SOC:</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtCPREMSOC" runat="server" class="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -584,7 +584,7 @@
                         </div>
                         <br />
                         <div class="row form-group padding-row">
-                            <label id="lblTPARESG1" runat="server" class="col-lg-2 text-right lbl">Tx.Penalização (%):</label>
+                            <asp:Label id="lblTPARESG1" runat="server" class="col-lg-2 text-right lbl">Tx.Penalização (%):</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtTPARESG1" runat="server" class="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -605,7 +605,7 @@
                             </div>
                         </div>
                         <div class="row form-group padding-row">
-                            <label id="lblQANORES1" runat="server" class="col-lg-2 text-right lbl">Até (Ano):</label>
+                            <asp:Label id="lblQANORES1" runat="server" class="col-lg-2 text-right lbl">Até (Ano):</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtQANORES1" runat="server" class="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -626,7 +626,7 @@
                             </div>
                         </div>
                         <div class="row form-group padding-row">
-                            <label id="lblDPRESG1" runat="server" class="col-lg-2 text-right lbl">Data:</label>
+                            <asp:Label id="lblDPRESG1" runat="server" class="col-lg-2 text-right lbl">Data:</asp:Label>
                             <div class="col-lg-1">
                                 <asp:TextBox ID="txtDPRESG1" runat="server" class="form-control t-field-t"></asp:TextBox>
                             </div>
@@ -649,13 +649,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">COPERSG.:</label>
+                                <asp:Label runat="server" class="col-lg-2 text-right lbl">COPERSG.:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCopersg" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">Prod.c/ PPP:</label>
+                                <asp:Label runat="server" class="col-lg-2 text-right lbl">Prod.c/ PPP:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbCopersgppp" runat="server" class="form-control t-field-t"></select>
                                 </div>
@@ -663,7 +663,7 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">COPERSG PPP:</label>
+                                <asp:Label runat="server" class="col-lg-2 text-right lbl">COPERSG PPP:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtIcobppp" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -682,13 +682,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">SubProduto:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">SubProduto:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtSubpfund" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">Conta:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">Conta:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCbalfund" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -705,25 +705,25 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC1 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC1 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT1 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT1 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC4 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC4 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT4 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT4 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -731,25 +731,25 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC2 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC2 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT2 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT2 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC5 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC5 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT5 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT5 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -757,25 +757,25 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC3 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC3 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT3 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT3 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">ENC6 (%):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">ENC6 (%):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtTencmod6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <label class="col-lg-3 text-right lbl">MONT6 (€):</label>
+                                <asp:Label class="col-lg-3 text-right lbl">MONT6 (€):</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtMencmod6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -792,7 +792,7 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6">
-                                <label class="col-lg-2 text-right lbl">Anos:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">Anos:</asp:Label>
                                 <div class="col-lg-2">
                                     <asp:TextBox ID="txtQprorrog" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -811,13 +811,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">Validade de Duração de Contrato:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">Validade de Duração de Contrato:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbIvaldur" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label class="col-lg-2 text-right lbl">Base de Cálculo:</label>
+                                <asp:Label class="col-lg-2 text-right lbl">Base de Cálculo:</asp:Label>
                                 <div class="col-lg-4">
                                     <select id="cmbIbasecal" runat="server" class="form-control t-field-t"></select>
                                 </div>
@@ -834,13 +834,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblITIPOREV" runat="server" class="col-lg-2 text-right lbl">TIPO DE REVALORIZAÇÃO DE CAPITAL</label>
+                                <asp:Label id="lblITIPOREV" runat="server" class="col-lg-2 text-right lbl">TIPO DE REVALORIZAÇÃO DE CAPITAL</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtITIPOREV" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblCTABREV" runat="server" class="col-lg-2 text-right lbl">COD. TABELA DE REVALORIZAÇÃO :</label>
+                                <asp:Label id="lblCTABREV" runat="server" class="col-lg-2 text-right lbl">COD. TABELA DE REVALORIZAÇÃO :</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtCTABREV" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
@@ -857,13 +857,13 @@
                     <div class="col-lg-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
-                                <label id="lblIMETRESG" runat="server" class="col-lg-2 text-right lbl">METDO DE RESGATE:</label>
+                                <asp:Label id="lblIMETRESG" runat="server" class="col-lg-2 text-right lbl">METDO DE RESGATE:</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtIMETRESG" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 ">
-                                <label id="lblICAPTLZ" runat="server" class="col-lg-2 text-right lbl">CAPITALIZACAO :</label>
+                                <asp:Label id="lblICAPTLZ" runat="server" class="col-lg-2 text-right lbl">CAPITALIZACAO :</asp:Label>
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtICAPTLZ" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
