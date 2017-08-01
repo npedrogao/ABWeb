@@ -105,7 +105,7 @@
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 ">
                                 <asp:Label ID="lblIPRZABS" runat="server" class="col-lg-2 text-right lbl">Prazo Absoluto:</asp:Label>
-                                <div class="col-lg-1">
+                                <div class="col-lg-2">
                                     <select id="cmbIPRZABS" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>

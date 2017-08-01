@@ -185,7 +185,7 @@ namespace Core.Models
 
     public enum PrazoAbsolutoEnum
     {
-        [Description("")]
+        [Description("Selecione")]
         Empty = ' ',
         [Description("A")]
         A = 'A',

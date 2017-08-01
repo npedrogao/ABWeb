@@ -10,9 +10,9 @@
             <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>
         <div class="container-fluid form-horizontal">
-            <br />
-            <div class="row colorbck">
+            <div class="row colorbck ">
                 <div class="col-lg-12">
+                          <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 ">
                             <asp:Label ID="lblCODVALOR" runat="server" class="col-lg-2 text-right lbl">Espécie:</asp:Label>

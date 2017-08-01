@@ -16,11 +16,14 @@ namespace ABWebCatalogue.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             StringBuilder js = new StringBuilder();
-            CatalogueModel.ApplyModel(this, ref js);
-            LoadCombos();          
-            InjectJs(ref js);
-            JsUtil.InjectJsServerSide(this, js);
 
+            string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
+            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+
+    
+
+            JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            JsUtil.InjectJsServerSide(this, js);
             string transaccao = Request.QueryString["transacao"];
             lblTransaction.Text = transaccao;
 
