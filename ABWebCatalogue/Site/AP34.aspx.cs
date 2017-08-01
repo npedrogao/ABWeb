@@ -26,13 +26,17 @@ namespace ABWebCatalogue.Site
             btnClearKeys.HRef = WebUtil.GetPageRoot(this) + this.Request.Url.Query;
 
             StringBuilder js = new StringBuilder();
+            //StringBuilder lib = new StringBuilder();
             // Resources.resJS.LookupCmbOnChange
             string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+            
+            //JsUtil.AppendJsLib("/js/AP34.js", lib);
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
             JsUtil.InjectJsServerSide(this, js);
-
+            
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
             if (IsPostBack)
