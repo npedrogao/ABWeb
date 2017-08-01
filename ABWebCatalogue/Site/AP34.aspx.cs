@@ -22,6 +22,9 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this) + this.Request.Url.Query;
+
             StringBuilder js = new StringBuilder();
             //StringBuilder lib = new StringBuilder();
             // Resources.resJS.LookupCmbOnChange
