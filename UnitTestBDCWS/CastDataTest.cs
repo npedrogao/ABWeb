@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Core.Utils;
 using System.Linq;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UITest.Common.Service;
 
 namespace UnitTestBDCWS
 {
@@ -29,15 +31,10 @@ namespace UnitTestBDCWS
         [TestMethod]
         public void TestIteradorEnumerado()
         {
-        
-            var aslist2 = EnumExtensions.EnumExtensions.ConvertEnumToListDescValue<Core.Models.H1971Enum>();
-
-            var aslistxpto = EnumExtensions.EnumExtensions.ConvertEnumToListValueDesc<Core.Models.H1971Enum>();
-
-            var tosco = EnumExtensions.EnumExtensions.ConvertEnumToListValueText<Core.Models.H1971Enum>();
-
-        
-
+            //ElegibilidadeEnum
+            var valueTextList = EnumExtensions.EnumExtensions.ConvertEnumToList<Core.Models.TipoCalculoJurosEnum>(Core.Models.KeyValueSourceEnum.ValueFromEnumVal_TextFromEnum);
+            var descValueList = EnumExtensions.EnumExtensions.ConvertEnumToList<Core.Models.TipoCalculoJurosEnum>(Core.Models.KeyValueSourceEnum.ValueFromDescTextFromEnum);
+            var valueDescList = EnumExtensions.EnumExtensions.ConvertEnumToList<Core.Models.TipoCalculoJurosEnum>(Core.Models.KeyValueSourceEnum.ValueFromFromEnumTxtTextFromDesc);                                    
         }
     }
 }
