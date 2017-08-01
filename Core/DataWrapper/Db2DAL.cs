@@ -16,32 +16,19 @@ namespace Core.DataWrapper
 
             if (tabela == TabelaEnum.NULL)
                 throw new ArgumentException("Necessário indicar tabela DB2!");
-
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT ");
-
-            if (colunas?.Length > 0)
-            {
-                foreach (string coluna in colunas)
-                {
-                    query.Append(coluna.Trim());
-                    query.Append(", ");
-                }
-                query.Remove(query.Length - 2, 2);
-            }
-            else
-            {
-                query.Append(" * ");
-            }
-
-            query.Append(" FROM ");
-            query.Append("DB2PTUSER.");
-            query.Append(tabela.GetDesc());
-            dataTable.Load(dbConnection.ExecSql(query.ToString()));
+            
+            dataTable.Load(dbConnection.ExecSql(SelectFromTable(tabela, colunas)));
 
             return dataTable;
         }
-
+        /// <summary>
+        /// Gets a list of Key-Values for a given column name and description.
+        /// </summary>
+        /// <param name="tabela">from Table</param>
+        /// <param name="dbConnection">server instance</param>
+        /// <param name="idColName">name</param>
+        /// <param name="idColDesc">description</param>
+        /// <returns></returns>
         public static List<KeyValuePair<string, string>> GetDb2Lst(TabelaEnum tabela, OdbcDbConnection dbConnection, string idColName, string idColDesc)
         {
             List<KeyValuePair<string, string>> lst = new List<KeyValuePair<string, string>>();
@@ -55,21 +42,17 @@ namespace Core.DataWrapper
             if (string.IsNullOrWhiteSpace(idColName))
                 throw new ArgumentException("Necessário indicar idColDesc!");
 
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT ");
-            query.Append(idColName).Append(", ").Append(idColDesc);
-            query.Append(" FROM ");
-            query.Append("DB2PTUSER.");
-            query.Append(tabela.GetDesc());
-
-            var reader = dbConnection.ExecSql(query.ToString());
+           
+            string [] lista = { idColName?.ToString(), idColDesc?.ToString() };
+            
+            var reader = dbConnection.ExecSql(SelectFromTable(tabela, lista));
 
             while (reader.Read())
             {
                 lst.Add(new KeyValuePair<string, string>(reader[idColName].ToString(), reader[idColDesc].ToString()));
             }
-
-            return lst;
+            
+            return lst.OrderBy(l => l.Value).ToList();
         }
 
         public static List<ErrorCodeModel> GetErrorCodeByHelpId(OdbcDbConnection dbConnection, string filter)
@@ -100,6 +83,63 @@ namespace Core.DataWrapper
             }
 
             return lst;
+        }
+
+        private static string SelectFromTable (TabelaEnum tabela, params string[] colunas)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT ");
+
+            if (colunas?.Length > 0)
+            {
+                foreach (string coluna in colunas)
+                {
+                    query.Append(coluna.Trim());
+                    query.Append(", ");
+                }
+                query.Remove(query.Length - 2, 2);
+            }
+            else
+            {
+                query.Append(" * ");
+            }
+
+            query.Append(" FROM ");
+            query.Append("DB2PTUSER.");
+            query.Append(tabela.GetDesc());
+
+            return query.ToString();
+        }
+
+        private static string SelectFromTableWithOrderBy(TabelaEnum tabela, string orderBy, params string[] colunas)
+        {
+            if (string.IsNullOrWhiteSpace(orderBy))
+                throw new ArgumentNullException(orderBy);
+
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT ");
+
+            if (colunas?.Length > 0)
+            {
+                foreach (string coluna in colunas)
+                {
+                    query.Append(coluna.Trim());
+                    query.Append(", ");
+                }
+                query.Remove(query.Length - 2, 2);
+            }
+            else
+            {
+                query.Append(" * ");
+            }
+
+            query.Append(" FROM ");
+            query.Append("DB2PTUSER.");
+            query.Append(tabela.GetDesc());
+            query.Append(" ORDER BY ");
+            query.Append(orderBy);
+
+            return query.ToString();
         }
     }
 }
