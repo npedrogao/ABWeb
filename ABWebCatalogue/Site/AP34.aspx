@@ -84,8 +84,8 @@
                 </div>
                 <br />
                 <div id="pnlBtnSearch" class="divCollapseLeft" runat="server">
+                    <button id="btnClearKeys" class="btns btns-alt" runat="server" onserverclick="btnClear_Click">Limpar</button>
                     <button id="searchKeys" class="btns" runat="server">Search</button>
-
                 </div>
                 <div id="pnlBtn" class="divCollapseLeft hidden" runat="server">
                     <a id="btnCloseAll" class="btns" runat="server">Fechar</a>
@@ -418,7 +418,7 @@
                 <hr class="hr" />
                 <br />
                 <div class="divCollapseLeft">
-                    <button id="btnClear" class="btns" runat="server" onserverclick="btnClear_Click">Limpar</button>
+                    <button id="btnClear" class="btns btns-alt"  runat="server" onserverclick="btnClear_Click">Limpar</button>
                     <button id="btnSave" class="btns" runat="server" onserverclick="btnSave_Click">Guardar</button>
                 </div>
             </div>
