@@ -19,8 +19,8 @@ namespace ABWebCatalogue.Site
             string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
 
-            ClientScript.RegisterClientScriptBlock(this.GetType(), (new Guid()).ToString(), "<script>function JsServerSide(){" + js.ToString() + "};</script>", false);
             InjectJs(ref js);
+            JsUtil.InjectJsServerSide(this, js);
 
             string transaccao = Request.QueryString["transacao"];
             lblTransaction.Text = transaccao;

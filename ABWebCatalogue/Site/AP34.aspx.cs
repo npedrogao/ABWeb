@@ -27,8 +27,7 @@ namespace ABWebCatalogue.Site
             string[] jsFunctionNames = new string[] { Resources.jsRes.LookupCmbOnChange };
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
-            js.Append(Resources.jsRes.AccordionController);
-
+            JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.InjectJsServerSide(this, js);
 
             string transaccao = Request.QueryString["transacao"].ToUpper();
