@@ -189,7 +189,6 @@ namespace ABWebCatalogue.Site
 
         protected void ComboLoad()
         {
-
             cmbIPRZABS.LoadWithList(IsPostBack, CatalogueModel.ListPrazoAbsoluto);
             cmbIIRS.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
             cmbITRANCHE.LoadWithList(IsPostBack, CatalogueModel.ListSimNao);
