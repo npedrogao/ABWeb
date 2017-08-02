@@ -24,6 +24,7 @@ namespace ABWebCatalogue.Site
 
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.InjectJsServerSide(this, js);
+            JsUtil.AppendJsLib("/js/ca29.js", js);
             string transaccao = Request.QueryString["transacao"];
             lblTransaction.Text = transaccao;
 
