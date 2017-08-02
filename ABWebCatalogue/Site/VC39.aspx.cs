@@ -17,6 +17,9 @@ namespace ABWebCatalogue.Site
         {
             btnClearKeys.HRef = WebUtil.GetPageRoot(this);
 
+            string x = "";
+
+            
             StringBuilder js = new StringBuilder();
             string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
