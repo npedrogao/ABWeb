@@ -26,7 +26,7 @@ namespace Core.Models
 
             transactionName = page.Request.QueryString["transacao"];
             placeHolder = page.Master.FindControl("CPH");
-        
+
             try
             {
                 using (OdbcDbConnection db2Con = new OdbcDbConnection("Dsn=DEV_MST;uid=db2tuser;mode=SHARE;dbalias=DEV_MST;pwd=12letmein"))
@@ -1220,9 +1220,34 @@ namespace Core.Models
             }
         }
 
+
+        public static List<KeyValuePair<string, string>> Ivaldur
+        {
+            get
+            {
+                IvaldurEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = IvaldurEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IvaldurEnum.I;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = IvaldurEnum.D;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+            }
+        }
+
+
         static CatalogueModel()
         {
-            
+
         }
 
 
