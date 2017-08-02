@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/DefaultMaster.Master" AutoEventWireup="true" CodeBehind="TI96.aspx.cs" Inherits="ABWebCatalogue.Site.TI96" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
-    <script src="../js/commonAB.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
