@@ -1228,112 +1228,112 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtCTAFUNDO;
         
         /// <summary>
-        /// txtTENCGES1 control.
+        /// txtTENCMOD1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES1;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD1;
         
         /// <summary>
-        /// txtMENCGES1 control.
+        /// txtMENCMOD1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES1;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD1;
         
         /// <summary>
-        /// txtTENCGES4 control.
+        /// txtTENCMOD4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES4;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD4;
         
         /// <summary>
-        /// txtMENCGES4 control.
+        /// txtMENCMOD4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES4;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD4;
         
         /// <summary>
-        /// txtTENCGES2 control.
+        /// txtTENCMOD2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES2;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD2;
         
         /// <summary>
-        /// txtMENCGES2 control.
+        /// txtMENCMOD2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES2;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD2;
         
         /// <summary>
-        /// txtTENCGES5 control.
+        /// txtTENCMOD5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES5;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD5;
         
         /// <summary>
-        /// txtMENCGES5 control.
+        /// txtMENCMOD5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES5;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD5;
         
         /// <summary>
-        /// txtTENCGES3 control.
+        /// txtTENCMOD3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES3;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD3;
         
         /// <summary>
-        /// txtMENCGES3 control.
+        /// txtMENCMOD3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES3;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD3;
         
         /// <summary>
-        /// txtTENCGES6 control.
+        /// txtTENCMOD6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTENCGES6;
+        protected global::System.Web.UI.WebControls.TextBox txtTENCMOD6;
         
         /// <summary>
-        /// txtMENCGES6 control.
+        /// txtMENCMOD6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMENCGES6;
+        protected global::System.Web.UI.WebControls.TextBox txtMENCMOD6;
         
         /// <summary>
         /// lblQPRORROG control.
@@ -1912,22 +1912,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.WebControls.TextBox txtMVAR;
         
         /// <summary>
-        /// lblDTACTIVA control.
+        /// lblDVAR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDTACTIVA;
+        protected global::System.Web.UI.WebControls.Label lblDVAR;
         
         /// <summary>
-        /// txtDTACTIVA control.
+        /// txtDVAR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDTACTIVA;
+        protected global::System.Web.UI.WebControls.TextBox txtDVAR;
         
         /// <summary>
         /// lblGOBSRV control.

@@ -590,25 +590,25 @@
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC1 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT1 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD1" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC4 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT4 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD4" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -616,25 +616,25 @@
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC2 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT2 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD2" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC5 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT5 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD5" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -642,25 +642,25 @@
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC3 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT3 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD3" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">ENC6 (%):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtTENCGES6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtTENCMOD6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-xs-3">
                                 <asp:Label runat="server" CssClass="col-lg-3 col-xs-3 text-right lbl">MONT6 (€):</asp:Label>
                                 <div class="col-lg-2 col-xs-2">
-                                    <asp:TextBox ID="txtMENCGES6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtMENCMOD6" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -1005,9 +1005,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lblDTACTIVA" runat="server" CssClass="col-lg-2 col-xs-2 text-right lbl">Data:</asp:Label>
+                                <asp:Label ID="lblDVAR" runat="server" CssClass="col-lg-2 col-xs-2 text-right lbl">Data:</asp:Label>
                                 <div class="col-lg-4 col-xs-4">
-                                    <asp:TextBox ID="txtDTACTIVA" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
+                                    <asp:TextBox ID="txtDVAR" runat="server" CssClass="form-control t-field-t"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
