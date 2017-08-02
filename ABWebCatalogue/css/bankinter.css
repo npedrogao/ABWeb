@@ -1568,7 +1568,7 @@ button.btn {
     font-family: Bankinter;
     /*width: 95px;*/
     /*height: 35px;*/
-    height: 26px;
+    height: 25px;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1591,7 +1591,7 @@ button.btn {
 
 .btns-alt {
     min-width: 50px;
-    margin: 0 10px;
+    margin: 0 5px;
     background: #ddd;
     color: #555;
 }

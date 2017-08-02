@@ -27,6 +27,7 @@ namespace ABWebCatalogue.Site
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js);
             JsUtil.InjectJsServerSide(this, js);
+            JsUtil.AppendJsLib("/js/ti97.js", js);
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
 
             string transaccao = Request.QueryString["transacao"].ToUpper();

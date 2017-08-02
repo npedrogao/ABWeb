@@ -40,7 +40,7 @@ namespace Core.Utils
             jsBuilder.Append("$(document).ready(function() {").Append(code).Append("});");
         }
 
-        private static void AppendJsLib(string src, StringBuilder jsBuilder)
+        public static void AppendJsLib(string src, StringBuilder jsBuilder)
         {
             jsBuilder.Append(@"<script src=""").Append(src).Append(@""" type = ""text/javascript"" ></script>");
         }

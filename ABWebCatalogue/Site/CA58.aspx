@@ -3,7 +3,7 @@
 <%@ Import Namespace="Core.Utils" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="../js/commonAB.js"></script>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
@@ -24,7 +24,7 @@
                 <div class="col-sm-12 col-md-12">
                     <div class="row form-group">
                         <div class="col-sm-4 col-md-4 col-lg-2">
-                            <label class="col-lg-2 text-right lbl">Familia:</label>
+                            <label class="col-lg-4 text-right lbl">Familia:</label>
                             <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbFamilia" runat="server" class="form-control t-field-t"></select>
                             </div>
@@ -36,19 +36,19 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-2">
-                            <label class="col-lg-6 text-right lbl">Em Comercialização:</label>
+                            <label class="col-lg-7 text-right lbl">Em Comercialização:</label>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <select id="cmbEmComercializacao" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-2">
-                            <label class="col-lg-2 text-right lbl">Estado:</label>
+                            <label class="col-lg-4 text-right lbl">Estado:</label>
                             <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbEstado" runat="server" class="form-control t-field-t"></select>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-3">
-                            <label class="col-lg-2 text-right lbl">Produto:</label>
+                            <label class="col-lg-4 text-right lbl">Produto:</label>
                             <div class="col-sm-6 col-md-6 col-lg-6">
                                 <select id="cmbProduto" runat="server" class="form-control t-field-t"></select>
                             </div>
