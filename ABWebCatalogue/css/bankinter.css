@@ -1556,7 +1556,7 @@ button.btn {
 }
 
 .divCollapseLeft {
-    margin-left: 90%
+    margin-left: 85%;
 }
 
 .btns {
@@ -1579,7 +1579,7 @@ button.btn {
     color: #FFF;
     cursor: pointer;
     font-weight: bold;
-    margin-left: 5%;
+    
 }
 
     .btns:hover {
@@ -1591,7 +1591,7 @@ button.btn {
 
 .btns-alt {
     min-width: 50px;
-    margin: 0 5px;
+    margin-right: 5%;
     background: #ddd;
     color: #555;
 }
