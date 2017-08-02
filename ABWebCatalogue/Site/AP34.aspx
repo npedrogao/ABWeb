@@ -6,6 +6,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH" runat="server">
     <div class="content">
+        <div id="messageDiv" class="col-lg-12" runat="server" visible="false">
+            <ul id="bulletUl" class="col-lg-offset-11" runat="server">
+            </ul>
+        </div>
+      
         <div class="titleTransaction">
             <asp:Label ID="lblTransaction" runat="server"> </asp:Label>
         </div>

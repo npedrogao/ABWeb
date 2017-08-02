@@ -43,7 +43,6 @@
                     if (detectIE() == 11) { document.write("<hr style='color:#F56600;background:#F56600;border:none;height:0.5px;' />") }
                     else { document.write("<hr style='color:#F56600;background:#F56600;border:none;height:1px;' />") }
                 </script>
-                <asp:Label ID="Label1" runat="server" Text="V1.6.3" Style="color: #CCCCCC"></asp:Label>
             </td>
         </tr>
     </table>
