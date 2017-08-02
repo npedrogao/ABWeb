@@ -33,6 +33,11 @@ namespace ABWebCatalogue.Site
             //JsUtil.AppendJsLib("/js/AP34.js", lib);
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
+
+            JsUtil.ExecJsFunction(Resources.jsRes.callServerSide, js, txtCClaPrz.ClientID);
+
+
+
             JsUtil.InjectJsServerSide(this, js);
             
             string transaccao = Request.QueryString["transacao"].ToUpper();

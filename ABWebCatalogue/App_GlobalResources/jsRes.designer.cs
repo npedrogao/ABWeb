@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to callServerSide.
+        /// </summary>
+        internal static string callServerSide {
+            get {
+                return ResourceManager.GetString("callServerSide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CustodiaRulesSN.
         /// </summary>
         internal static string CustodiaRulesSN {
