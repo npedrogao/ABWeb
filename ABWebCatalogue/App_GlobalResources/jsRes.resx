@@ -120,6 +120,9 @@
   <data name="AccordionController" xml:space="preserve">
     <value>fAccordionController</value>
   </data>
+  <data name="callServerSide" xml:space="preserve">
+    <value>callServerSide</value>
+  </data>
   <data name="CustodiaRulesSN" xml:space="preserve">
     <value>CustodiaRulesSN</value>
   </data>

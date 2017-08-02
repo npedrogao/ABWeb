@@ -1,5 +1,6 @@
 ﻿using Core.Logging;
 using Core.Models;
+using Core.Utils;
 using ServiceWrapper.Core.Delegator;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace ABWebCatalogue.Site
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-          
+            string rd = WebUtil.GetPageName(this);
         }
 
         protected void Page_Load(object sender, EventArgs e)

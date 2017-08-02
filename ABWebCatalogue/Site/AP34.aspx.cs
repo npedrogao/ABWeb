@@ -30,8 +30,12 @@ namespace ABWebCatalogue.Site
             
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
+
+            JsUtil.ExecJsFunction(Resources.jsRes.callServerSide, js, txtCClaPrz.ClientID);
+
+
+
             JsUtil.InjectJsServerSide(this, js);
-            JsUtil.AppendJsLib("/js/ap34.js", js);
 
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;

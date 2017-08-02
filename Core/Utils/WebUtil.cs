@@ -13,6 +13,11 @@ namespace Core.Utils
             //return @"http://localhost:63213/Site/AP34.aspx";
         }
 
+        public static string GetPageName(System.Web.UI.Page page)
+        {
+            return System.IO.Path.GetFileNameWithoutExtension(page.Request.Path);
+        }
+
 
         /// <summary>
         /// Converte um objecto cujo valor deverá ser um DateTime ou um null numa string no formato de data

@@ -10,3 +10,18 @@
         }
     });
 }
+
+function callServerSide(campo) {
+
+
+    $("input[id=" + campo + "]").keyup('input', function () {
+        var length = parseInt($("input[id=" + campo + "]").attr("maxlength"));
+        var valueLength = $("input[id=" + campo + "]").val().length;
+
+        if (length === valueLength) {
+
+
+            $("#CPH_hdnCampoTouched").val("caralho");
+        }
+    });
+}
