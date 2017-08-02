@@ -423,7 +423,6 @@
                 </div>
 
                 <hr class="hr" />
-                <br />
                 <div class="divCollapseLeft">
                     <button id="btnClear" class="btns btns-alt" runat="server" onserverclick="btnClear_Click">Limpar</button>
                     <button id="btnSave" class="btns" runat="server" onserverclick="btnSave_Click">Guardar</button>
