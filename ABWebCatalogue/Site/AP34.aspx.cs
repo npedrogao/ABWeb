@@ -19,8 +19,6 @@ namespace ABWebCatalogue.Site
 
         protected void Page_Load(object sender, EventArgs e)
         {          
-
-            //WebUtil.SystemMessage(bulletDiv, bulletUl, "o zé é burro", "o Zé é burro outravez");
             btnClearKeys.HRef = WebUtil.GetPageRoot(this); // + this.Request.Url.Query;
 
             StringBuilder js = new StringBuilder();
@@ -30,7 +28,6 @@ namespace ABWebCatalogue.Site
 
             CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
             
-            //JsUtil.AppendJsLib("/js/AP34.js", lib);
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
 
@@ -39,7 +36,7 @@ namespace ABWebCatalogue.Site
 
 
             JsUtil.InjectJsServerSide(this, js);
-            
+
             string transaccao = Request.QueryString["transacao"].ToUpper();
             lblTransaction.Text = transaccao;
             if (IsPostBack)

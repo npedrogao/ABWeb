@@ -18,6 +18,7 @@ namespace Core.Utils
             AppendJsLib("/js/jquery-1.8.3.js", js);
             AppendJsLib("/js/bootstrap.js", js);
             AppendJsLib("/js/commonAB.js", js);
+            AppendJsLib("/js/"+ WebUtil.GetPageName(page) +".js", js);
 
             js.Append(@"<script type=""text/javascript"">function JsServerSide(){").Append(jsBuilder.ToString()).Append("};");
             AppendJsDocumentReady("JsServerSide();", js);
