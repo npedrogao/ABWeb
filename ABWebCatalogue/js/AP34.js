@@ -11,17 +11,20 @@
     });
 }
 
-function callServerSide(campo) {
-
+function callServerSide(hiddenId, campo) {
+    var hidden = "#" + hiddenId;
 
     $("input[id=" + campo + "]").keyup('input', function () {
         var length = parseInt($("input[id=" + campo + "]").attr("maxlength"));
         var valueLength = $("input[id=" + campo + "]").val().length;
 
         if (length === valueLength) {
-
-
-            $("#CPH_hdnCampoTouched").val("caralho");
+            if ($(hidden).val().length === 0) {
+                $(hidden).val(campo);
+            } else {
+                $(hidden).val($(hidden).val() + ", " + campo);
+            }
+                     
         }
     });
 }

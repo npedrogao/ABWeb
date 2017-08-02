@@ -31,7 +31,7 @@ namespace ABWebCatalogue.Site
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
             JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js, "S", cmbIRenovac.ClientID, txtQMAXREN.ClientID);
 
-            JsUtil.ExecJsFunction(Resources.jsRes.callServerSide, js, txtCClaPrz.ClientID);
+            JsUtil.ExecJsFunction(Resources.jsRes.callServerSide, js, hdnCampoTouched.ClientID, txtCClaPrz.ClientID);
 
 
 
