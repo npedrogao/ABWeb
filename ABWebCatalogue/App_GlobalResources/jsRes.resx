@@ -141,4 +141,7 @@
   <data name="LookupCmbOnChange" xml:space="preserve">
     <value>fLookupCmbOnChange</value>
   </data>
+  <data name="changeTipoRev" xml:space="preserve">
+    <value>changeTipoRev</value>
+  </data>
 </root>

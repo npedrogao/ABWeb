@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to changeTipoRev.
+        /// </summary>
+        internal static string changeTipoRev {
+            get {
+                return ResourceManager.GetString("changeTipoRev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CustodiaRulesSN.
         /// </summary>
         internal static string CustodiaRulesSN {

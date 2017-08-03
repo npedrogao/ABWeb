@@ -23,6 +23,8 @@ namespace ABWebCatalogue.Site
             StringBuilder js = new StringBuilder();
             string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
             JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            //JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js);
+            JsUtil.ExecJsFunction(Resources.jsRes.changeTipoRev, js, cmbITIPOREV.ClientID, txtCTABREV.ClientID);
 
             JsUtil.InjectJsServerSide(this, js);
 
@@ -79,7 +81,8 @@ namespace ABWebCatalogue.Site
         private void LoadCombos()
         {
             cmbIvaldur.LoadWithList(IsPostBack, CatalogueModel.Ivaldur);
-            cmbITIPOREV.LoadWithList(IsPostBack, CatalogueModel.Ivaldur);
+            cmbITIPOREV.LoadWithList(IsPostBack, CatalogueModel.Itiporev);
+            //cmbIMETRESG.LoadWithList(IsPostBack, CatalogueModel.)
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
