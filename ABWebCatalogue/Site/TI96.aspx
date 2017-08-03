@@ -14,13 +14,13 @@
                     <br />
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbDebito" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Identificação Programa:</asp:Label>
+                            <asp:Label ID="lblCPROGRAMAPC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Identificação Programa:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
-                                <asp:TextBox ID="txtCprogramapc" runat="server" CssClass="form-control t-field-t" MaxLength="15"></asp:TextBox>
+                                <asp:TextBox ID="txtCPROGRAMAPC" runat="server" CssClass="form-control t-field-t" MaxLength="15"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbNCliente" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Nº Cliente:</asp:Label>
+                            <asp:Label ID="lblZCLIENTE" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Nº Cliente:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
                                 <asp:TextBox ID="txtZcliente" runat="server" CssClass="form-control t-field-t" MaxLength="7"></asp:TextBox>
                             </div>
@@ -28,48 +28,48 @@
                     </div>
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbNEmissao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Nº Emissão:</asp:Label>
+                            <asp:Label ID="lblZEMISSAO" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Nº Emissão:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
-                                <asp:TextBox ID="txtZemissao" runat="server" CssClass="form-control t-field-t" MaxLength="7"></asp:TextBox>
+                                <asp:TextBox ID="txtZEMISSAO" runat="server" CssClass="form-control t-field-t" MaxLength="7"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbValNominalEmissao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Valor nominal emissão:</asp:Label>
+                            <asp:Label ID="lblMNOMINE" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Valor nominal emissão:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
-                                <asp:TextBox ID="txtMnomine" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                <asp:TextBox ID="txtMNOMINE" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
                             </div>
                         </div>
                     </div>
                     <div class="row form-group padding-row">
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbBancoAgente" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Banco agente:</asp:Label>
+                            <asp:Label ID="lblCODBAN" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Banco agente:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
-                                <asp:TextBox ID="txtCodban" runat="server" CssClass="form-control t-field-t" MaxLength="4"></asp:TextBox>
+                                <asp:TextBox ID="txtCODBAN" runat="server" CssClass="form-control t-field-t" MaxLength="4"></asp:TextBox>
                             </div>
                             <div class="col-lg-4 col-xs-4 ">
                                 <asp:TextBox ID="txtDcodban" runat="server" CssClass="t-field-2" MaxLength="20"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xs-6 ">
-                            <asp:Label ID="lbEspecie" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Espécie:</asp:Label>
+                            <asp:Label ID="lblCODVALOR" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Espécie:</asp:Label>
                             <div class="col-lg-2 col-xs-4 ">
                                 <asp:TextBox ID="txtCodvalor" runat="server" CssClass="t-field-2" MaxLength="13"></asp:TextBox>
                             </div>
                             <div class="col-lg-4 col-xs-4 ">
-                                <asp:TextBox ID="txtNombrev" runat="server" CssClass="t-field-2" MaxLength="27"></asp:TextBox>
+                                <select id="cmbNOMBREV" runat="server" class="t-field-2" ></select>
                             </div>
                         </div>
                     </div>
                     <div id="pnlTI" runat="server" class="hidden">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbReactivar" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Reactivar:</asp:Label>
+                                <asp:Label ID="lblREACTIVAR" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Reactivar:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbReactivar" runat="server" class="form-control t-field-t"></select>
+                                    <select id="cmbREACTIVAR" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID-="lbISIN" runat="server" class="col-lg-4 col-xs-4 text-right lbl">ISIN:</asp:Label>
+                                <asp:Label ID-="lblCODISIN" runat="server" class="col-lg-4 col-xs-4 text-right lbl">ISIN:</asp:Label>
                                 <div class="col-lg-4 col-xs-4 ">
                                     <asp:TextBox ID="txtISIN" runat="server" CssClass="t-field-2" MaxLength="13"></asp:TextBox>
                                 </div>
@@ -77,74 +77,74 @@
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCodSGC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Código SGC:</asp:Label>
+                                <asp:Label ID="lblCODSGC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Código SGC:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCodSGC" runat="server" CssClass="t-field-2" MaxLength="12"></asp:TextBox>
+                                    <asp:TextBox ID="txtCODSGC" runat="server" CssClass="t-field-2" MaxLength="12"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbBolsaSGC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Bolsa SGC:</asp:Label>
+                                <asp:Label ID="lblBOLSGC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Bolsa SGC:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtBolsaSGC" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
+                                    <asp:TextBox ID="txtBOLSGC" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCustodiante" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Custodiante:</asp:Label>
+                                <asp:Label ID="lblCCUSTOD" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Custodiante:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCodisin" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
+                                    <asp:TextBox ID="txtCCUSTOD" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
                                 </div>
                                 <div class="col-lg-4 col-xs-4 ">
-                                    <asp:TextBox ID="txtDcustod" runat="server" CssClass="t-field-2" MaxLength="13"></asp:TextBox>
+                                    <asp:TextBox ID="txtDCUSTOD" runat="server" CssClass="t-field-2" MaxLength="13"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCotacao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Cotação:</asp:Label>
+                                <asp:Label ID="lblCAMED" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Cotação:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCamed" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row form-group padding-row">
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbMoedaCL" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Moeda COT/LIQ:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtMoedaval" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbDefault" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Default:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbItitdef" runat="server" class="form-control t-field-t"></select>
+                                    <asp:TextBox ID="txtCAMED" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbVLNOMUnit" runat="server" class="col-lg-4 col-xs-4 text-right lbl">VL.NOM.Unitário:</asp:Label>
+                                <asp:Label ID="lblMOEDAVAL" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Moeda COT/LIQ:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtNomin" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtMOEDAVAL" runat="server" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbMoedaNominal" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Moeda Nominal:</asp:Label>
+                                <asp:Label ID="lblITITDEF" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Default:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCoddivi" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
+                                    <select id="cmbITITDEF" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCVM" runat="server" class="col-lg-4 col-xs-4 text-right lbl">CVM:</asp:Label>
+                                <asp:Label ID="lblNOMIN" runat="server" class="col-lg-4 col-xs-4 text-right lbl">VL.NOM.Unitário:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtNemonica" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtNOMIN" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbLocalGuard" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Local Guard:</asp:Label>
+                                <asp:Label ID="lblCODDIVI" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Moeda Nominal:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtLguarda" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
+                                    <asp:TextBox ID="txtCODDIVI" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblNEMONICA" runat="server" class="col-lg-4 col-xs-4 text-right lbl">CVM:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtNEMONICA" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblLGUARDA" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Local Guard:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtLGUARDA" runat="server" size="1" CssClass="form-control t-field-t" MaxLength="3"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -152,120 +152,120 @@
                             <div class="col-lg-6 col-xs-6 ">
                                 <asp:Label ID="lbSistNegocia" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Sist. Negocia. :</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbTiptitul" runat="server" class="form-control t-field-t"></select>
+                                    <select id="cmbTIPTITUL" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbBloomberg" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Bloomberg:</asp:Label>
+                                <asp:Label ID="lblCBLOOMBG" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Bloomberg:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCbloombg" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="12"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row form-group padding-row">
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbEscalao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Escalão:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCtipesc" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="1"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbReuters" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Reuters:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCreuters" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtCBLOOMBG" runat="server"  CssClass="form-control t-field-t " MaxLength="12"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCustodia" runat="server" class="col-lg-4 col-xs-4 text-right lbl">D. Custódia:</asp:Label>
+                                <asp:Label ID="lblCTIPESC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Escalão:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbDercus" runat="server" class="form-control t-field-t"></select>
+                                    <asp:TextBox ID="txtCTIPESC" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="1"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbContribuinte" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Contribuinte:</asp:Label>
+                                <asp:Label ID="lblCREUTERS" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Reuters:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtNif" runat="server" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row form-group padding-row">
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbPaisEmit" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Pais Emit:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCpaisemi" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
-                                </div>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtDpaisemi" runat="server" CssClass="t-field-2 " MaxLength="11"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbLoteMinimo" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Lote minimo:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtLotemin" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtCREUTERS" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbAgencias" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Agencias:</asp:Label>
+                                <asp:Label ID="lblDERCUS" runat="server" class="col-lg-4 col-xs-4 text-right lbl">D. Custódia:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbItitbal" runat="server" class="form-control t-field-t"></select>
+                                    <select id="cmbDERCUS" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbPaixsercad" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Pais Mercad:</asp:Label>
+                                <asp:Label ID="lblNIF" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Contribuinte:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtCodpais" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
-                                </div>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtDpais" runat="server" CssClass="form-control t-field-t " MaxLength="11"></asp:TextBox>
+                                    <asp:TextBox ID="txtNIF" runat="server" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbNET" runat="server" class="col-lg-4 col-xs-4 text-right lbl">NET:</asp:Label>
+                                <asp:Label ID="lblCPAISEMI" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Pais Emit:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbIbantele" runat="server" class="form-control t-field-t"></select>
+                                    <asp:TextBox ID="txtCPAISEMI" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
+                                </div>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtDPAISEMI" runat="server" CssClass="t-field-2 " MaxLength="11"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbCredito" runat="server" class="col-lg-4 col-xs-4 text-right lbl">% Crédito:</asp:Label>
+                                <asp:Label ID="lblLOTEMIN" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Lote minimo:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtTcredito" runat="server" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtLOTEMIN" runat="server" size="1" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbSegCarteira" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Seg.Carteir:</asp:Label>
+                                <asp:Label ID="lblITITBAL" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Agencias:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtSegcart" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
+                                    <select id="cmbITITBAL" runat="server" class="form-control t-field-t"></select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblCODPAIS" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Pais Mercad:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtCODPAIS" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
+                                </div>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtDPAIS" runat="server" CssClass="form-control t-field-t " MaxLength="11"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblIBANTELE" runat="server" class="col-lg-4 col-xs-4 text-right lbl">NET:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <select id="cmbIBANTELE" runat="server" class="form-control t-field-t"></select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblTCREDITO" runat="server" class="col-lg-4 col-xs-4 text-right lbl">% Crédito:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtTCREDITO" runat="server" CssClass="form-control t-field-t " MaxLength="9"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblSEGCART" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Seg.Carteir:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtSEGCART" runat="server" CssClass="form-control t-field-t " MaxLength="3"></asp:TextBox>
                                 </div>
                                 <div class="col-lg-4 col-xs-4 ">
-                                    <asp:TextBox ID="txtDsegcart" runat="server" CssClass="form-control t-field-t" MaxLength="40"></asp:TextBox>
+                                    <asp:TextBox ID="txtDSEGCART" runat="server" CssClass="form-control t-field-t" MaxLength="40"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbEstado" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Estado:</asp:Label>
+                                <asp:Label ID="lblSITUACA" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Estado:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtSituaca" runat="server" CssClass="form-control t-field-t " MaxLength="8"></asp:TextBox>
+                                    <asp:TextBox ID="txtSITUACA" runat="server" CssClass="form-control t-field-t " MaxLength="8"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbNegociavel" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Negociável:</asp:Label>
+                                <asp:Label ID="lblNEGOCIAV" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Negociável:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbNegociav" runat="server" class="form-control t-field-t"></select>
+                                    <select id="cmbNEGOCIAV" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbUltActu" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Ult.Actu:</asp:Label>
+                                <asp:Label ID="lblFECHACTU" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Ult.Actu:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtFechactu" runat="server" CssClass="form-control t-field-t small-input " MaxLength="8"></asp:TextBox>
+                                    <asp:TextBox ID="txtFECHACTU" runat="server" CssClass="form-control t-field-t small-input " MaxLength="8"></asp:TextBox>
                                 </div>
                                 <div class="col-lg-4 col-xs-4 ">
                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control t-field-t small-input " MaxLength="5"></asp:TextBox>
@@ -301,43 +301,43 @@
                     </div>--%>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbTipoJuro" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Tipo de Juro:</asp:Label>
+                                <asp:Label ID="lblTIPINT" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Tipo de Juro:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbTipint" runat="server" class="form-control t-field-t"></select>
+                                    <select id="cmbTIPINT" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbModalidade" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Modalidade:</asp:Label>
+                                <asp:Label ID="lblITIPEMISS" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Modalidade:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <select id="cmbItipemiss" runat="server" class="form-control t-field-t"></select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row form-group padding-row">
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbTaxaMediaEmissao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Taxa Média Emissão:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbQTDEmissao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">QTD. Emissão:</asp:Label>
-                                <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtDesde" runat="server" CssClass="form-control t-field-t" MaxLength="11"></asp:TextBox>
+                                    <select id="cmbITIPEMISS" runat="server" class="form-control t-field-t"></select>
                                 </div>
                             </div>
                         </div>
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbIsensao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">% Isensão:</asp:Label>
+                                <asp:Label ID="lblINTERES" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Taxa Média Emissão:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtExenc" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtINTERES" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-xs-6 ">
-                                <asp:Label ID="lbTaxaEmissao" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Taxa de Emissão:</asp:Label>
+                                <asp:Label ID="lblDESDE" runat="server" class="col-lg-4 col-xs-4 text-right lbl">QTD. Emissão:</asp:Label>
                                 <div class="col-lg-2 col-xs-4 ">
-                                    <asp:TextBox ID="txtTxprog" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                    <asp:TextBox ID="txtDESDE" runat="server" CssClass="form-control t-field-t" MaxLength="11"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group padding-row">
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblEXENC" runat="server" class="col-lg-4 col-xs-4 text-right lbl">% Isensão:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtEXENC" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <asp:Label ID="lblTXPROG" runat="server" class="col-lg-4 col-xs-4 text-right lbl">Taxa de Emissão:</asp:Label>
+                                <div class="col-lg-2 col-xs-4 ">
+                                    <asp:TextBox ID="txtTXPROG" runat="server" CssClass="form-control t-field-t" MaxLength="9"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
