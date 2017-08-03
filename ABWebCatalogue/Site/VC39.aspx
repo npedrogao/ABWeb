@@ -521,12 +521,12 @@
                     </div>
                 </div>
                 <br />
-                <div class="col-lg-1 col-xs-12 col-xs-12 titleAccordion">
+                <div class="col-lg-12 col-xs-12 titleAccordion">
                     <a class="accordion" title="Contabilidade">Contabilidade</a>
                 </div>
                 <div class="row hidden closeAccordion colorbck">
                     <br />
-                    <div class="col-lg-1 col-xs-12 col-xs-12">
+                    <div class="col-lg-12 col-xs-12">
                         <div class="row form-group padding-row">
                             <div class="col-lg-6 col-xs-6 ">
                                 <asp:Label ID="lblCOPERSG" runat="server" class="col-lg-2 col-xs-2 text-right lbl">COPERSG.:</asp:Label>

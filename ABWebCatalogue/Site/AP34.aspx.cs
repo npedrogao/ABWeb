@@ -41,6 +41,8 @@ namespace ABWebCatalogue.Site
             lblTransaction.Text = transaccao;
             if (IsPostBack)
             {
+
+              
                 pnlBtnSearch.AddClass("hidden");
                 WebUtil.AddRemoveHidden(true, pnlBtn, pnlGESTADO, pnlDFIMVAL, pnlSearchContent);
  

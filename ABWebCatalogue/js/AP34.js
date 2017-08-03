@@ -24,7 +24,7 @@ function callServerSide(hiddenId, campo) {
             } else {
                 $(hidden).val($(hidden).val() + ", " + campo);
             }
-                     
+            $("#form1").submit();
         }
     });
 }
