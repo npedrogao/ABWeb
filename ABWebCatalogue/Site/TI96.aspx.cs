@@ -1,52 +1,94 @@
 ﻿using Core.Models;
 using System;
 using Core.WebExtensions;
+using Core.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 
 namespace ABWebCatalogue.Site
 {
     public partial class TI96 : System.Web.UI.Page
     {
-        string type;
-        TI96Model model = new TI96Model();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            type = Request.QueryString["type"];
-            var form = Request.Form;
+            btnClearKeys.HRef = WebUtil.GetPageRoot(this);
 
+            StringBuilder js = new StringBuilder();
+            string[] jsFunctionNames = new string[] { "fLookupCmbOnChange" };
+            JsUtil.ExecJsFunction(Resources.jsRes.AccordionController, js);
+            //JsUtil.ExecJsFunction(Resources.jsRes.LockUnlockField, js);
+
+
+            JsUtil.InjectJsServerSide(this, js);
+
+            CatalogueModel.ApplyModel(this, ref js, jsFunctionNames);
+
+            string transaccao = Request.QueryString["transacao"];
+            lblTransaction.Text = transaccao;
+
+            if (IsPostBack)
+            {
+                pnlBtnSearch.AddClass("hidden");
+                WebUtil.AddRemoveHidden(true, pnlTI, pnlBtn, pnlSearchContent);
+
+                if (transaccao != null)
+                {
+
+                    TypeLoad(transaccao);
+                }
+            }
+            LoadCombos();
+        }
+
+        private void TypeLoad(string transaccao)
+        {
+            lblTransaction.Text = transaccao;
+            string type = transaccao.Substring(transaccao.Length - 1, 1);
             switch (type)
             {
                 case "C":
-                    {
-                        lblTransaction.Text = "TI96C";
-                        break;
-                    }
-                case "M":
-                case "V":
-                    {
-                        if (type == "V")
-                        {
-                            Master.FindControl("CPH").Controls.SetReadonlyControls();
-                        }
 
-                        break;
-                    }
+                    break;
+                case "M":
+                    ReadOnlyCommonFields();
+
+                    break;
+                case "V":
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
+
+                    break;
                 case "A":
-                    {
-                        lblTransaction.Text = "TI96A";
-                        break;
-                    }
+                    Master.FindControl("CPH").Controls.SetReadonlyControls();
+
+                    break;
+                default:
+                    break;
             }
         }
 
-        protected void btnClean_Click(object sender, EventArgs e)
+        protected void ReadOnlyCommonFields()
         {
-            //ToDo
+
+        }
+
+        private void LoadCombos()
+        {
+
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            Master.FindControl("CPH").Controls.SetCleanField();
+        }
+
+        private void InjectJs(ref StringBuilder js)
+        {
+
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -187,7 +229,7 @@ namespace ABWebCatalogue.Site
 
             //ATRIBUTOS DE INVESTIMENTO
             //model.Csubfam = form.GetStr(txtCsubfam.ID);
-            
+
             //model.Cliquidprod = form.GetStr(txtCliquidprod.ID);
             //model.Ccomplexinv = form.GetStr(txtCcomplexinv.ID);
             //model.Dcomplexinv = form.GetStr(txtDcomplexinv.ID);
@@ -207,44 +249,6 @@ namespace ABWebCatalogue.Site
 
         }
 
-        protected void btnWarrants_Click(object sender, EventArgs e)
-        {
-            pnlWarrantsContent.Visible = pnlWarrantsContent.Visible == false ? true : false;
-        }
 
-        protected void btnPanel1_Click(object sender, EventArgs e)
-        {
-            pnlPanel1Content.Visible = pnlPanel1Content.Visible == false ? true : false;
-        }
-
-        protected void btnPanel2_Click(object sender, EventArgs e)
-        {
-            pnlPanel2Content.Visible = pnlPanel2Content.Visible == false ? true : false;
-        }
-
-        protected void btnPanel3_Click(object sender, EventArgs e)
-        {
-            pnlPanel3Content.Visible = pnlPanel3Content.Visible == false ? true : false;
-          
-        }
-        protected void btnPapComerc_Click(object sender, EventArgs e)
-        {
-            pnlPapComercContent.Visible = pnlPapComercContent.Visible == false ? true : false;
-
-        }
-
-        protected void btnTaxMult_Click(object sender, EventArgs e)
-        {
-            pnlTaxMultContent.Visible = pnlTaxMultContent.Visible == false ? true : false;
-
-        }
-
-        protected void btnAtInves_Click(object sender, EventArgs e)
-        {
-            pnlAtInvesContent.Visible = pnlAtInvesContent.Visible == false ? true : false;
-           
-
-
-        }
     }
 }
