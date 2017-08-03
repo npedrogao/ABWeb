@@ -1858,24 +1858,6 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCONOFFREGU;
         
         /// <summary>
-        /// lblCIPAD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCIPAD;
-        
-        /// <summary>
-        /// cmbCIPAD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCIPAD;
-        
-        /// <summary>
         /// lblCNIVELRISCO control.
         /// </summary>
         /// <remarks>
@@ -1993,22 +1975,22 @@ namespace ABWebCatalogue.Site {
         protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCCLASSRISC;
         
         /// <summary>
-        /// lblDisponível control.
+        /// lblCIPAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDisponível;
+        protected global::System.Web.UI.WebControls.Label lblCIPAD;
         
         /// <summary>
-        /// txtDisponível control.
+        /// cmbCIPAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDisponível;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect cmbCIPAD;
         
         /// <summary>
         /// btnClear control.
