@@ -511,6 +511,16 @@ namespace Core.Models
         D = 'D'
     }
 
+    public enum ItiporevEnum
+    {
+        [Description("Seleccione")]
+        Empty = ' ',
+        [Description("Crédito")]
+        Credito = 'C',
+        [Description("Normal")]
+        Normal = 'R'
+    }
+
     #region (HELP ENUMS)
     public enum H1971Enum
     {

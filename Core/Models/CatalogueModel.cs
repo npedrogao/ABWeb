@@ -1245,6 +1245,29 @@ namespace Core.Models
         }
 
 
+        public static List<KeyValuePair<string, string>>Itiporev
+        {
+            get
+            {
+                ItiporevEnum en;
+                var lst = new List<KeyValuePair<string, string>>();
+
+                en = ItiporevEnum.Empty;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ItiporevEnum.Credito;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                en = ItiporevEnum.Normal;
+                lst.Add(new KeyValuePair<string, string>(EnumExtensions.EnumExtensions.GetValue(en)
+                    , EnumExtensions.EnumExtensions.GetDesc(en)));
+
+                return lst;
+            }
+        }
+
         static CatalogueModel()
         {
 
